@@ -23,7 +23,7 @@ To run the examples, install the following packages:
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Example: Variability of ERP in auditory task">
+    <div class="sphx-glr-thumbcontainer" tooltip="Example: Variability of ERP in a auditory task">
 
 .. only:: html
 
@@ -34,13 +34,13 @@ To run the examples, install the following packages:
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Example: Variability of ERP in auditory task</div>
+      <div class="sphx-glr-thumbnail-title">Example: Variability of ERP in a auditory task</div>
     </div>
 
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Example: Variability of ERDS in motor-imagery task">
+    <div class="sphx-glr-thumbcontainer" tooltip="Example: Variability of ERDS in a motor-imagery task">
 
 .. only:: html
 
@@ -51,7 +51,7 @@ To run the examples, install the following packages:
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Example: Variability of ERDS in motor-imagery task</div>
+      <div class="sphx-glr-thumbnail-title">Example: Variability of ERDS in a motor-imagery task</div>
     </div>
 
 

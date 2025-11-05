@@ -18,7 +18,7 @@
 .. _sphx_glr_auto_examples_example_variability_ERP.py:
 
 
-Example: Variability of ERP in auditory task
+Example: Variability of ERP in a auditory task
 ============================================
 
 .. GENERATED FROM PYTHON SOURCE LINES 7-12
@@ -88,7 +88,7 @@ Example: Variability of ERP in auditory task
 
  .. code-block:: none
 
-      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 122860.00it/s]
+      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 94312.89it/s]
     Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-1_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424519  =      0.000 ...   424.519 secs...
@@ -349,7 +349,7 @@ Example: Variability of ERP in auditory task
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 11.889 seconds)
+   **Total running time of the script:** (0 minutes 13.408 seconds)
 
 
 .. _sphx_glr_download_auto_examples_example_variability_ERP.py:

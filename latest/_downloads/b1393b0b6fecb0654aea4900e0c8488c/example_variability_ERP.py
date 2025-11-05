@@ -1,5 +1,5 @@
 """
-Example: Variability of ERP in auditory task
+Example: Variability of ERP in a auditory task
 ============================================
 """
 

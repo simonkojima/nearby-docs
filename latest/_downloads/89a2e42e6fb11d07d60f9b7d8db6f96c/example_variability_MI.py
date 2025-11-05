@@ -1,5 +1,5 @@
 """
-Example: Variability of ERDS in motor-imagery task
+Example: Variability of ERDS in a motor-imagery task
 ==================================================
 """
 

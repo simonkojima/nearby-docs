@@ -18,7 +18,7 @@
 .. _sphx_glr_auto_examples_example_variability_MI.py:
 
 
-Example: Variability of ERDS in motor-imagery task
+Example: Variability of ERDS in a motor-imagery task
 ==================================================
 
 .. GENERATED FROM PYTHON SOURCE LINES 7-12
@@ -97,7 +97,7 @@ Example: Variability of ERDS in motor-imagery task
 
  .. code-block:: none
 
-    0it [00:00, ?it/s]    9it [00:00, 21719.64it/s]
+    0it [00:00, ?it/s]    9it [00:00, 21644.92it/s]
     Reading 0 ... 230399  =      0.000 ...   449.998 secs...
     Reading 0 ... 230399  =      0.000 ...   449.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
@@ -314,9 +314,9 @@ Example: Variability of ERDS in motor-imagery task
 
 
 
-    <tr class="mne-repr-section-header general-c1b89636-e787-4859-abeb-02151b26a1d2"
+    <tr class="mne-repr-section-header general-5ea05113-16e0-4ec9-9656-deeb33c3fdd9"
          title="Hide section" 
-        onclick="toggleVisibility('general-c1b89636-e787-4859-abeb-02151b26a1d2')">
+        onclick="toggleVisibility('general-5ea05113-16e0-4ec9-9656-deeb33c3fdd9')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -328,19 +328,19 @@ Example: Variability of ERDS in motor-imagery task
     </tr>
 
 
-    <tr class="repr-element general-c1b89636-e787-4859-abeb-02151b26a1d2 ">
+    <tr class="repr-element general-5ea05113-16e0-4ec9-9656-deeb33c3fdd9 ">
         <td class="mne-repr-section-toggle"></td>
         <td>MNE object type</td>
         <td>Epochs</td>
     </tr>
-    <tr class="repr-element general-c1b89636-e787-4859-abeb-02151b26a1d2 ">
+    <tr class="repr-element general-5ea05113-16e0-4ec9-9656-deeb33c3fdd9 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Measurement date</td>
     
         <td>2024-09-20 at 17:57:40 UTC</td>
     
     </tr>
-    <tr class="repr-element general-c1b89636-e787-4859-abeb-02151b26a1d2 ">
+    <tr class="repr-element general-5ea05113-16e0-4ec9-9656-deeb33c3fdd9 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Participant</td>
     
@@ -349,7 +349,7 @@ Example: Variability of ERDS in motor-imagery task
     
     
     </tr>
-    <tr class="repr-element general-c1b89636-e787-4859-abeb-02151b26a1d2 ">
+    <tr class="repr-element general-5ea05113-16e0-4ec9-9656-deeb33c3fdd9 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Experimenter</td>
     
@@ -364,9 +364,9 @@ Example: Variability of ERDS in motor-imagery task
 
 
 
-    <tr class="mne-repr-section-header acquisition-2ac36235-29c2-4890-9c46-5c90063d54e1"
+    <tr class="mne-repr-section-header acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef"
          title="Hide section" 
-        onclick="toggleVisibility('acquisition-2ac36235-29c2-4890-9c46-5c90063d54e1')">
+        onclick="toggleVisibility('acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -381,14 +381,14 @@ Example: Variability of ERDS in motor-imagery task
 
 
 
-    <tr class="repr-element acquisition-2ac36235-29c2-4890-9c46-5c90063d54e1 ">
+    <tr class="repr-element acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef ">
         <td class="mne-repr-section-toggle"></td>
         <td>Total number of events</td>
         <td>200</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-2ac36235-29c2-4890-9c46-5c90063d54e1 ">
+    <tr class="repr-element acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef ">
         <td class="mne-repr-section-toggle"></td>
         <td>Events counts</td>
     
@@ -405,35 +405,35 @@ Example: Variability of ERDS in motor-imagery task
     </tr>
 
 
-    <tr class="repr-element acquisition-2ac36235-29c2-4890-9c46-5c90063d54e1 ">
+    <tr class="repr-element acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef ">
         <td class="mne-repr-section-toggle"></td>
         <td>Time range</td>
         <td>-3.000 – 5.492 s</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-2ac36235-29c2-4890-9c46-5c90063d54e1 ">
+    <tr class="repr-element acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef ">
         <td class="mne-repr-section-toggle"></td>
         <td>Baseline</td>
         <td>off</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-2ac36235-29c2-4890-9c46-5c90063d54e1 ">
+    <tr class="repr-element acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef ">
         <td class="mne-repr-section-toggle"></td>
         <td>Sampling frequency</td>
         <td>128.00 Hz</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-2ac36235-29c2-4890-9c46-5c90063d54e1 ">
+    <tr class="repr-element acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef ">
         <td class="mne-repr-section-toggle"></td>
         <td>Time points</td>
         <td>1,088</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-2ac36235-29c2-4890-9c46-5c90063d54e1 ">
+    <tr class="repr-element acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef ">
         <td class="mne-repr-section-toggle"></td>
         <td>Metadata</td>
         <td>No metadata set</td>
@@ -447,9 +447,9 @@ Example: Variability of ERDS in motor-imagery task
 
 
 
-    <tr class="mne-repr-section-header channels-38ac0e7b-6d81-4a2e-a4d5-cb2dc74d558d"
+    <tr class="mne-repr-section-header channels-d3fd266c-09d8-408c-bafb-e407b55c621e"
          title="Hide section" 
-        onclick="toggleVisibility('channels-38ac0e7b-6d81-4a2e-a4d5-cb2dc74d558d')">
+        onclick="toggleVisibility('channels-d3fd266c-09d8-408c-bafb-e407b55c621e')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -462,7 +462,7 @@ Example: Variability of ERDS in motor-imagery task
 
 
     
-    <tr class="repr-element channels-38ac0e7b-6d81-4a2e-a4d5-cb2dc74d558d ">
+    <tr class="repr-element channels-d3fd266c-09d8-408c-bafb-e407b55c621e ">
         <td class="mne-repr-section-toggle"></td>
         <td>EEG</td>
         <td>
@@ -475,7 +475,7 @@ Example: Variability of ERDS in motor-imagery task
     </tr>
 
 
-    <tr class="repr-element channels-38ac0e7b-6d81-4a2e-a4d5-cb2dc74d558d ">
+    <tr class="repr-element channels-d3fd266c-09d8-408c-bafb-e407b55c621e ">
         <td class="mne-repr-section-toggle"></td>
         <td>Head & sensor digitization</td>
     
@@ -490,9 +490,9 @@ Example: Variability of ERDS in motor-imagery task
 
 
 
-    <tr class="mne-repr-section-header filters-0a174ea3-5c02-45b2-a3e2-563d2d4088e8"
+    <tr class="mne-repr-section-header filters-f54dd553-30fb-4826-8fe9-46e264863384"
          title="Hide section" 
-        onclick="toggleVisibility('filters-0a174ea3-5c02-45b2-a3e2-563d2d4088e8')">
+        onclick="toggleVisibility('filters-f54dd553-30fb-4826-8fe9-46e264863384')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -504,14 +504,14 @@ Example: Variability of ERDS in motor-imagery task
     </tr>
 
 
-    <tr class="repr-element filters-0a174ea3-5c02-45b2-a3e2-563d2d4088e8 ">
+    <tr class="repr-element filters-f54dd553-30fb-4826-8fe9-46e264863384 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Highpass</td>
         <td>1.00 Hz</td>
     </tr>
 
 
-    <tr class="repr-element filters-0a174ea3-5c02-45b2-a3e2-563d2d4088e8 ">
+    <tr class="repr-element filters-f54dd553-30fb-4826-8fe9-46e264863384 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Lowpass</td>
         <td>45.00 Hz</td>
@@ -557,10 +557,10 @@ Example: Variability of ERDS in motor-imagery task
  .. code-block:: none
 
     [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    3.0s
-    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    4.2s remaining:    2.1s
-    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    4.5s remaining:    0.6s
-    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    4.7s finished
+    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    2.9s
+    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    4.1s remaining:    2.0s
+    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    4.4s remaining:    0.6s
+    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    4.6s finished
     Applying baseline correction (mode: percent)
     <Power Estimates from Epochs, multitaper method | 200 epochs × 27 channels × 45 freqs × 544 times, 1.0 - 45.0 Hz, -3.00 - 5.48 s, 1008.6 MiB>
 
@@ -811,7 +811,7 @@ Example: Variability of ERDS in motor-imagery task
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 12.625 seconds)
+   **Total running time of the script:** (0 minutes 10.947 seconds)
 
 
 .. _sphx_glr_download_auto_examples_example_variability_MI.py:
