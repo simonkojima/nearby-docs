@@ -405,8 +405,8 @@ to download the full example code.</p>
 <span class="n">l_freq</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">h_freq</span> <span class="o">=</span> <span class="mi">45</span>
 <span class="n">resample</span> <span class="o">=</span> <span class="mi">128</span>
-<span class="n">tmin</span> <span class="o">=</span> <span class="mf">0.0</span>
-<span class="n">tmax</span> <span class="o">=</span> <span class="mf">8.5</span>
+<span class="n">tmin</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.0</span>
+<span class="n">tmax</span> <span class="o">=</span> <span class="mf">5.0</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">Dreyer2023</span><span class="p">()</span>
 
@@ -442,12 +442,10 @@ to download the full example code.</p>
 <span class="n">epochs</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
 
 <span class="n">epochs</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">resample</span><span class="p">)</span>
-
-<span class="n">epochs</span><span class="o">.</span><span class="n">shift_time</span><span class="p">(</span><span class="n">tshift</span><span class="o">=-</span><span class="mf">3.0</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
-9it [00:00, 21644.92it/s]
+9it [00:00, 19045.78it/s]
 Reading 0 ... 230399  =      0.000 ...   449.998 secs...
 Reading 0 ... 230399  =      0.000 ...   449.998 secs...
 Reading 0 ... 230911  =      0.000 ...   450.998 secs...
@@ -510,7 +508,7 @@ Not setting metadata
 1017 matching events found
 No baseline correction applied
 0 projection items activated
-Using data from preloaded Raw for 200 events and 4353 original time points ...
+Using data from preloaded Raw for 200 events and 3585 original time points ...
 0 bad epochs dropped
 </pre></div>
 </div>
@@ -662,9 +660,9 @@ this file apply (plus whatever default styling the IDE applies).
 
 
 
-<tr class="mne-repr-section-header general-5ea05113-16e0-4ec9-9656-deeb33c3fdd9"
+<tr class="mne-repr-section-header general-7c49cb95-b715-467c-9a7d-db4c37d708a5"
      title="Hide section"
-    onclick="toggleVisibility('general-5ea05113-16e0-4ec9-9656-deeb33c3fdd9')">
+    onclick="toggleVisibility('general-7c49cb95-b715-467c-9a7d-db4c37d708a5')">
     <th class="mne-repr-section-toggle">
         <button >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -676,19 +674,19 @@ this file apply (plus whatever default styling the IDE applies).
 </tr>
 
 
-<tr class="repr-element general-5ea05113-16e0-4ec9-9656-deeb33c3fdd9 ">
+<tr class="repr-element general-7c49cb95-b715-467c-9a7d-db4c37d708a5 ">
     <td class="mne-repr-section-toggle"></td>
     <td>MNE object type</td>
     <td>Epochs</td>
 </tr>
-<tr class="repr-element general-5ea05113-16e0-4ec9-9656-deeb33c3fdd9 ">
+<tr class="repr-element general-7c49cb95-b715-467c-9a7d-db4c37d708a5 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Measurement date</td>
 
     <td>2024-09-20 at 17:57:40 UTC</td>
 
 </tr>
-<tr class="repr-element general-5ea05113-16e0-4ec9-9656-deeb33c3fdd9 ">
+<tr class="repr-element general-7c49cb95-b715-467c-9a7d-db4c37d708a5 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Participant</td>
 
@@ -697,7 +695,7 @@ this file apply (plus whatever default styling the IDE applies).
 
 
 </tr>
-<tr class="repr-element general-5ea05113-16e0-4ec9-9656-deeb33c3fdd9 ">
+<tr class="repr-element general-7c49cb95-b715-467c-9a7d-db4c37d708a5 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Experimenter</td>
 
@@ -712,9 +710,9 @@ this file apply (plus whatever default styling the IDE applies).
 
 
 
-<tr class="mne-repr-section-header acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef"
+<tr class="mne-repr-section-header acquisition-485d4a02-5d20-45ae-a058-fe6259893f54"
      title="Hide section"
-    onclick="toggleVisibility('acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef')">
+    onclick="toggleVisibility('acquisition-485d4a02-5d20-45ae-a058-fe6259893f54')">
     <th class="mne-repr-section-toggle">
         <button >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -729,14 +727,14 @@ this file apply (plus whatever default styling the IDE applies).
 
 
 
-<tr class="repr-element acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef ">
+<tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Total number of events</td>
     <td>200</td>
 </tr>
 
 
-<tr class="repr-element acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef ">
+<tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Events counts</td>
 
@@ -753,35 +751,35 @@ this file apply (plus whatever default styling the IDE applies).
 </tr>
 
 
-<tr class="repr-element acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef ">
+<tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Time range</td>
-    <td>-3.000 – 5.492 s</td>
+    <td>-2.000 – 4.992 s</td>
 </tr>
 
 
-<tr class="repr-element acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef ">
+<tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Baseline</td>
     <td>off</td>
 </tr>
 
 
-<tr class="repr-element acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef ">
+<tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Sampling frequency</td>
     <td>128.00 Hz</td>
 </tr>
 
 
-<tr class="repr-element acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef ">
+<tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Time points</td>
-    <td>1,088</td>
+    <td>896</td>
 </tr>
 
 
-<tr class="repr-element acquisition-fde1be23-e4f1-43f4-a898-6408f17011ef ">
+<tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Metadata</td>
     <td>No metadata set</td>
@@ -795,9 +793,9 @@ this file apply (plus whatever default styling the IDE applies).
 
 
 
-<tr class="mne-repr-section-header channels-d3fd266c-09d8-408c-bafb-e407b55c621e"
+<tr class="mne-repr-section-header channels-525bfd38-9190-49a1-bdf2-60b0d9026394"
      title="Hide section"
-    onclick="toggleVisibility('channels-d3fd266c-09d8-408c-bafb-e407b55c621e')">
+    onclick="toggleVisibility('channels-525bfd38-9190-49a1-bdf2-60b0d9026394')">
     <th class="mne-repr-section-toggle">
         <button >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -810,7 +808,7 @@ this file apply (plus whatever default styling the IDE applies).
 
 
 
-<tr class="repr-element channels-d3fd266c-09d8-408c-bafb-e407b55c621e ">
+<tr class="repr-element channels-525bfd38-9190-49a1-bdf2-60b0d9026394 ">
     <td class="mne-repr-section-toggle"></td>
     <td>EEG</td>
     <td>
@@ -823,7 +821,7 @@ this file apply (plus whatever default styling the IDE applies).
 </tr>
 
 
-<tr class="repr-element channels-d3fd266c-09d8-408c-bafb-e407b55c621e ">
+<tr class="repr-element channels-525bfd38-9190-49a1-bdf2-60b0d9026394 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Head & sensor digitization</td>
 
@@ -838,9 +836,9 @@ this file apply (plus whatever default styling the IDE applies).
 
 
 
-<tr class="mne-repr-section-header filters-f54dd553-30fb-4826-8fe9-46e264863384"
+<tr class="mne-repr-section-header filters-9fa6112a-d53e-4bfc-8d65-769deb905fc2"
      title="Hide section"
-    onclick="toggleVisibility('filters-f54dd553-30fb-4826-8fe9-46e264863384')">
+    onclick="toggleVisibility('filters-9fa6112a-d53e-4bfc-8d65-769deb905fc2')">
     <th class="mne-repr-section-toggle">
         <button >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -852,14 +850,14 @@ this file apply (plus whatever default styling the IDE applies).
 </tr>
 
 
-<tr class="repr-element filters-f54dd553-30fb-4826-8fe9-46e264863384 ">
+<tr class="repr-element filters-9fa6112a-d53e-4bfc-8d65-769deb905fc2 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Highpass</td>
     <td>1.00 Hz</td>
 </tr>
 
 
-<tr class="repr-element filters-f54dd553-30fb-4826-8fe9-46e264863384 ">
+<tr class="repr-element filters-9fa6112a-d53e-4bfc-8d65-769deb905fc2 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Lowpass</td>
     <td>45.00 Hz</td>
@@ -892,12 +890,12 @@ this file apply (plus whatever default styling the IDE applies).
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    2.9s
-[Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    4.1s remaining:    2.0s
-[Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    4.4s remaining:    0.6s
-[Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    4.6s finished
+[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    2.6s
+[Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    3.3s remaining:    1.7s
+[Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    3.7s remaining:    0.5s
+[Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    3.7s finished
 Applying baseline correction (mode: percent)
-&lt;Power Estimates from Epochs, multitaper method | 200 epochs × 27 channels × 45 freqs × 544 times, 1.0 - 45.0 Hz, -3.00 - 5.48 s, 1008.6 MiB&gt;
+&lt;Power Estimates from Epochs, multitaper method | 200 epochs × 27 channels × 45 freqs × 448 times, 1.0 - 45.0 Hz, -2.00 - 4.98 s, 830.6 MiB&gt;
 </pre></div>
 </div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -1061,15 +1059,15 @@ Applying baseline correction (mode: percent)
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span># Variability Metrics
- - ME    :   0.785384
- - SMEAT :   1.013060
- - WTTV  :   1.076949
- - ATTV  :  17.055662
- - ATSVA :   0.842394
- - ATFVA :   1.108201
+ - ME    :  -0.138121
+ - SMEAT :   0.458346
+ - WTTV  :   0.360843
+ - ATTV  :   7.814168
+ - ATSVA :   1.249263
+ - ATFVA :   1.355209
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 10.947 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 10.166 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-example-variability-mi-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c6f8cf37d3087bad44cc860176d0c75d/example_variability_MI.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">example_variability_MI.ipynb</span></code></a></p>
