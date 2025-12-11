@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Example: Variability of ERP in a auditory task &#8212; Nearby 0.0.2 documentation</title>
+    <title>Example: Intra-Subject Variability of ERP &#8212; Nearby 0.0.3 documentation</title>
   
   
   
@@ -42,21 +42,19 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e3a6060d"></script>
+    <script src="../_static/documentation_options.js?v=47de8214"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'auto_examples/example_variability_ERP';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.2';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.3';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Example: Variability of ERDS in a motor-imagery task" href="example_variability_MI.html" />
-    <link rel="prev" title="Examples" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -125,8 +123,8 @@
       
     
     
-    <img src="../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.2 documentation - Home"/>
-    <img src="../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.2 documentation - Home"/>
+    <img src="../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.3 documentation - Home"/>
+    <img src="../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.3 documentation - Home"/>
   
   
 </a></div>
@@ -148,7 +146,7 @@
 </li>
 
 
-<li class="nav-item current active">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="index.html">
     Examples
   </a>
@@ -238,8 +236,10 @@
       
       
       
+        
+      
       <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -261,7 +261,7 @@
 </li>
 
 
-<li class="nav-item current active">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="index.html">
     Examples
   </a>
@@ -316,19 +316,6 @@
     
   </div>
   
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-<nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Example: Variability of ERP in a auditory task</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example_variability_MI.html">Example: Variability of ERDS in a motor-imagery task</a></li>
-</ul>
-</div>
-</nav></div>
-    </div>
-  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
@@ -364,10 +351,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Examples</a></li>
-    
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Example: Variability of ERP in a auditory task</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Example: Intra-Subject Variability of ERP</span></li>
   </ul>
 </nav>
 </div>
@@ -389,10 +373,14 @@
 <p><a class="reference internal" href="#sphx-glr-download-auto-examples-example-variability-erp-py"><span class="std std-ref">Go to the end</span></a>
 to download the full example code.</p>
 </div>
-<section class="sphx-glr-example-title" id="example-variability-of-erp-in-a-auditory-task">
-<span id="sphx-glr-auto-examples-example-variability-erp-py"></span><h1>Example: Variability of ERP in a auditory task<a class="headerlink" href="#example-variability-of-erp-in-a-auditory-task" title="Link to this heading">#</a></h1>
+<section class="sphx-glr-example-title" id="example-intra-subject-variability-of-erp">
+<span id="sphx-glr-auto-examples-example-variability-erp-py"></span><h1>Example: Intra-Subject Variability of ERP<a class="headerlink" href="#example-intra-subject-variability-of-erp" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Authors: Simon Kojima &lt;simon.kojima@inria.fr&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># License: BSD (3-clause)</span>
+</pre></div>
+</div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">mne</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">nearby</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">moabb.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">Kojima2024B</span>
 </pre></div>
@@ -438,7 +426,7 @@ to download the full example code.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0/36 [00:00&lt;?, ?it/s]
-100%|██████████| 36/36 [00:00&lt;00:00, 94312.89it/s]
+100%|██████████| 36/36 [00:00&lt;00:00, 118987.35it/s]
 Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-1_eeg.vhdr...
 Setting channel info structure...
 Reading 0 ... 424519  =      0.000 ...   424.519 secs...
@@ -547,43 +535,28 @@ Applying baseline correction (mode: mean)
 </pre></div>
 </div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Compute Variability Metrics</span>
-
-<span class="sd"># ME</span>
+<span class="sd"># Within-Trial Temporal (WTTemp)</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span>
-
-<span class="n">me</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">me</span><span class="p">(</span>
-    <span class="n">epochs</span><span class="p">[</span><span class="s2">&quot;Target&quot;</span><span class="p">],</span> <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Cz&quot;</span><span class="p">,</span> <span class="s2">&quot;CPz&quot;</span><span class="p">,</span> <span class="s2">&quot;Pz&quot;</span><span class="p">]</span>
-<span class="p">)</span>
-
-<span class="n">me</span> <span class="o">=</span> <span class="n">me</span><span class="p">[</span><span class="s2">&quot;me&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd"># SMEAT</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="n">smeat</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">smeat</span><span class="p">(</span>
+<span class="n">wt_temp</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">within_trial_temporal</span><span class="p">(</span>
     <span class="n">epochs</span><span class="p">[</span><span class="s2">&quot;Target&quot;</span><span class="p">],</span>
     <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
     <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
     <span class="n">picks</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Cz&quot;</span><span class="p">,</span> <span class="s2">&quot;CPz&quot;</span><span class="p">,</span> <span class="s2">&quot;Pz&quot;</span><span class="p">],</span>
 <span class="p">)</span>
 
-<span class="n">smeat</span> <span class="o">=</span> <span class="n">smeat</span><span class="p">[</span><span class="s2">&quot;smeat&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wt_temp</span><span class="p">)</span>
+
+<span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd"># WTTV</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="n">wttv</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">wttv</span><span class="p">(</span>
-    <span class="n">epochs</span><span class="p">[</span><span class="s2">&quot;Target&quot;</span><span class="p">],</span>
-    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
-    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
-    <span class="n">picks</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Cz&quot;</span><span class="p">,</span> <span class="s2">&quot;CPz&quot;</span><span class="p">,</span> <span class="s2">&quot;Pz&quot;</span><span class="p">],</span>
-<span class="p">)</span>
-
-<span class="n">wttv</span> <span class="o">=</span> <span class="n">wttv</span><span class="p">[</span><span class="s2">&quot;wttv&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class="sphx-glr-script-out highlight-pytb notranslate"><div class="highlight"><pre><span></span><span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;/home/skojima/git/nearby/examples/example_variability_ERP.py&quot;</span>, line <span class="m">59</span>, in <span class="n">&lt;module&gt;</span>
+<span class="w">    </span><span class="n">wt_temp</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">within_trial_temporal</span><span class="p">(</span>
+<span class="w">              </span><span class="pm">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+  File <span class="nb">&quot;/home/skojima/git/nearby/nearby/metrics/temporal.py&quot;</span>, line <span class="m">103</span>, in <span class="n">within_trial_temporal</span>
+<span class="w">    </span><span class="n">sd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">                </span><span class="pm">^^^^</span>
+<span class="gr">UnboundLocalError</span>: <span class="n">cannot access local variable &#39;data&#39; where it is not associated with a value</span>
 </pre></div>
 </div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -624,15 +597,7 @@ Applying baseline correction (mode: mean)
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; - ATSVA : </span><span class="si">{</span><span class="n">atsva</span><span class="si">:</span><span class="s2">10.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span># Variability Metrics
- - ME    :   0.547908
- - SMEAT :   5.598208
- - WTTV  :   4.743322
- - ATTV  :  34.486727
- - ATSVA :   1.474609
-</pre></div>
-</div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 13.408 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 11.918 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-example-variability-erp-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/49d1a97a23d3b29006d4be95ab5e229f/example_variability_ERP.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">example_variability_ERP.ipynb</span></code></a></p>
@@ -657,24 +622,6 @@ Applying baseline correction (mode: mean)
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="index.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Examples</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="example_variability_MI.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Example: Variability of ERDS in a motor-imagery task</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               

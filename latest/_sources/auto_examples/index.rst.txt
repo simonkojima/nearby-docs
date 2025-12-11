@@ -23,35 +23,69 @@ To run the examples, install the following packages:
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Example: Variability of ERP in a auditory task">
+    <div class="sphx-glr-thumbcontainer" tooltip="Example: Intra-Subject Variability of ERP in an auditory task">
 
 .. only:: html
 
-  .. image:: /auto_examples/images/thumb/sphx_glr_example_variability_ERP_thumb.png
+  .. image:: /auto_examples/images/thumb/sphx_glr_example_variability_ERP_intra_subject_thumb.png
     :alt:
 
-  :ref:`sphx_glr_auto_examples_example_variability_ERP.py`
+  :ref:`sphx_glr_auto_examples_example_variability_ERP_intra_subject.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Example: Variability of ERP in a auditory task</div>
+      <div class="sphx-glr-thumbnail-title">Example: Intra-Subject Variability of ERP in an auditory task</div>
     </div>
 
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Example: Variability of ERDS in a motor-imagery task">
+    <div class="sphx-glr-thumbcontainer" tooltip="Example: Inter-Subject Variability of ERP in an auditory task">
 
 .. only:: html
 
-  .. image:: /auto_examples/images/thumb/sphx_glr_example_variability_MI_thumb.png
+  .. image:: /auto_examples/images/thumb/sphx_glr_example_variability_ERP_inter_subject_thumb.png
     :alt:
 
-  :ref:`sphx_glr_auto_examples_example_variability_MI.py`
+  :ref:`sphx_glr_auto_examples_example_variability_ERP_inter_subject.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Example: Variability of ERDS in a motor-imagery task</div>
+      <div class="sphx-glr-thumbnail-title">Example: Inter-Subject Variability of ERP in an auditory task</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example: Intra-Subject Variability of ERDS in a motor-imagery task">
+
+.. only:: html
+
+  .. image:: /auto_examples/images/thumb/sphx_glr_example_variability_MI_intra_subject_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_example_variability_MI_intra_subject.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Example: Intra-Subject Variability of ERDS in a motor-imagery task</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example: Inter-Subjects Variability of ERDS in a motor-imagery task">
+
+.. only:: html
+
+  .. image:: /auto_examples/images/thumb/sphx_glr_example_variability_MI_inter_subjects_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_example_variability_MI_inter_subjects.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Example: Inter-Subjects Variability of ERDS in a motor-imagery task</div>
     </div>
 
 
@@ -65,8 +99,10 @@ To run the examples, install the following packages:
 .. toctree::
    :hidden:
 
-   /auto_examples/example_variability_ERP
-   /auto_examples/example_variability_MI
+   /auto_examples/example_variability_ERP_intra_subject
+   /auto_examples/example_variability_ERP_inter_subject
+   /auto_examples/example_variability_MI_intra_subject
+   /auto_examples/example_variability_MI_inter_subjects
 
 
 .. only:: html

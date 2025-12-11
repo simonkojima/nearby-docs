@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>nearby.metrics package &#8212; Nearby 0.0.2 documentation</title>
+    <title>nearby.metrics package &#8212; Nearby 0.0.4 documentation</title>
   
   
   
@@ -42,14 +42,14 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=e3a6060d"></script>
+    <script src="_static/documentation_options.js?v=8c5712d9"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'nearby.metrics';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.2';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.4';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
@@ -123,8 +123,8 @@
       
     
     
-    <img src="_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.2 documentation - Home"/>
-    <img src="_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.2 documentation - Home"/>
+    <img src="_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.4 documentation - Home"/>
+    <img src="_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.4 documentation - Home"/>
   
   
 </a></div>
@@ -386,12 +386,12 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-nearby.metrics.erds">
-<span id="nearby-metrics-erds-module"></span><h2>nearby.metrics.erds module<a class="headerlink" href="#module-nearby.metrics.erds" title="Link to this heading">#</a></h2>
+<section id="module-nearby.metrics.frequency">
+<span id="nearby-metrics-frequency-module"></span><h2>nearby.metrics.frequency module<a class="headerlink" href="#module-nearby.metrics.frequency" title="Link to this heading">#</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="nearby.metrics.erds.me">
-<span class="sig-prename descclassname"><span class="pre">nearby.metrics.erds.</span></span><span class="sig-name descname"><span class="pre">me</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/erds.html#me"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.erds.me" title="Link to this definition">#</a></dt>
-<dd><p>Compute mean ERD/S values.</p>
+<dt class="sig sig-object py" id="nearby.metrics.frequency.atfv">
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.frequency.</span></span><span class="sig-name descname"><span class="pre">atfv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tfrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/frequency.html#atfv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.frequency.atfv" title="Link to this definition">#</a></dt>
+<dd><p>Compute Across-Trial Frequency Variability values.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -403,6 +403,11 @@ If <cite>obj</cite> is an MNE Epochs object, it is applied using <cite>obj.copy(
 <li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
 <li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
 <li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>metrics</strong> (<em>{&quot;angle&quot;</em><em>, </em><em>&quot;cosine&quot;}</em><em>, </em><em>default=&quot;angle&quot;</em>) – <p>If “angle”, the distance between the mean and each epoch is computed using
+angular distance. The mean is estimated using the Fréchet mean (p = 2).</p>
+<p>If “cosine”, the distance between the mean and each epoch is computed using
+cosine distance. The mean is estimated using an extrinsic mean.</p>
+</p></li>
 <li><p><strong>picks</strong> (<em>str</em><em> | </em><em>array_like</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Channels to include.</p></li>
 <li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If <cite>True</cite>, values are averaged across epochs. If <cite>False</cite>, a value
 is returned for each epoch.
@@ -413,27 +418,18 @@ per-epoch ERD/S values.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>df</strong> – DataFrame containing mean ERD/S values for each channel.</p>
+<dd class="field-even"><p><strong>df</strong> – DataFrame containing variability values for each channel.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>pandas.DataFrame</p>
 </dd>
 </dl>
-<p class="rubric">References</p>
-<div role="list" class="citation-list">
-<div class="citation" id="rfe633d112ce0-1" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
-<p>S. Rimbert, D. Trocellier, F. Lotte,
-“Is Event-Related Desynchronization variability correlated with BCI performance?”,
-MetroXRAINE 2022, DOI: <a class="reference external" href="https://doi.org/10.1109/MetroXRAINE54828.2022.9967551">10.1109/MetroXRAINE54828.2022.9967551</a></p>
-</div>
-</div>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="nearby.metrics.erds.smeat">
-<span class="sig-prename descclassname"><span class="pre">nearby.metrics.erds.</span></span><span class="sig-name descname"><span class="pre">smeat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/erds.html#smeat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.erds.smeat" title="Link to this definition">#</a></dt>
-<dd><p>Compute standard deviation of mean ERD/S values across trials.</p>
+<dt class="sig sig-object py" id="nearby.metrics.frequency.between_average_frequency">
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.frequency.</span></span><span class="sig-name descname"><span class="pre">between_average_frequency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tfr_A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tfrs_B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/frequency.html#between_average_frequency"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.frequency.between_average_frequency" title="Link to this definition">#</a></dt>
+<dd><p>Compute Subject-to-Group Frequency Variability values.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -445,35 +441,71 @@ If <cite>obj</cite> is an MNE Epochs object, it is applied using <cite>obj.copy(
 <li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
 <li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
 <li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>metrics</strong> (<em>{&quot;angle&quot;</em><em>, </em><em>&quot;cosine&quot;}</em><em>, </em><em>default=&quot;angle&quot;</em>) – <p>If “angle”, the distance between the mean and each epoch is computed using
+angular distance. The mean is estimated using the Fréchet mean (p = 2).</p>
+<p>If “cosine”, the distance between the mean and each epoch is computed using
+cosine distance. The mean is estimated using an extrinsic mean.</p>
+</p></li>
 <li><p><strong>picks</strong> (<em>str</em><em> | </em><em>array_like</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Channels to include.</p></li>
+<li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If <cite>True</cite>, values are averaged across epochs. If <cite>False</cite>, a value
+is returned for each epoch.
+If <code class="docutils literal notranslate"><span class="pre">average=False</span></code>, the DataFrame contains one entry per channel,
+where each entry consists of a JSON-encoded list representing the
+per-epoch ERD/S values.</p></li>
 <li><p><strong>additional_values</strong> (<em>dict</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Additional columns to append to the output dataframe.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>df</strong> – DataFrame containing standard deviations of ERD/S for each channel.</p>
+<dd class="field-even"><p><strong>df</strong> – DataFrame containing variability values for each channel.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>pandas.DataFrame</p>
 </dd>
 </dl>
-<p class="rubric">References</p>
-<div role="list" class="citation-list">
-<div class="citation" id="r245cc761f626-1" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
-<p>S. Rimbert, D. Trocellier, F. Lotte,
-“Is Event-Related Desynchronization variability correlated with BCI performance?”,
-MetroXRAINE 2022, DOI: <a class="reference external" href="https://doi.org/10.1109/MetroXRAINE54828.2022.9967551">10.1109/MetroXRAINE54828.2022.9967551</a></p>
-</div>
-</div>
 </dd></dl>
 
-</section>
-<section id="module-nearby.metrics.frequency">
-<span id="nearby-metrics-frequency-module"></span><h2>nearby.metrics.frequency module<a class="headerlink" href="#module-nearby.metrics.frequency" title="Link to this heading">#</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="nearby.metrics.frequency.atfv">
-<span class="sig-prename descclassname"><span class="pre">nearby.metrics.frequency.</span></span><span class="sig-name descname"><span class="pre">atfv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tfrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/frequency.html#atfv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.frequency.atfv" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nearby.metrics.frequency.between_trial_frequency">
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.frequency.</span></span><span class="sig-name descname"><span class="pre">between_trial_frequency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tfrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/frequency.html#between_trial_frequency"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.frequency.between_trial_frequency" title="Link to this definition">#</a></dt>
 <dd><p>Compute Across-Trial Frequency Variability values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<code class="docutils literal notranslate"><span class="pre">mne.epochs.Epochs</span></code> | <code class="docutils literal notranslate"><span class="pre">mne.time_frequency.tfr.BaseTFR</span></code>) – The MNE object containing either epochs or time–frequency data.</p></li>
+<li><p><strong>baseline</strong> (<em>tuple</em><em> | </em><em>list</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time interval used for baseline correction. If <cite>None</cite>, no baseline is applied.
+If <cite>obj</cite> is an MNE TFR object, the baseline is applied using <cite>obj.copy().apply_baseline(baseline, mode=”percent”)</cite>.
+If <cite>obj</cite> is an MNE Epochs object, it is applied using <cite>obj.copy().apply_baseline(baseline)</cite>.</p></li>
+<li><p><strong>fmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>metrics</strong> (<em>{&quot;angle&quot;</em><em>, </em><em>&quot;cosine&quot;}</em><em>, </em><em>default=&quot;angle&quot;</em>) – <p>If “angle”, the distance between the mean and each epoch is computed using
+angular distance. The mean is estimated using the Fréchet mean (p = 2).</p>
+<p>If “cosine”, the distance between the mean and each epoch is computed using
+cosine distance. The mean is estimated using an extrinsic mean.</p>
+</p></li>
+<li><p><strong>picks</strong> (<em>str</em><em> | </em><em>array_like</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Channels to include.</p></li>
+<li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If <cite>True</cite>, values are averaged across epochs. If <cite>False</cite>, a value
+is returned for each epoch.
+If <code class="docutils literal notranslate"><span class="pre">average=False</span></code>, the DataFrame contains one entry per channel,
+where each entry consists of a JSON-encoded list representing the
+per-epoch ERD/S values.</p></li>
+<li><p><strong>additional_values</strong> (<em>dict</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Additional columns to append to the output dataframe.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>df</strong> – DataFrame containing variability values for each channel.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nearby.metrics.frequency.sgfv">
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.frequency.</span></span><span class="sig-name descname"><span class="pre">sgfv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tfr_A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tfrs_B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/frequency.html#sgfv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.frequency.sgfv" title="Link to this definition">#</a></dt>
+<dd><p>Compute Subject-to-Group Frequency Variability values.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -508,12 +540,88 @@ per-epoch ERD/S values.</p></li>
 </dl>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="nearby.metrics.frequency.within_trial_frequency">
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.frequency.</span></span><span class="sig-name descname"><span class="pre">within_trial_frequency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tfrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'windows'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">windows</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_window_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/frequency.html#within_trial_frequency"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.frequency.within_trial_frequency" title="Link to this definition">#</a></dt>
+<dd><p>Compute Within-Trial Frequency Variability values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<code class="docutils literal notranslate"><span class="pre">mne.epochs.Epochs</span></code> | <code class="docutils literal notranslate"><span class="pre">mne.time_frequency.tfr.BaseTFR</span></code>) – The MNE object containing either epochs or time–frequency data.</p></li>
+<li><p><strong>baseline</strong> (<em>tuple</em><em> | </em><em>list</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time interval used for baseline correction. If <cite>None</cite>, no baseline is applied.
+If <cite>obj</cite> is an MNE TFR object, the baseline is applied using <cite>obj.copy().apply_baseline(baseline, mode=”percent”)</cite>.
+If <cite>obj</cite> is an MNE Epochs object, it is applied using <cite>obj.copy().apply_baseline(baseline)</cite>.</p></li>
+<li><p><strong>fmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>metric</strong> (<em>{&quot;angle&quot;</em><em>, </em><em>&quot;cosine&quot;}</em><em>, </em><em>default=&quot;angle&quot;</em>) – <p>If “angle”, the distance between the mean and each epoch is computed using
+angular distance. The mean is estimated using the Fréchet mean (p = 2).</p>
+<p>If “cosine”, the distance between the mean and each epoch is computed using
+cosine distance. The mean is estimated using an extrinsic mean.</p>
+</p></li>
+<li><p><strong>picks</strong> (<em>str</em><em> | </em><em>array_like</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Channels to include.</p></li>
+<li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If <cite>True</cite>, values are averaged across epochs. If <cite>False</cite>, a value
+is returned for each epoch.
+If <code class="docutils literal notranslate"><span class="pre">average=False</span></code>, the DataFrame contains one entry per channel,
+where each entry consists of a JSON-encoded list representing the
+per-epoch ERD/S values.</p></li>
+<li><p><strong>additional_values</strong> (<em>dict</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Additional columns to append to the output dataframe.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>df</strong> – DataFrame containing variability values</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nearby.metrics.frequency.wtfv">
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.frequency.</span></span><span class="sig-name descname"><span class="pre">wtfv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tfrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'windows'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">windows</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_window_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/frequency.html#wtfv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.frequency.wtfv" title="Link to this definition">#</a></dt>
+<dd><p>Compute Within-Trial Frequency Variability values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<code class="docutils literal notranslate"><span class="pre">mne.epochs.Epochs</span></code> | <code class="docutils literal notranslate"><span class="pre">mne.time_frequency.tfr.BaseTFR</span></code>) – The MNE object containing either epochs or time–frequency data.</p></li>
+<li><p><strong>baseline</strong> (<em>tuple</em><em> | </em><em>list</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time interval used for baseline correction. If <cite>None</cite>, no baseline is applied.
+If <cite>obj</cite> is an MNE TFR object, the baseline is applied using <cite>obj.copy().apply_baseline(baseline, mode=”percent”)</cite>.
+If <cite>obj</cite> is an MNE Epochs object, it is applied using <cite>obj.copy().apply_baseline(baseline)</cite>.</p></li>
+<li><p><strong>fmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>metric</strong> (<em>{&quot;angle&quot;</em><em>, </em><em>&quot;cosine&quot;}</em><em>, </em><em>default=&quot;angle&quot;</em>) – <p>If “angle”, the distance between the mean and each epoch is computed using
+angular distance. The mean is estimated using the Fréchet mean (p = 2).</p>
+<p>If “cosine”, the distance between the mean and each epoch is computed using
+cosine distance. The mean is estimated using an extrinsic mean.</p>
+</p></li>
+<li><p><strong>picks</strong> (<em>str</em><em> | </em><em>array_like</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Channels to include.</p></li>
+<li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If <cite>True</cite>, values are averaged across epochs. If <cite>False</cite>, a value
+is returned for each epoch.
+If <code class="docutils literal notranslate"><span class="pre">average=False</span></code>, the DataFrame contains one entry per channel,
+where each entry consists of a JSON-encoded list representing the
+per-epoch ERD/S values.</p></li>
+<li><p><strong>additional_values</strong> (<em>dict</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Additional columns to append to the output dataframe.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>df</strong> – DataFrame containing atsv values</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="module-nearby.metrics.spatial">
 <span id="nearby-metrics-spatial-module"></span><h2>nearby.metrics.spatial module<a class="headerlink" href="#module-nearby.metrics.spatial" title="Link to this heading">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="nearby.metrics.spatial.atsv">
-<span class="sig-prename descclassname"><span class="pre">nearby.metrics.spatial.</span></span><span class="sig-name descname"><span class="pre">atsv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/spatial.html#atsv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.spatial.atsv" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.spatial.</span></span><span class="sig-name descname"><span class="pre">atsv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/spatial.html#atsv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.spatial.atsv" title="Link to this definition">#</a></dt>
 <dd><p>Compute Across-Trial Spatial Variability values.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -527,6 +635,196 @@ If <cite>obj</cite> is an MNE Epochs object, it is applied using <cite>obj.copy(
 <li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
 <li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
 <li><p><strong>metrics</strong> (<em>{&quot;angle&quot;</em><em>, </em><em>&quot;cosine&quot;}</em><em>, </em><em>default=&quot;angle&quot;</em>) – <p>If “angle”, the distance between the mean and each epoch is computed using
+angular distance. The mean is estimated using the Fréchet mean (p = 2).</p>
+<p>If “cosine”, the distance between the mean and each epoch is computed using
+cosine distance. The mean is estimated using an extrinsic mean.</p>
+</p></li>
+<li><p><strong>picks</strong> (<em>str</em><em> | </em><em>array_like</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Channels to include.</p></li>
+<li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If <cite>True</cite>, values are averaged across epochs. If <cite>False</cite>, a value
+is returned for each epoch.
+If <code class="docutils literal notranslate"><span class="pre">average=False</span></code>, the DataFrame contains one entry per channel,
+where each entry consists of a JSON-encoded list representing the
+per-epoch ERD/S values.</p></li>
+<li><p><strong>additional_values</strong> (<em>dict</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Additional columns to append to the output dataframe.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>df</strong> – DataFrame containing variability values</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nearby.metrics.spatial.between_average_spatial">
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.spatial.</span></span><span class="sig-name descname"><span class="pre">between_average_spatial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objs_B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/spatial.html#between_average_spatial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.spatial.between_average_spatial" title="Link to this definition">#</a></dt>
+<dd><p>Compute Subject-to-Group Spatial Variability values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<code class="docutils literal notranslate"><span class="pre">mne.epochs.Epochs</span></code> | <code class="docutils literal notranslate"><span class="pre">mne.time_frequency.tfr.BaseTFR</span></code>) – The MNE object containing either epochs or time–frequency data.</p></li>
+<li><p><strong>baseline</strong> (<em>tuple</em><em> | </em><em>list</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time interval used for baseline correction. If <cite>None</cite>, no baseline is applied.
+If <cite>obj</cite> is an MNE TFR object, the baseline is applied using <cite>obj.copy().apply_baseline(baseline, mode=”percent”)</cite>.
+If <cite>obj</cite> is an MNE Epochs object, it is applied using <cite>obj.copy().apply_baseline(baseline)</cite>.</p></li>
+<li><p><strong>fmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>metrics</strong> (<em>{&quot;angle&quot;</em><em>, </em><em>&quot;cosine&quot;}</em><em>, </em><em>default=&quot;angle&quot;</em>) – <p>If “angle”, the distance between the mean and each epoch is computed using
+angular distance. The mean is estimated using the Fréchet mean (p = 2).</p>
+<p>If “cosine”, the distance between the mean and each epoch is computed using
+cosine distance. The mean is estimated using an extrinsic mean.</p>
+</p></li>
+<li><p><strong>picks</strong> (<em>str</em><em> | </em><em>array_like</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Channels to include.</p></li>
+<li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If <cite>True</cite>, values are averaged across epochs. If <cite>False</cite>, a value
+is returned for each epoch.
+If <code class="docutils literal notranslate"><span class="pre">average=False</span></code>, the DataFrame contains one entry per channel,
+where each entry consists of a JSON-encoded list representing the
+per-epoch ERD/S values.</p></li>
+<li><p><strong>additional_values</strong> (<em>dict</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Additional columns to append to the output dataframe.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>df</strong> – DataFrame containing variability values</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nearby.metrics.spatial.between_trial_spatial">
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.spatial.</span></span><span class="sig-name descname"><span class="pre">between_trial_spatial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/spatial.html#between_trial_spatial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.spatial.between_trial_spatial" title="Link to this definition">#</a></dt>
+<dd><p>Compute Across-Trial Spatial Variability values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<code class="docutils literal notranslate"><span class="pre">mne.epochs.Epochs</span></code> | <code class="docutils literal notranslate"><span class="pre">mne.time_frequency.tfr.BaseTFR</span></code>) – The MNE object containing either epochs or time–frequency data.</p></li>
+<li><p><strong>baseline</strong> (<em>tuple</em><em> | </em><em>list</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time interval used for baseline correction. If <cite>None</cite>, no baseline is applied.
+If <cite>obj</cite> is an MNE TFR object, the baseline is applied using <cite>obj.copy().apply_baseline(baseline, mode=”percent”)</cite>.
+If <cite>obj</cite> is an MNE Epochs object, it is applied using <cite>obj.copy().apply_baseline(baseline)</cite>.</p></li>
+<li><p><strong>fmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>metrics</strong> (<em>{&quot;angle&quot;</em><em>, </em><em>&quot;cosine&quot;}</em><em>, </em><em>default=&quot;angle&quot;</em>) – <p>If “angle”, the distance between the mean and each epoch is computed using
+angular distance. The mean is estimated using the Fréchet mean (p = 2).</p>
+<p>If “cosine”, the distance between the mean and each epoch is computed using
+cosine distance. The mean is estimated using an extrinsic mean.</p>
+</p></li>
+<li><p><strong>picks</strong> (<em>str</em><em> | </em><em>array_like</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Channels to include.</p></li>
+<li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If <cite>True</cite>, values are averaged across epochs. If <cite>False</cite>, a value
+is returned for each epoch.
+If <code class="docutils literal notranslate"><span class="pre">average=False</span></code>, the DataFrame contains one entry per channel,
+where each entry consists of a JSON-encoded list representing the
+per-epoch ERD/S values.</p></li>
+<li><p><strong>additional_values</strong> (<em>dict</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Additional columns to append to the output dataframe.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>df</strong> – DataFrame containing variability values</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nearby.metrics.spatial.sgsv">
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.spatial.</span></span><span class="sig-name descname"><span class="pre">sgsv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objs_B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/spatial.html#sgsv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.spatial.sgsv" title="Link to this definition">#</a></dt>
+<dd><p>Compute Subject-to-Group Spatial Variability values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<code class="docutils literal notranslate"><span class="pre">mne.epochs.Epochs</span></code> | <code class="docutils literal notranslate"><span class="pre">mne.time_frequency.tfr.BaseTFR</span></code>) – The MNE object containing either epochs or time–frequency data.</p></li>
+<li><p><strong>baseline</strong> (<em>tuple</em><em> | </em><em>list</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time interval used for baseline correction. If <cite>None</cite>, no baseline is applied.
+If <cite>obj</cite> is an MNE TFR object, the baseline is applied using <cite>obj.copy().apply_baseline(baseline, mode=”percent”)</cite>.
+If <cite>obj</cite> is an MNE Epochs object, it is applied using <cite>obj.copy().apply_baseline(baseline)</cite>.</p></li>
+<li><p><strong>fmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>metrics</strong> (<em>{&quot;angle&quot;</em><em>, </em><em>&quot;cosine&quot;}</em><em>, </em><em>default=&quot;angle&quot;</em>) – <p>If “angle”, the distance between the mean and each epoch is computed using
+angular distance. The mean is estimated using the Fréchet mean (p = 2).</p>
+<p>If “cosine”, the distance between the mean and each epoch is computed using
+cosine distance. The mean is estimated using an extrinsic mean.</p>
+</p></li>
+<li><p><strong>picks</strong> (<em>str</em><em> | </em><em>array_like</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Channels to include.</p></li>
+<li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If <cite>True</cite>, values are averaged across epochs. If <cite>False</cite>, a value
+is returned for each epoch.
+If <code class="docutils literal notranslate"><span class="pre">average=False</span></code>, the DataFrame contains one entry per channel,
+where each entry consists of a JSON-encoded list representing the
+per-epoch ERD/S values.</p></li>
+<li><p><strong>additional_values</strong> (<em>dict</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Additional columns to append to the output dataframe.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>df</strong> – DataFrame containing sgsv values</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nearby.metrics.spatial.within_trial_spatial">
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.spatial.</span></span><span class="sig-name descname"><span class="pre">within_trial_spatial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'windows'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">windows</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_window_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/spatial.html#within_trial_spatial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.spatial.within_trial_spatial" title="Link to this definition">#</a></dt>
+<dd><p>Compute Within-Trial Spatial Variability values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<code class="docutils literal notranslate"><span class="pre">mne.epochs.Epochs</span></code> | <code class="docutils literal notranslate"><span class="pre">mne.time_frequency.tfr.BaseTFR</span></code>) – The MNE object containing either epochs or time–frequency data.</p></li>
+<li><p><strong>baseline</strong> (<em>tuple</em><em> | </em><em>list</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time interval used for baseline correction. If <cite>None</cite>, no baseline is applied.
+If <cite>obj</cite> is an MNE TFR object, the baseline is applied using <cite>obj.copy().apply_baseline(baseline, mode=”percent”)</cite>.
+If <cite>obj</cite> is an MNE Epochs object, it is applied using <cite>obj.copy().apply_baseline(baseline)</cite>.</p></li>
+<li><p><strong>fmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>metric</strong> (<em>{&quot;angle&quot;</em><em>, </em><em>&quot;cosine&quot;}</em><em>, </em><em>default=&quot;angle&quot;</em>) – <p>If “angle”, the distance between the mean and each epoch is computed using
+angular distance. The mean is estimated using the Fréchet mean (p = 2).</p>
+<p>If “cosine”, the distance between the mean and each epoch is computed using
+cosine distance. The mean is estimated using an extrinsic mean.</p>
+</p></li>
+<li><p><strong>picks</strong> (<em>str</em><em> | </em><em>array_like</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Channels to include.</p></li>
+<li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If <cite>True</cite>, values are averaged across epochs. If <cite>False</cite>, a value
+is returned for each epoch.
+If <code class="docutils literal notranslate"><span class="pre">average=False</span></code>, the DataFrame contains one entry per channel,
+where each entry consists of a JSON-encoded list representing the
+per-epoch ERD/S values.</p></li>
+<li><p><strong>additional_values</strong> (<em>dict</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Additional columns to append to the output dataframe.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>df</strong> – DataFrame containing variability values</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nearby.metrics.spatial.wtsv">
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.spatial.</span></span><span class="sig-name descname"><span class="pre">wtsv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'windows'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">windows</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_window_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/spatial.html#wtsv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.spatial.wtsv" title="Link to this definition">#</a></dt>
+<dd><p>Compute Within-Trial Spatial Variability values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<code class="docutils literal notranslate"><span class="pre">mne.epochs.Epochs</span></code> | <code class="docutils literal notranslate"><span class="pre">mne.time_frequency.tfr.BaseTFR</span></code>) – The MNE object containing either epochs or time–frequency data.</p></li>
+<li><p><strong>baseline</strong> (<em>tuple</em><em> | </em><em>list</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time interval used for baseline correction. If <cite>None</cite>, no baseline is applied.
+If <cite>obj</cite> is an MNE TFR object, the baseline is applied using <cite>obj.copy().apply_baseline(baseline, mode=”percent”)</cite>.
+If <cite>obj</cite> is an MNE Epochs object, it is applied using <cite>obj.copy().apply_baseline(baseline)</cite>.</p></li>
+<li><p><strong>fmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>metric</strong> (<em>{&quot;angle&quot;</em><em>, </em><em>&quot;cosine&quot;}</em><em>, </em><em>default=&quot;angle&quot;</em>) – <p>If “angle”, the distance between the mean and each epoch is computed using
 angular distance. The mean is estimated using the Fréchet mean (p = 2).</p>
 <p>If “cosine”, the distance between the mean and each epoch is computed using
 cosine distance. The mean is estimated using an extrinsic mean.</p>
@@ -578,6 +876,138 @@ per-epoch ERD/S values.</p></li>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>df</strong> – DataFrame containing attv values for each channel.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nearby.metrics.temporal.between_average_temporal">
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.temporal.</span></span><span class="sig-name descname"><span class="pre">between_average_temporal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objs_B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/temporal.html#between_average_temporal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.temporal.between_average_temporal" title="Link to this definition">#</a></dt>
+<dd><p>Compute Between-Average Temporal (BATemp) values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<code class="docutils literal notranslate"><span class="pre">mne.evoked.Evoked</span></code> | <code class="docutils literal notranslate"><span class="pre">mne.time_frequency.tfr.AverageTFR</span></code>) – The MNE object containing either epochs or time–frequency data.</p></li>
+<li><p><strong>baseline</strong> (<em>tuple</em><em> | </em><em>list</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time interval used for baseline correction. If <cite>None</cite>, no baseline is applied.
+If <cite>obj</cite> is an MNE TFR object, the baseline is applied using <cite>obj.copy().apply_baseline(baseline, mode=”percent”)</cite>.
+If <cite>obj</cite> is an MNE Epochs object, it is applied using <cite>obj.copy().apply_baseline(baseline)</cite>.</p></li>
+<li><p><strong>fmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>picks</strong> (<em>str</em><em> | </em><em>array_like</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Channels to include.</p></li>
+<li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If <cite>True</cite>, values are averaged across epochs. If <cite>False</cite>, a value
+is returned for each epoch.
+If <code class="docutils literal notranslate"><span class="pre">average=False</span></code>, the DataFrame contains one entry per channel,
+where each entry consists of a JSON-encoded list representing the
+per-epoch ERD/S values.</p></li>
+<li><p><strong>additional_values</strong> (<em>dict</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Additional columns to append to the output dataframe.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>df</strong> – DataFrame containing variability values for each channel.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nearby.metrics.temporal.between_trial_temporal">
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.temporal.</span></span><span class="sig-name descname"><span class="pre">between_trial_temporal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/temporal.html#between_trial_temporal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.temporal.between_trial_temporal" title="Link to this definition">#</a></dt>
+<dd><p>Compute Between-Trial Temporal (BTTemp) Variability values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<code class="docutils literal notranslate"><span class="pre">mne.epochs.Epochs</span></code> | <code class="docutils literal notranslate"><span class="pre">mne.time_frequency.tfr.BaseTFR</span></code>) – The MNE object containing either epochs or time–frequency data.</p></li>
+<li><p><strong>baseline</strong> (<em>tuple</em><em> | </em><em>list</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time interval used for baseline correction. If <cite>None</cite>, no baseline is applied.
+If <cite>obj</cite> is an MNE TFR object, the baseline is applied using <cite>obj.copy().apply_baseline(baseline, mode=”percent”)</cite>.
+If <cite>obj</cite> is an MNE Epochs object, it is applied using <cite>obj.copy().apply_baseline(baseline)</cite>.</p></li>
+<li><p><strong>fmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>picks</strong> (<em>str</em><em> | </em><em>array_like</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Channels to include.</p></li>
+<li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If <cite>True</cite>, values are averaged across epochs. If <cite>False</cite>, a value
+is returned for each epoch.
+If <code class="docutils literal notranslate"><span class="pre">average=False</span></code>, the DataFrame contains one entry per channel,
+where each entry consists of a JSON-encoded list representing the
+per-epoch ERD/S values.</p></li>
+<li><p><strong>additional_values</strong> (<em>dict</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Additional columns to append to the output dataframe.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>df</strong> – DataFrame containing variability values for each channel.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nearby.metrics.temporal.sgtv">
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.temporal.</span></span><span class="sig-name descname"><span class="pre">sgtv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objs_B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/temporal.html#sgtv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.temporal.sgtv" title="Link to this definition">#</a></dt>
+<dd><p>Compute SG_ATTV (Subject-to-Group Within-Trial Temporal Variability) values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<code class="docutils literal notranslate"><span class="pre">mne.epochs.Epochs</span></code> | <code class="docutils literal notranslate"><span class="pre">mne.time_frequency.tfr.BaseTFR</span></code>) – The MNE object containing either epochs or time–frequency data.</p></li>
+<li><p><strong>baseline</strong> (<em>tuple</em><em> | </em><em>list</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time interval used for baseline correction. If <cite>None</cite>, no baseline is applied.
+If <cite>obj</cite> is an MNE TFR object, the baseline is applied using <cite>obj.copy().apply_baseline(baseline, mode=”percent”)</cite>.
+If <cite>obj</cite> is an MNE Epochs object, it is applied using <cite>obj.copy().apply_baseline(baseline)</cite>.</p></li>
+<li><p><strong>fmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>picks</strong> (<em>str</em><em> | </em><em>array_like</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Channels to include.</p></li>
+<li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If <cite>True</cite>, values are averaged across epochs. If <cite>False</cite>, a value
+is returned for each epoch.
+If <code class="docutils literal notranslate"><span class="pre">average=False</span></code>, the DataFrame contains one entry per channel,
+where each entry consists of a JSON-encoded list representing the
+per-epoch ERD/S values.</p></li>
+<li><p><strong>additional_values</strong> (<em>dict</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Additional columns to append to the output dataframe.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>df</strong> – DataFrame containing wttv values for each channel.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nearby.metrics.temporal.within_trial_temporal">
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.temporal.</span></span><span class="sig-name descname"><span class="pre">within_trial_temporal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/temporal.html#within_trial_temporal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.temporal.within_trial_temporal" title="Link to this definition">#</a></dt>
+<dd><p>Compute Within-Trial Temporal (WTTemp) Variability values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<code class="docutils literal notranslate"><span class="pre">mne.epochs.Epochs</span></code> | <code class="docutils literal notranslate"><span class="pre">mne.time_frequency.tfr.EpochsTFR</span></code>) – The MNE object containing either epochs or time–frequency data.</p></li>
+<li><p><strong>baseline</strong> (<em>tuple</em><em> | </em><em>list</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time interval used for baseline correction. If <cite>None</cite>, no baseline is applied.
+If <cite>obj</cite> is an MNE TFR object, the baseline is applied using <cite>obj.copy().apply_baseline(baseline, mode=”percent”)</cite>.
+If <cite>obj</cite> is an MNE Epochs object, it is applied using <cite>obj.copy().apply_baseline(baseline)</cite>.</p></li>
+<li><p><strong>fmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency range of interest. Only used when <cite>obj</cite> is a TFR object.</p></li>
+<li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time range of interest, in seconds.</p></li>
+<li><p><strong>picks</strong> (<em>str</em><em> | </em><em>array_like</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Channels to include.</p></li>
+<li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If <cite>True</cite>, values are averaged across epochs. If <cite>False</cite>, a value
+is returned for each epoch.
+If <code class="docutils literal notranslate"><span class="pre">average=False</span></code>, the DataFrame contains one entry per channel,
+where each entry consists of a JSON-encoded list representing the
+per-epoch ERD/S values.</p></li>
+<li><p><strong>additional_values</strong> (<em>dict</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Additional columns to append to the output dataframe.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>df</strong> – DataFrame containing variability values for each channel.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>pandas.DataFrame</p>
@@ -654,21 +1084,30 @@ per-epoch ERD/S values.</p></li>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-nearby.metrics.erds">nearby.metrics.erds module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.erds.me"><code class="docutils literal notranslate"><span class="pre">me()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.erds.smeat"><code class="docutils literal notranslate"><span class="pre">smeat()</span></code></a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-nearby.metrics.frequency">nearby.metrics.frequency module</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.frequency.atfv"><code class="docutils literal notranslate"><span class="pre">atfv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.frequency.between_average_frequency"><code class="docutils literal notranslate"><span class="pre">between_average_frequency()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.frequency.between_trial_frequency"><code class="docutils literal notranslate"><span class="pre">between_trial_frequency()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.frequency.sgfv"><code class="docutils literal notranslate"><span class="pre">sgfv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.frequency.within_trial_frequency"><code class="docutils literal notranslate"><span class="pre">within_trial_frequency()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.frequency.wtfv"><code class="docutils literal notranslate"><span class="pre">wtfv()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-nearby.metrics.spatial">nearby.metrics.spatial module</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.spatial.atsv"><code class="docutils literal notranslate"><span class="pre">atsv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.spatial.between_average_spatial"><code class="docutils literal notranslate"><span class="pre">between_average_spatial()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.spatial.between_trial_spatial"><code class="docutils literal notranslate"><span class="pre">between_trial_spatial()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.spatial.sgsv"><code class="docutils literal notranslate"><span class="pre">sgsv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.spatial.within_trial_spatial"><code class="docutils literal notranslate"><span class="pre">within_trial_spatial()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.spatial.wtsv"><code class="docutils literal notranslate"><span class="pre">wtsv()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-nearby.metrics.temporal">nearby.metrics.temporal module</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.temporal.attv"><code class="docutils literal notranslate"><span class="pre">attv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.temporal.between_average_temporal"><code class="docutils literal notranslate"><span class="pre">between_average_temporal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.temporal.between_trial_temporal"><code class="docutils literal notranslate"><span class="pre">between_trial_temporal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.temporal.sgtv"><code class="docutils literal notranslate"><span class="pre">sgtv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.temporal.within_trial_temporal"><code class="docutils literal notranslate"><span class="pre">within_trial_temporal()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.temporal.wttv"><code class="docutils literal notranslate"><span class="pre">wttv()</span></code></a></li>
 </ul>
 </li>

@@ -18,15 +18,30 @@
 .. _sphx_glr_auto_examples_example_variability_ERP.py:
 
 
-Example: Variability of ERP in a auditory task
+Example: Intra-Subject Variability of ERP
 ============================================
 
-.. GENERATED FROM PYTHON SOURCE LINES 7-12
+.. GENERATED FROM PYTHON SOURCE LINES 5-10
+
+.. code-block:: Python
+
+
+    # Authors: Simon Kojima <simon.kojima@inria.fr>
+    #
+    # License: BSD (3-clause)
+
+
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 11-15
 
 .. code-block:: Python
 
     import mne
-    import pandas as pd
     import nearby
     from moabb.datasets import Kojima2024B
 
@@ -37,7 +52,7 @@ Example: Variability of ERP in a auditory task
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-52
+.. GENERATED FROM PYTHON SOURCE LINES 16-55
 
 .. code-block:: Python
 
@@ -88,7 +103,7 @@ Example: Variability of ERP in a auditory task
 
  .. code-block:: none
 
-      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 94312.89it/s]
+      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 118987.35it/s]
     Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-1_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424519  =      0.000 ...   424.519 secs...
@@ -198,77 +213,43 @@ Example: Variability of ERP in a auditory task
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 53-66
+.. GENERATED FROM PYTHON SOURCE LINES 56-70
 
 .. code-block:: Python
 
     """
-    Compute Variability Metrics
-
-    # ME
+    # Within-Trial Temporal (WTTemp)
     """
-    tmin, tmax = 0.2, 0.4
-
-    me = nearby.metrics.me(
-        epochs["Target"], tmin=tmin, tmax=tmax, picks=["Cz", "CPz", "Pz"]
-    )
-
-    me = me["me"].mean()
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 67-79
-
-.. code-block:: Python
-
-    """
-    # SMEAT
-    """
-    smeat = nearby.metrics.smeat(
+    wt_temp = nearby.metrics.within_trial_temporal(
         epochs["Target"],
         tmin=tmin,
         tmax=tmax,
         picks=["Cz", "CPz", "Pz"],
     )
 
-    smeat = smeat["smeat"].mean()
+    print(wt_temp)
+
+    exit()
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+.. code-block:: pytb
+
+    Traceback (most recent call last):
+      File "/home/skojima/git/nearby/examples/example_variability_ERP.py", line 59, in <module>
+        wt_temp = nearby.metrics.within_trial_temporal(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/skojima/git/nearby/nearby/metrics/temporal.py", line 103, in within_trial_temporal
+        sd = np.std(data, axis=1)
+                    ^^^^
+    UnboundLocalError: cannot access local variable 'data' where it is not associated with a value
 
 
 
 
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 80-92
-
-.. code-block:: Python
-
-    """
-    # WTTV
-    """
-    wttv = nearby.metrics.wttv(
-        epochs["Target"],
-        tmin=tmin,
-        tmax=tmax,
-        picks=["Cz", "CPz", "Pz"],
-    )
-
-    wttv = wttv["wttv"].mean()
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 93-105
+.. GENERATED FROM PYTHON SOURCE LINES 71-83
 
 .. code-block:: Python
 
@@ -285,13 +266,7 @@ Example: Variability of ERP in a auditory task
     attv = attv["attv"].mean()
 
 
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 106-118
+.. GENERATED FROM PYTHON SOURCE LINES 84-96
 
 .. code-block:: Python
 
@@ -308,13 +283,7 @@ Example: Variability of ERP in a auditory task
     atsva = atsva["atsva"].mean()
 
 
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 119-129
+.. GENERATED FROM PYTHON SOURCE LINES 97-107
 
 .. code-block:: Python
 
@@ -330,26 +299,9 @@ Example: Variability of ERP in a auditory task
     print(f" - ATSVA : {atsva:10.6f}")
 
 
-
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    # Variability Metrics
-     - ME    :   0.547908
-     - SMEAT :   5.598208
-     - WTTV  :   4.743322
-     - ATTV  :  34.486727
-     - ATSVA :   1.474609
-
-
-
-
-
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 13.408 seconds)
+   **Total running time of the script:** (0 minutes 11.918 seconds)
 
 
 .. _sphx_glr_download_auto_examples_example_variability_ERP.py:

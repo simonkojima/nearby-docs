@@ -1,0 +1,6 @@
+﻿nearby.mean.mean\_frechet\_p2
+=============================
+
+.. currentmodule:: nearby.mean
+
+.. autofunction:: mean_frechet_p2

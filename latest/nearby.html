@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>nearby package &#8212; Nearby 0.0.2 documentation</title>
+    <title>nearby package &#8212; Nearby 0.0.4 documentation</title>
   
   
   
@@ -42,14 +42,14 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=e3a6060d"></script>
+    <script src="_static/documentation_options.js?v=8c5712d9"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'nearby';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.2';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.4';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
@@ -123,8 +123,8 @@
       
     
     
-    <img src="_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.2 documentation - Home"/>
-    <img src="_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.2 documentation - Home"/>
+    <img src="_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.4 documentation - Home"/>
+    <img src="_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.4 documentation - Home"/>
   
   
 </a></div>
@@ -402,7 +402,6 @@
 <li class="toctree-l3"><a class="reference internal" href="nearby.mean.html#nearby.mean.mean.get_random_unit_vec"><code class="docutils literal notranslate"><span class="pre">get_random_unit_vec()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="nearby.mean.html#nearby.mean.mean.mean_extrinsic"><code class="docutils literal notranslate"><span class="pre">mean_extrinsic()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="nearby.mean.html#nearby.mean.mean.mean_frechet_p2"><code class="docutils literal notranslate"><span class="pre">mean_frechet_p2()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="nearby.mean.html#nearby.mean.mean.mean_frechet_p2_old"><code class="docutils literal notranslate"><span class="pre">mean_frechet_p2_old()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="nearby.mean.html#module-nearby.mean">Module contents</a></li>
@@ -410,21 +409,30 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="nearby.metrics.html">nearby.metrics package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="nearby.metrics.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nearby.metrics.html#module-nearby.metrics.erds">nearby.metrics.erds module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.erds.me"><code class="docutils literal notranslate"><span class="pre">me()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.erds.smeat"><code class="docutils literal notranslate"><span class="pre">smeat()</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="nearby.metrics.html#module-nearby.metrics.frequency">nearby.metrics.frequency module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.frequency.atfv"><code class="docutils literal notranslate"><span class="pre">atfv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.frequency.between_average_frequency"><code class="docutils literal notranslate"><span class="pre">between_average_frequency()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.frequency.between_trial_frequency"><code class="docutils literal notranslate"><span class="pre">between_trial_frequency()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.frequency.sgfv"><code class="docutils literal notranslate"><span class="pre">sgfv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.frequency.within_trial_frequency"><code class="docutils literal notranslate"><span class="pre">within_trial_frequency()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.frequency.wtfv"><code class="docutils literal notranslate"><span class="pre">wtfv()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="nearby.metrics.html#module-nearby.metrics.spatial">nearby.metrics.spatial module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.spatial.atsv"><code class="docutils literal notranslate"><span class="pre">atsv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.spatial.between_average_spatial"><code class="docutils literal notranslate"><span class="pre">between_average_spatial()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.spatial.between_trial_spatial"><code class="docutils literal notranslate"><span class="pre">between_trial_spatial()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.spatial.sgsv"><code class="docutils literal notranslate"><span class="pre">sgsv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.spatial.within_trial_spatial"><code class="docutils literal notranslate"><span class="pre">within_trial_spatial()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.spatial.wtsv"><code class="docutils literal notranslate"><span class="pre">wtsv()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="nearby.metrics.html#module-nearby.metrics.temporal">nearby.metrics.temporal module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.temporal.attv"><code class="docutils literal notranslate"><span class="pre">attv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.temporal.between_average_temporal"><code class="docutils literal notranslate"><span class="pre">between_average_temporal()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.temporal.between_trial_temporal"><code class="docutils literal notranslate"><span class="pre">between_trial_temporal()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.temporal.sgtv"><code class="docutils literal notranslate"><span class="pre">sgtv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.temporal.within_trial_temporal"><code class="docutils literal notranslate"><span class="pre">within_trial_temporal()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="nearby.metrics.html#nearby.metrics.temporal.wttv"><code class="docutils literal notranslate"><span class="pre">wttv()</span></code></a></li>
 </ul>
 </li>
@@ -435,13 +443,17 @@
 <li class="toctree-l2"><a class="reference internal" href="nearby.utils.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nearby.utils.html#module-nearby.utils.core">nearby.utils.core module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="nearby.utils.html#nearby.utils.core.add_values_to_df"><code class="docutils literal notranslate"><span class="pre">add_values_to_df()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.utils.html#nearby.utils.core.auto_windows"><code class="docutils literal notranslate"><span class="pre">auto_windows()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.utils.html#nearby.utils.core.check_averaged_obj_type"><code class="docutils literal notranslate"><span class="pre">check_averaged_obj_type()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="nearby.utils.html#nearby.utils.core.check_obj_type"><code class="docutils literal notranslate"><span class="pre">check_obj_type()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.utils.html#nearby.utils.core.get_obj_type"><code class="docutils literal notranslate"><span class="pre">get_obj_type()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="nearby.utils.html#module-nearby.utils.mne_utils">nearby.utils.mne_utils module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="nearby.utils.html#nearby.utils.mne_utils.concatenate_events"><code class="docutils literal notranslate"><span class="pre">concatenate_events()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="nearby.utils.html#nearby.utils.mne_utils.concatenate_tfrs"><code class="docutils literal notranslate"><span class="pre">concatenate_tfrs()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="nearby.utils.html#nearby.utils.mne_utils.concatrenate_event_ids"><code class="docutils literal notranslate"><span class="pre">concatrenate_event_ids()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nearby.utils.html#nearby.utils.mne_utils.get_group_wise_tfrs"><code class="docutils literal notranslate"><span class="pre">get_group_wise_tfrs()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="nearby.utils.html#nearby.utils.mne_utils.is_event_ids_identical"><code class="docutils literal notranslate"><span class="pre">is_event_ids_identical()</span></code></a></li>
 </ul>
 </li>

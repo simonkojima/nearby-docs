@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Example: Variability of ERDS in a motor-imagery task &#8212; Nearby 0.0.2 documentation</title>
+    <title>Example: Intra-Subject Variability of ERDS in a motor-imagery task &#8212; Nearby 0.0.4 documentation</title>
   
   
   
@@ -42,21 +42,21 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e3a6060d"></script>
+    <script src="../_static/documentation_options.js?v=8c5712d9"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'auto_examples/example_variability_MI';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.2';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.4';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="How to Install" href="../install.html" />
-    <link rel="prev" title="Example: Variability of ERP in a auditory task" href="example_variability_ERP.html" />
+    <link rel="prev" title="Example: Intra-Subject Variability of ERP" href="_variability_ERP.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -125,8 +125,8 @@
       
     
     
-    <img src="../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.2 documentation - Home"/>
-    <img src="../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.2 documentation - Home"/>
+    <img src="../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.4 documentation - Home"/>
+    <img src="../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.4 documentation - Home"/>
   
   
 </a></div>
@@ -322,8 +322,13 @@
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="example_variability_ERP.html">Example: Variability of ERP in a auditory task</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Example: Variability of ERDS in a motor-imagery task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_variability_ERP.html">Example: Intra-Subject Variability of ERP</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Example: Intra-Subject Variability of ERDS in a motor-imagery task</a></li>
+
+
+
+
+
 </ul>
 </div>
 </nav></div>
@@ -367,7 +372,7 @@
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">Examples</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Example: Variability of ERDS in a motor-imagery task</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Example: Intra-Subject Variability of ERDS in a motor-imagery task</span></li>
   </ul>
 </nav>
 </div>
@@ -389,24 +394,28 @@
 <p><a class="reference internal" href="#sphx-glr-download-auto-examples-example-variability-mi-py"><span class="std std-ref">Go to the end</span></a>
 to download the full example code.</p>
 </div>
-<section class="sphx-glr-example-title" id="example-variability-of-erds-in-a-motor-imagery-task">
-<span id="sphx-glr-auto-examples-example-variability-mi-py"></span><h1>Example: Variability of ERDS in a motor-imagery task<a class="headerlink" href="#example-variability-of-erds-in-a-motor-imagery-task" title="Link to this heading">#</a></h1>
+<section class="sphx-glr-example-title" id="example-intra-subject-variability-of-erds-in-a-motor-imagery-task">
+<span id="sphx-glr-auto-examples-example-variability-mi-py"></span><h1>Example: Intra-Subject Variability of ERDS in a motor-imagery task<a class="headerlink" href="#example-intra-subject-variability-of-erds-in-a-motor-imagery-task" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Authors: Simon Kojima &lt;simon.kojima@inria.fr&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># License: BSD (3-clause)</span>
+</pre></div>
+</div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">mne</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">nearby</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">moabb.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dreyer2023</span>
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Extract Epochs</span>
-<span class="sd">&quot;&quot;&quot;</span>
-
-<span class="n">subject</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">l_freq</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">h_freq</span> <span class="o">=</span> <span class="mi">45</span>
+</section>
+<section id="extract-epochs">
+<h1>Extract Epochs<a class="headerlink" href="#extract-epochs" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">subject</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">l_freq</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">h_freq</span> <span class="o">=</span> <span class="mi">13</span>
 <span class="n">resample</span> <span class="o">=</span> <span class="mi">128</span>
-<span class="n">tmin</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.0</span>
-<span class="n">tmax</span> <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">tmin</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.5</span>
+<span class="n">tmax</span> <span class="o">=</span> <span class="mf">5.5</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">Dreyer2023</span><span class="p">()</span>
 
@@ -445,70 +454,74 @@ to download the full example code.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
-9it [00:00, 19045.78it/s]
+9it [00:00, 21845.33it/s]
 Reading 0 ... 230399  =      0.000 ...   449.998 secs...
 Reading 0 ... 230399  =      0.000 ...   449.998 secs...
 Reading 0 ... 230911  =      0.000 ...   450.998 secs...
 Reading 0 ... 230911  =      0.000 ...   450.998 secs...
 Reading 0 ... 230911  =      0.000 ...   450.998 secs...
-No stim channel nor annotations found, skipping setting annotations.
-No stim channel nor annotations found, skipping setting annotations.
-No stim channel nor annotations found, skipping setting annotations.
-No stim channel nor annotations found, skipping setting annotations.
-No stim channel nor annotations found, skipping setting annotations.
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
 Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 45 Hz
+Setting up band-pass filter from 7 - 13 Hz
 
 IIR filter parameters
 ---------------------
 Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
 - Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 45.00 Hz: -6.02, -6.02 dB
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
 Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 45 Hz
+Setting up band-pass filter from 7 - 13 Hz
 
 IIR filter parameters
 ---------------------
 Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
 - Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 45.00 Hz: -6.02, -6.02 dB
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
 Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 45 Hz
+Setting up band-pass filter from 7 - 13 Hz
 
 IIR filter parameters
 ---------------------
 Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
 - Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 45.00 Hz: -6.02, -6.02 dB
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
 Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 45 Hz
+Setting up band-pass filter from 7 - 13 Hz
 
 IIR filter parameters
 ---------------------
 Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
 - Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 45.00 Hz: -6.02, -6.02 dB
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
 Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 45 Hz
+Setting up band-pass filter from 7 - 13 Hz
 
 IIR filter parameters
 ---------------------
 Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
 - Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 45.00 Hz: -6.02, -6.02 dB
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
-Used Annotations descriptions: [np.str_(&#39;1010&#39;), np.str_(&#39;32769&#39;), np.str_(&#39;32770&#39;), np.str_(&#39;33281&#39;), np.str_(&#39;33282&#39;), np.str_(&#39;33284&#39;), np.str_(&#39;768&#39;), np.str_(&#39;781&#39;), np.str_(&#39;786&#39;), np.str_(&#39;800&#39;), np.str_(&#39;left_hand&#39;), np.str_(&#39;right_hand&#39;)]
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Used Annotations descriptions: [np.str_(&#39;left_hand&#39;), np.str_(&#39;right_hand&#39;)]
 Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
-Multiple event values for single event times found. Creating new event value to reflect simultaneous events.
 Not setting metadata
-1017 matching events found
+240 matching events found
 No baseline correction applied
 0 projection items activated
-Using data from preloaded Raw for 200 events and 3585 original time points ...
+Using data from preloaded Raw for 240 events and 4097 original time points ...
 0 bad epochs dropped
 </pre></div>
 </div>
@@ -660,9 +673,9 @@ this file apply (plus whatever default styling the IDE applies).
 
 
 
-<tr class="mne-repr-section-header general-7c49cb95-b715-467c-9a7d-db4c37d708a5"
+<tr class="mne-repr-section-header general-e0f79c06-3a35-4b6b-9fd4-f68463a9a593"
      title="Hide section"
-    onclick="toggleVisibility('general-7c49cb95-b715-467c-9a7d-db4c37d708a5')">
+    onclick="toggleVisibility('general-e0f79c06-3a35-4b6b-9fd4-f68463a9a593')">
     <th class="mne-repr-section-toggle">
         <button >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -674,19 +687,19 @@ this file apply (plus whatever default styling the IDE applies).
 </tr>
 
 
-<tr class="repr-element general-7c49cb95-b715-467c-9a7d-db4c37d708a5 ">
+<tr class="repr-element general-e0f79c06-3a35-4b6b-9fd4-f68463a9a593 ">
     <td class="mne-repr-section-toggle"></td>
     <td>MNE object type</td>
     <td>Epochs</td>
 </tr>
-<tr class="repr-element general-7c49cb95-b715-467c-9a7d-db4c37d708a5 ">
+<tr class="repr-element general-e0f79c06-3a35-4b6b-9fd4-f68463a9a593 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Measurement date</td>
 
     <td>2024-09-20 at 17:57:40 UTC</td>
 
 </tr>
-<tr class="repr-element general-7c49cb95-b715-467c-9a7d-db4c37d708a5 ">
+<tr class="repr-element general-e0f79c06-3a35-4b6b-9fd4-f68463a9a593 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Participant</td>
 
@@ -695,7 +708,7 @@ this file apply (plus whatever default styling the IDE applies).
 
 
 </tr>
-<tr class="repr-element general-7c49cb95-b715-467c-9a7d-db4c37d708a5 ">
+<tr class="repr-element general-e0f79c06-3a35-4b6b-9fd4-f68463a9a593 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Experimenter</td>
 
@@ -710,9 +723,9 @@ this file apply (plus whatever default styling the IDE applies).
 
 
 
-<tr class="mne-repr-section-header acquisition-485d4a02-5d20-45ae-a058-fe6259893f54"
+<tr class="mne-repr-section-header acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3"
      title="Hide section"
-    onclick="toggleVisibility('acquisition-485d4a02-5d20-45ae-a058-fe6259893f54')">
+    onclick="toggleVisibility('acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3')">
     <th class="mne-repr-section-toggle">
         <button >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -727,23 +740,23 @@ this file apply (plus whatever default styling the IDE applies).
 
 
 
-<tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
+<tr class="repr-element acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Total number of events</td>
-    <td>200</td>
+    <td>240</td>
 </tr>
 
 
-<tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
+<tr class="repr-element acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Events counts</td>
 
     <td>
 
-        left_hand: 100
+        left_hand: 120
         <br />
 
-        right_hand: 100
+        right_hand: 120
 
 
     </td>
@@ -751,35 +764,35 @@ this file apply (plus whatever default styling the IDE applies).
 </tr>
 
 
-<tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
+<tr class="repr-element acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Time range</td>
-    <td>-2.000 – 4.992 s</td>
+    <td>-2.500 – 5.492 s</td>
 </tr>
 
 
-<tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
+<tr class="repr-element acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Baseline</td>
     <td>off</td>
 </tr>
 
 
-<tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
+<tr class="repr-element acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Sampling frequency</td>
     <td>128.00 Hz</td>
 </tr>
 
 
-<tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
+<tr class="repr-element acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Time points</td>
-    <td>896</td>
+    <td>1,024</td>
 </tr>
 
 
-<tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
+<tr class="repr-element acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Metadata</td>
     <td>No metadata set</td>
@@ -793,9 +806,9 @@ this file apply (plus whatever default styling the IDE applies).
 
 
 
-<tr class="mne-repr-section-header channels-525bfd38-9190-49a1-bdf2-60b0d9026394"
+<tr class="mne-repr-section-header channels-e585a175-fe08-4d69-a122-05b508e90622"
      title="Hide section"
-    onclick="toggleVisibility('channels-525bfd38-9190-49a1-bdf2-60b0d9026394')">
+    onclick="toggleVisibility('channels-e585a175-fe08-4d69-a122-05b508e90622')">
     <th class="mne-repr-section-toggle">
         <button >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -808,7 +821,7 @@ this file apply (plus whatever default styling the IDE applies).
 
 
 
-<tr class="repr-element channels-525bfd38-9190-49a1-bdf2-60b0d9026394 ">
+<tr class="repr-element channels-e585a175-fe08-4d69-a122-05b508e90622 ">
     <td class="mne-repr-section-toggle"></td>
     <td>EEG</td>
     <td>
@@ -821,7 +834,7 @@ this file apply (plus whatever default styling the IDE applies).
 </tr>
 
 
-<tr class="repr-element channels-525bfd38-9190-49a1-bdf2-60b0d9026394 ">
+<tr class="repr-element channels-e585a175-fe08-4d69-a122-05b508e90622 ">
     <td class="mne-repr-section-toggle"></td>
     <td>Head & sensor digitization</td>
 
@@ -836,9 +849,9 @@ this file apply (plus whatever default styling the IDE applies).
 
 
 
-<tr class="mne-repr-section-header filters-9fa6112a-d53e-4bfc-8d65-769deb905fc2"
+<tr class="mne-repr-section-header filters-129aa263-0fee-4d9b-bfa8-4063a91eb73a"
      title="Hide section"
-    onclick="toggleVisibility('filters-9fa6112a-d53e-4bfc-8d65-769deb905fc2')">
+    onclick="toggleVisibility('filters-129aa263-0fee-4d9b-bfa8-4063a91eb73a')">
     <th class="mne-repr-section-toggle">
         <button >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -850,28 +863,27 @@ this file apply (plus whatever default styling the IDE applies).
 </tr>
 
 
-<tr class="repr-element filters-9fa6112a-d53e-4bfc-8d65-769deb905fc2 ">
+<tr class="repr-element filters-129aa263-0fee-4d9b-bfa8-4063a91eb73a ">
     <td class="mne-repr-section-toggle"></td>
     <td>Highpass</td>
-    <td>1.00 Hz</td>
+    <td>7.00 Hz</td>
 </tr>
 
 
-<tr class="repr-element filters-9fa6112a-d53e-4bfc-8d65-769deb905fc2 ">
+<tr class="repr-element filters-129aa263-0fee-4d9b-bfa8-4063a91eb73a ">
     <td class="mne-repr-section-toggle"></td>
     <td>Lowpass</td>
-    <td>45.00 Hz</td>
+    <td>13.00 Hz</td>
 </tr>
 
 
 </table>
 </div>
 <br />
-<br /><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Extract ERDS</span>
-<span class="sd">&quot;&quot;&quot;</span>
-
-<span class="n">baseline</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+<br /></section>
+<section id="extract-erds">
+<h1>Extract ERDS<a class="headerlink" href="#extract-erds" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">baseline</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
 
 <span class="n">tfrs</span> <span class="o">=</span> <span class="n">epochs</span><span class="o">.</span><span class="n">compute_tfr</span><span class="p">(</span>
     <span class="n">method</span><span class="o">=</span><span class="s2">&quot;multitaper&quot;</span><span class="p">,</span>
@@ -890,50 +902,26 @@ this file apply (plus whatever default styling the IDE applies).
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    2.6s
-[Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    3.3s remaining:    1.7s
-[Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    3.7s remaining:    0.5s
-[Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    3.7s finished
+[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    1.7s
+[Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    2.1s remaining:    1.0s
+[Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    2.1s remaining:    0.3s
+[Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    2.2s finished
 Applying baseline correction (mode: percent)
-&lt;Power Estimates from Epochs, multitaper method | 200 epochs × 27 channels × 45 freqs × 448 times, 1.0 - 45.0 Hz, -2.00 - 4.98 s, 830.6 MiB&gt;
+&lt;Power Estimates from Epochs, multitaper method | 240 epochs × 27 channels × 7 freqs × 512 times, 7.0 - 13.0 Hz, -2.50 - 5.48 s, 177.2 MiB&gt;
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Compute Variability Metrics</span>
-
-<span class="sd"># ME</span>
-<span class="sd">&quot;&quot;&quot;</span>
+</section>
+<section id="within-trial-variability-metrics">
+<h1>Within-Trial Variability Metrics<a class="headerlink" href="#within-trial-variability-metrics" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">13</span>
-<span class="n">fmin_atfv</span><span class="p">,</span> <span class="n">fmax_atfv</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">30</span>
-<span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">4.5</span>
-
-<span class="n">me_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">me</span><span class="p">(</span>
-    <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">],</span>
-    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
-    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
-    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
-    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
-    <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C4&quot;</span><span class="p">,</span>
-    <span class="n">additional_values</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;left&quot;</span><span class="p">},</span>
-<span class="p">)</span>
-<span class="n">me_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">me</span><span class="p">(</span>
-    <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">],</span>
-    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
-    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
-    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
-    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
-    <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C3&quot;</span><span class="p">,</span>
-    <span class="n">additional_values</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;right&quot;</span><span class="p">},</span>
-<span class="p">)</span>
-
-<span class="n">me</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">me_left</span><span class="p">,</span> <span class="n">me_right</span><span class="p">])[</span><span class="s2">&quot;me&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">interval</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">dataset</span><span class="o">.</span><span class="n">interval</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd"># SMEAT</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="n">smeat_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">smeat</span><span class="p">(</span>
+<section id="within-trial-temporal-variability-wttemp">
+<h2>Within-Trial Temporal Variability (WTTemp)<a class="headerlink" href="#within-trial-temporal-variability-wttemp" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">wt_temp_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">within_trial_temporal</span><span class="p">(</span>
     <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">],</span>
     <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
     <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
@@ -941,7 +929,7 @@ Applying baseline correction (mode: percent)
     <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
     <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C4&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">smeat_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">smeat</span><span class="p">(</span>
+<span class="n">wt_temp_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">within_trial_temporal</span><span class="p">(</span>
     <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">],</span>
     <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
     <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
@@ -949,14 +937,87 @@ Applying baseline correction (mode: percent)
     <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
     <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C3&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-
-<span class="n">smeat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">smeat_left</span><span class="p">,</span> <span class="n">smeat_right</span><span class="p">])[</span><span class="s2">&quot;smeat&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">wt_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">wt_temp_left</span><span class="p">,</span> <span class="n">wt_temp_right</span><span class="p">])</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;WTTemp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wt_temp</span><span class="p">[</span><span class="s2">&quot;within_trial_temporal&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;WTTemp: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;WTTemp&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd"># WTTV</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="n">wttv_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">wttv</span><span class="p">(</span>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>WTTemp: 0.386
+</pre></div>
+</div>
+</section>
+<section id="within-trial-spatial-variability-wtspat">
+<h2>Within-Trial Spatial Variability (WTSpat)<a class="headerlink" href="#within-trial-spatial-variability-wtspat" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">wt_spat_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">within_trial_spatial</span><span class="p">(</span>
+    <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">],</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">auto_window_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">auto_window_step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">wt_spat_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">within_trial_spatial</span><span class="p">(</span>
+    <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">],</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">auto_window_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">auto_window_step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">wt_spat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">wt_spat_left</span><span class="p">,</span> <span class="n">wt_spat_right</span><span class="p">])</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;WTSpat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wt_spat</span><span class="p">[</span><span class="s2">&quot;within_trial_spatial&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;WTSpat: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;WTSpat&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>WTSpat: 0.596
+</pre></div>
+</div>
+</section>
+<section id="within-trial-frequency-variability-wtfreq">
+<h2>Within-Trial Frequency Variability (WTFreq)<a class="headerlink" href="#within-trial-frequency-variability-wtfreq" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">wt_freq_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">within_trial_frequency</span><span class="p">(</span>
+    <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">],</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">auto_window_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">auto_window_step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C4&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">wt_freq_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">within_trial_frequency</span><span class="p">(</span>
+    <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">],</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">auto_window_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">auto_window_step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C3&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">wt_freq</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">wt_freq_left</span><span class="p">,</span> <span class="n">wt_freq_right</span><span class="p">])</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;WTFreq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wt_freq</span><span class="p">[</span><span class="s2">&quot;within_trial_frequency&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;WTFreq: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;WTFreq&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>WTFreq: 0.534
+</pre></div>
+</div>
+</section>
+</section>
+<section id="between-trial-variability">
+<h1>Between-Trial Variability<a class="headerlink" href="#between-trial-variability" title="Link to this heading">#</a></h1>
+<section id="between-trial-spatial-variability">
+<h2>Between-Trial Spatial Variability<a class="headerlink" href="#between-trial-spatial-variability" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">bt_temp_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_temporal</span><span class="p">(</span>
     <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">],</span>
     <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
     <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
@@ -964,7 +1025,7 @@ Applying baseline correction (mode: percent)
     <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
     <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C4&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">wttv_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">wttv</span><span class="p">(</span>
+<span class="n">bt_temp_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_temporal</span><span class="p">(</span>
     <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">],</span>
     <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
     <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
@@ -973,13 +1034,44 @@ Applying baseline correction (mode: percent)
     <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C3&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="n">wttv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">wttv_left</span><span class="p">,</span> <span class="n">wttv_right</span><span class="p">])[</span><span class="s2">&quot;wttv&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">bt_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">bt_temp_left</span><span class="p">,</span> <span class="n">bt_temp_right</span><span class="p">])</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BTTemp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bt_temp</span><span class="p">[</span><span class="s2">&quot;between_trial_temporal&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BTTemp: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BTTemp&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd"># ATTV</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="n">attv_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">attv</span><span class="p">(</span>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BTTemp: 8.684
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h2>Between-Trial Spatial Variability<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">bt_spat_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_spatial</span><span class="p">(</span>
+    <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">],</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">bt_spat_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_spatial</span><span class="p">(</span>
+    <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">],</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">bt_spat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">bt_spat_left</span><span class="p">,</span> <span class="n">bt_spat_right</span><span class="p">])</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BTSpat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bt_spat</span><span class="p">[</span><span class="s2">&quot;between_trial_spatial&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BTSpat: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BTSpat&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BTSpat: 1.182
+</pre></div>
+</div>
+</section>
+<section id="between-trial-frequency-variability">
+<h2>Between-Trial Frequency Variability<a class="headerlink" href="#between-trial-frequency-variability" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">bt_freq_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_frequency</span><span class="p">(</span>
     <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">],</span>
     <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
     <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
@@ -987,7 +1079,7 @@ Applying baseline correction (mode: percent)
     <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
     <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C4&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">attv_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">attv</span><span class="p">(</span>
+<span class="n">bt_freq_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_frequency</span><span class="p">(</span>
     <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">],</span>
     <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
     <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
@@ -996,78 +1088,26 @@ Applying baseline correction (mode: percent)
     <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C3&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="n">attv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">attv_left</span><span class="p">,</span> <span class="n">attv_right</span><span class="p">])[</span><span class="s2">&quot;attv&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">bt_freq</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">bt_freq_left</span><span class="p">,</span> <span class="n">bt_freq_right</span><span class="p">])</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BTFreq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bt_freq</span><span class="p">[</span><span class="s2">&quot;between_trial_frequency&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BTFreq: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BTFreq&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd"># ATSVA</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="n">atsva_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">atsv</span><span class="p">(</span>
-    <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">],</span>
-    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
-    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
-    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
-    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
-    <span class="n">metrics</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">atsva_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">atsv</span><span class="p">(</span>
-    <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">],</span>
-    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
-    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
-    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
-    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
-    <span class="n">metrics</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-
-<span class="n">atsva</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">atsva_left</span><span class="p">,</span> <span class="n">atsva_right</span><span class="p">])[</span><span class="s2">&quot;atsva&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BTFreq: 0.999
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd"># ATFVA</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="n">atfva_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">atfv</span><span class="p">(</span>
-    <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">],</span>
-    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin_atfv</span><span class="p">,</span>
-    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax_atfv</span><span class="p">,</span>
-    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
-    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
-    <span class="n">metrics</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">atfva_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">atfv</span><span class="p">(</span>
-    <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">],</span>
-    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin_atfv</span><span class="p">,</span>
-    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax_atfv</span><span class="p">,</span>
-    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
-    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
-    <span class="n">metrics</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-
-<span class="n">atfva</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">atfva_left</span><span class="p">,</span> <span class="n">atfva_right</span><span class="p">])[</span><span class="s2">&quot;atfva&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</section>
+</section>
+<section id="results">
+<h1>Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd"># Print results</span>
-<span class="sd">&quot;&quot;&quot;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# Variability Metrics&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; - ME    : </span><span class="si">{</span><span class="n">me</span><span class="si">:</span><span class="s2">10.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; - SMEAT : </span><span class="si">{</span><span class="n">smeat</span><span class="si">:</span><span class="s2">10.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; - WTTV  : </span><span class="si">{</span><span class="n">wttv</span><span class="si">:</span><span class="s2">10.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; - ATTV  : </span><span class="si">{</span><span class="n">attv</span><span class="si">:</span><span class="s2">10.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; - ATSVA : </span><span class="si">{</span><span class="n">atsva</span><span class="si">:</span><span class="s2">10.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; - ATFVA : </span><span class="si">{</span><span class="n">atfva</span><span class="si">:</span><span class="s2">10.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>     WTTemp    WTSpat    WTFreq    BTTemp    BTSpat    BTFreq
+0  0.385501  0.595941  0.534277  8.683985  1.182418  0.999372
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span># Variability Metrics
- - ME    :  -0.138121
- - SMEAT :   0.458346
- - WTTV  :   0.360843
- - ATTV  :   7.814168
- - ATSVA :   1.249263
- - ATFVA :   1.355209
-</pre></div>
-</div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 10.166 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 7.325 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-example-variability-mi-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c6f8cf37d3087bad44cc860176d0c75d/example_variability_MI.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">example_variability_MI.ipynb</span></code></a></p>
@@ -1093,12 +1133,12 @@ Applying baseline correction (mode: percent)
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="example_variability_ERP.html"
+       href="_variability_ERP.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Example: Variability of ERP in a auditory task</p>
+        <p class="prev-next-title">Example: Intra-Subject Variability of ERP</p>
       </div>
     </a>
     <a class="right-next"
@@ -1120,6 +1160,34 @@ Applying baseline correction (mode: percent)
                 <dialog id="pst-secondary-sidebar-modal"></dialog>
                 <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Example: Intra-Subject Variability of ERDS in a motor-imagery task</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extract-epochs">Extract Epochs</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extract-erds">Extract ERDS</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#within-trial-variability-metrics">Within-Trial Variability Metrics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#within-trial-temporal-variability-wttemp">Within-Trial Temporal Variability (WTTemp)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#within-trial-spatial-variability-wtspat">Within-Trial Spatial Variability (WTSpat)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#within-trial-frequency-variability-wtfreq">Within-Trial Frequency Variability (WTFreq)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-variability">Between-Trial Variability</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-spatial-variability">Between-Trial Spatial Variability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Between-Trial Spatial Variability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-frequency-variability">Between-Trial Frequency Variability</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
+</ul>
+
+  </nav></div>
 
   <div class="sidebar-secondary-item">
   <div role="note" aria-label="source link">

@@ -18,10 +18,26 @@
 .. _sphx_glr_auto_examples_example_variability_MI.py:
 
 
-Example: Variability of ERDS in a motor-imagery task
-==================================================
+Example: Intra-Subject Variability of ERDS in a motor-imagery task
+==================================================================
 
-.. GENERATED FROM PYTHON SOURCE LINES 7-12
+.. GENERATED FROM PYTHON SOURCE LINES 5-10
+
+.. code-block:: Python
+
+
+    # Authors: Simon Kojima <simon.kojima@inria.fr>
+    #
+    # License: BSD (3-clause)
+
+
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 11-16
 
 .. code-block:: Python
 
@@ -37,20 +53,22 @@ Example: Variability of ERDS in a motor-imagery task
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-59
+.. GENERATED FROM PYTHON SOURCE LINES 17-19
+
+Extract Epochs
+==============
+
+.. GENERATED FROM PYTHON SOURCE LINES 19-62
 
 .. code-block:: Python
 
-    """
-    Extract Epochs
-    """
 
     subject = 1
-    l_freq = 1
-    h_freq = 45
+    l_freq = 7
+    h_freq = 13
     resample = 128
-    tmin = -2.0
-    tmax = 5.0
+    tmin = -2.5
+    tmax = 5.5
 
     dataset = Dreyer2023()
 
@@ -95,70 +113,74 @@ Example: Variability of ERDS in a motor-imagery task
 
  .. code-block:: none
 
-    0it [00:00, ?it/s]    9it [00:00, 19045.78it/s]
+    0it [00:00, ?it/s]    9it [00:00, 21845.33it/s]
     Reading 0 ... 230399  =      0.000 ...   449.998 secs...
     Reading 0 ... 230399  =      0.000 ...   449.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
-    No stim channel nor annotations found, skipping setting annotations.
-    No stim channel nor annotations found, skipping setting annotations.
-    No stim channel nor annotations found, skipping setting annotations.
-    No stim channel nor annotations found, skipping setting annotations.
-    No stim channel nor annotations found, skipping setting annotations.
+    Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 45 Hz
+    Setting up band-pass filter from 7 - 13 Hz
 
     IIR filter parameters
     ---------------------
     Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
     - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 45.00 Hz: -6.02, -6.02 dB
+    - Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
     Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 45 Hz
+    Setting up band-pass filter from 7 - 13 Hz
 
     IIR filter parameters
     ---------------------
     Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
     - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 45.00 Hz: -6.02, -6.02 dB
+    - Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
     Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 45 Hz
+    Setting up band-pass filter from 7 - 13 Hz
 
     IIR filter parameters
     ---------------------
     Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
     - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 45.00 Hz: -6.02, -6.02 dB
+    - Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
     Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 45 Hz
+    Setting up band-pass filter from 7 - 13 Hz
 
     IIR filter parameters
     ---------------------
     Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
     - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 45.00 Hz: -6.02, -6.02 dB
+    - Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
     Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 45 Hz
+    Setting up band-pass filter from 7 - 13 Hz
 
     IIR filter parameters
     ---------------------
     Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
     - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 45.00 Hz: -6.02, -6.02 dB
+    - Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
-    Used Annotations descriptions: [np.str_('1010'), np.str_('32769'), np.str_('32770'), np.str_('33281'), np.str_('33282'), np.str_('33284'), np.str_('768'), np.str_('781'), np.str_('786'), np.str_('800'), np.str_('left_hand'), np.str_('right_hand')]
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 7 - 13 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+    Used Annotations descriptions: [np.str_('left_hand'), np.str_('right_hand')]
     Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
-    Multiple event values for single event times found. Creating new event value to reflect simultaneous events.
     Not setting metadata
-    1017 matching events found
+    240 matching events found
     No baseline correction applied
     0 projection items activated
-    Using data from preloaded Raw for 200 events and 3585 original time points ...
+    Using data from preloaded Raw for 240 events and 4097 original time points ...
     0 bad epochs dropped
 
 
@@ -312,9 +334,9 @@ Example: Variability of ERDS in a motor-imagery task
 
 
 
-    <tr class="mne-repr-section-header general-7c49cb95-b715-467c-9a7d-db4c37d708a5"
+    <tr class="mne-repr-section-header general-e0f79c06-3a35-4b6b-9fd4-f68463a9a593"
          title="Hide section" 
-        onclick="toggleVisibility('general-7c49cb95-b715-467c-9a7d-db4c37d708a5')">
+        onclick="toggleVisibility('general-e0f79c06-3a35-4b6b-9fd4-f68463a9a593')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -326,19 +348,19 @@ Example: Variability of ERDS in a motor-imagery task
     </tr>
 
 
-    <tr class="repr-element general-7c49cb95-b715-467c-9a7d-db4c37d708a5 ">
+    <tr class="repr-element general-e0f79c06-3a35-4b6b-9fd4-f68463a9a593 ">
         <td class="mne-repr-section-toggle"></td>
         <td>MNE object type</td>
         <td>Epochs</td>
     </tr>
-    <tr class="repr-element general-7c49cb95-b715-467c-9a7d-db4c37d708a5 ">
+    <tr class="repr-element general-e0f79c06-3a35-4b6b-9fd4-f68463a9a593 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Measurement date</td>
     
         <td>2024-09-20 at 17:57:40 UTC</td>
     
     </tr>
-    <tr class="repr-element general-7c49cb95-b715-467c-9a7d-db4c37d708a5 ">
+    <tr class="repr-element general-e0f79c06-3a35-4b6b-9fd4-f68463a9a593 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Participant</td>
     
@@ -347,7 +369,7 @@ Example: Variability of ERDS in a motor-imagery task
     
     
     </tr>
-    <tr class="repr-element general-7c49cb95-b715-467c-9a7d-db4c37d708a5 ">
+    <tr class="repr-element general-e0f79c06-3a35-4b6b-9fd4-f68463a9a593 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Experimenter</td>
     
@@ -362,9 +384,9 @@ Example: Variability of ERDS in a motor-imagery task
 
 
 
-    <tr class="mne-repr-section-header acquisition-485d4a02-5d20-45ae-a058-fe6259893f54"
+    <tr class="mne-repr-section-header acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3"
          title="Hide section" 
-        onclick="toggleVisibility('acquisition-485d4a02-5d20-45ae-a058-fe6259893f54')">
+        onclick="toggleVisibility('acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -379,23 +401,23 @@ Example: Variability of ERDS in a motor-imagery task
 
 
 
-    <tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
+    <tr class="repr-element acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Total number of events</td>
-        <td>200</td>
+        <td>240</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
+    <tr class="repr-element acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Events counts</td>
     
         <td>
         
-            left_hand: 100
+            left_hand: 120
             <br />
         
-            right_hand: 100
+            right_hand: 120
         
         
         </td>
@@ -403,35 +425,35 @@ Example: Variability of ERDS in a motor-imagery task
     </tr>
 
 
-    <tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
+    <tr class="repr-element acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Time range</td>
-        <td>-2.000 – 4.992 s</td>
+        <td>-2.500 – 5.492 s</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
+    <tr class="repr-element acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Baseline</td>
         <td>off</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
+    <tr class="repr-element acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Sampling frequency</td>
         <td>128.00 Hz</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
+    <tr class="repr-element acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Time points</td>
-        <td>896</td>
+        <td>1,024</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-485d4a02-5d20-45ae-a058-fe6259893f54 ">
+    <tr class="repr-element acquisition-214e7dbd-5733-4f24-ba1e-99de1ac024e3 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Metadata</td>
         <td>No metadata set</td>
@@ -445,9 +467,9 @@ Example: Variability of ERDS in a motor-imagery task
 
 
 
-    <tr class="mne-repr-section-header channels-525bfd38-9190-49a1-bdf2-60b0d9026394"
+    <tr class="mne-repr-section-header channels-e585a175-fe08-4d69-a122-05b508e90622"
          title="Hide section" 
-        onclick="toggleVisibility('channels-525bfd38-9190-49a1-bdf2-60b0d9026394')">
+        onclick="toggleVisibility('channels-e585a175-fe08-4d69-a122-05b508e90622')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -460,7 +482,7 @@ Example: Variability of ERDS in a motor-imagery task
 
 
     
-    <tr class="repr-element channels-525bfd38-9190-49a1-bdf2-60b0d9026394 ">
+    <tr class="repr-element channels-e585a175-fe08-4d69-a122-05b508e90622 ">
         <td class="mne-repr-section-toggle"></td>
         <td>EEG</td>
         <td>
@@ -473,7 +495,7 @@ Example: Variability of ERDS in a motor-imagery task
     </tr>
 
 
-    <tr class="repr-element channels-525bfd38-9190-49a1-bdf2-60b0d9026394 ">
+    <tr class="repr-element channels-e585a175-fe08-4d69-a122-05b508e90622 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Head & sensor digitization</td>
     
@@ -488,9 +510,9 @@ Example: Variability of ERDS in a motor-imagery task
 
 
 
-    <tr class="mne-repr-section-header filters-9fa6112a-d53e-4bfc-8d65-769deb905fc2"
+    <tr class="mne-repr-section-header filters-129aa263-0fee-4d9b-bfa8-4063a91eb73a"
          title="Hide section" 
-        onclick="toggleVisibility('filters-9fa6112a-d53e-4bfc-8d65-769deb905fc2')">
+        onclick="toggleVisibility('filters-129aa263-0fee-4d9b-bfa8-4063a91eb73a')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -502,17 +524,17 @@ Example: Variability of ERDS in a motor-imagery task
     </tr>
 
 
-    <tr class="repr-element filters-9fa6112a-d53e-4bfc-8d65-769deb905fc2 ">
+    <tr class="repr-element filters-129aa263-0fee-4d9b-bfa8-4063a91eb73a ">
         <td class="mne-repr-section-toggle"></td>
         <td>Highpass</td>
-        <td>1.00 Hz</td>
+        <td>7.00 Hz</td>
     </tr>
 
 
-    <tr class="repr-element filters-9fa6112a-d53e-4bfc-8d65-769deb905fc2 ">
+    <tr class="repr-element filters-129aa263-0fee-4d9b-bfa8-4063a91eb73a ">
         <td class="mne-repr-section-toggle"></td>
         <td>Lowpass</td>
-        <td>45.00 Hz</td>
+        <td>13.00 Hz</td>
     </tr>
 
 
@@ -521,13 +543,15 @@ Example: Variability of ERDS in a motor-imagery task
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 60-81
+.. GENERATED FROM PYTHON SOURCE LINES 63-65
+
+Extract ERDS
+==============
+
+.. GENERATED FROM PYTHON SOURCE LINES 65-83
 
 .. code-block:: Python
 
-    """
-    Extract ERDS
-    """
 
     baseline = [-2.0, 0.0]
 
@@ -555,50 +579,31 @@ Example: Variability of ERDS in a motor-imagery task
  .. code-block:: none
 
     [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    2.6s
-    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    3.3s remaining:    1.7s
-    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    3.7s remaining:    0.5s
-    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    3.7s finished
+    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    1.7s
+    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    2.1s remaining:    1.0s
+    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    2.1s remaining:    0.3s
+    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    2.2s finished
     Applying baseline correction (mode: percent)
-    <Power Estimates from Epochs, multitaper method | 200 epochs × 27 channels × 45 freqs × 448 times, 1.0 - 45.0 Hz, -2.00 - 4.98 s, 830.6 MiB>
+    <Power Estimates from Epochs, multitaper method | 240 epochs × 27 channels × 7 freqs × 512 times, 7.0 - 13.0 Hz, -2.50 - 5.48 s, 177.2 MiB>
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 82-113
+.. GENERATED FROM PYTHON SOURCE LINES 84-87
+
+Within-Trial Variability Metrics
+================================
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 87-93
 
 .. code-block:: Python
 
-    """
-    Compute Variability Metrics
 
-    # ME
-    """
+    results = {}
 
     fmin, fmax = 7, 13
-    fmin_atfv, fmax_atfv = 8, 30
-    tmin, tmax = 0.5, 4.5
-
-    me_left = nearby.metrics.me(
-        tfrs["left_hand"],
-        fmin=fmin,
-        fmax=fmax,
-        tmin=tmin,
-        tmax=tmax,
-        picks="C4",
-        additional_values={"class": "left"},
-    )
-    me_right = nearby.metrics.me(
-        tfrs["right_hand"],
-        fmin=fmin,
-        fmax=fmax,
-        tmin=tmin,
-        tmax=tmax,
-        picks="C3",
-        additional_values={"class": "right"},
-    )
-
-    me = pd.concat([me_left, me_right])["me"].mean()
+    tmin, tmax = dataset.interval[0] + 0.5, dataset.interval[1]
 
 
 
@@ -607,14 +612,17 @@ Example: Variability of ERDS in a motor-imagery task
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 114-136
+.. GENERATED FROM PYTHON SOURCE LINES 94-96
+
+Within-Trial Temporal Variability (WTTemp)
+------------------------------------------
+
+.. GENERATED FROM PYTHON SOURCE LINES 96-117
 
 .. code-block:: Python
 
-    """
-    # SMEAT
-    """
-    smeat_left = nearby.metrics.smeat(
+
+    wt_temp_left = nearby.metrics.within_trial_temporal(
         tfrs["left_hand"],
         fmin=fmin,
         fmax=fmax,
@@ -622,7 +630,7 @@ Example: Variability of ERDS in a motor-imagery task
         tmax=tmax,
         picks="C4",
     )
-    smeat_right = nearby.metrics.smeat(
+    wt_temp_right = nearby.metrics.within_trial_temporal(
         tfrs["right_hand"],
         fmin=fmin,
         fmax=fmax,
@@ -630,163 +638,10 @@ Example: Variability of ERDS in a motor-imagery task
         tmax=tmax,
         picks="C3",
     )
+    wt_temp = pd.concat([wt_temp_left, wt_temp_right])
+    results["WTTemp"] = wt_temp["within_trial_temporal"].mean()
+    print(f"WTTemp: {results['WTTemp']:.3f}")
 
-    smeat = pd.concat([smeat_left, smeat_right])["smeat"].mean()
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 137-159
-
-.. code-block:: Python
-
-    """
-    # WTTV
-    """
-    wttv_left = nearby.metrics.wttv(
-        tfrs["left_hand"],
-        fmin=fmin,
-        fmax=fmax,
-        tmin=tmin,
-        tmax=tmax,
-        picks="C4",
-    )
-    wttv_right = nearby.metrics.wttv(
-        tfrs["right_hand"],
-        fmin=fmin,
-        fmax=fmax,
-        tmin=tmin,
-        tmax=tmax,
-        picks="C3",
-    )
-
-    wttv = pd.concat([wttv_left, wttv_right])["wttv"].mean()
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 160-182
-
-.. code-block:: Python
-
-    """
-    # ATTV
-    """
-    attv_left = nearby.metrics.attv(
-        tfrs["left_hand"],
-        fmin=fmin,
-        fmax=fmax,
-        tmin=tmin,
-        tmax=tmax,
-        picks="C4",
-    )
-    attv_right = nearby.metrics.attv(
-        tfrs["right_hand"],
-        fmin=fmin,
-        fmax=fmax,
-        tmin=tmin,
-        tmax=tmax,
-        picks="C3",
-    )
-
-    attv = pd.concat([attv_left, attv_right])["attv"].mean()
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 183-205
-
-.. code-block:: Python
-
-    """
-    # ATSVA
-    """
-    atsva_left = nearby.metrics.atsv(
-        tfrs["left_hand"],
-        fmin=fmin,
-        fmax=fmax,
-        tmin=tmin,
-        tmax=tmax,
-        metrics="angle",
-    )
-    atsva_right = nearby.metrics.atsv(
-        tfrs["right_hand"],
-        fmin=fmin,
-        fmax=fmax,
-        tmin=tmin,
-        tmax=tmax,
-        metrics="angle",
-    )
-
-    atsva = pd.concat([atsva_left, atsva_right])["atsva"].mean()
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 206-228
-
-.. code-block:: Python
-
-    """
-    # ATFVA
-    """
-    atfva_left = nearby.metrics.atfv(
-        tfrs["left_hand"],
-        fmin=fmin_atfv,
-        fmax=fmax_atfv,
-        tmin=tmin,
-        tmax=tmax,
-        metrics="angle",
-    )
-    atfva_right = nearby.metrics.atfv(
-        tfrs["right_hand"],
-        fmin=fmin_atfv,
-        fmax=fmax_atfv,
-        tmin=tmin,
-        tmax=tmax,
-        metrics="angle",
-    )
-
-    atfva = pd.concat([atfva_left, atfva_right])["atfva"].mean()
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 229-240
-
-.. code-block:: Python
-
-    """
-    # Print results
-    """
-
-    print("# Variability Metrics")
-    print(f" - ME    : {me:10.6f}")
-    print(f" - SMEAT : {smeat:10.6f}")
-    print(f" - WTTV  : {wttv:10.6f}")
-    print(f" - ATTV  : {attv:10.6f}")
-    print(f" - ATSVA : {atsva:10.6f}")
-    print(f" - ATFVA : {atfva:10.6f}")
 
 
 
@@ -795,13 +650,264 @@ Example: Variability of ERDS in a motor-imagery task
 
  .. code-block:: none
 
-    # Variability Metrics
-     - ME    :  -0.138121
-     - SMEAT :   0.458346
-     - WTTV  :   0.360843
-     - ATTV  :   7.814168
-     - ATSVA :   1.249263
-     - ATFVA :   1.355209
+    WTTemp: 0.386
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 118-120
+
+Within-Trial Spatial Variability (WTSpat)
+------------------------------------------
+
+.. GENERATED FROM PYTHON SOURCE LINES 120-145
+
+.. code-block:: Python
+
+
+    wt_spat_left = nearby.metrics.within_trial_spatial(
+        tfrs["left_hand"],
+        fmin=fmin,
+        fmax=fmax,
+        tmin=tmin,
+        tmax=tmax,
+        auto_window_size=1,
+        auto_window_step=1,
+        metric="angle",
+    )
+    wt_spat_right = nearby.metrics.within_trial_spatial(
+        tfrs["right_hand"],
+        fmin=fmin,
+        fmax=fmax,
+        tmin=tmin,
+        tmax=tmax,
+        auto_window_size=1,
+        auto_window_step=1,
+        metric="angle",
+    )
+    wt_spat = pd.concat([wt_spat_left, wt_spat_right])
+    results["WTSpat"] = wt_spat["within_trial_spatial"].mean()
+    print(f"WTSpat: {results['WTSpat']:.3f}")
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    WTSpat: 0.596
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 146-148
+
+Within-Trial Frequency Variability (WTFreq)
+-------------------------------------------
+
+.. GENERATED FROM PYTHON SOURCE LINES 148-176
+
+.. code-block:: Python
+
+    wt_freq_left = nearby.metrics.within_trial_frequency(
+        tfrs["left_hand"],
+        fmin=fmin,
+        fmax=fmax,
+        tmin=tmin,
+        tmax=tmax,
+        auto_window_size=1,
+        auto_window_step=1,
+        metric="angle",
+        picks="C4",
+    )
+
+    wt_freq_right = nearby.metrics.within_trial_frequency(
+        tfrs["right_hand"],
+        fmin=fmin,
+        fmax=fmax,
+        tmin=tmin,
+        tmax=tmax,
+        auto_window_size=1,
+        auto_window_step=1,
+        metric="angle",
+        picks="C3",
+    )
+
+    wt_freq = pd.concat([wt_freq_left, wt_freq_right])
+    results["WTFreq"] = wt_freq["within_trial_frequency"].mean()
+    print(f"WTFreq: {results['WTFreq']:.3f}")
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    WTFreq: 0.534
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 177-179
+
+Between-Trial Variability
+=========================
+
+.. GENERATED FROM PYTHON SOURCE LINES 182-184
+
+Between-Trial Spatial Variability
+----------------------------------
+
+.. GENERATED FROM PYTHON SOURCE LINES 184-206
+
+.. code-block:: Python
+
+
+    bt_temp_left = nearby.metrics.between_trial_temporal(
+        tfrs["left_hand"],
+        fmin=fmin,
+        fmax=fmax,
+        tmin=tmin,
+        tmax=tmax,
+        picks="C4",
+    )
+    bt_temp_right = nearby.metrics.between_trial_temporal(
+        tfrs["right_hand"],
+        fmin=fmin,
+        fmax=fmax,
+        tmin=tmin,
+        tmax=tmax,
+        picks="C3",
+    )
+
+    bt_temp = pd.concat([bt_temp_left, bt_temp_right])
+    results["BTTemp"] = bt_temp["between_trial_temporal"].mean()
+    print(f"BTTemp: {results['BTTemp']:.3f}")
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    BTTemp: 8.684
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 207-209
+
+Between-Trial Spatial Variability
+----------------------------------
+
+.. GENERATED FROM PYTHON SOURCE LINES 209-229
+
+.. code-block:: Python
+
+
+    bt_spat_left = nearby.metrics.between_trial_spatial(
+        tfrs["left_hand"],
+        fmin=fmin,
+        fmax=fmax,
+        tmin=tmin,
+        tmax=tmax,
+    )
+    bt_spat_right = nearby.metrics.between_trial_spatial(
+        tfrs["right_hand"],
+        fmin=fmin,
+        fmax=fmax,
+        tmin=tmin,
+        tmax=tmax,
+    )
+
+    bt_spat = pd.concat([bt_spat_left, bt_spat_right])
+    results["BTSpat"] = bt_spat["between_trial_spatial"].mean()
+    print(f"BTSpat: {results['BTSpat']:.3f}")
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    BTSpat: 1.182
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 230-232
+
+Between-Trial Frequency Variability
+----------------------------------
+
+.. GENERATED FROM PYTHON SOURCE LINES 232-254
+
+.. code-block:: Python
+
+
+    bt_freq_left = nearby.metrics.between_trial_frequency(
+        tfrs["left_hand"],
+        fmin=fmin,
+        fmax=fmax,
+        tmin=tmin,
+        tmax=tmax,
+        picks="C4",
+    )
+    bt_freq_right = nearby.metrics.between_trial_frequency(
+        tfrs["right_hand"],
+        fmin=fmin,
+        fmax=fmax,
+        tmin=tmin,
+        tmax=tmax,
+        picks="C3",
+    )
+
+    bt_freq = pd.concat([bt_freq_left, bt_freq_right])
+    results["BTFreq"] = bt_freq["between_trial_frequency"].mean()
+    print(f"BTFreq: {results['BTFreq']:.3f}")
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    BTFreq: 0.999
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 255-257
+
+Results
+=======
+
+.. GENERATED FROM PYTHON SOURCE LINES 257-259
+
+.. code-block:: Python
+
+
+    print(pd.DataFrame(results, index=[0]))
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+         WTTemp    WTSpat    WTFreq    BTTemp    BTSpat    BTFreq
+    0  0.385501  0.595941  0.534277  8.683985  1.182418  0.999372
 
 
 
@@ -809,7 +915,7 @@ Example: Variability of ERDS in a motor-imagery task
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 10.166 seconds)
+   **Total running time of the script:** (0 minutes 7.325 seconds)
 
 
 .. _sphx_glr_download_auto_examples_example_variability_MI.py:

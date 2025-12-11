@@ -1,7 +1,11 @@
 """
-Example: Variability of ERDS in a motor-imagery task
-==================================================
+Example: Intra-Subject Variability of ERDS in a motor-imagery task
+==================================================================
 """
+
+# Authors: Simon Kojima <simon.kojima@inria.fr>
+#
+# License: BSD (3-clause)
 
 # %%
 import mne
@@ -10,16 +14,15 @@ import nearby
 from moabb.datasets import Dreyer2023
 
 # %%
-"""
-Extract Epochs
-"""
+# Extract Epochs
+# ==============
 
 subject = 1
-l_freq = 1
-h_freq = 45
+l_freq = 7
+h_freq = 13
 resample = 128
-tmin = -2.0
-tmax = 5.0
+tmin = -2.5
+tmax = 5.5
 
 dataset = Dreyer2023()
 
@@ -57,9 +60,8 @@ epochs.load_data()
 epochs.resample(resample)
 
 # %%
-"""
-Extract ERDS
-"""
+# Extract ERDS
+# ==============
 
 baseline = [-2.0, 0.0]
 
@@ -79,42 +81,20 @@ tfrs = tfrs.apply_baseline(baseline=baseline, mode="percent")
 print(tfrs)
 
 # %%
-"""
-Compute Variability Metrics
+# Within-Trial Variability Metrics
+# ================================
+#
 
-# ME
-"""
+results = {}
 
 fmin, fmax = 7, 13
-fmin_atfv, fmax_atfv = 8, 30
-tmin, tmax = 0.5, 4.5
-
-me_left = nearby.metrics.me(
-    tfrs["left_hand"],
-    fmin=fmin,
-    fmax=fmax,
-    tmin=tmin,
-    tmax=tmax,
-    picks="C4",
-    additional_values={"class": "left"},
-)
-me_right = nearby.metrics.me(
-    tfrs["right_hand"],
-    fmin=fmin,
-    fmax=fmax,
-    tmin=tmin,
-    tmax=tmax,
-    picks="C3",
-    additional_values={"class": "right"},
-)
-
-me = pd.concat([me_left, me_right])["me"].mean()
+tmin, tmax = dataset.interval[0] + 0.5, dataset.interval[1]
 
 # %%
-"""
-# SMEAT
-"""
-smeat_left = nearby.metrics.smeat(
+# Within-Trial Temporal Variability (WTTemp)
+# ------------------------------------------
+
+wt_temp_left = nearby.metrics.within_trial_temporal(
     tfrs["left_hand"],
     fmin=fmin,
     fmax=fmax,
@@ -122,7 +102,7 @@ smeat_left = nearby.metrics.smeat(
     tmax=tmax,
     picks="C4",
 )
-smeat_right = nearby.metrics.smeat(
+wt_temp_right = nearby.metrics.within_trial_temporal(
     tfrs["right_hand"],
     fmin=fmin,
     fmax=fmax,
@@ -130,14 +110,79 @@ smeat_right = nearby.metrics.smeat(
     tmax=tmax,
     picks="C3",
 )
-
-smeat = pd.concat([smeat_left, smeat_right])["smeat"].mean()
+wt_temp = pd.concat([wt_temp_left, wt_temp_right])
+results["WTTemp"] = wt_temp["within_trial_temporal"].mean()
+print(f"WTTemp: {results['WTTemp']:.3f}")
 
 # %%
-"""
-# WTTV
-"""
-wttv_left = nearby.metrics.wttv(
+# Within-Trial Spatial Variability (WTSpat)
+# ------------------------------------------
+
+wt_spat_left = nearby.metrics.within_trial_spatial(
+    tfrs["left_hand"],
+    fmin=fmin,
+    fmax=fmax,
+    tmin=tmin,
+    tmax=tmax,
+    auto_window_size=1,
+    auto_window_step=1,
+    metric="angle",
+)
+wt_spat_right = nearby.metrics.within_trial_spatial(
+    tfrs["right_hand"],
+    fmin=fmin,
+    fmax=fmax,
+    tmin=tmin,
+    tmax=tmax,
+    auto_window_size=1,
+    auto_window_step=1,
+    metric="angle",
+)
+wt_spat = pd.concat([wt_spat_left, wt_spat_right])
+results["WTSpat"] = wt_spat["within_trial_spatial"].mean()
+print(f"WTSpat: {results['WTSpat']:.3f}")
+
+# %%
+# Within-Trial Frequency Variability (WTFreq)
+# -------------------------------------------
+wt_freq_left = nearby.metrics.within_trial_frequency(
+    tfrs["left_hand"],
+    fmin=fmin,
+    fmax=fmax,
+    tmin=tmin,
+    tmax=tmax,
+    auto_window_size=1,
+    auto_window_step=1,
+    metric="angle",
+    picks="C4",
+)
+
+wt_freq_right = nearby.metrics.within_trial_frequency(
+    tfrs["right_hand"],
+    fmin=fmin,
+    fmax=fmax,
+    tmin=tmin,
+    tmax=tmax,
+    auto_window_size=1,
+    auto_window_step=1,
+    metric="angle",
+    picks="C3",
+)
+
+wt_freq = pd.concat([wt_freq_left, wt_freq_right])
+results["WTFreq"] = wt_freq["within_trial_frequency"].mean()
+print(f"WTFreq: {results['WTFreq']:.3f}")
+
+# %%
+# Between-Trial Variability
+# =========================
+
+
+# %%
+# Between-Trial Spatial Variability
+# ----------------------------------
+
+bt_temp_left = nearby.metrics.between_trial_temporal(
     tfrs["left_hand"],
     fmin=fmin,
     fmax=fmax,
@@ -145,7 +190,7 @@ wttv_left = nearby.metrics.wttv(
     tmax=tmax,
     picks="C4",
 )
-wttv_right = nearby.metrics.wttv(
+bt_temp_right = nearby.metrics.between_trial_temporal(
     tfrs["right_hand"],
     fmin=fmin,
     fmax=fmax,
@@ -154,13 +199,38 @@ wttv_right = nearby.metrics.wttv(
     picks="C3",
 )
 
-wttv = pd.concat([wttv_left, wttv_right])["wttv"].mean()
+bt_temp = pd.concat([bt_temp_left, bt_temp_right])
+results["BTTemp"] = bt_temp["between_trial_temporal"].mean()
+print(f"BTTemp: {results['BTTemp']:.3f}")
 
 # %%
-"""
-# ATTV
-"""
-attv_left = nearby.metrics.attv(
+# Between-Trial Spatial Variability
+# ----------------------------------
+
+bt_spat_left = nearby.metrics.between_trial_spatial(
+    tfrs["left_hand"],
+    fmin=fmin,
+    fmax=fmax,
+    tmin=tmin,
+    tmax=tmax,
+)
+bt_spat_right = nearby.metrics.between_trial_spatial(
+    tfrs["right_hand"],
+    fmin=fmin,
+    fmax=fmax,
+    tmin=tmin,
+    tmax=tmax,
+)
+
+bt_spat = pd.concat([bt_spat_left, bt_spat_right])
+results["BTSpat"] = bt_spat["between_trial_spatial"].mean()
+print(f"BTSpat: {results['BTSpat']:.3f}")
+
+# %%
+# Between-Trial Frequency Variability
+# ----------------------------------
+
+bt_freq_left = nearby.metrics.between_trial_frequency(
     tfrs["left_hand"],
     fmin=fmin,
     fmax=fmax,
@@ -168,7 +238,7 @@ attv_left = nearby.metrics.attv(
     tmax=tmax,
     picks="C4",
 )
-attv_right = nearby.metrics.attv(
+bt_freq_right = nearby.metrics.between_trial_frequency(
     tfrs["right_hand"],
     fmin=fmin,
     fmax=fmax,
@@ -177,63 +247,12 @@ attv_right = nearby.metrics.attv(
     picks="C3",
 )
 
-attv = pd.concat([attv_left, attv_right])["attv"].mean()
+bt_freq = pd.concat([bt_freq_left, bt_freq_right])
+results["BTFreq"] = bt_freq["between_trial_frequency"].mean()
+print(f"BTFreq: {results['BTFreq']:.3f}")
 
 # %%
-"""
-# ATSVA
-"""
-atsva_left = nearby.metrics.atsv(
-    tfrs["left_hand"],
-    fmin=fmin,
-    fmax=fmax,
-    tmin=tmin,
-    tmax=tmax,
-    metrics="angle",
-)
-atsva_right = nearby.metrics.atsv(
-    tfrs["right_hand"],
-    fmin=fmin,
-    fmax=fmax,
-    tmin=tmin,
-    tmax=tmax,
-    metrics="angle",
-)
+# Results
+# =======
 
-atsva = pd.concat([atsva_left, atsva_right])["atsva"].mean()
-
-# %%
-"""
-# ATFVA
-"""
-atfva_left = nearby.metrics.atfv(
-    tfrs["left_hand"],
-    fmin=fmin_atfv,
-    fmax=fmax_atfv,
-    tmin=tmin,
-    tmax=tmax,
-    metrics="angle",
-)
-atfva_right = nearby.metrics.atfv(
-    tfrs["right_hand"],
-    fmin=fmin_atfv,
-    fmax=fmax_atfv,
-    tmin=tmin,
-    tmax=tmax,
-    metrics="angle",
-)
-
-atfva = pd.concat([atfva_left, atfva_right])["atfva"].mean()
-
-# %%
-"""
-# Print results
-"""
-
-print("# Variability Metrics")
-print(f" - ME    : {me:10.6f}")
-print(f" - SMEAT : {smeat:10.6f}")
-print(f" - WTTV  : {wttv:10.6f}")
-print(f" - ATTV  : {attv:10.6f}")
-print(f" - ATSVA : {atsva:10.6f}")
-print(f" - ATFVA : {atfva:10.6f}")
+print(pd.DataFrame(results, index=[0]))

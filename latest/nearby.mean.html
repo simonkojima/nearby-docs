@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>nearby.mean package &#8212; Nearby 0.0.2 documentation</title>
+    <title>nearby.mean package &#8212; Nearby 0.0.4 documentation</title>
   
   
   
@@ -42,14 +42,15 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=e3a6060d"></script>
+    <script src="_static/documentation_options.js?v=8c5712d9"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'nearby.mean';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.2';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.4';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
@@ -123,8 +124,8 @@
       
     
     
-    <img src="_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.2 documentation - Home"/>
-    <img src="_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.2 documentation - Home"/>
+    <img src="_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.4 documentation - Home"/>
+    <img src="_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.4 documentation - Home"/>
   
   
 </a></div>
@@ -396,17 +397,75 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="nearby.mean.mean.mean_extrinsic">
 <span class="sig-prename descclassname"><span class="pre">nearby.mean.mean.</span></span><span class="sig-name descname"><span class="pre">mean_extrinsic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/mean/mean.html#mean_extrinsic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.mean.mean.mean_extrinsic" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<dd><p>Compute the <strong>extrinsic mean direction</strong> of a set of vectors.</p>
+<p>This function normalizes each vector in <code class="docutils literal notranslate"><span class="pre">X</span></code> to unit length, sums the
+resulting unit vectors, and normalizes the sum to obtain the extrinsic
+mean direction.</p>
+<p>The computation follows:</p>
+<div class="math notranslate nohighlight">
+\[S = \sum_{i=1}^{N} \frac{X_i}{|X_i|}\]</div>
+<div class="math notranslate nohighlight">
+\[\mu = \frac{S}{|S|}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>array_like</em><em>, </em><em>shape</em><em> (</em><em>n_samples</em><em>, </em><em>n_dims</em><em>)</em>) – Input vectors. Each row corresponds to a vector.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The extrinsic mean direction (unit vector).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray, shape (n_dims,)</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The extrinsic mean is commonly used in directional statistics
+(e.g., unit-sphere embeddings, mean direction on <span class="math notranslate nohighlight">\(S^{d-1}\)</span>).</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nearby.mean.mean.mean_frechet_p2">
 <span class="sig-prename descclassname"><span class="pre">nearby.mean.mean.</span></span><span class="sig-name descname"><span class="pre">mean_frechet_p2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'extrinsic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">42</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/mean/mean.html#mean_frechet_p2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.mean.mean.mean_frechet_p2" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="nearby.mean.mean.mean_frechet_p2_old">
-<span class="sig-prename descclassname"><span class="pre">nearby.mean.mean.</span></span><span class="sig-name descname"><span class="pre">mean_frechet_p2_old</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-08</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'extrinsic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/mean/mean.html#mean_frechet_p2_old"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.mean.mean.mean_frechet_p2_old" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<dd><p>Compute the Fréchet mean on the unit hypersphere with the <span class="math notranslate nohighlight">\(p = 2\)</span>
+squared angular distance (intrinsic mean).</p>
+<p>Optimization is performed on the unit sphere <span class="math notranslate nohighlight">\(S^{d-1}\)</span> using
+<code class="docutils literal notranslate"><span class="pre">pymanopt</span></code> with a steepest descent solver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>array_like</em><em>, </em><em>shape</em><em> (</em><em>n_samples</em><em>, </em><em>n_dims</em><em>)</em>) – Input vectors. They will be normalized to unit length internally.</p></li>
+<li><p><strong>init</strong> (<em>{&quot;extrinsic&quot;</em><em>, </em><em>&quot;random&quot;</em><em>, </em><em>array_like}</em><em>, </em><em>optional</em>) – <p>Initialization method for the Fréchet mean.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;extrinsic&quot;</span></code> : use the extrinsic mean direction.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;random&quot;</span></code> : sample a random unit vector as initialization.</p></li>
+<li><p>ndarray : directly specify an initial vector (will be normalized).</p></li>
+</ul>
+</p></li>
+<li><p><strong>seed</strong> (<em>int</em><em>, </em><em>optional</em>) – Random seed used when <code class="docutils literal notranslate"><span class="pre">init=&quot;random&quot;</span></code>.</p></li>
+<li><p><strong>return_all</strong> (<em>bool</em><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, return the full optimizer result object from pymanopt.
+Otherwise, only the estimated Fréchet mean point is returned.</p></li>
+<li><p><strong>**kwargs</strong> – Additional keyword arguments passed to
+<code class="docutils literal notranslate"><span class="pre">pymanopt.optimizers.SteepestDescent</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">return_all=False</span></code>: the Fréchet mean (unit vector).</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">return_all=True</span></code>: the full result returned by pymanopt.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray or pymanopt.OptimizeResult</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>The function computes the <em>intrinsic</em> mean on the sphere using the
+geodesic distance.</p></li>
+<li><p>If vectors in <code class="docutils literal notranslate"><span class="pre">X</span></code> are not unit length, they are normalized internally.</p></li>
+<li><p>The objective is smooth everywhere except for antipodal configurations.</p></li>
+</ul>
+</dd></dl>
 
 </section>
 <section id="module-nearby.mean">
@@ -448,7 +507,6 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.mean.mean.get_random_unit_vec"><code class="docutils literal notranslate"><span class="pre">get_random_unit_vec()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.mean.mean.mean_extrinsic"><code class="docutils literal notranslate"><span class="pre">mean_extrinsic()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.mean.mean.mean_frechet_p2"><code class="docutils literal notranslate"><span class="pre">mean_frechet_p2()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.mean.mean.mean_frechet_p2_old"><code class="docutils literal notranslate"><span class="pre">mean_frechet_p2_old()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-nearby.mean">Module contents</a></li>

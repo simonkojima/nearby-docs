@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nearby.metrics.temporal &#8212; Nearby 0.0.2 documentation</title>
+    <title>nearby.metrics.temporal &#8212; Nearby 0.0.4 documentation</title>
   
   
   
@@ -41,14 +41,14 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=e3a6060d"></script>
+    <script src="../../../_static/documentation_options.js?v=8c5712d9"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/nearby/metrics/temporal';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.2';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.4';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
@@ -122,8 +122,8 @@
       
     
     
-    <img src="../../../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.2 documentation - Home"/>
-    <img src="../../../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.2 documentation - Home"/>
+    <img src="../../../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.4 documentation - Home"/>
+    <img src="../../../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.4 documentation - Home"/>
   
   
 </a></div>
@@ -372,23 +372,381 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
+<span class="kn">import</span><span class="w"> </span><span class="nn">tslearn.metrics</span>
+
 <span class="kn">import</span><span class="w"> </span><span class="nn">mne</span>
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">..utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_obj_type</span><span class="p">,</span> <span class="n">add_values_to_df</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">check_obj_type</span><span class="p">,</span>
+    <span class="n">add_values_to_df</span><span class="p">,</span>
+    <span class="n">check_averaged_obj_type</span><span class="p">,</span>
+    <span class="n">get_obj_type</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="within_trial_temporal">
+<a class="viewcode-back" href="../../../nearby.metrics.within_trial_temporal.html#nearby.metrics.temporal.within_trial_temporal">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">within_trial_temporal</span><span class="p">(</span>
+        <span class="n">obj</span><span class="p">,</span>
+        <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute Within-Trial Temporal (WTTemp) Variability values.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    obj : ``mne.epochs.Epochs`` | ``mne.time_frequency.tfr.EpochsTFR``</span>
+<span class="sd">        The MNE object containing either epochs or time–frequency data.</span>
+
+<span class="sd">    baseline : tuple | list | None, optional</span>
+<span class="sd">        Time interval used for baseline correction. If `None`, no baseline is applied.</span>
+<span class="sd">        If `obj` is an MNE TFR object, the baseline is applied using `obj.copy().apply_baseline(baseline, mode=&quot;percent&quot;)`.</span>
+<span class="sd">        If `obj` is an MNE Epochs object, it is applied using `obj.copy().apply_baseline(baseline)`.</span>
+
+<span class="sd">    fmin, fmax : float | None, optional</span>
+<span class="sd">        Frequency range of interest. Only used when `obj` is a TFR object.</span>
+
+<span class="sd">    tmin, tmax : float | None, optional</span>
+<span class="sd">        Time range of interest, in seconds.</span>
+
+<span class="sd">    picks : str | array_like | None, optional</span>
+<span class="sd">        Channels to include.</span>
+
+<span class="sd">    average : bool, default=True</span>
+<span class="sd">        If `True`, values are averaged across epochs. If `False`, a value</span>
+<span class="sd">        is returned for each epoch.</span>
+<span class="sd">        If ``average=False``, the DataFrame contains one entry per channel,</span>
+<span class="sd">        where each entry consists of a JSON-encoded list representing the</span>
+<span class="sd">        per-epoch ERD/S values.</span>
+
+<span class="sd">    additional_values : dict | None, optional</span>
+<span class="sd">        Additional columns to append to the output dataframe.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    df : pandas.DataFrame</span>
+<span class="sd">        DataFrame containing variability values for each channel.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">type_obj</span> <span class="o">=</span> <span class="n">get_obj_type</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">((</span><span class="n">type_obj</span> <span class="o">==</span> <span class="s2">&quot;EpochsTFR&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">type_obj</span> <span class="o">==</span> <span class="s2">&quot;Epochs&quot;</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;within_trial_temporal is only implemented for EpochsTFR or Epochs objects.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">baseline</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">type_obj</span> <span class="o">==</span> <span class="s2">&quot;EpochsTFR&quot;</span><span class="p">:</span>
+            <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">apply_baseline</span><span class="p">(</span><span class="n">baseline</span><span class="p">,</span> <span class="s2">&quot;percent&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">type_obj</span> <span class="o">==</span> <span class="s2">&quot;Epochs&quot;</span><span class="p">:</span>
+            <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">apply_baseline</span><span class="p">(</span><span class="n">baseline</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">picks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
+
+    <span class="n">df_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;within_trial_temporal&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">type_obj</span> <span class="o">==</span> <span class="s2">&quot;EpochsTFR&quot;</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span> <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">)</span>
+            <span class="c1"># data.shape: n_epochs, n_channels, n_freqs, n_times</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="c1"># data.shape: n_epochs, n_freqs, n_times</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="c1"># data.shape: n_epochs, n_times</span>
+        <span class="k">elif</span> <span class="n">type_obj</span> <span class="o">==</span> <span class="s2">&quot;Epochs&quot;</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;uV&quot;</span><span class="p">)</span>
+            <span class="c1"># data.shape: n_epochs, n_channels, n_times</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="c1"># data.shape: n_epochs, n_times</span>
+
+        <span class="n">sd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">average</span><span class="p">:</span>
+            <span class="n">sd</span> <span class="o">=</span> <span class="n">sd</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sd</span> <span class="o">=</span> <span class="n">sd</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+            <span class="n">sd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">sd</span><span class="p">)</span>
+
+        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;within_trial_temporal&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sd</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_dict</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">additional_values</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">add_values_to_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">additional_values</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span></div>
+
+
+
+<div class="viewcode-block" id="between_trial_temporal">
+<a class="viewcode-back" href="../../../nearby.metrics.between_trial_temporal.html#nearby.metrics.temporal.between_trial_temporal">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">between_trial_temporal</span><span class="p">(</span>
+        <span class="n">obj</span><span class="p">,</span>
+        <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute Between-Trial Temporal (BTTemp) Variability values.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    obj : ``mne.epochs.Epochs`` | ``mne.time_frequency.tfr.BaseTFR``</span>
+<span class="sd">        The MNE object containing either epochs or time–frequency data.</span>
+
+<span class="sd">    baseline : tuple | list | None, optional</span>
+<span class="sd">        Time interval used for baseline correction. If `None`, no baseline is applied.</span>
+<span class="sd">        If `obj` is an MNE TFR object, the baseline is applied using `obj.copy().apply_baseline(baseline, mode=&quot;percent&quot;)`.</span>
+<span class="sd">        If `obj` is an MNE Epochs object, it is applied using `obj.copy().apply_baseline(baseline)`.</span>
+
+<span class="sd">    fmin, fmax : float | None, optional</span>
+<span class="sd">        Frequency range of interest. Only used when `obj` is a TFR object.</span>
+
+<span class="sd">    tmin, tmax : float | None, optional</span>
+<span class="sd">        Time range of interest, in seconds.</span>
+
+<span class="sd">    picks : str | array_like | None, optional</span>
+<span class="sd">        Channels to include.</span>
+
+<span class="sd">    average : bool, default=True</span>
+<span class="sd">        If `True`, values are averaged across epochs. If `False`, a value</span>
+<span class="sd">        is returned for each epoch.</span>
+<span class="sd">        If ``average=False``, the DataFrame contains one entry per channel,</span>
+<span class="sd">        where each entry consists of a JSON-encoded list representing the</span>
+<span class="sd">        per-epoch ERD/S values.</span>
+
+<span class="sd">    additional_values : dict | None, optional</span>
+<span class="sd">        Additional columns to append to the output dataframe.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    df : pandas.DataFrame</span>
+<span class="sd">        DataFrame containing variability values for each channel.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">type_obj</span> <span class="o">=</span> <span class="n">get_obj_type</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">((</span><span class="n">type_obj</span> <span class="o">==</span> <span class="s2">&quot;EpochsTFR&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">type_obj</span> <span class="o">==</span> <span class="s2">&quot;Epochs&quot;</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;within_trial_temporal is only implemented for EpochsTFR or Epochs objects.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">baseline</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">type_obj</span> <span class="o">==</span> <span class="s2">&quot;tfr&quot;</span><span class="p">:</span>
+            <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">apply_baseline</span><span class="p">(</span><span class="n">baseline</span><span class="p">,</span> <span class="s2">&quot;percent&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">type_obj</span> <span class="o">==</span> <span class="s2">&quot;epochs&quot;</span><span class="p">:</span>
+            <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">apply_baseline</span><span class="p">(</span><span class="n">baseline</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">picks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
+
+    <span class="n">df_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;between_trial_temporal&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">type_obj</span> <span class="o">==</span> <span class="s2">&quot;EpochsTFR&quot;</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span> <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">)</span>
+            <span class="c1"># data.shape: n_epochs, n_channels, n_freqs, n_times</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="c1"># data.shape: n_epochs, n_freqs, n_times</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="c1"># data.shape: n_epochs, n_times</span>
+
+        <span class="k">elif</span> <span class="n">type_obj</span> <span class="o">==</span> <span class="s2">&quot;Epochs&quot;</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;uV&quot;</span><span class="p">)</span>
+            <span class="c1"># data.shape: n_epochs, n_channels, n_times</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="c1"># data.shape: n_epochs, n_times</span>
+
+        <span class="n">mean</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="c1"># mean.shape: n_times</span>
+
+        <span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="n">tslearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">dtw</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">m</span><span class="p">,</span> <span class="p">:])</span>
+            <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">average</span><span class="p">:</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+
+        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;between_trial_temporal&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_dict</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">additional_values</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">add_values_to_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">additional_values</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span></div>
+
+
+
+<div class="viewcode-block" id="between_average_temporal">
+<a class="viewcode-back" href="../../../nearby.metrics.between_average_temporal.html#nearby.metrics.temporal.between_average_temporal">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">between_average_temporal</span><span class="p">(</span>
+        <span class="n">obj_A</span><span class="p">,</span>
+        <span class="n">objs_B</span><span class="p">,</span>
+        <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute Between-Average Temporal (BATemp) values.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    obj : ``mne.evoked.Evoked`` | ``mne.time_frequency.tfr.AverageTFR``</span>
+<span class="sd">        The MNE object containing either epochs or time–frequency data.</span>
+
+<span class="sd">    baseline : tuple | list | None, optional</span>
+<span class="sd">        Time interval used for baseline correction. If `None`, no baseline is applied.</span>
+<span class="sd">        If `obj` is an MNE TFR object, the baseline is applied using `obj.copy().apply_baseline(baseline, mode=&quot;percent&quot;)`.</span>
+<span class="sd">        If `obj` is an MNE Epochs object, it is applied using `obj.copy().apply_baseline(baseline)`.</span>
+
+<span class="sd">    fmin, fmax : float | None, optional</span>
+<span class="sd">        Frequency range of interest. Only used when `obj` is a TFR object.</span>
+
+<span class="sd">    tmin, tmax : float | None, optional</span>
+<span class="sd">        Time range of interest, in seconds.</span>
+
+<span class="sd">    picks : str | array_like | None, optional</span>
+<span class="sd">        Channels to include.</span>
+
+<span class="sd">    average : bool, default=True</span>
+<span class="sd">        If `True`, values are averaged across epochs. If `False`, a value</span>
+<span class="sd">        is returned for each epoch.</span>
+<span class="sd">        If ``average=False``, the DataFrame contains one entry per channel,</span>
+<span class="sd">        where each entry consists of a JSON-encoded list representing the</span>
+<span class="sd">        per-epoch ERD/S values.</span>
+
+<span class="sd">    additional_values : dict | None, optional</span>
+<span class="sd">        Additional columns to append to the output dataframe.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    df : pandas.DataFrame</span>
+<span class="sd">        DataFrame containing variability values for each channel.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">type_obj_A</span> <span class="o">=</span> <span class="n">get_obj_type</span><span class="p">(</span><span class="n">obj_A</span><span class="p">)</span>
+    <span class="n">type_objs_B</span> <span class="o">=</span> <span class="n">get_obj_type</span><span class="p">(</span><span class="n">objs_B</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">((</span><span class="n">type_obj_A</span> <span class="o">==</span> <span class="s2">&quot;Evoked&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">type_obj_A</span> <span class="o">==</span> <span class="s2">&quot;AverageTFR&quot;</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;obj_A must be an instance of Evoked or AverageTFR objects.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">((</span><span class="n">type_objs_B</span> <span class="o">==</span> <span class="s2">&quot;list_Evoked&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">type_objs_B</span> <span class="o">==</span> <span class="s2">&quot;list_AverageTFR&quot;</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;objs_B must be an instance of list of Evoked or AverageTFR objects.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">type_obj_A</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">type_objs_B</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;obj_A and objs_B must be of the same type.&quot;</span><span class="p">)</span>
+
+    <span class="n">obj_A</span> <span class="o">=</span> <span class="n">obj_A</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">objs_B</span> <span class="o">=</span> <span class="p">[</span><span class="n">objs_B</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">objs_B</span><span class="p">))]</span>
+
+    <span class="k">if</span> <span class="n">picks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">obj_A</span> <span class="o">=</span> <span class="n">obj_A</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">objs_B</span><span class="p">)):</span>
+            <span class="n">objs_B</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">objs_B</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">proc_tfr</span><span class="p">(</span><span class="n">tfr</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">tfr</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span> <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">)</span>
+        <span class="c1"># data.shape: n_channels, n_freqs, n_times</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="c1"># data.shape: n_freqs, n_times</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="c1"># data.shape: n_times</span>
+
+        <span class="k">return</span> <span class="n">data</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">proc_evoked</span><span class="p">(</span><span class="n">evoked</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">evoked</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;uV&quot;</span><span class="p">)</span>
+        <span class="c1"># data.shape: n_channels, n_times</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="c1"># data.shape: n_times</span>
+
+        <span class="k">return</span> <span class="n">data</span>
+
+    <span class="n">df_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;between_average_temporal&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">obj_A</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">type_obj_A</span> <span class="o">==</span> <span class="s2">&quot;AverageTFR&quot;</span><span class="p">:</span>
+
+            <span class="n">data_A</span> <span class="o">=</span> <span class="n">proc_tfr</span><span class="p">(</span><span class="n">obj_A</span><span class="p">)</span>
+            <span class="n">data_B</span> <span class="o">=</span> <span class="p">[</span><span class="n">proc_tfr</span><span class="p">(</span><span class="n">objs_B</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">objs_B</span><span class="p">))]</span>
+
+        <span class="k">elif</span> <span class="n">type_obj_A</span> <span class="o">==</span> <span class="s2">&quot;Evoked&quot;</span><span class="p">:</span>
+
+            <span class="n">data_A</span> <span class="o">=</span> <span class="n">proc_evoked</span><span class="p">(</span><span class="n">obj_A</span><span class="p">)</span>
+            <span class="n">data_B</span> <span class="o">=</span> <span class="p">[</span><span class="n">proc_evoked</span><span class="p">(</span><span class="n">objs_B</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">objs_B</span><span class="p">))]</span>
+
+        <span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">B</span> <span class="ow">in</span> <span class="n">data_B</span><span class="p">:</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="n">tslearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">dtw</span><span class="p">(</span><span class="n">data_A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+            <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">average</span><span class="p">:</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+
+        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;between_average_temporal&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_dict</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">additional_values</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">add_values_to_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">additional_values</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span></div>
+
 
 
 <div class="viewcode-block" id="attv">
 <a class="viewcode-back" href="../../../nearby.metrics.attv.html#nearby.metrics.temporal.attv">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">attv</span><span class="p">(</span>
-    <span class="n">obj</span><span class="p">,</span>
-    <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">obj</span><span class="p">,</span>
+        <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Compute Across-Trial Temporal Variability values.</span>
@@ -443,7 +801,7 @@
             <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">apply_baseline</span><span class="p">(</span><span class="n">baseline</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">picks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
 
     <span class="n">df_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;attv&quot;</span><span class="p">:</span> <span class="p">[]}</span>
     <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
@@ -493,15 +851,15 @@
 <div class="viewcode-block" id="wttv">
 <a class="viewcode-back" href="../../../nearby.metrics.wttv.html#nearby.metrics.temporal.wttv">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">wttv</span><span class="p">(</span>
-    <span class="n">obj</span><span class="p">,</span>
-    <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">obj</span><span class="p">,</span>
+        <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Compute Within-Trial Temporal Variability values.</span>
@@ -551,7 +909,7 @@
             <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">apply_baseline</span><span class="p">(</span><span class="n">baseline</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">picks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
 
     <span class="n">df_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;wttv&quot;</span><span class="p">:</span> <span class="p">[]}</span>
     <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
@@ -581,6 +939,131 @@
 
         <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
         <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;wttv&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sd</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_dict</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">additional_values</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">add_values_to_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">additional_values</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span></div>
+
+
+
+<div class="viewcode-block" id="sgtv">
+<a class="viewcode-back" href="../../../nearby.metrics.html#nearby.metrics.temporal.sgtv">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">sgtv</span><span class="p">(</span>
+        <span class="n">obj_A</span><span class="p">,</span>
+        <span class="n">objs_B</span><span class="p">,</span>
+        <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute SG_ATTV (Subject-to-Group Within-Trial Temporal Variability) values.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    obj : ``mne.epochs.Epochs`` | ``mne.time_frequency.tfr.BaseTFR``</span>
+<span class="sd">        The MNE object containing either epochs or time–frequency data.</span>
+
+<span class="sd">    baseline : tuple | list | None, optional</span>
+<span class="sd">        Time interval used for baseline correction. If `None`, no baseline is applied.</span>
+<span class="sd">        If `obj` is an MNE TFR object, the baseline is applied using `obj.copy().apply_baseline(baseline, mode=&quot;percent&quot;)`.</span>
+<span class="sd">        If `obj` is an MNE Epochs object, it is applied using `obj.copy().apply_baseline(baseline)`.</span>
+
+<span class="sd">    fmin, fmax : float | None, optional</span>
+<span class="sd">        Frequency range of interest. Only used when `obj` is a TFR object.</span>
+
+<span class="sd">    tmin, tmax : float | None, optional</span>
+<span class="sd">        Time range of interest, in seconds.</span>
+
+<span class="sd">    picks : str | array_like | None, optional</span>
+<span class="sd">        Channels to include.</span>
+
+<span class="sd">    average : bool, default=True</span>
+<span class="sd">        If `True`, values are averaged across epochs. If `False`, a value</span>
+<span class="sd">        is returned for each epoch.</span>
+<span class="sd">        If ``average=False``, the DataFrame contains one entry per channel,</span>
+<span class="sd">        where each entry consists of a JSON-encoded list representing the</span>
+<span class="sd">        per-epoch ERD/S values.</span>
+
+<span class="sd">    additional_values : dict | None, optional</span>
+<span class="sd">        Additional columns to append to the output dataframe.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    df : pandas.DataFrame</span>
+<span class="sd">        DataFrame containing wttv values for each channel.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">tslearn.metrics</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;tslearn is not installed. pip install tslearn&quot;</span><span class="p">)</span>
+
+    <span class="n">type_obj</span> <span class="o">=</span> <span class="n">check_averaged_obj_type</span><span class="p">(</span><span class="n">obj_A</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">objs_B</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;objs_B must be an list&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">objs_B</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mne</span><span class="o">.</span><span class="n">time_frequency</span><span class="o">.</span><span class="n">tfr</span><span class="o">.</span><span class="n">AverageTFR</span><span class="p">))</span> <span class="ow">and</span> <span class="p">(</span>
+            <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">objs_B</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mne</span><span class="o">.</span><span class="n">evoked</span><span class="o">.</span><span class="n">Evoked</span><span class="p">)</span>
+    <span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;tfr_B must be an list of mne.time_frequency.tfr.AverageTFR or mne.evoked.Evoked objects&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">picks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">obj_A</span> <span class="o">=</span> <span class="n">obj_A</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">objs_B</span><span class="p">)):</span>
+            <span class="n">objs_B</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">objs_B</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">proc_tfr</span><span class="p">(</span><span class="n">tfr</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">tfr</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span> <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">)</span>
+        <span class="c1"># data.shape: n_channels, n_freqs, n_times</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="c1"># data.shape: n_freqs, n_times</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="c1"># data.shape: n_times</span>
+
+        <span class="k">return</span> <span class="n">data</span>
+
+    <span class="n">df_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;sgtv&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">obj_A</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">type_obj</span> <span class="o">==</span> <span class="s2">&quot;tfr&quot;</span><span class="p">:</span>
+
+            <span class="n">data_A</span> <span class="o">=</span> <span class="n">proc_tfr</span><span class="p">(</span><span class="n">obj_A</span><span class="p">)</span>
+            <span class="n">data_B</span> <span class="o">=</span> <span class="p">[</span><span class="n">proc_tfr</span><span class="p">(</span><span class="n">objs_B</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">objs_B</span><span class="p">))]</span>
+
+        <span class="k">elif</span> <span class="n">type_obj</span> <span class="o">==</span> <span class="s2">&quot;epochs&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;SG_ATTV is not implemented for epochs objects.&quot;</span><span class="p">)</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;uV&quot;</span><span class="p">)</span>
+            <span class="c1"># data.shape: n_epochs, n_channels, n_times</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="c1"># data.shape: n_epochs, n_times</span>
+
+        <span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">B</span> <span class="ow">in</span> <span class="n">data_B</span><span class="p">:</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="n">tslearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">dtw</span><span class="p">(</span><span class="n">data_A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+            <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">average</span><span class="p">:</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+
+        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;sgtv&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
 
     <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_dict</span><span class="p">)</span>
 

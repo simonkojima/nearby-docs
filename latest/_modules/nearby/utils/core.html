@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nearby.utils.core &#8212; Nearby 0.0.2 documentation</title>
+    <title>nearby.utils.core &#8212; Nearby 0.0.4 documentation</title>
   
   
   
@@ -41,14 +41,14 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=e3a6060d"></script>
+    <script src="../../../_static/documentation_options.js?v=8c5712d9"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/nearby/utils/core';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.2';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.4';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
@@ -122,8 +122,8 @@
       
     
     
-    <img src="../../../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.2 documentation - Home"/>
-    <img src="../../../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.2 documentation - Home"/>
+    <img src="../../../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.4 documentation - Home"/>
+    <img src="../../../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.4 documentation - Home"/>
   
   
 </a></div>
@@ -367,7 +367,23 @@
                 <article class="bd-article">
                   
   <h1>Source code for nearby.utils.core</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">mne</span>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">mne</span>
+
+
+<div class="viewcode-block" id="auto_windows">
+<a class="viewcode-back" href="../../../nearby.utils.html#nearby.utils.core.auto_windows">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">auto_windows</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="p">):</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="n">size</span>
+
+    <span class="n">windows</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+
+    <span class="n">I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">end</span> <span class="o">&lt;=</span> <span class="n">tmax</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">windows</span> <span class="o">=</span> <span class="n">windows</span><span class="p">[</span><span class="n">I</span><span class="p">,</span> <span class="p">:]</span>
+
+    <span class="k">return</span> <span class="n">windows</span></div>
+
 
 
 <div class="viewcode-block" id="add_values_to_df">
@@ -379,6 +395,39 @@
 
 
 
+<div class="viewcode-block" id="get_obj_type">
+<a class="viewcode-back" href="../../../nearby.utils.html#nearby.utils.core.get_obj_type">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_obj_type</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">mne</span><span class="o">.</span><span class="n">time_frequency</span><span class="o">.</span><span class="n">tfr</span><span class="o">.</span><span class="n">EpochsTFR</span><span class="p">):</span>
+        <span class="n">type_obj</span> <span class="o">=</span> <span class="s2">&quot;EpochsTFR&quot;</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">mne</span><span class="o">.</span><span class="n">epochs</span><span class="o">.</span><span class="n">BaseEpochs</span><span class="p">):</span>
+        <span class="n">type_obj</span> <span class="o">=</span> <span class="s2">&quot;Epochs&quot;</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">mne</span><span class="o">.</span><span class="n">time_frequency</span><span class="o">.</span><span class="n">tfr</span><span class="o">.</span><span class="n">AverageTFR</span><span class="p">):</span>
+        <span class="n">type_obj</span> <span class="o">=</span> <span class="s2">&quot;AverageTFR&quot;</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">mne</span><span class="o">.</span><span class="n">evoked</span><span class="o">.</span><span class="n">Evoked</span><span class="p">):</span>
+        <span class="n">type_obj</span> <span class="o">=</span> <span class="s2">&quot;Evoked&quot;</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="n">type_obj</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">obj</span><span class="p">:</span>
+            <span class="n">type_obj</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">get_obj_type</span><span class="p">(</span><span class="n">o</span><span class="p">))</span>
+        <span class="n">type_obj</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">type_obj</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">type_obj</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;obj must be a list of the same type&quot;</span><span class="p">)</span>
+
+        <span class="n">type_obj</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;list_</span><span class="si">{</span><span class="n">type_obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">type_obj</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="n">type_obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;obj must be an instance of mne.time_frequency.tfr.BaseTFR, mne.epochs.BaseEpochs, mne.time_frequency.tfr.AverageTFR, mne.evoked.Evoked or list of these&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">type_obj</span></div>
+
+
+
 <div class="viewcode-block" id="check_obj_type">
 <a class="viewcode-back" href="../../../nearby.utils.html#nearby.utils.core.check_obj_type">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">check_obj_type</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
@@ -387,7 +436,24 @@
     <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">mne</span><span class="o">.</span><span class="n">epochs</span><span class="o">.</span><span class="n">BaseEpochs</span><span class="p">):</span>
         <span class="n">type_obj</span> <span class="o">=</span> <span class="s2">&quot;epochs&quot;</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;obj must be an instance of mne.time_frequency.tfr.BaseTFR or mne.epochs.BaseEpochs&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;obj must be an instance of mne.time_frequency.tfr.BaseTFR or mne.epochs.BaseEpochs&quot;</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">type_obj</span></div>
+
+
+
+<div class="viewcode-block" id="check_averaged_obj_type">
+<a class="viewcode-back" href="../../../nearby.utils.html#nearby.utils.core.check_averaged_obj_type">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">check_averaged_obj_type</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">mne</span><span class="o">.</span><span class="n">time_frequency</span><span class="o">.</span><span class="n">tfr</span><span class="o">.</span><span class="n">AverageTFR</span><span class="p">):</span>
+        <span class="n">type_obj</span> <span class="o">=</span> <span class="s2">&quot;tfr&quot;</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">mne</span><span class="o">.</span><span class="n">evoked</span><span class="o">.</span><span class="n">Evoked</span><span class="p">):</span>
+        <span class="n">type_obj</span> <span class="o">=</span> <span class="s2">&quot;evoked&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;obj must be an instance of mne.time_frequency.tfr.BaseTFR or mne.epochs.BaseEpochs&quot;</span>
+        <span class="p">)</span>
     <span class="k">return</span> <span class="n">type_obj</span></div>
 
 </pre></div>
