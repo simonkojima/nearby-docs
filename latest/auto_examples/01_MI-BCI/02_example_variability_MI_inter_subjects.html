@@ -1,0 +1,1192 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Example: Inter-Subjects Variability of ERDS in a motor-imagery task &#8212; Nearby 0.0.4 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=8c5712d9"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'auto_examples/01_MI-BCI/02_example_variability_MI_inter_subjects';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.4';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Using Nearby on ERP Data" href="../02_ERP/index.html" />
+    <link rel="prev" title="Example: Intra-Subject Variability of ERDS in a motor-imagery task" href="01_example_variability_MI_intra_subject.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.4 documentation - Home"/>
+    <img src="../../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.4 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../documentation.html">
+    Documentation
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../install.html">
+    How to Install
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../documentation.html">
+    Documentation
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../install.html">
+    How to Install
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Using Nearby on MI-BCI Data</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01_example_variability_MI_intra_subject.html">Example: Intra-Subject Variability of ERDS in a motor-imagery task</a></li>
+
+
+
+
+
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Example: Inter-Subjects Variability of ERDS in a motor-imagery task</a></li>
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02_ERP/index.html">Using Nearby on ERP Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02_ERP/01_example_variability_ERP_intra_subject.html">Example: Intra-Subject Variability of ERP in an auditory task</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../02_ERP/02_example_variability_ERP_inter_subject.html">Example: Inter-Subject Variability of ERP in an auditory task</a></li>
+
+
+
+
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Examples</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Using Nearby on MI-BCI Data</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Example: Inter-Subjects Variability of ERDS in a motor-imagery task</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#sphx-glr-download-auto-examples-01-mi-bci-02-example-variability-mi-inter-subjects-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code.</p>
+</div>
+<section class="sphx-glr-example-title" id="example-inter-subjects-variability-of-erds-in-a-motor-imagery-task">
+<span id="sphx-glr-auto-examples-01-mi-bci-02-example-variability-mi-inter-subjects-py"></span><h1>Example: Inter-Subjects Variability of ERDS in a motor-imagery task<a class="headerlink" href="#example-inter-subjects-variability-of-erds-in-a-motor-imagery-task" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Authors: Simon Kojima &lt;simon.kojima@inria.fr&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># License: BSD (3-clause)</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">mne</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nearby</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">moabb.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dreyer2023</span>
+</pre></div>
+</div>
+</section>
+<section id="extract-epochs">
+<h1>Extract Epochs<a class="headerlink" href="#extract-epochs" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">test_subject</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">train_subjects</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">l_freq</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">h_freq</span> <span class="o">=</span> <span class="mi">13</span>
+<span class="n">resample</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">tmin_epochs</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.5</span>
+<span class="n">tmax_epochs</span> <span class="o">=</span> <span class="mf">5.5</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">Dreyer2023</span><span class="p">()</span>
+
+<span class="n">subjects</span> <span class="o">=</span> <span class="p">[</span><span class="n">test_subject</span><span class="p">]</span> <span class="o">+</span> <span class="n">train_subjects</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">subjects</span><span class="o">=</span><span class="n">subjects</span><span class="p">)</span>
+
+<span class="n">epochs</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">subject</span> <span class="ow">in</span> <span class="n">subjects</span><span class="p">:</span>
+
+    <span class="n">raws</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">subject</span><span class="p">][</span><span class="s2">&quot;0&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+    <span class="k">for</span> <span class="n">raw</span> <span class="ow">in</span> <span class="n">raws</span><span class="p">:</span>
+        <span class="n">raw</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+            <span class="n">l_freq</span><span class="o">=</span><span class="n">l_freq</span><span class="p">,</span>
+            <span class="n">h_freq</span><span class="o">=</span><span class="n">h_freq</span><span class="p">,</span>
+            <span class="n">method</span><span class="o">=</span><span class="s2">&quot;iir&quot;</span><span class="p">,</span>
+            <span class="n">iir_params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;ftype&quot;</span><span class="p">:</span> <span class="s2">&quot;butter&quot;</span><span class="p">,</span> <span class="s2">&quot;btype&quot;</span><span class="p">:</span> <span class="s2">&quot;bandpass&quot;</span><span class="p">,</span> <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+            <span class="n">phase</span><span class="o">=</span><span class="s2">&quot;zero&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="n">raw</span> <span class="o">=</span> <span class="n">mne</span><span class="o">.</span><span class="n">concatenate_raws</span><span class="p">(</span><span class="n">raws</span><span class="p">)</span>
+
+    <span class="n">raw</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="s2">&quot;eeg&quot;</span><span class="p">)</span>
+
+    <span class="n">e</span> <span class="o">=</span> <span class="n">mne</span><span class="o">.</span><span class="n">Epochs</span><span class="p">(</span>
+        <span class="n">raw</span><span class="p">,</span> <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tmin</span><span class="o">=</span><span class="n">tmin_epochs</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax_epochs</span><span class="p">,</span> <span class="n">event_repeated</span><span class="o">=</span><span class="s2">&quot;merge&quot;</span>
+    <span class="p">)</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">e</span><span class="p">[[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">,</span> <span class="s2">&quot;right_hand&quot;</span><span class="p">]]</span>
+
+    <span class="n">e</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+
+    <span class="n">e</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">resample</span><span class="p">)</span>
+
+    <span class="n">epochs</span><span class="p">[</span><span class="n">subject</span><span class="p">]</span> <span class="o">=</span> <span class="n">e</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
+9it [00:00, 39321.60it/s]
+Reading 0 ... 230399  =      0.000 ...   449.998 secs...
+Reading 0 ... 230399  =      0.000 ...   449.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+
+0it [00:00, ?it/s]
+9it [00:00, 37711.02it/s]
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+
+0it [00:00, ?it/s]
+9it [00:00, 40502.94it/s]
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+
+0it [00:00, ?it/s]
+9it [00:00, 39945.75it/s]
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Used Annotations descriptions: [np.str_(&#39;left_hand&#39;), np.str_(&#39;right_hand&#39;)]
+Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
+Not setting metadata
+240 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 240 events and 4097 original time points ...
+0 bad epochs dropped
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Used Annotations descriptions: [np.str_(&#39;left_hand&#39;), np.str_(&#39;right_hand&#39;)]
+Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
+Not setting metadata
+240 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 240 events and 4097 original time points ...
+0 bad epochs dropped
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Used Annotations descriptions: [np.str_(&#39;left_hand&#39;), np.str_(&#39;right_hand&#39;)]
+Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
+Not setting metadata
+240 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 240 events and 4097 original time points ...
+0 bad epochs dropped
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 7 - 13 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
+
+Used Annotations descriptions: [np.str_(&#39;left_hand&#39;), np.str_(&#39;right_hand&#39;)]
+Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
+Not setting metadata
+240 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 240 events and 4097 original time points ...
+0 bad epochs dropped
+</pre></div>
+</div>
+</section>
+<section id="extract-erds">
+<h1>Extract ERDS<a class="headerlink" href="#extract-erds" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">baseline</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+
+<span class="n">tfrs_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;left_hand&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;right_hand&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+
+<span class="k">for</span> <span class="n">subject</span> <span class="ow">in</span> <span class="n">subjects</span><span class="p">:</span>
+    <span class="n">tfrs</span> <span class="o">=</span> <span class="n">epochs</span><span class="p">[</span><span class="n">subject</span><span class="p">]</span><span class="o">.</span><span class="n">compute_tfr</span><span class="p">(</span>
+        <span class="n">method</span><span class="o">=</span><span class="s2">&quot;multitaper&quot;</span><span class="p">,</span>
+        <span class="n">freqs</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">l_freq</span><span class="p">,</span> <span class="n">h_freq</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span>
+        <span class="n">n_cycles</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">l_freq</span><span class="p">,</span> <span class="n">h_freq</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span>
+        <span class="n">use_fft</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">return_itc</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">average</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">decim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">tfrs</span> <span class="o">=</span> <span class="n">tfrs</span><span class="o">.</span><span class="n">apply_baseline</span><span class="p">(</span><span class="n">baseline</span><span class="o">=</span><span class="n">baseline</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;percent&quot;</span><span class="p">)</span>
+
+    <span class="n">tfrs_dict</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">][</span><span class="n">subject</span><span class="p">]</span> <span class="o">=</span> <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">average</span><span class="p">()</span>
+    <span class="n">tfrs_dict</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">][</span><span class="n">subject</span><span class="p">]</span> <span class="o">=</span> <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">average</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[Parallel(n_jobs=-1)]: Using backend LokyBackend with 24 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  10 out of  27 | elapsed:    0.2s remaining:    0.3s
+[Parallel(n_jobs=-1)]: Done  16 out of  27 | elapsed:    0.2s remaining:    0.1s
+[Parallel(n_jobs=-1)]: Done  22 out of  27 | elapsed:    0.2s remaining:    0.0s
+[Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.2s finished
+Applying baseline correction (mode: percent)
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 24 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  10 out of  27 | elapsed:    0.2s remaining:    0.3s
+[Parallel(n_jobs=-1)]: Done  16 out of  27 | elapsed:    0.2s remaining:    0.1s
+[Parallel(n_jobs=-1)]: Done  22 out of  27 | elapsed:    0.2s remaining:    0.0s
+[Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.2s finished
+Applying baseline correction (mode: percent)
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 24 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  10 out of  27 | elapsed:    0.2s remaining:    0.3s
+[Parallel(n_jobs=-1)]: Done  16 out of  27 | elapsed:    0.2s remaining:    0.1s
+[Parallel(n_jobs=-1)]: Done  22 out of  27 | elapsed:    0.2s remaining:    0.0s
+[Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.2s finished
+Applying baseline correction (mode: percent)
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 24 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  10 out of  27 | elapsed:    0.2s remaining:    0.3s
+[Parallel(n_jobs=-1)]: Done  16 out of  27 | elapsed:    0.2s remaining:    0.1s
+[Parallel(n_jobs=-1)]: Done  22 out of  27 | elapsed:    0.2s remaining:    0.0s
+[Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.2s finished
+Applying baseline correction (mode: percent)
+</pre></div>
+</div>
+</section>
+<section id="between-group-trial-variability">
+<h1>Between-Group-Trial Variability<a class="headerlink" href="#between-group-trial-variability" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">13</span>
+<span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">interval</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">dataset</span><span class="o">.</span><span class="n">interval</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">tfrs_left</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tfrs_dict</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">tfrs_right</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tfrs_dict</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+<span class="n">M_left</span> <span class="o">=</span> <span class="n">mne</span><span class="o">.</span><span class="n">time_frequency</span><span class="o">.</span><span class="n">combine_tfr</span><span class="p">(</span>
+    <span class="n">tfrs_left</span><span class="p">,</span>
+    <span class="n">weights</span><span class="o">=</span><span class="s2">&quot;equal&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">M_right</span> <span class="o">=</span> <span class="n">mne</span><span class="o">.</span><span class="n">time_frequency</span><span class="o">.</span><span class="n">combine_tfr</span><span class="p">(</span>
+    <span class="n">tfrs_right</span><span class="p">,</span>
+    <span class="n">weights</span><span class="o">=</span><span class="s2">&quot;equal&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<section id="between-trial-group-temporal-variability-btwtrialgrptemp">
+<h2>Between-Trial-Group Temporal Variability (BtwTrialGrpTemp)<a class="headerlink" href="#between-trial-group-temporal-variability-btwtrialgrptemp" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">importlib</span>
+
+<span class="n">importlib</span><span class="o">.</span><span class="n">reload</span><span class="p">(</span><span class="n">nearby</span><span class="p">)</span>
+<span class="n">importlib</span><span class="o">.</span><span class="n">reload</span><span class="p">(</span><span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="p">)</span>
+
+<span class="n">btw_trial_grp_temp_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_group_temporal</span><span class="p">(</span>
+    <span class="n">tfrs_left</span><span class="p">,</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C4&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">btw_trial_grp_temp_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_group_temporal</span><span class="p">(</span>
+    <span class="n">tfrs_right</span><span class="p">,</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C3&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">btw_trial_grp_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">btw_trial_grp_temp_left</span><span class="p">,</span> <span class="n">btw_trial_grp_temp_right</span><span class="p">])</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpTemp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_temp</span><span class="p">[</span><span class="s2">&quot;between_trial_group_temporal&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BtwTrialGrpTemp: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BtwTrialGrpTemp&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BtwTrialGrpTemp: 52.502
+</pre></div>
+</div>
+</section>
+<section id="between-trial-group-spatial-variability-btwtrialgrpspat">
+<h2>Between-Trial-Group Spatial Variability (BtwTrialGrpSpat)<a class="headerlink" href="#between-trial-group-spatial-variability-btwtrialgrpspat" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">btw_trial_grp_spat_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_group_spatial</span><span class="p">(</span>
+    <span class="n">tfrs_left</span><span class="p">,</span> <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span> <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span>
+<span class="p">)</span>
+
+<span class="n">btw_trial_grp_spat_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_group_spatial</span><span class="p">(</span>
+    <span class="n">tfrs_right</span><span class="p">,</span> <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span> <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span>
+<span class="p">)</span>
+
+<span class="n">btw_trial_grp_spat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">btw_trial_grp_spat_left</span><span class="p">,</span> <span class="n">btw_trial_grp_spat_right</span><span class="p">])</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpSpat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_spat</span><span class="p">[</span><span class="s2">&quot;between_trial_group_spatial&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BtwTrialGrpSpat: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BtwTrialGrpSpat&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BtwTrialGrpSpat: 0.946
+</pre></div>
+</div>
+</section>
+<section id="between-trial-group-frequency-variability-btwtrialgrpfreq">
+<h2>Between-Trial-Group Frequency Variability (BtwTrialGrpFreq)<a class="headerlink" href="#between-trial-group-frequency-variability-btwtrialgrpfreq" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">btw_trial_grp_freq_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_group_frequency</span><span class="p">(</span>
+    <span class="n">tfrs_left</span><span class="p">,</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C4&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">btw_trial_grp_freq_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_group_frequency</span><span class="p">(</span>
+    <span class="n">tfrs_right</span><span class="p">,</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C3&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">btw_trial_grp_freq</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">btw_trial_grp_freq_left</span><span class="p">,</span> <span class="n">btw_trial_grp_freq_right</span><span class="p">])</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpFreq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_freq</span><span class="p">[</span><span class="s2">&quot;between_trial_group_frequency&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BtwTrialGrpFreq: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BtwTrialGrpFreq&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BtwTrialGrpFreq: 1.027
+</pre></div>
+</div>
+</section>
+</section>
+<section id="between-trial-group-variability-test-user-referenced">
+<h1>Between-Trial-Group Variability (Test-User Referenced)<a class="headerlink" href="#between-trial-group-variability-test-user-referenced" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">tfrs_train_left</span> <span class="o">=</span> <span class="p">[</span><span class="n">tfrs_dict</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">][</span><span class="n">m</span><span class="p">]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">train_subjects</span><span class="p">]</span>
+<span class="n">tfrs_train_right</span> <span class="o">=</span> <span class="p">[</span><span class="n">tfrs_dict</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">][</span><span class="n">m</span><span class="p">]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">train_subjects</span><span class="p">]</span>
+</pre></div>
+</div>
+<section id="between-trial-group-temporal-variability-test-user-referenced-btwtrialgrptemp-tr">
+<h2>Between-Trial-Group Temporal Variability - Test-User Referenced (BtwTrialGrpTemp-TR)<a class="headerlink" href="#between-trial-group-temporal-variability-test-user-referenced-btwtrialgrptemp-tr" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">btw_trial_grp_temp_tr_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_group_temporal</span><span class="p">(</span>
+    <span class="n">tfrs_train_left</span><span class="p">,</span>
+    <span class="n">centroid</span><span class="o">=</span><span class="n">tfrs_dict</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">][</span><span class="n">test_subject</span><span class="p">],</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C4&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">btw_trial_grp_temp_tr_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_group_temporal</span><span class="p">(</span>
+    <span class="n">tfrs_train_right</span><span class="p">,</span>
+    <span class="n">centroid</span><span class="o">=</span><span class="n">tfrs_dict</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">][</span><span class="n">test_subject</span><span class="p">],</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="s2">&quot;C3&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">btw_trial_grp_temp_tr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">btw_trial_grp_temp_tr_left</span><span class="p">,</span> <span class="n">btw_trial_grp_temp_tr_right</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpTemp-TR&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_temp_tr</span><span class="p">[</span>
+    <span class="s2">&quot;between_trial_group_temporal&quot;</span>
+<span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BtwTrialGrpTemp-TR: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BtwTrialGrpTemp-TR&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BtwTrialGrpTemp-TR: 127.863
+</pre></div>
+</div>
+</section>
+<section id="between-trial-group-spatial-variability-test-user-referenced-btwtrialgrpspat-tr">
+<h2>Between-Trial-Group Spatial Variability - Test-User Referenced (BtwTrialGrpSpat-TR)<a class="headerlink" href="#between-trial-group-spatial-variability-test-user-referenced-btwtrialgrpspat-tr" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">btw_trial_grp_spat_tr_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_group_spatial</span><span class="p">(</span>
+    <span class="n">tfrs_train_left</span><span class="p">,</span>
+    <span class="n">centroid</span><span class="o">=</span><span class="n">tfrs_dict</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">][</span><span class="n">test_subject</span><span class="p">],</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">btw_trial_grp_spat_tr_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_group_spatial</span><span class="p">(</span>
+    <span class="n">tfrs_train_right</span><span class="p">,</span>
+    <span class="n">centroid</span><span class="o">=</span><span class="n">tfrs_dict</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">][</span><span class="n">test_subject</span><span class="p">],</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">btw_trial_grp_spat_tr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">btw_trial_grp_spat_tr_left</span><span class="p">,</span> <span class="n">btw_trial_grp_spat_tr_right</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpSpat-TR&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_spat_tr</span><span class="p">[</span>
+    <span class="s2">&quot;between_trial_group_spatial&quot;</span>
+<span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BtwTrialGrpSpat-TR: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BtwTrialGrpSpat-TR&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BtwTrialGrpSpat-TR: 1.961
+</pre></div>
+</div>
+</section>
+<section id="between-trial-group-frequency-variability-test-user-referenced-btwtrialgrpfreq-tr">
+<h2>Between-Trial-Group Frequency Variability - Test-User Referenced (BtwTrialGrpFreq-TR)<a class="headerlink" href="#between-trial-group-frequency-variability-test-user-referenced-btwtrialgrpfreq-tr" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">btw_trial_grp_freq_tr_left</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_group_frequency</span><span class="p">(</span>
+    <span class="n">tfrs_train_left</span><span class="p">,</span>
+    <span class="n">centroid</span><span class="o">=</span><span class="n">tfrs_dict</span><span class="p">[</span><span class="s2">&quot;left_hand&quot;</span><span class="p">][</span><span class="n">test_subject</span><span class="p">],</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">btw_trial_grp_freq_tr_right</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_group_frequency</span><span class="p">(</span>
+    <span class="n">tfrs_train_right</span><span class="p">,</span>
+    <span class="n">centroid</span><span class="o">=</span><span class="n">tfrs_dict</span><span class="p">[</span><span class="s2">&quot;right_hand&quot;</span><span class="p">][</span><span class="n">test_subject</span><span class="p">],</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">btw_trial_grp_freq_tr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">btw_trial_grp_freq_tr_left</span><span class="p">,</span> <span class="n">btw_trial_grp_freq_tr_right</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpFreq-TR&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_freq_tr</span><span class="p">[</span>
+    <span class="s2">&quot;between_trial_group_frequency&quot;</span>
+<span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BtwTrialGrpFreq-TR: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BtwTrialGrpFreq-TR&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BtwTrialGrpFreq-TR: 1.853
+</pre></div>
+</div>
+</section>
+</section>
+<section id="results">
+<h1>Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>   BtwTrialGrpTemp  BtwTrialGrpSpat  BtwTrialGrpFreq  BtwTrialGrpTemp-TR  BtwTrialGrpSpat-TR  BtwTrialGrpFreq-TR
+0        52.502186         0.946375         1.026725            127.8634            1.961261            1.853452
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 6.027 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-01-mi-bci-02-example-variability-mi-inter-subjects-py">
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/9cc167b28dd67913c68c4e4941578c38/02_example_variability_MI_inter_subjects.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">02_example_variability_MI_inter_subjects.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/070d727894cd596ce1b8e4d16c35ddcc/02_example_variability_MI_inter_subjects.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">02_example_variability_MI_inter_subjects.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/b9be42240e640625227f17d4cdd68c96/02_example_variability_MI_inter_subjects.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">02_example_variability_MI_inter_subjects.zip</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01_example_variability_MI_intra_subject.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Example: Intra-Subject Variability of ERDS in a motor-imagery task</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../02_ERP/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Using Nearby on ERP Data</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Example: Inter-Subjects Variability of ERDS in a motor-imagery task</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extract-epochs">Extract Epochs</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extract-erds">Extract ERDS</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#between-group-trial-variability">Between-Group-Trial Variability</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-temporal-variability-btwtrialgrptemp">Between-Trial-Group Temporal Variability (BtwTrialGrpTemp)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-spatial-variability-btwtrialgrpspat">Between-Trial-Group Spatial Variability (BtwTrialGrpSpat)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-frequency-variability-btwtrialgrpfreq">Between-Trial-Group Frequency Variability (BtwTrialGrpFreq)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-variability-test-user-referenced">Between-Trial-Group Variability (Test-User Referenced)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-temporal-variability-test-user-referenced-btwtrialgrptemp-tr">Between-Trial-Group Temporal Variability - Test-User Referenced (BtwTrialGrpTemp-TR)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-spatial-variability-test-user-referenced-btwtrialgrpspat-tr">Between-Trial-Group Spatial Variability - Test-User Referenced (BtwTrialGrpSpat-TR)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-frequency-variability-test-user-referenced-btwtrialgrpfreq-tr">Between-Trial-Group Frequency Variability - Test-User Referenced (BtwTrialGrpFreq-TR)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
+</ul>
+
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/auto_examples/01_MI-BCI/02_example_variability_MI_inter_subjects.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Nearby contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.0.4.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

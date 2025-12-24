@@ -2,5 +2,9 @@
   {
     "version": "latest",
     "url": "/nearby-docs/latest/"
+  },
+  {
+    "version": "v0.0.4",
+    "url": "/nearby-docs/v0.0.4/"
   }
 ]

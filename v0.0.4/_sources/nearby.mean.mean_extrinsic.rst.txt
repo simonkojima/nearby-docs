@@ -1,0 +1,6 @@
+﻿nearby.mean.mean\_extrinsic
+===========================
+
+.. currentmodule:: nearby.mean
+
+.. autofunction:: mean_extrinsic

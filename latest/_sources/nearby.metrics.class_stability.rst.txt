@@ -1,0 +1,6 @@
+﻿nearby.metrics.class\_stability
+===============================
+
+.. currentmodule:: nearby.metrics
+
+.. autofunction:: class_stability

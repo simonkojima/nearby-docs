@@ -1,0 +1,64 @@
+
+
+.. _sphx_glr_auto_examples_01_MI-BCI:
+
+Using Nearby on MI-BCI Data
+===========================
+
+.. toctree::
+   :hidden:
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example: Intra-Subject Variability of ERDS in a motor-imagery task">
+
+.. only:: html
+
+  .. image:: /auto_examples/01_MI-BCI/images/thumb/sphx_glr_01_example_variability_MI_intra_subject_thumb.png
+    :alt:
+
+  :doc:`/auto_examples/01_MI-BCI/01_example_variability_MI_intra_subject`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Example: Intra-Subject Variability of ERDS in a motor-imagery task</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example: Inter-Subjects Variability of ERDS in a motor-imagery task">
+
+.. only:: html
+
+  .. image:: /auto_examples/01_MI-BCI/images/thumb/sphx_glr_02_example_variability_MI_inter_subjects_thumb.png
+    :alt:
+
+  :doc:`/auto_examples/01_MI-BCI/02_example_variability_MI_inter_subjects`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Example: Inter-Subjects Variability of ERDS in a motor-imagery task</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/01_MI-BCI/01_example_variability_MI_intra_subject
+   /auto_examples/01_MI-BCI/02_example_variability_MI_inter_subjects
+

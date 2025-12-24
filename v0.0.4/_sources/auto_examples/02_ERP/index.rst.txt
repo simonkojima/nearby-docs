@@ -1,0 +1,64 @@
+
+
+.. _sphx_glr_auto_examples_02_ERP:
+
+Using Nearby on ERP Data
+========================
+
+.. toctree::
+   :hidden:
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example: Intra-Subject Variability of ERP in an auditory task">
+
+.. only:: html
+
+  .. image:: /auto_examples/02_ERP/images/thumb/sphx_glr_01_example_variability_ERP_intra_subject_thumb.png
+    :alt:
+
+  :doc:`/auto_examples/02_ERP/01_example_variability_ERP_intra_subject`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Example: Intra-Subject Variability of ERP in an auditory task</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example: Inter-Subject Variability of ERP in an auditory task">
+
+.. only:: html
+
+  .. image:: /auto_examples/02_ERP/images/thumb/sphx_glr_02_example_variability_ERP_inter_subject_thumb.png
+    :alt:
+
+  :doc:`/auto_examples/02_ERP/02_example_variability_ERP_inter_subject`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Example: Inter-Subject Variability of ERP in an auditory task</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/02_ERP/01_example_variability_ERP_intra_subject
+   /auto_examples/02_ERP/02_example_variability_ERP_inter_subject
+
