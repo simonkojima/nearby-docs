@@ -1,0 +1,6 @@
+﻿nearby.mean.frechet\_mean\_angular
+==================================
+
+.. currentmodule:: nearby.mean
+
+.. autofunction:: frechet_mean_angular

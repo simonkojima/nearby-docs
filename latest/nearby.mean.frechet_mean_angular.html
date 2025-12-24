@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Documentation &#8212; Nearby 0.0.4 documentation</title>
+    <title>nearby.mean.frechet_mean_angular &#8212; Nearby 0.0.4 documentation</title>
   
   
   
@@ -46,7 +46,7 @@
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'documentation';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'nearby.mean.frechet_mean_angular';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
@@ -56,8 +56,8 @@
         </script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="nearby.metrics.within_trial_temporal" href="nearby.metrics.within_trial_temporal.html" />
-    <link rel="prev" title="Nearby documentation" href="index.html" />
+    <link rel="next" title="Examples" href="auto_examples/index.html" />
+    <link rel="prev" title="nearby.mean.extrinsic_mean" href="nearby.mean.extrinsic_mean.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -143,7 +143,7 @@
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item current active">
-  <a class="nav-link nav-internal" href="#">
+  <a class="nav-link nav-internal" href="documentation.html">
     Documentation
   </a>
 </li>
@@ -256,7 +256,7 @@
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item current active">
-  <a class="nav-link nav-internal" href="#">
+  <a class="nav-link nav-internal" href="documentation.html">
     Documentation
   </a>
 </li>
@@ -351,9 +351,9 @@
 <li class="toctree-l1"><a class="reference internal" href="nearby.distances.distance_angle.html">nearby.distances.distance_angle</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mean</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="nearby.mean.extrinsic_mean.html">nearby.mean.extrinsic_mean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nearby.mean.frechet_mean_angular.html">nearby.mean.frechet_mean_angular</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">nearby.mean.frechet_mean_angular</a></li>
 </ul>
 </div>
 </nav></div>
@@ -394,7 +394,10 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Documentation</span></li>
+    
+    <li class="breadcrumb-item"><a href="documentation.html" class="nav-link">Documentation</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">nearby.mean.frechet_mean_angular</span></li>
   </ul>
 </nav>
 </div>
@@ -411,101 +414,68 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="documentation">
-<h1>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h1>
-<section id="within-trial-variability">
-<h2>Within-Trial Variability<a class="headerlink" href="#within-trial-variability" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="nearby.metrics.within_trial_temporal.html#nearby.metrics.within_trial_temporal" title="nearby.metrics.within_trial_temporal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearby.metrics.within_trial_temporal</span></code></a>(data[, ...])</p></td>
-<td><p>Compute Within-Trial Temporal (WiTrialTemp) Variability values.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="nearby.metrics.within_trial_spatial.html#nearby.metrics.within_trial_spatial" title="nearby.metrics.within_trial_spatial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearby.metrics.within_trial_spatial</span></code></a>(data[, ...])</p></td>
-<td><p>Compute within-trial spatial variability from time-resolved channel patterns.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="nearby.metrics.within_trial_frequency.html#nearby.metrics.within_trial_frequency" title="nearby.metrics.within_trial_frequency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearby.metrics.within_trial_frequency</span></code></a>(data)</p></td>
-<td><p>Compute within-trial frequency variability from time-resolved spectral patterns.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="between-trial-variability">
-<h2>Between-Trial Variability<a class="headerlink" href="#between-trial-variability" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="nearby.metrics.between_trial_temporal.html#nearby.metrics.between_trial_temporal" title="nearby.metrics.between_trial_temporal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearby.metrics.between_trial_temporal</span></code></a>(data)</p></td>
-<td><p>Compute between-trial temporal variability using DTW distances to a mean.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="nearby.metrics.between_trial_spatial.html#nearby.metrics.between_trial_spatial" title="nearby.metrics.between_trial_spatial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearby.metrics.between_trial_spatial</span></code></a>(data[, ...])</p></td>
-<td><p>Compute between-trial spatial variability from epoch-wise channel patterns.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="nearby.metrics.between_trial_frequency.html#nearby.metrics.between_trial_frequency" title="nearby.metrics.between_trial_frequency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearby.metrics.between_trial_frequency</span></code></a>(data)</p></td>
-<td><p>Compute between-trial frequency variability from epoch-wise spectra.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="between-trial-group-variability">
-<h2>Between-Trial-Group Variability<a class="headerlink" href="#between-trial-group-variability" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="nearby.metrics.between_trial_group_temporal.html#nearby.metrics.between_trial_group_temporal" title="nearby.metrics.between_trial_group_temporal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearby.metrics.between_trial_group_temporal</span></code></a>(data)</p></td>
-<td><p>Compute between-trial-group temporal variability using DTW distances to a centroid.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="nearby.metrics.between_trial_group_spatial.html#nearby.metrics.between_trial_group_spatial" title="nearby.metrics.between_trial_group_spatial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearby.metrics.between_trial_group_spatial</span></code></a>(data)</p></td>
-<td><p>Compute between-trial-group spatial variability from group-representative patterns.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="nearby.metrics.between_trial_group_frequency.html#nearby.metrics.between_trial_group_frequency" title="nearby.metrics.between_trial_group_frequency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearby.metrics.between_trial_group_frequency</span></code></a>(data)</p></td>
-<td><p>Compute between-trial-group frequency variability from group-representative spectra.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="miscellaneous-metrics">
-<h2>Miscellaneous Metrics<a class="headerlink" href="#miscellaneous-metrics" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="nearby.metrics.mean_erds.html#nearby.metrics.mean_erds" title="nearby.metrics.mean_erds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearby.metrics.mean_erds</span></code></a>(data[, baseline, ...])</p></td>
-<td><p>Compute mean ERD/S values for each channel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="nearby.metrics.standard_deviation_erds.html#nearby.metrics.standard_deviation_erds" title="nearby.metrics.standard_deviation_erds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearby.metrics.standard_deviation_erds</span></code></a>(data)</p></td>
-<td><p>Compute the standard deviation of mean ERD/S values across trials.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="nearby.metrics.class_stability.html#nearby.metrics.class_stability" title="nearby.metrics.class_stability"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearby.metrics.class_stability</span></code></a>([epochs, ...])</p></td>
-<td><p>Compute a Riemannian geometry-based class stability score.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="distances">
-<h2>Distances<a class="headerlink" href="#distances" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="nearby.distances.distance_angle.html#nearby.distances.distance_angle" title="nearby.distances.distance_angle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearby.distances.distance_angle</span></code></a>(w1, w2)</p></td>
-<td><p>Compute the angle (in radians) between two vectors.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="mean">
-<h2>Mean<a class="headerlink" href="#mean" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="nearby.mean.extrinsic_mean.html#nearby.mean.extrinsic_mean" title="nearby.mean.extrinsic_mean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearby.mean.extrinsic_mean</span></code></a>(X)</p></td>
-<td><p>Compute the <strong>extrinsic mean direction</strong> of a set of vectors.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="nearby.mean.frechet_mean_angular.html#nearby.mean.frechet_mean_angular" title="nearby.mean.frechet_mean_angular"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearby.mean.frechet_mean_angular</span></code></a>(X[, init, ...])</p></td>
-<td><p>Compute the Fréchet mean on the unit hypersphere with the <span class="math notranslate nohighlight">\(p = 2\)</span> squared angular distance (intrinsic mean).</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
+  <section id="nearby-mean-frechet-mean-angular">
+<h1>nearby.mean.frechet_mean_angular<a class="headerlink" href="#nearby-mean-frechet-mean-angular" title="Link to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="nearby.mean.frechet_mean_angular">
+<span class="sig-prename descclassname"><span class="pre">nearby.mean.</span></span><span class="sig-name descname"><span class="pre">frechet_mean_angular</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'extrinsic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">42</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/mean/mean.html#frechet_mean_angular"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.mean.frechet_mean_angular" title="Link to this definition">#</a></dt>
+<dd><p>Compute the Fréchet mean on the unit hypersphere with the <span class="math notranslate nohighlight">\(p = 2\)</span>
+squared angular distance (intrinsic mean).</p>
+<p>Optimization is performed on the unit sphere <span class="math notranslate nohighlight">\(S^{d-1}\)</span> using
+<code class="docutils literal notranslate"><span class="pre">pymanopt</span></code> with a steepest descent solver.</p>
+<p>Let <span class="math notranslate nohighlight">\(x_i \in \mathbb{R}^d\)</span> be input vectors normalized to unit norm
+and <span class="math notranslate nohighlight">\(\mu \in S^{d-1}\)</span> be the unknown mean direction. The Fréchet mean
+(for <span class="math notranslate nohighlight">\(p=2\)</span>) is defined as the minimizer of the sum of squared angular
+distances:</p>
+<div class="math notranslate nohighlight">
+\[\mu^* = \arg\min_{\mu \in S^{d-1}} \sum_{i=1}^{N} d_{\angle}(x_i, \mu)^2\]</div>
+<p>where the angular (geodesic) distance on the unit sphere is</p>
+<div class="math notranslate nohighlight">
+\[d_{\angle}(x, \mu) = \arccos(x^{\top}\mu).\]</div>
+<ul class="simple">
+<li><p>The function computes the <em>intrinsic</em> mean on the sphere using the
+geodesic distance.</p></li>
+<li><p>If vectors in <code class="docutils literal notranslate"><span class="pre">X</span></code> are not unit length, they are normalized internally.</p></li>
+<li><p>The objective is smooth everywhere except for antipodal configurations.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>array_like</em><em>, </em><em>shape</em><em> (</em><em>n_samples</em><em>, </em><em>n_dims</em><em>)</em>) – Input vectors. They will be normalized to unit length internally.</p></li>
+<li><p><strong>init</strong> (<em>{&quot;extrinsic&quot;</em><em>, </em><em>&quot;random&quot;</em><em>, </em><em>array_like}</em><em>, </em><em>optional</em>) – <p>Initialization method for the Fréchet mean.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;extrinsic&quot;</span></code> : use the extrinsic mean direction.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;random&quot;</span></code> : sample a random unit vector as initialization.</p></li>
+<li><p>ndarray : directly specify an initial vector (will be normalized).</p></li>
+</ul>
+</p></li>
+<li><p><strong>seed</strong> (<em>int</em><em>, </em><em>optional</em>) – Random seed used when <code class="docutils literal notranslate"><span class="pre">init=&quot;random&quot;</span></code>.</p></li>
+<li><p><strong>return_all</strong> (<em>bool</em><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, return the full optimizer result object from pymanopt.
+Otherwise, only the estimated Fréchet mean point is returned.</p></li>
+<li><p><strong>**kwargs</strong> – Additional keyword arguments passed to
+<code class="docutils literal notranslate"><span class="pre">pymanopt.optimizers.SteepestDescent</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">return_all=False</span></code>: the Fréchet mean (unit vector).</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">return_all=True</span></code>: the full result returned by pymanopt.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray or pymanopt.OptimizeResult</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>The function computes the <em>intrinsic</em> mean on the sphere using the
+geodesic distance.</p></li>
+<li><p>If vectors in <code class="docutils literal notranslate"><span class="pre">X</span></code> are not unit length, they are normalized internally.</p></li>
+<li><p>The objective is smooth everywhere except for antipodal configurations.</p></li>
+</ul>
+</dd></dl>
+
 </section>
 
 
@@ -519,20 +489,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="index.html"
+       href="nearby.mean.extrinsic_mean.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Nearby documentation</p>
+        <p class="prev-next-title">nearby.mean.extrinsic_mean</p>
       </div>
     </a>
     <a class="right-next"
-       href="nearby.metrics.within_trial_temporal.html"
+       href="auto_examples/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">nearby.metrics.within_trial_temporal</p>
+        <p class="prev-next-title">Examples</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -555,12 +525,7 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#within-trial-variability">Within-Trial Variability</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-variability">Between-Trial Variability</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-variability">Between-Trial-Group Variability</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-metrics">Miscellaneous Metrics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distances">Distances</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mean">Mean</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.mean.frechet_mean_angular"><code class="docutils literal notranslate"><span class="pre">frechet_mean_angular()</span></code></a></li>
 </ul>
   </nav></div>
 
@@ -568,7 +533,7 @@
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/documentation.rst.txt"
+      <li><a href="_sources/nearby.mean.frechet_mean_angular.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div></div>

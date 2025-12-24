@@ -42,8 +42,8 @@
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../../_static/documentation_options.js?v=8c5712d9"></script>
-    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/nearby/mean/mean';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
@@ -370,12 +370,11 @@
 <span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">autograd.numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">anp</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pymanopt</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 
 
-<div class="viewcode-block" id="mean_extrinsic">
-<a class="viewcode-back" href="../../../nearby.mean.mean_extrinsic.html#nearby.mean.mean.mean_extrinsic">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">mean_extrinsic</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
+<div class="viewcode-block" id="extrinsic_mean">
+<a class="viewcode-back" href="../../../nearby.mean.extrinsic_mean.html#nearby.mean.extrinsic_mean">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">extrinsic_mean</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Compute the **extrinsic mean direction** of a set of vectors.</span>
 
@@ -419,27 +418,44 @@
 
 
 
-<div class="viewcode-block" id="get_random_unit_vec">
-<a class="viewcode-back" href="../../../nearby.mean.html#nearby.mean.mean.get_random_unit_vec">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_random_unit_vec</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">rng</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">rng</span><span class="p">)</span>
     <span class="n">v</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">d</span><span class="p">)</span>
     <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">get_random_unit_vec</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">v</span> <span class="o">/</span> <span class="n">n</span></div>
+    <span class="k">return</span> <span class="n">v</span> <span class="o">/</span> <span class="n">n</span>
 
 
-
-<div class="viewcode-block" id="mean_frechet_p2">
-<a class="viewcode-back" href="../../../nearby.mean.mean_frechet_p2.html#nearby.mean.mean.mean_frechet_p2">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">mean_frechet_p2</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="s2">&quot;extrinsic&quot;</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">return_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="frechet_mean_angular">
+<a class="viewcode-back" href="../../../nearby.mean.frechet_mean_angular.html#nearby.mean.frechet_mean_angular">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">frechet_mean_angular</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="s2">&quot;extrinsic&quot;</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">return_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Compute the Fréchet mean on the unit hypersphere with the :math:`p = 2`</span>
 <span class="sd">    squared angular distance (intrinsic mean).</span>
 
 <span class="sd">    Optimization is performed on the unit sphere :math:`S^{d-1}` using</span>
 <span class="sd">    ``pymanopt`` with a steepest descent solver.</span>
+
+<span class="sd">    Let :math:`x_i \\in \\mathbb{R}^d` be input vectors normalized to unit norm</span>
+<span class="sd">    and :math:`\\mu \\in S^{d-1}` be the unknown mean direction. The Fréchet mean</span>
+<span class="sd">    (for :math:`p=2`) is defined as the minimizer of the sum of squared angular</span>
+<span class="sd">    distances:</span>
+
+<span class="sd">    .. math::</span>
+
+<span class="sd">        \\mu^* = \\arg\\min_{\\mu \\in S^{d-1}} \\sum_{i=1}^{N} d_{\\angle}(x_i, \\mu)^2</span>
+
+<span class="sd">    where the angular (geodesic) distance on the unit sphere is</span>
+
+<span class="sd">    .. math::</span>
+
+<span class="sd">        d_{\\angle}(x, \\mu) = \\arccos(x^{\\top}\\mu).</span>
+
+<span class="sd">    - The function computes the *intrinsic* mean on the sphere using the</span>
+<span class="sd">      geodesic distance.</span>
+<span class="sd">    - If vectors in ``X`` are not unit length, they are normalized internally.</span>
+<span class="sd">    - The objective is smooth everywhere except for antipodal configurations.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -484,7 +500,7 @@
     <span class="n">n_vecs</span><span class="p">,</span> <span class="n">n_dim</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
 
     <span class="k">if</span> <span class="n">init</span> <span class="o">==</span> <span class="s2">&quot;extrinsic&quot;</span><span class="p">:</span>
-        <span class="n">initial_point</span> <span class="o">=</span> <span class="n">mean_extrinsic</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="n">initial_point</span> <span class="o">=</span> <span class="n">extrinsic_mean</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">init</span> <span class="o">==</span> <span class="s2">&quot;random&quot;</span><span class="p">:</span>
         <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
         <span class="n">initial_point</span> <span class="o">=</span> <span class="n">get_random_unit_vec</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="n">n_dim</span><span class="p">,</span> <span class="n">rng</span><span class="o">=</span><span class="n">rng</span><span class="p">)</span>
@@ -552,7 +568,7 @@
 
   <p class="copyright">
     
-      © Copyright 2025, Simon Kojima.
+      © Copyright 2025, Nearby contributors.
       <br/>
     
   </p>
@@ -561,7 +577,7 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.0.4.
     <br/>
   </p>
 </div>
