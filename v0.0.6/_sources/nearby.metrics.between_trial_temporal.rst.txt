@@ -1,0 +1,6 @@
+﻿nearby.metrics.between\_trial\_temporal
+=======================================
+
+.. currentmodule:: nearby.metrics
+
+.. autofunction:: between_trial_temporal
