@@ -1,0 +1,6 @@
+﻿nearby.metrics.within\_trial\_frequency
+=======================================
+
+.. currentmodule:: nearby.metrics
+
+.. autofunction:: within_trial_frequency

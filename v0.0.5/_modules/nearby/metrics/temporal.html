@@ -1,0 +1,991 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nearby.metrics.temporal &#8212; Nearby 0.0.4 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=8c5712d9"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/nearby/metrics/temporal';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.4';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.4 documentation - Home"/>
+    <img src="../../../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.4 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../documentation.html">
+    Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../auto_examples/index.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../install.html">
+    How to Install
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../documentation.html">
+    Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../auto_examples/index.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../install.html">
+    How to Install
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">nearby.metrics.temporal</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for nearby.metrics.temporal</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">mne</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tslearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">dtw</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tslearn.barycenters</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">euclidean_barycenter</span><span class="p">,</span>
+    <span class="n">dtw_barycenter_averaging</span><span class="p">,</span>
+    <span class="n">dtw_barycenter_averaging_subgradient</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils.core</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">_add_values_to_df</span><span class="p">,</span>
+    <span class="n">_get_data_type</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils.proc</span><span class="w"> </span><span class="kn">import</span> <span class="n">_get_data</span><span class="p">,</span> <span class="n">_apply_baseline</span>
+
+
+<div class="viewcode-block" id="within_trial_temporal">
+<a class="viewcode-back" href="../../../nearby.metrics.within_trial_temporal.html#nearby.metrics.within_trial_temporal">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">within_trial_temporal</span><span class="p">(</span>
+    <span class="n">data</span><span class="p">,</span>
+    <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute Within-Trial Temporal (WiTrialTemp) Variability values.</span>
+
+<span class="sd">    This metric quantifies how much the time course varies within each epoch.</span>
+<span class="sd">    For each channel, it computes the standard deviation over time within an epoch,</span>
+<span class="sd">    then optionally averages those values across epochs.</span>
+
+<span class="sd">    - If ``data`` is an :class:`mne.time_frequency.tfr.EpochsTFR`, power values are</span>
+<span class="sd">      first restricted to the specified frequency band (``fmin``-``fmax``) and then</span>
+<span class="sd">      averaged over frequency, yielding a single time course per epoch.</span>
+<span class="sd">    - If ``data`` is an :class:`mne.epochs.Epochs`, the epoched signal is used</span>
+<span class="sd">      directly (in microvolts).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : mne.epochs.Epochs | mne.time_frequency.tfr.EpochsTFR</span>
+<span class="sd">        The MNE object containing either epoched time-domain data (:class:`mne.epochs.Epochs`)</span>
+<span class="sd">        or epoched time-frequency data (:class:`mne.time_frequency.tfr.EpochsTFR`).</span>
+
+<span class="sd">    baseline : tuple of float | list of float | None, optional</span>
+<span class="sd">        Time interval (in seconds) used for baseline correction. If ``None``, no baseline</span>
+<span class="sd">        is applied.</span>
+
+<span class="sd">        For :class:`mne.time_frequency.tfr.EpochsTFR`, baseline correction is applied as::</span>
+
+<span class="sd">            data.copy().apply_baseline(baseline, mode=&quot;percent&quot;)</span>
+
+<span class="sd">        For :class:`mne.epochs.Epochs`, baseline correction is applied as::</span>
+
+<span class="sd">            data.copy().apply_baseline(baseline)</span>
+
+<span class="sd">    fmin, fmax : float | None, optional</span>
+<span class="sd">        Frequency band of interest (in Hz). Only used when ``obj`` is an</span>
+<span class="sd">        :class:`mne.time_frequency.tfr.EpochsTFR`. If ``None``, MNE defaults are used.</span>
+
+<span class="sd">    tmin, tmax : float | None, optional</span>
+<span class="sd">        Time window of interest (in seconds). If provided, data are cropped to</span>
+<span class="sd">        ``[tmin, tmax]`` before computing variability.</span>
+
+<span class="sd">    picks : str | array_like of int | array_like of str | None, optional</span>
+<span class="sd">        Channels to include. Passed to :meth:`mne.Epochs.pick` / :meth:`mne.time_frequency.EpochsTFR.pick`.</span>
+<span class="sd">        If ``None``, all channels are used.</span>
+
+<span class="sd">    ddof : int, default=1</span>
+<span class="sd">        Delta degrees of freedom passed to :func:`numpy.std`.</span>
+<span class="sd">        This parameter is forwarded directly to ``np.std(X, ddof=ddof)`` when</span>
+<span class="sd">        computing the standard deviation within each epoch.</span>
+
+<span class="sd">    additional_values : dict | None, optional</span>
+<span class="sd">        Additional columns to append to the returned dataframe. This is useful for</span>
+<span class="sd">        adding metadata (e.g., ``subject``, ``session``, ``run``).</span>
+
+<span class="sd">    average : bool, default=True</span>
+<span class="sd">        If ``True``, returns a single scalar per channel obtained by averaging the</span>
+<span class="sd">        per-epoch within-trial temporal standard deviations across epochs.</span>
+
+<span class="sd">        If ``False``, returns a per-channel JSON-encoded list containing one value</span>
+<span class="sd">        per epoch (order follows the epoch order in ``data``).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    df : pandas.DataFrame</span>
+<span class="sd">        Output dataframe with one row per channel.</span>
+
+<span class="sd">        - ``channel`` : str</span>
+<span class="sd">            Channel name.</span>
+<span class="sd">        - ``within_trial_temporal`` : float | str</span>
+<span class="sd">            If ``average=True``, a scalar variability value.</span>
+<span class="sd">            If ``average=False``, a JSON-encoded list of per-epoch variability values.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">type_data</span> <span class="o">=</span> <span class="n">_get_data_type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">((</span><span class="n">type_data</span> <span class="o">==</span> <span class="s2">&quot;EpochsTFR&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">type_data</span> <span class="o">==</span> <span class="s2">&quot;Epochs&quot;</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;within_trial_temporal is only implemented for EpochsTFR or Epochs objects.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">baseline</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">_apply_baseline</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">baseline</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">picks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
+
+    <span class="n">df_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;within_trial_temporal&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
+
+        <span class="n">X</span> <span class="o">=</span> <span class="n">_get_data</span><span class="p">(</span>
+            <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+            <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+            <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+            <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+            <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+            <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+            <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">sd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="n">ddof</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">average</span><span class="p">:</span>
+            <span class="n">sd</span> <span class="o">=</span> <span class="n">sd</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sd</span> <span class="o">=</span> <span class="n">sd</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+            <span class="n">sd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">sd</span><span class="p">)</span>
+
+        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;within_trial_temporal&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sd</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_dict</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">additional_values</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">_add_values_to_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">additional_values</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span></div>
+
+
+
+<div class="viewcode-block" id="between_trial_temporal">
+<a class="viewcode-back" href="../../../nearby.metrics.between_trial_temporal.html#nearby.metrics.between_trial_temporal">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">between_trial_temporal</span><span class="p">(</span>
+    <span class="n">data</span><span class="p">,</span>
+    <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">barycenter</span><span class="o">=</span><span class="s2">&quot;dba&quot;</span><span class="p">,</span>
+    <span class="n">params_barycenter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">params_dtw</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute between-trial temporal variability using DTW distances to a mean.</span>
+
+<span class="sd">    For each channel, this function forms a set of 1D time courses (one per epoch),</span>
+<span class="sd">    computes a representative time course (the mean or barycenter) across epochs, then</span>
+<span class="sd">    measures how much each epoch deviates from the mean using Dynamic Time</span>
+<span class="sd">    Warping (DTW). The channel-level score is the mean DTW distance across epochs.</span>
+
+<span class="sd">    DTW is computed using the `tslearn.metrics.dtw &lt;https://tslearn.readthedocs.io/en/stable/gen_modules/metrics/tslearn.metrics.dtw.html#tslearn.metrics.dtw&gt;`_ module.</span>
+
+<span class="sd">    The input can be either time-domain epochs (:class:`mne.epochs.Epochs`) or</span>
+<span class="sd">    time–frequency power epochs (:class:`mne.time_frequency.tfr.EpochsTFR`):</span>
+
+<span class="sd">    - For :class:`~mne.time_frequency.tfr.EpochsTFR`, power is optionally cropped in</span>
+<span class="sd">      frequency (``fmin``–``fmax``), then averaged over frequency to obtain a single</span>
+<span class="sd">      time course per epoch.</span>
+<span class="sd">    - For :class:`~mne.epochs.Epochs`, the epoched signal is used directly (optionally</span>
+<span class="sd">      cropped in time; returned in microvolts).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : mne.epochs.Epochs | mne.time_frequency.tfr.EpochsTFR</span>
+<span class="sd">        Epoched MNE object. Only these two types are supported.</span>
+
+<span class="sd">    baseline : tuple of float | None, optional</span>
+<span class="sd">        Baseline interval in seconds (e.g., ``(-1, 0)``). If provided, baseline</span>
+<span class="sd">        correction is applied on a copy of ``data`` before computing variability.</span>
+<span class="sd">        For :class:`~mne.time_frequency.tfr.EpochsTFR`, baseline is applied with</span>
+<span class="sd">        ``mode=&quot;percent&quot;``.</span>
+
+<span class="sd">    fmin, fmax : float | None, optional</span>
+<span class="sd">        Frequency band of interest in Hz. Only used when ``data`` is an</span>
+<span class="sd">        :class:`~mne.time_frequency.tfr.EpochsTFR`. If either is ``None``, no</span>
+<span class="sd">        frequency cropping is applied.</span>
+
+<span class="sd">    tmin, tmax : float | None, optional</span>
+<span class="sd">        Time window of interest in seconds. If provided, data are cropped to</span>
+<span class="sd">        ``[tmin, tmax]`` prior to mean/DTW computations.</span>
+
+<span class="sd">    picks : str | array_like of int | array_like of str | None, optional</span>
+<span class="sd">        Channels to include. Passed to :meth:`mne.Epochs.pick` or</span>
+<span class="sd">        :meth:`mne.time_frequency.EpochsTFR.pick`. If ``None``, all channels are used.</span>
+
+<span class="sd">    barycenter : {&quot;dba&quot;, &quot;dba_subgradient&quot;, &quot;euclidean&quot;}, default=&quot;dba&quot;</span>
+<span class="sd">        Method used to compute the representative time course across epochs.</span>
+
+<span class="sd">        - ``&quot;dba&quot;``: DTW Barycenter Averaging (DBA). See `tslearn.barycenters.dtw_barycenter_averaging &lt;https://tslearn.readthedocs.io/en/stable/gen_modules/barycenters/tslearn.barycenters.dtw_barycenter_averaging.html#tslearn.barycenters.dtw_barycenter_averaging&gt;`_</span>
+<span class="sd">        - ``&quot;dba_subgradient&quot;``: DBA using a subgradient-based optimization. See `tslearn.barycenters.dtw_barycenter_averaging_subgradient &lt;https://tslearn.readthedocs.io/en/stable/gen_modules/barycenters/tslearn.barycenters.dtw_barycenter_averaging_subgradient.html#tslearn.barycenters.dtw_barycenter_averaging_subgradient&gt;`_</span>
+<span class="sd">        - ``&quot;euclidean&quot;``: Euclidean mean over epochs (no DTW alignment). See `tslearn.barycenters.euclidean_barycenter &lt;https://tslearn.readthedocs.io/en/stable/gen_modules/barycenters/tslearn.barycenters.euclidean_barycenter.html#tslearn.barycenters.euclidean_barycenter&gt;`_</span>
+
+<span class="sd">    params_barycenter : dict | None, optional</span>
+<span class="sd">        Parameters passed to the selected barycenter routine. If ``None``, an empty</span>
+<span class="sd">        dict is used.</span>
+
+<span class="sd">    params_dtw : dict | None, optional</span>
+<span class="sd">        Parameters passed to the DTW distance function used to compare each epoch to</span>
+<span class="sd">        the barycenter. If ``None``, an empty dict is used.</span>
+
+<span class="sd">    average : bool, default=True</span>
+<span class="sd">        Controls the output format for each channel.</span>
+
+<span class="sd">        - If ``True``, return a scalar per channel (mean DTW distance across epochs).</span>
+<span class="sd">        - If ``False``, return a JSON-encoded list of per-epoch DTW distances (epoch</span>
+<span class="sd">          order matches ``data``).</span>
+
+<span class="sd">    additional_values : dict | None, optional</span>
+<span class="sd">        Extra columns to append to the returned dataframe (e.g., ``{&quot;subject&quot;: 1}``).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    df : pandas.DataFrame</span>
+<span class="sd">        Dataframe with one row per channel.</span>
+
+<span class="sd">        ``channel`` : str</span>
+<span class="sd">            Channel name.</span>
+
+<span class="sd">        ``between_trial_temporal`` : float | str</span>
+<span class="sd">            If ``average=True``, the mean DTW distance across epochs.</span>
+<span class="sd">            If ``average=False``, a JSON-encoded list of DTW distances with length</span>
+<span class="sd">            ``n_epochs``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">params_barycenter</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">params_barycenter</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">params_barycenter</span> <span class="o">=</span> <span class="n">params_barycenter</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">params_dtw</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">params_dtw</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">params_dtw</span> <span class="o">=</span> <span class="n">params_dtw</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">type_data</span> <span class="o">=</span> <span class="n">_get_data_type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">((</span><span class="n">type_data</span> <span class="o">==</span> <span class="s2">&quot;EpochsTFR&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">type_data</span> <span class="o">==</span> <span class="s2">&quot;Epochs&quot;</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;between_trial_temporal is only implemented for EpochsTFR or Epochs objects.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">baseline</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">_apply_baseline</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">baseline</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">picks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
+
+    <span class="n">df_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;between_trial_temporal&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">_get_data</span><span class="p">(</span>
+            <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+            <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+            <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+            <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+            <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+            <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+            <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">match</span> <span class="n">barycenter</span><span class="p">:</span>
+            <span class="k">case</span> <span class="s2">&quot;dba&quot;</span><span class="p">:</span>
+                <span class="n">mean</span> <span class="o">=</span> <span class="n">dtw_barycenter_averaging</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="o">**</span><span class="n">params_barycenter</span><span class="p">)</span>
+            <span class="k">case</span> <span class="s2">&quot;dba_subgradient&quot;</span><span class="p">:</span>
+                <span class="n">mean</span> <span class="o">=</span> <span class="n">dtw_barycenter_averaging_subgradient</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="o">**</span><span class="n">params_barycenter</span><span class="p">)</span>
+            <span class="k">case</span> <span class="s2">&quot;euclidean&quot;</span><span class="p">:</span>
+                <span class="n">mean</span> <span class="o">=</span> <span class="n">euclidean_barycenter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="o">**</span><span class="n">params_barycenter</span><span class="p">)</span>
+            <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid barycenter method: </span><span class="si">{</span><span class="n">barycenter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="c1"># mean.shape: n_times, 1</span>
+
+        <span class="n">n_epochs</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_epochs</span><span class="p">):</span>
+            <span class="c1"># X[m, None].shape: n_times, 1</span>
+            <span class="c1"># mean.shape: n_times, 1</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="n">dtw</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">m</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="o">**</span><span class="n">params_dtw</span><span class="p">)</span>
+            <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">average</span><span class="p">:</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+
+        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;between_trial_temporal&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_dict</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">additional_values</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">_add_values_to_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">additional_values</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span></div>
+
+
+
+<div class="viewcode-block" id="between_trial_group_temporal">
+<a class="viewcode-back" href="../../../nearby.metrics.between_trial_group_temporal.html#nearby.metrics.between_trial_group_temporal">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">between_trial_group_temporal</span><span class="p">(</span>
+    <span class="n">data</span><span class="p">,</span>
+    <span class="n">centroid</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">barycenter</span><span class="o">=</span><span class="s2">&quot;dba&quot;</span><span class="p">,</span>
+    <span class="n">params_barycenter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">params_dtw</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute between-trial-group temporal variability using DTW distances to a centroid.</span>
+
+<span class="sd">    This metric quantifies how much *group-representative* time courses differ from</span>
+<span class="sd">    each other. Each element of ``data`` is expected to be a representative waveform</span>
+<span class="sd">    for a trial-group (e.g., an averaged response), and the variability is computed</span>
+<span class="sd">    by comparing each group waveform to a centroid using Dynamic Time Warping (DTW).</span>
+
+<span class="sd">    DTW is computed using the `tslearn.metrics.dtw &lt;https://tslearn.readthedocs.io/en/stable/gen_modules/metrics/tslearn.metrics.dtw.html#tslearn.metrics.dtw&gt;`_ module.</span>
+
+<span class="sd">    For each channel:</span>
+
+<span class="sd">    1. Convert each group object to a 1D time course (optionally cropped in time, and</span>
+<span class="sd">       for TFR optionally averaged within ``fmin``–``fmax``).</span>
+<span class="sd">    2. Define a centroid time course:</span>
+<span class="sd">       - If ``centroid`` is an MNE object, use it directly.</span>
+<span class="sd">       - If ``centroid=&quot;mean&quot;``, compute a barycenter from the group time courses using ``barycenter``.</span>
+<span class="sd">    3. Compute DTW distance between each group time course and the centroid.</span>
+<span class="sd">    4. Aggregate distances across groups (mean or per-group list).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : list of mne.Evoked | list of mne.time_frequency.tfr.AverageTFR</span>
+<span class="sd">        List of group-representative objects. All entries must have the same type:</span>
+<span class="sd">        either :class:`mne.Evoked` or :class:`mne.time_frequency.tfr.AverageTFR`.</span>
+
+<span class="sd">    centroid : {&quot;mean&quot;} | mne.Evoked | mne.time_frequency.tfr.AverageTFR, default=&quot;mean&quot;</span>
+<span class="sd">        Definition of the centroid waveform used as DTW reference.</span>
+
+<span class="sd">        - ``&quot;mean&quot;``: compute a centroid time course from ``data`` using the method</span>
+<span class="sd">          specified by ``barycenter``.</span>
+<span class="sd">        - If an MNE object is provided, it is used directly as the centroid (after</span>
+<span class="sd">          optional picking and cropping).</span>
+
+<span class="sd">        The centroid object must be of the same type as the elements of ``data``.</span>
+
+<span class="sd">    fmin, fmax : float | None, optional</span>
+<span class="sd">        Frequency band of interest in Hz. Only used when ``data`` contains</span>
+<span class="sd">        :class:`~mne.time_frequency.tfr.AverageTFR`. If either is ``None``, no</span>
+<span class="sd">        frequency cropping is applied for that bound.</span>
+
+<span class="sd">    tmin, tmax : float | None, optional</span>
+<span class="sd">        Time window of interest in seconds. If provided, all objects are cropped to</span>
+<span class="sd">        ``[tmin, tmax]`` prior to centroid/DTW computations.</span>
+
+<span class="sd">    picks : str | array_like of int | array_like of str | None, optional</span>
+<span class="sd">        Channels to include. Applied to the centroid (if provided as an object) and</span>
+<span class="sd">        to every element in ``data``. If ``None``, all channels are used.</span>
+
+<span class="sd">    barycenter : {&quot;dba&quot;, &quot;dba_subgradient&quot;, &quot;euclidean&quot;}, default=&quot;dba&quot;</span>
+<span class="sd">        Method used to compute the centroid time course when ``centroid=&quot;mean&quot;``.</span>
+
+<span class="sd">        - ``&quot;dba&quot;``: DTW Barycenter Averaging (DBA). See `tslearn.barycenters.dtw_barycenter_averaging &lt;https://tslearn.readthedocs.io/en/stable/gen_modules/barycenters/tslearn.barycenters.dtw_barycenter_averaging.html#tslearn.barycenters.dtw_barycenter_averaging&gt;`_</span>
+<span class="sd">        - ``&quot;dba_subgradient&quot;``: DBA using a subgradient-based optimization. See `tslearn.barycenters.dtw_barycenter_averaging_subgradient &lt;https://tslearn.readthedocs.io/en/stable/gen_modules/barycenters/tslearn.barycenters.dtw_barycenter_averaging_subgradient.html#tslearn.barycenters.dtw_barycenter_averaging_subgradient&gt;`_</span>
+<span class="sd">        - ``&quot;euclidean&quot;``: Euclidean mean over epochs (no DTW alignment). See `tslearn.barycenters.euclidean_barycenter &lt;https://tslearn.readthedocs.io/en/stable/gen_modules/barycenters/tslearn.barycenters.euclidean_barycenter.html#tslearn.barycenters.euclidean_barycenter&gt;`_</span>
+
+<span class="sd">    params_barycenter : dict | None, optional</span>
+<span class="sd">        Parameters passed to the selected barycenter routine. If ``None``, an empty</span>
+<span class="sd">        dict is used.</span>
+
+<span class="sd">    params_dtw : dict | None, optional</span>
+<span class="sd">        Parameters passed to the DTW distance function used to compare each group</span>
+<span class="sd">        time course to the centroid. If ``None``, an empty dict is used.</span>
+
+<span class="sd">    additional_values : dict | None, optional</span>
+<span class="sd">        Extra columns to append to the returned dataframe (e.g., ``{&quot;subject&quot;: 1}``).</span>
+
+<span class="sd">    average : bool, default=True</span>
+<span class="sd">        Controls the output format for each channel.</span>
+
+<span class="sd">        - If ``True``, return a scalar per channel (mean DTW distance across groups).</span>
+<span class="sd">        - If ``False``, return a JSON-encoded list of per-group DTW distances (group</span>
+<span class="sd">          order matches ``data``).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    df : pandas.DataFrame</span>
+<span class="sd">        Dataframe with one row per channel.</span>
+
+<span class="sd">        ``channel`` : str</span>
+<span class="sd">            Channel name.</span>
+
+<span class="sd">        ``between_trial_group_temporal`` : float | str</span>
+<span class="sd">            If ``average=True``, the mean DTW distance across groups.</span>
+<span class="sd">            If ``average=False``, a JSON-encoded list of DTW distances with length</span>
+<span class="sd">            ``len(data)``.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    - This function measures variability between *group-level representatives*</span>
+<span class="sd">      (e.g., averages) rather than between single-trial epochs.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">params_barycenter</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">params_barycenter</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">params_barycenter</span> <span class="o">=</span> <span class="n">params_barycenter</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">params_dtw</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">params_dtw</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">params_dtw</span> <span class="o">=</span> <span class="n">params_dtw</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">type_data</span> <span class="o">=</span> <span class="n">_get_data_type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">type_data</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;list_Evoked&quot;</span><span class="p">,</span> <span class="s2">&quot;list_AverageTFR&quot;</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;data must be an instance of list of Evoked or AverageTFR objects.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">centroid</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">data_centroid</span> <span class="o">=</span> <span class="n">centroid</span>
+
+        <span class="n">type_data_centroid</span> <span class="o">=</span> <span class="n">_get_data_type</span><span class="p">(</span><span class="n">data_centroid</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">type_data_centroid</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Evoked&quot;</span><span class="p">,</span> <span class="s2">&quot;AverageTFR&quot;</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;centroid must be an instance of Evoked or AverageTFR objects.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">type_data_centroid</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">type_data</span><span class="p">:</span>
+            <span class="c1"># type_data expect &quot;list_Evoked&quot; or &quot;list_AverageTFR&quot;</span>
+            <span class="c1"># while type_data_centroid expect &quot;Evoked&quot; or &quot;AverageTFR&quot;</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;centroid and data must be of the same type.&quot;</span><span class="p">)</span>
+
+        <span class="n">data_centroid</span> <span class="o">=</span> <span class="n">data_centroid</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">picks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">data_centroid</span> <span class="o">=</span> <span class="n">data_centroid</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">centroid</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;mean&quot;</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid centroid: </span><span class="si">{</span><span class="n">centroid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">data_centroid</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))]</span>
+
+    <span class="k">if</span> <span class="n">picks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
+
+    <span class="n">df_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;between_trial_group_temporal&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
+        <span class="n">X_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">_get_data</span><span class="p">(</span>
+                <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="p">],</span>
+                <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+                <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+                <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+                <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+                <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+                <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">X_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">data_centroid</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">X_centroid</span> <span class="o">=</span> <span class="n">_get_data</span><span class="p">(</span>
+                <span class="n">data</span><span class="o">=</span><span class="n">data_centroid</span><span class="p">,</span>
+                <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+                <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+                <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+                <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+                <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+                <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">data_centroid</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">match</span> <span class="n">barycenter</span><span class="p">:</span>
+                <span class="k">case</span> <span class="s2">&quot;dba&quot;</span><span class="p">:</span>
+                    <span class="n">X_centroid</span> <span class="o">=</span> <span class="n">dtw_barycenter_averaging</span><span class="p">(</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">X_list</span><span class="p">),</span> <span class="o">**</span><span class="n">params_barycenter</span>
+                    <span class="p">)</span>
+                <span class="k">case</span> <span class="s2">&quot;dba_subgradient&quot;</span><span class="p">:</span>
+                    <span class="n">X_centroid</span> <span class="o">=</span> <span class="n">dtw_barycenter_averaging_subgradient</span><span class="p">(</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">X_list</span><span class="p">),</span> <span class="o">**</span><span class="n">params_barycenter</span>
+                    <span class="p">)</span>
+                <span class="k">case</span> <span class="s2">&quot;euclidean&quot;</span><span class="p">:</span>
+                    <span class="n">X_centroid</span> <span class="o">=</span> <span class="n">euclidean_barycenter</span><span class="p">(</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">X_list</span><span class="p">),</span> <span class="o">**</span><span class="n">params_barycenter</span>
+                    <span class="p">)</span>
+                <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid barycenter method: </span><span class="si">{</span><span class="n">barycenter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">X</span> <span class="ow">in</span> <span class="n">X_list</span><span class="p">:</span>
+            <span class="c1"># np.atleast_2d(X).T: n_times, 1</span>
+            <span class="c1"># X_centroid.shape: n_times, 1</span>
+
+            <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_2d</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="n">dtw</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">X_centroid</span><span class="p">,</span> <span class="o">**</span><span class="n">params_dtw</span><span class="p">)</span>
+            <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">average</span><span class="p">:</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+
+        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;between_trial_group_temporal&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_dict</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">additional_values</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">_add_values_to_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">additional_values</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Nearby contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.0.4.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

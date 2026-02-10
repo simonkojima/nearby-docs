@@ -1,0 +1,6 @@
+﻿nearby.distances.distance\_angle
+================================
+
+.. currentmodule:: nearby.distances
+
+.. autofunction:: distance_angle
