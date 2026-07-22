@@ -1,0 +1,6 @@
+﻿nearby.metrics.within\_trial\_spatial
+=====================================
+
+.. currentmodule:: nearby.metrics
+
+.. autofunction:: within_trial_spatial

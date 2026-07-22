@@ -1,0 +1,863 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Example: Intra-Subject Variability of ERP in an auditory task &#8212; Nearby 0.0.4 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=8c5712d9"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'auto_examples/example_variability_ERP_intra_subject';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.4';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Example: Inter-Subject Variability of ERP in an auditory task" href="example_variability_ERP_inter_subject.html" />
+    <link rel="prev" title="Examples" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.4 documentation - Home"/>
+    <img src="../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.4 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../documentation.html">
+    Documentation
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../install.html">
+    How to Install
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../documentation.html">
+    Documentation
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../install.html">
+    How to Install
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Example: Intra-Subject Variability of ERP in an auditory task</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="example_variability_ERP_inter_subject.html">Example: Inter-Subject Variability of ERP in an auditory task</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="example_variability_MI_intra_subject.html">Example: Intra-Subject Variability of ERDS in a motor-imagery task</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="example_variability_MI_inter_subjects.html">Example: Inter-Subjects Variability of ERDS in a motor-imagery task</a></li>
+
+
+
+
+
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Examples</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Example: Intra-Subject Variability of ERP in an auditory task</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#sphx-glr-download-auto-examples-example-variability-erp-intra-subject-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code.</p>
+</div>
+<section class="sphx-glr-example-title" id="example-intra-subject-variability-of-erp-in-an-auditory-task">
+<span id="sphx-glr-auto-examples-example-variability-erp-intra-subject-py"></span><h1>Example: Intra-Subject Variability of ERP in an auditory task<a class="headerlink" href="#example-intra-subject-variability-of-erp-in-an-auditory-task" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Authors: Simon Kojima &lt;simon.kojima@inria.fr&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># License: BSD (3-clause)</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">mne</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nearby</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">moabb.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">Kojima2024B</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</pre></div>
+</div>
+</section>
+<section id="extract-epochs">
+<h1>Extract Epochs<a class="headerlink" href="#extract-epochs" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">subject</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">l_freq</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">h_freq</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">resample</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">tmin_epochs</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.1</span>
+<span class="n">tmax_epochs</span> <span class="o">=</span> <span class="mf">1.2</span>
+<span class="n">baseline</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">Kojima2024B</span><span class="p">(</span><span class="n">task</span><span class="o">=</span><span class="s2">&quot;2stream&quot;</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">subjects</span><span class="o">=</span><span class="p">[</span><span class="n">subject</span><span class="p">])</span>
+
+<span class="n">raws</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">subject</span><span class="p">][</span><span class="s2">&quot;0&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+<span class="k">for</span> <span class="n">raw</span> <span class="ow">in</span> <span class="n">raws</span><span class="p">:</span>
+    <span class="n">raw</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+        <span class="n">l_freq</span><span class="o">=</span><span class="n">l_freq</span><span class="p">,</span>
+        <span class="n">h_freq</span><span class="o">=</span><span class="n">h_freq</span><span class="p">,</span>
+        <span class="n">method</span><span class="o">=</span><span class="s2">&quot;iir&quot;</span><span class="p">,</span>
+        <span class="n">iir_params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;ftype&quot;</span><span class="p">:</span> <span class="s2">&quot;butter&quot;</span><span class="p">,</span> <span class="s2">&quot;btype&quot;</span><span class="p">:</span> <span class="s2">&quot;bandpass&quot;</span><span class="p">,</span> <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+        <span class="n">phase</span><span class="o">=</span><span class="s2">&quot;zero&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="n">raw</span> <span class="o">=</span> <span class="n">mne</span><span class="o">.</span><span class="n">concatenate_raws</span><span class="p">(</span><span class="n">raws</span><span class="p">)</span>
+
+<span class="n">raw</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="s2">&quot;eeg&quot;</span><span class="p">)</span>
+
+<span class="n">epochs</span> <span class="o">=</span> <span class="n">mne</span><span class="o">.</span><span class="n">Epochs</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tmin</span><span class="o">=</span><span class="n">tmin_epochs</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax_epochs</span><span class="p">)</span>
+
+<span class="n">epochs</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+
+<span class="n">epochs</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">resample</span><span class="p">)</span>
+
+<span class="n">epochs</span> <span class="o">=</span> <span class="n">epochs</span><span class="o">.</span><span class="n">apply_baseline</span><span class="p">(</span><span class="n">baseline</span><span class="o">=</span><span class="n">baseline</span><span class="p">)</span>
+
+<span class="n">epochs</span> <span class="o">=</span> <span class="n">epochs</span><span class="p">[</span><span class="s2">&quot;Target&quot;</span><span class="p">]</span>
+
+<span class="n">tfrs</span> <span class="o">=</span> <span class="n">epochs</span><span class="o">.</span><span class="n">compute_tfr</span><span class="p">(</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;multitaper&quot;</span><span class="p">,</span>
+    <span class="n">freqs</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">l_freq</span><span class="p">,</span> <span class="n">h_freq</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span>
+    <span class="n">n_cycles</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">l_freq</span><span class="p">,</span> <span class="n">h_freq</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span>
+    <span class="n">use_fft</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">return_itc</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">average</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">decim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">tfrs</span> <span class="o">=</span> <span class="n">tfrs</span><span class="o">.</span><span class="n">apply_baseline</span><span class="p">(</span><span class="n">baseline</span><span class="o">=</span><span class="n">baseline</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;percent&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0/36 [00:00&lt;?, ?it/s]
+100%|██████████| 36/36 [00:00&lt;00:00, 118241.93it/s]
+Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-1_eeg.vhdr...
+Setting channel info structure...
+Reading 0 ... 424519  =      0.000 ...   424.519 secs...
+Used Annotations descriptions: [np.str_(&#39;Stimulus/S  1&#39;), np.str_(&#39;Stimulus/S  2&#39;), np.str_(&#39;Stimulus/S101&#39;), np.str_(&#39;Stimulus/S102&#39;), np.str_(&#39;Stimulus/S103&#39;), np.str_(&#39;Stimulus/S104&#39;), np.str_(&#39;Stimulus/S111&#39;), np.str_(&#39;Stimulus/S112&#39;), np.str_(&#39;Stimulus/S113&#39;), np.str_(&#39;Stimulus/S114&#39;), np.str_(&#39;Stimulus/S201&#39;), np.str_(&#39;Stimulus/S202&#39;), np.str_(&#39;Stimulus/S203&#39;), np.str_(&#39;Stimulus/S204&#39;)]
+Creating RawArray with float64 data, n_channels=1, n_times=424520
+    Range : 0 ... 424519 =      0.000 ...   424.519 secs
+Ready.
+Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-3_eeg.vhdr...
+Setting channel info structure...
+Reading 0 ... 424519  =      0.000 ...   424.519 secs...
+Used Annotations descriptions: [np.str_(&#39;Stimulus/S  1&#39;), np.str_(&#39;Stimulus/S  2&#39;), np.str_(&#39;Stimulus/S101&#39;), np.str_(&#39;Stimulus/S102&#39;), np.str_(&#39;Stimulus/S103&#39;), np.str_(&#39;Stimulus/S104&#39;), np.str_(&#39;Stimulus/S111&#39;), np.str_(&#39;Stimulus/S112&#39;), np.str_(&#39;Stimulus/S113&#39;), np.str_(&#39;Stimulus/S114&#39;), np.str_(&#39;Stimulus/S201&#39;), np.str_(&#39;Stimulus/S202&#39;), np.str_(&#39;Stimulus/S203&#39;), np.str_(&#39;Stimulus/S204&#39;), np.str_(&#39;Stimulus/S238&#39;)]
+Creating RawArray with float64 data, n_channels=1, n_times=424520
+    Range : 0 ... 424519 =      0.000 ...   424.519 secs
+Ready.
+Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-5_eeg.vhdr...
+Setting channel info structure...
+Reading 0 ... 424639  =      0.000 ...   424.639 secs...
+Used Annotations descriptions: [np.str_(&#39;Stimulus/S  1&#39;), np.str_(&#39;Stimulus/S  2&#39;), np.str_(&#39;Stimulus/S101&#39;), np.str_(&#39;Stimulus/S102&#39;), np.str_(&#39;Stimulus/S103&#39;), np.str_(&#39;Stimulus/S104&#39;), np.str_(&#39;Stimulus/S111&#39;), np.str_(&#39;Stimulus/S112&#39;), np.str_(&#39;Stimulus/S113&#39;), np.str_(&#39;Stimulus/S114&#39;), np.str_(&#39;Stimulus/S201&#39;), np.str_(&#39;Stimulus/S202&#39;), np.str_(&#39;Stimulus/S203&#39;), np.str_(&#39;Stimulus/S204&#39;)]
+Creating RawArray with float64 data, n_channels=1, n_times=424640
+    Range : 0 ... 424639 =      0.000 ...   424.639 secs
+Ready.
+Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-8_eeg.vhdr...
+Setting channel info structure...
+Reading 0 ... 424599  =      0.000 ...   424.599 secs...
+Used Annotations descriptions: [np.str_(&#39;Stimulus/S  1&#39;), np.str_(&#39;Stimulus/S  2&#39;), np.str_(&#39;Stimulus/S101&#39;), np.str_(&#39;Stimulus/S102&#39;), np.str_(&#39;Stimulus/S103&#39;), np.str_(&#39;Stimulus/S104&#39;), np.str_(&#39;Stimulus/S111&#39;), np.str_(&#39;Stimulus/S112&#39;), np.str_(&#39;Stimulus/S113&#39;), np.str_(&#39;Stimulus/S114&#39;), np.str_(&#39;Stimulus/S201&#39;), np.str_(&#39;Stimulus/S202&#39;), np.str_(&#39;Stimulus/S203&#39;), np.str_(&#39;Stimulus/S204&#39;)]
+Creating RawArray with float64 data, n_channels=1, n_times=424600
+    Range : 0 ... 424599 =      0.000 ...   424.599 secs
+Ready.
+Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-10_eeg.vhdr...
+Setting channel info structure...
+Reading 0 ... 424559  =      0.000 ...   424.559 secs...
+Used Annotations descriptions: [np.str_(&#39;Stimulus/S  1&#39;), np.str_(&#39;Stimulus/S  2&#39;), np.str_(&#39;Stimulus/S101&#39;), np.str_(&#39;Stimulus/S102&#39;), np.str_(&#39;Stimulus/S103&#39;), np.str_(&#39;Stimulus/S104&#39;), np.str_(&#39;Stimulus/S111&#39;), np.str_(&#39;Stimulus/S112&#39;), np.str_(&#39;Stimulus/S113&#39;), np.str_(&#39;Stimulus/S114&#39;), np.str_(&#39;Stimulus/S201&#39;), np.str_(&#39;Stimulus/S202&#39;), np.str_(&#39;Stimulus/S203&#39;), np.str_(&#39;Stimulus/S204&#39;)]
+Creating RawArray with float64 data, n_channels=1, n_times=424560
+    Range : 0 ... 424559 =      0.000 ...   424.559 secs
+Ready.
+Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-12_eeg.vhdr...
+Setting channel info structure...
+Reading 0 ... 424479  =      0.000 ...   424.479 secs...
+Used Annotations descriptions: [np.str_(&#39;Stimulus/S  1&#39;), np.str_(&#39;Stimulus/S  2&#39;), np.str_(&#39;Stimulus/S101&#39;), np.str_(&#39;Stimulus/S102&#39;), np.str_(&#39;Stimulus/S103&#39;), np.str_(&#39;Stimulus/S104&#39;), np.str_(&#39;Stimulus/S111&#39;), np.str_(&#39;Stimulus/S112&#39;), np.str_(&#39;Stimulus/S113&#39;), np.str_(&#39;Stimulus/S114&#39;), np.str_(&#39;Stimulus/S201&#39;), np.str_(&#39;Stimulus/S202&#39;), np.str_(&#39;Stimulus/S203&#39;), np.str_(&#39;Stimulus/S204&#39;)]
+Creating RawArray with float64 data, n_channels=1, n_times=424480
+    Range : 0 ... 424479 =      0.000 ...   424.479 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Used Annotations descriptions: [np.str_(&#39;NonTarget&#39;), np.str_(&#39;Target&#39;)]
+Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
+Not setting metadata
+1440 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 1440 events and 1301 original time points ...
+0 bad epochs dropped
+Applying baseline correction (mode: mean)
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
+[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    1.9s
+[Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    3.5s remaining:    0.1s
+[Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    3.5s finished
+Applying baseline correction (mode: percent)
+</pre></div>
+</div>
+</section>
+<section id="within-trial-variability-metrics">
+<h1>Within-Trial Variability Metrics<a class="headerlink" href="#within-trial-variability-metrics" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span>
+</pre></div>
+</div>
+<section id="within-trial-temporal-variability-wttemp">
+<h2>Within-Trial Temporal Variability (WTTemp)<a class="headerlink" href="#within-trial-temporal-variability-wttemp" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">wt_temp</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">within_trial_temporal</span><span class="p">(</span>
+    <span class="n">epochs</span><span class="p">[</span><span class="s2">&quot;Target&quot;</span><span class="p">],</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Cz&quot;</span><span class="p">,</span> <span class="s2">&quot;CPz&quot;</span><span class="p">,</span> <span class="s2">&quot;Pz&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;WTTemp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wt_temp</span><span class="p">[</span><span class="s2">&quot;within_trial_temporal&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;WTTemp: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;WTTemp&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>WTTemp: 4.743
+</pre></div>
+</div>
+</section>
+<section id="within-trial-spatial-variability-wtspat">
+<h2>Within-Trial Spatial Variability (WTSpat)<a class="headerlink" href="#within-trial-spatial-variability-wtspat" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">wt_spat</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">within_trial_spatial</span><span class="p">(</span>
+    <span class="n">epochs</span><span class="p">[</span><span class="s2">&quot;Target&quot;</span><span class="p">],</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">auto_window_size</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span>
+    <span class="n">auto_window_step</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;WTSpat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wt_spat</span><span class="p">[</span><span class="s2">&quot;within_trial_spatial&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;WTSpat: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;WTSpat&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>WTSpat: 0.565
+</pre></div>
+</div>
+</section>
+<section id="within-trial-frequency-variability-wtfreq">
+<h2>Within-Trial Frequency Variability (WTFreq)<a class="headerlink" href="#within-trial-frequency-variability-wtfreq" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">wt_spat</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">within_trial_frequency</span><span class="p">(</span>
+    <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;Target&quot;</span><span class="p">],</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">auto_window_size</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span>
+    <span class="n">auto_window_step</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Cz&quot;</span><span class="p">,</span> <span class="s2">&quot;CPz&quot;</span><span class="p">,</span> <span class="s2">&quot;Pz&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;WTFreq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wt_spat</span><span class="p">[</span><span class="s2">&quot;within_trial_frequency&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;WTFreq: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;WTFreq&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>WTFreq: 0.180
+</pre></div>
+</div>
+</section>
+</section>
+<section id="between-trial-variability-metrics">
+<h1>Between-Trial Variability Metrics<a class="headerlink" href="#between-trial-variability-metrics" title="Link to this heading">#</a></h1>
+<section id="between-trial-temporal-variability-bttemp">
+<h2>Between-Trial Temporal Variability (BTTemp)<a class="headerlink" href="#between-trial-temporal-variability-bttemp" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">bt_temp</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_temporal</span><span class="p">(</span>
+    <span class="n">epochs</span><span class="p">[</span><span class="s2">&quot;Target&quot;</span><span class="p">],</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Cz&quot;</span><span class="p">,</span> <span class="s2">&quot;CPz&quot;</span><span class="p">,</span> <span class="s2">&quot;Pz&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BTTemp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bt_temp</span><span class="p">[</span><span class="s2">&quot;between_trial_temporal&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BTTemp: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BTTemp&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BTTemp: 34.487
+</pre></div>
+</div>
+</section>
+<section id="between-trial-spatial-variability-btspat">
+<h2>Between-Trial Spatial Variability (BTSpat)<a class="headerlink" href="#between-trial-spatial-variability-btspat" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">bt_spat</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_spatial</span><span class="p">(</span>
+    <span class="n">epochs</span><span class="p">[</span><span class="s2">&quot;Target&quot;</span><span class="p">],</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BTSpat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bt_spat</span><span class="p">[</span><span class="s2">&quot;between_trial_spatial&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BTSpat: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BTSpat&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BTSpat: 1.475
+</pre></div>
+</div>
+</section>
+<section id="between-trial-frequency-variability-btfreq">
+<h2>Between-Trial Frequency Variability (BTFreq)<a class="headerlink" href="#between-trial-frequency-variability-btfreq" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">bt_freq</span> <span class="o">=</span> <span class="n">nearby</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">between_trial_frequency</span><span class="p">(</span>
+    <span class="n">tfrs</span><span class="p">[</span><span class="s2">&quot;Target&quot;</span><span class="p">],</span>
+    <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+    <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Cz&quot;</span><span class="p">,</span> <span class="s2">&quot;CPz&quot;</span><span class="p">,</span> <span class="s2">&quot;Pz&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BTFreq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bt_freq</span><span class="p">[</span><span class="s2">&quot;between_trial_frequency&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BTFreq: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BTFreq&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BTFreq: 0.881
+</pre></div>
+</div>
+</section>
+</section>
+<section id="results">
+<h1>Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>     WTTemp   WTSpat    WTFreq     BTTemp    BTSpat    BTFreq
+0  4.743322  0.56506  0.180005  34.486727  1.474609  0.881017
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 18.403 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-example-variability-erp-intra-subject-py">
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/c1b88c2bb342cf21726713bc366dae06/example_variability_ERP_intra_subject.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">example_variability_ERP_intra_subject.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/27afb6f4ad2b5f86b278ee8ea33daf63/example_variability_ERP_intra_subject.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">example_variability_ERP_intra_subject.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/48ad0164225128eb7012840eb561734d/example_variability_ERP_intra_subject.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">example_variability_ERP_intra_subject.zip</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Examples</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="example_variability_ERP_inter_subject.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Example: Inter-Subject Variability of ERP in an auditory task</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Example: Intra-Subject Variability of ERP in an auditory task</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extract-epochs">Extract Epochs</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#within-trial-variability-metrics">Within-Trial Variability Metrics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#within-trial-temporal-variability-wttemp">Within-Trial Temporal Variability (WTTemp)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#within-trial-spatial-variability-wtspat">Within-Trial Spatial Variability (WTSpat)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#within-trial-frequency-variability-wtfreq">Within-Trial Frequency Variability (WTFreq)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-variability-metrics">Between-Trial Variability Metrics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-temporal-variability-bttemp">Between-Trial Temporal Variability (BTTemp)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-spatial-variability-btspat">Between-Trial Spatial Variability (BTSpat)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-frequency-variability-btfreq">Between-Trial Frequency Variability (BTFreq)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
+</ul>
+
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/auto_examples/example_variability_ERP_intra_subject.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Simon Kojima.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
