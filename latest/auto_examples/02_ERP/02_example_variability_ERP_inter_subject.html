@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Example: Inter-Subject Variability of ERP in an auditory task &#8212; Nearby 0.0.6 documentation</title>
+    <title>Example: Inter-Subject Variability of ERP in an auditory task &#8212; Nearby 0.1.0 documentation</title>
   
   
   
@@ -27,32 +27,34 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=fd6457a4" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
 
-    <script src="../../_static/documentation_options.js?v=1fd71caa"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/sg-tags.js?v=d80f6fa4"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'auto_examples/02_ERP/02_example_variability_ERP_inter_subject';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_version = '0.20.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.6';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1.0';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="How to Install" href="../../install.html" />
@@ -60,20 +62,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  
+  
+  
   
   <dialog id="pst-search-dialog">
     
@@ -99,7 +107,7 @@
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
   <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
@@ -125,8 +133,8 @@
       
     
     
-    <img src="../../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.6 documentation - Home"/>
-    <img src="../../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.6 documentation - Home"/>
+    <img src="../../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.1.0 documentation - Home"/>
+    <img src="../../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.1.0 documentation - Home"/>
   
   
 </a></div>
@@ -182,11 +190,18 @@
       
         <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
       
         <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -286,11 +301,18 @@
         
           <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
         
           <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -317,7 +339,15 @@
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
         <div class="sidebar-primary-item">
+
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
@@ -497,7 +527,7 @@ to download the full example code.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0/36 [00:00&lt;?, ?it/s]
-100%|██████████| 36/36 [00:00&lt;00:00, 134937.39it/s]
+100%|██████████| 36/36 [00:00&lt;00:00, 98048.66it/s]
 Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-1_eeg.vhdr...
 Setting channel info structure...
 Reading 0 ... 424519  =      0.000 ...   424.519 secs...
@@ -542,7 +572,7 @@ Creating RawArray with float64 data, n_channels=1, n_times=424480
 Ready.
 
   0%|          | 0/36 [00:00&lt;?, ?it/s]
-100%|██████████| 36/36 [00:00&lt;00:00, 2666.86it/s]
+100%|██████████| 36/36 [00:00&lt;00:00, 2519.69it/s]
 Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-B/eeg/sub-B_task-2stream_run-1_eeg.vhdr...
 Setting channel info structure...
 Reading 0 ... 424559  =      0.000 ...   424.559 secs...
@@ -587,7 +617,7 @@ Creating RawArray with float64 data, n_channels=1, n_times=424560
 Ready.
 
   0%|          | 0/36 [00:00&lt;?, ?it/s]
-100%|██████████| 36/36 [00:00&lt;00:00, 3038.92it/s]
+100%|██████████| 36/36 [00:00&lt;00:00, 3060.98it/s]
 Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-C/eeg/sub-C_task-2stream_run-1_eeg.vhdr...
 Setting channel info structure...
 Reading 0 ... 424519  =      0.000 ...   424.519 secs...
@@ -632,7 +662,7 @@ Creating RawArray with float64 data, n_channels=1, n_times=424560
 Ready.
 
   0%|          | 0/36 [00:00&lt;?, ?it/s]
-100%|██████████| 36/36 [00:00&lt;00:00, 3102.17it/s]
+100%|██████████| 36/36 [00:00&lt;00:00, 3062.53it/s]
 Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-D/eeg/sub-D_task-2stream_run-1_eeg.vhdr...
 Setting channel info structure...
 Reading 0 ... 424519  =      0.000 ...   424.519 secs...
@@ -739,144 +769,8 @@ Using data from preloaded Raw for 1440 events and 1301 original time points ...
 0 bad epochs dropped
 Applying baseline correction (mode: mean)
 [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.4s
-[Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    1.8s remaining:    0.1s
-[Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    1.8s finished
-Applying baseline correction (mode: percent)
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 40 Hz
-
-IIR filter parameters
----------------------
-Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-- Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 40 Hz
-
-IIR filter parameters
----------------------
-Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-- Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 40 Hz
-
-IIR filter parameters
----------------------
-Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-- Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 40 Hz
-
-IIR filter parameters
----------------------
-Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-- Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 40 Hz
-
-IIR filter parameters
----------------------
-Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-- Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 40 Hz
-
-IIR filter parameters
----------------------
-Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-- Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-Used Annotations descriptions: [np.str_(&#39;NonTarget&#39;), np.str_(&#39;Target&#39;)]
-Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
-Not setting metadata
-1440 matching events found
-No baseline correction applied
-0 projection items activated
-Using data from preloaded Raw for 1440 events and 1301 original time points ...
-0 bad epochs dropped
-Applying baseline correction (mode: mean)
-[Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.4s
-[Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    1.9s remaining:    0.1s
-[Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    1.9s finished
-Applying baseline correction (mode: percent)
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 40 Hz
-
-IIR filter parameters
----------------------
-Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-- Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 40 Hz
-
-IIR filter parameters
----------------------
-Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-- Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 40 Hz
-
-IIR filter parameters
----------------------
-Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-- Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 40 Hz
-
-IIR filter parameters
----------------------
-Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-- Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 40 Hz
-
-IIR filter parameters
----------------------
-Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-- Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 1 - 40 Hz
-
-IIR filter parameters
----------------------
-Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-- Filter order 16 (effective, after forward-backward)
-- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-Used Annotations descriptions: [np.str_(&#39;NonTarget&#39;), np.str_(&#39;Target&#39;)]
-Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
-Not setting metadata
-1440 matching events found
-No baseline correction applied
-0 projection items activated
-Using data from preloaded Raw for 1440 events and 1301 original time points ...
-0 bad epochs dropped
-Applying baseline correction (mode: mean)
-[Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
 [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.5s
-[Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.7s remaining:    0.1s
+[Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.6s remaining:    0.1s
 [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    2.7s finished
 Applying baseline correction (mode: percent)
 Filtering raw data in 1 contiguous segment
@@ -944,8 +838,144 @@ Using data from preloaded Raw for 1440 events and 1301 original time points ...
 Applying baseline correction (mode: mean)
 [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
 [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.5s
-[Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.8s remaining:    0.1s
+[Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.9s remaining:    0.1s
 [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    2.9s finished
+Applying baseline correction (mode: percent)
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Used Annotations descriptions: [np.str_(&#39;NonTarget&#39;), np.str_(&#39;Target&#39;)]
+Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
+Not setting metadata
+1440 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 1440 events and 1301 original time points ...
+0 bad epochs dropped
+Applying baseline correction (mode: mean)
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
+[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.4s
+[Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.3s remaining:    0.1s
+[Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    2.4s finished
+Applying baseline correction (mode: percent)
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 1 - 40 Hz
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+Used Annotations descriptions: [np.str_(&#39;NonTarget&#39;), np.str_(&#39;Target&#39;)]
+Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
+Not setting metadata
+1440 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 1440 events and 1301 original time points ...
+0 bad epochs dropped
+Applying baseline correction (mode: mean)
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
+[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.5s
+[Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.7s remaining:    0.1s
+[Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    2.8s finished
 Applying baseline correction (mode: percent)
 </pre></div>
 </div>
@@ -972,11 +1002,11 @@ Applying baseline correction (mode: percent)
     <span class="n">picks</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Cz&quot;</span><span class="p">,</span> <span class="s2">&quot;CPz&quot;</span><span class="p">,</span> <span class="s2">&quot;Pz&quot;</span><span class="p">],</span>
 <span class="p">)</span>
 
-<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpTemp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_temp</span><span class="p">[</span><span class="s2">&quot;between_trial_group_temporal&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpTemp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_temp</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BtwTrialGrpTemp: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BtwTrialGrpTemp&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BtwTrialGrpTemp: 2.091
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BtwTrialGrpTemp: 2.656
 </pre></div>
 </div>
 </section>
@@ -986,10 +1016,9 @@ Applying baseline correction (mode: percent)
     <span class="n">evoked_list</span><span class="p">,</span>
     <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
     <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
-    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpSpat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_spat</span><span class="p">[</span><span class="s2">&quot;between_trial_group_spatial&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpSpat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_spat</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BtwTrialGrpSpat: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BtwTrialGrpSpat&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1003,15 +1032,14 @@ Applying baseline correction (mode: percent)
     <span class="n">tfrs_list</span><span class="p">,</span>
     <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
     <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
-    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
     <span class="n">picks</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Cz&quot;</span><span class="p">,</span> <span class="s2">&quot;CPz&quot;</span><span class="p">,</span> <span class="s2">&quot;Pz&quot;</span><span class="p">],</span>
 <span class="p">)</span>
 
-<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpFreq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_freq</span><span class="p">[</span><span class="s2">&quot;between_trial_group_frequency&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpFreq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_freq</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BtwTrialGrpFreq: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BtwTrialGrpFreq&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BtwTrialGrpFreq: 0.154
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BtwTrialGrpFreq: 0.137
 </pre></div>
 </div>
 </section>
@@ -1032,13 +1060,11 @@ Applying baseline correction (mode: percent)
     <span class="n">picks</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Cz&quot;</span><span class="p">,</span> <span class="s2">&quot;CPz&quot;</span><span class="p">,</span> <span class="s2">&quot;Pz&quot;</span><span class="p">],</span>
 <span class="p">)</span>
 
-<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpTemp-TR&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_temp_tr</span><span class="p">[</span>
-    <span class="s2">&quot;between_trial_group_temporal&quot;</span>
-<span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpTemp-TR&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_temp_tr</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BtwTrialGrpTemp-TR: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BtwTrialGrpTemp-TR&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BtwTrialGrpTemp-TR: 3.614
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BtwTrialGrpTemp-TR: 3.507
 </pre></div>
 </div>
 </section>
@@ -1049,12 +1075,9 @@ Applying baseline correction (mode: percent)
     <span class="n">centroid</span><span class="o">=</span><span class="n">evoked_dict</span><span class="p">[</span><span class="n">test_subject</span><span class="p">],</span>
     <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
     <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
-    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpSpat-TR&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_spat_tr</span><span class="p">[</span>
-    <span class="s2">&quot;between_trial_group_spatial&quot;</span>
-<span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpSpat-TR&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_spat_tr</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BtwTrialGrpSpat-TR: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BtwTrialGrpSpat-TR&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1069,17 +1092,14 @@ Applying baseline correction (mode: percent)
     <span class="n">centroid</span><span class="o">=</span><span class="n">tfrs_dict</span><span class="p">[</span><span class="n">test_subject</span><span class="p">],</span>
     <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
     <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
-    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
     <span class="n">picks</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Cz&quot;</span><span class="p">,</span> <span class="s2">&quot;CPz&quot;</span><span class="p">,</span> <span class="s2">&quot;Pz&quot;</span><span class="p">],</span>
 <span class="p">)</span>
 
-<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpFreq-TR&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_freq_tr</span><span class="p">[</span>
-    <span class="s2">&quot;between_trial_group_frequency&quot;</span>
-<span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">results</span><span class="p">[</span><span class="s2">&quot;BtwTrialGrpFreq-TR&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btw_trial_grp_freq_tr</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BtwTrialGrpFreq-TR: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;BtwTrialGrpFreq-TR&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BtwTrialGrpFreq-TR: 0.223
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>BtwTrialGrpFreq-TR: 0.206
 </pre></div>
 </div>
 </section>
@@ -1090,10 +1110,10 @@ Applying baseline correction (mode: percent)
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>   BtwTrialGrpTemp  BtwTrialGrpSpat  BtwTrialGrpFreq  BtwTrialGrpTemp-TR  BtwTrialGrpSpat-TR  BtwTrialGrpFreq-TR
-0         2.090647          1.09036         0.154033            3.614317            1.438046            0.223217
+0         2.656304          1.09036         0.136924            3.507357            1.438046            0.205531
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 58.528 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (1 minutes 15.082 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-02-erp-02-example-variability-erp-inter-subject-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/831fcc30b6c4b1f8cb61e5e35d92e46b/02_example_variability_ERP_inter_subject.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">02_example_variability_ERP_inter_subject.ipynb</span></code></a></p>
@@ -1153,17 +1173,17 @@ Applying baseline correction (mode: percent)
     class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Example: Inter-Subject Variability of ERP in an auditory task</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extract-epochs">Extract Epochs</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#between-group-trial-variability">Between-Group-Trial Variability</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#between-group-trial-variability">Between-Group-Trial Variability</a><ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-temporal-variability-btwtrialgrptemp">Between-Trial-Group Temporal Variability (BtwTrialGrpTemp)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-spatial-variability-btwtrialgrpspat">Between-Trial-Group Spatial Variability (BtwTrialGrpSpat)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-frequency-variability-btwtrialgrpfreq">Between-Trial-Group Frequency Variability (BtwTrialGrpFreq)</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-variability-test-user-referenced">Between-Trial-Group Variability (Test-User Referenced)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-variability-test-user-referenced">Between-Trial-Group Variability (Test-User Referenced)</a><ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-temporal-variability-test-user-referenced-btwtrialgrptemp-tr">Between-Trial-Group Temporal Variability - Test-User Referenced (BtwTrialGrpTemp-TR)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-spatial-variability-test-user-referenced-btwtrialgrpspat-tr">Between-Trial-Group Spatial Variability - Test-User Referenced (BtwTrialGrpSpat-TR)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#between-trial-group-frequency-variability-test-user-referenced-btwtrialgrpfreq-tr">Between-Trial-Group Frequency Variability - Test-User Referenced (BtwTrialGrpFreq-TR)</a></li>
@@ -1175,13 +1195,13 @@ Applying baseline correction (mode: percent)
   </nav></div>
 
   <div class="sidebar-secondary-item">
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../../_sources/auto_examples/02_ERP/02_example_variability_ERP_inter_subject.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div></div>
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/auto_examples/02_ERP/02_example_variability_ERP_inter_subject.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
 
 </div></div>
               
@@ -1196,8 +1216,8 @@ Applying baseline correction (mode: percent)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1217,7 +1237,7 @@ Applying baseline correction (mode: percent)
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     <br/>
   </p>
 </div>
@@ -1231,7 +1251,7 @@ Applying baseline correction (mode: percent)
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
 </p></div>
       
     </div>

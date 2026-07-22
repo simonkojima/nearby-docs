@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nearby.metrics.frequency &#8212; Nearby 0.0.6 documentation</title>
+    <title>nearby.metrics.frequency &#8212; Nearby 0.1.0 documentation</title>
   
   
   
@@ -26,51 +26,59 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=fd6457a4" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
 
-    <script src="../../../_static/documentation_options.js?v=1fd71caa"></script>
-    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../_static/sg-tags.js?v=d80f6fa4"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/nearby/metrics/frequency';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_version = '0.20.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.6';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1.0';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../../_static/searchtools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  
+  
+  
   
   <dialog id="pst-search-dialog">
     
@@ -96,7 +104,7 @@
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
   <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
@@ -122,8 +130,8 @@
       
     
     
-    <img src="../../../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.6 documentation - Home"/>
-    <img src="../../../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.6 documentation - Home"/>
+    <img src="../../../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.1.0 documentation - Home"/>
+    <img src="../../../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.1.0 documentation - Home"/>
   
   
 </a></div>
@@ -179,11 +187,18 @@
       
         <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
       
         <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -281,11 +296,18 @@
         
           <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
         
           <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -367,17 +389,15 @@
                 <article class="bd-article">
                   
   <h1>Source code for nearby.metrics.frequency</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">mne</span>
 
+<span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">partial</span>
+
 <span class="kn">from</span><span class="w"> </span><span class="nn">..distances</span><span class="w"> </span><span class="kn">import</span> <span class="n">distance_angle</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">..mean</span><span class="w"> </span><span class="kn">import</span> <span class="n">extrinsic_mean</span><span class="p">,</span> <span class="n">frechet_mean_angular</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..mean</span><span class="w"> </span><span class="kn">import</span> <span class="n">frechet_mean_angular</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">..utils.core</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
-    <span class="n">_add_values_to_df</span><span class="p">,</span>
     <span class="n">_auto_windows</span><span class="p">,</span>
     <span class="n">_get_data_type</span><span class="p">,</span>
 <span class="p">)</span>
@@ -388,495 +408,431 @@
 <div class="viewcode-block" id="within_trial_frequency">
 <a class="viewcode-back" href="../../../nearby.metrics.within_trial_frequency.html#nearby.metrics.frequency.within_trial_frequency">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">within_trial_frequency</span><span class="p">(</span>
-    <span class="n">data</span><span class="p">,</span>
-    <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;windows&quot;</span><span class="p">,</span>
-    <span class="n">windows</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">auto_window_size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
-    <span class="n">auto_window_step</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
-    <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
-    <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">,</span>
+        <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">callback_distance</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">callback_centroid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;windows&quot;</span><span class="p">,</span>
+        <span class="n">window_size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+        <span class="n">window_step</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+        <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">return_centroid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Compute within-trial frequency variability from time-resolved spectral patterns.</span>
+<span class="sd">    Compute within-trial frequency variability.</span>
 
-<span class="sd">    This metric quantifies how much the *spectral pattern across frequencies* changes</span>
-<span class="sd">    within each epoch. For each channel and epoch, the time–frequency representation</span>
-<span class="sd">    (TFR) is converted into a sequence of frequency vectors (one per time window or</span>
-<span class="sd">    one per time sample). A reference frequency vector is estimated for that epoch,</span>
-<span class="sd">    and the dispersion of frequency vectors around the reference is computed. The</span>
-<span class="sd">    final output is the mean dispersion across epochs, or a per-epoch list.</span>
+<span class="sd">    This metric quantifies how much the spectral pattern across frequencies varies</span>
+<span class="sd">    *within each epoch* over time. Each epoch is represented as a sequence of</span>
+<span class="sd">    frequency vectors (one vector per time window in ``mode=&quot;windows&quot;``, or one vector</span>
+<span class="sd">    per time sample in ``mode=&quot;all_samples&quot;``). A within-epoch centroid frequency</span>
+<span class="sd">    pattern is estimated using ``callback_centroid`` and the dispersion is computed</span>
+<span class="sd">    as the mean distance (``callback_distance``) between each frequency vector and</span>
+<span class="sd">    the centroid. The final output aggregates dispersions across epochs.</span>
 
 <span class="sd">    Only time–frequency input (:class:`mne.time_frequency.tfr.EpochsTFR`) is supported.</span>
-<span class="sd">    For each channel, variability is computed independently.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    data : mne.time_frequency.tfr.EpochsTFR</span>
-<span class="sd">        Epoched time–frequency data. This function is implemented for TFR input only.</span>
-
-<span class="sd">    baseline : tuple of float | None, optional</span>
-<span class="sd">        Baseline interval in seconds (e.g., ``(None, 0)``). If provided, baseline</span>
-<span class="sd">        correction is applied on a copy of ``data`` using ``mode=&quot;percent&quot;``.</span>
-
-<span class="sd">    fmin, fmax : float | None, optional</span>
-<span class="sd">        Frequency band of interest in Hz. If provided, spectra are restricted to</span>
-<span class="sd">        frequencies in ``[fmin, fmax]`` before computing variability. If ``None``,</span>
-<span class="sd">        all frequencies are used.</span>
-
-<span class="sd">    mode : {&quot;windows&quot;, &quot;all_samples&quot;}, default=&quot;windows&quot;</span>
-<span class="sd">        How to represent within-epoch temporal evolution of frequency patterns.</span>
-
-<span class="sd">        - ``&quot;windows&quot;``: average the TFR within time windows; each window yields one</span>
-<span class="sd">          frequency vector of shape ``(n_freqs,)`` per epoch.</span>
-<span class="sd">        - ``&quot;all_samples&quot;``: use each time sample as a frequency vector (no temporal</span>
-<span class="sd">          window averaging).</span>
-
-<span class="sd">    windows : array_like of shape (n_windows, 2) | None, optional</span>
-<span class="sd">        Explicit time windows in seconds: ``[[tmin_0, tmax_0], ..., [tmin_k, tmax_k]]``.</span>
-<span class="sd">        Only used when ``mode=&quot;windows&quot;``. If ``None``, windows are generated</span>
-<span class="sd">        automatically using ``auto_window_size`` and ``auto_window_step`` between</span>
-<span class="sd">        ``tmin`` and ``tmax``.</span>
-
-<span class="sd">    auto_window_size : float, default=0.1</span>
-<span class="sd">        Window length in seconds used when ``windows=None`` and ``mode=&quot;windows&quot;``.</span>
-
-<span class="sd">    auto_window_step : float, default=0.1</span>
-<span class="sd">        Step in seconds used when ``windows=None`` and ``mode=&quot;windows&quot;``.</span>
+<span class="sd">        Epoched time–frequency data.</span>
 
 <span class="sd">    tmin, tmax : float | None, optional</span>
-<span class="sd">        Time range of interest in seconds. Used only to generate automatic windows</span>
-<span class="sd">        when ``windows=None`` and ``mode=&quot;windows&quot;``. These values are not applied</span>
-<span class="sd">        to cropping in ``mode=&quot;all_samples&quot;``.</span>
+<span class="sd">        Time bounds (seconds) used to define the region of interest. In ``mode=&quot;windows&quot;``</span>
+<span class="sd">        these bounds control the window generation. In ``mode=&quot;all_samples&quot;``, these</span>
+<span class="sd">        bounds are passed to :meth:`mne.time_frequency.EpochsTFR.get_data`.</span>
 
-<span class="sd">    metric : {&quot;angle&quot;, &quot;cosine&quot;}, default=&quot;angle&quot;</span>
-<span class="sd">        Distance/mean definition used to compute within-epoch spectral dispersion.</span>
+<span class="sd">    fmin, fmax : float | None, optional</span>
+<span class="sd">        Lower and upper frequency bounds (Hz). If provided, spectra are restricted to</span>
+<span class="sd">        ``[fmin, fmax]`` prior to computing the metric.</span>
 
-<span class="sd">        - ``&quot;angle&quot;``: angular distance from the Fréchet mean (p=2) of the frequency</span>
-<span class="sd">          vectors within an epoch.</span>
-<span class="sd">        - ``&quot;cosine&quot;``: cosine distance from the extrinsic mean of the frequency</span>
-<span class="sd">          vectors within an epoch.</span>
+<span class="sd">    callback_distance : callable | None, optional</span>
+<span class="sd">        Distance function comparing two frequency vectors of shape ``(n_freqs,)``.</span>
+<span class="sd">        If ``None``, uses :func:`nearby.distances.distance_angle`.</span>
+
+<span class="sd">    callback_centroid : callable | None, optional</span>
+<span class="sd">        Function computing a centroid frequency vector from an epoch-specific matrix</span>
+<span class="sd">        ``X_trial`` of shape ``(n_windows, n_freqs)``.</span>
+<span class="sd">        If ``None``, uses an angular Fréchet mean via</span>
+<span class="sd">        ``partial(frechet_mean_angular, verbosity=0)``.</span>
+
+<span class="sd">    mode : {&quot;windows&quot;, &quot;all_samples&quot;}, default=&quot;windows&quot;</span>
+<span class="sd">        Temporal sampling strategy for frequency patterns.</span>
+
+<span class="sd">        - ``&quot;windows&quot;``: average within time windows; each window yields one frequency</span>
+<span class="sd">          vector of shape ``(n_freqs,)`` per epoch.</span>
+<span class="sd">        - ``&quot;all_samples&quot;``: use each time sample as a frequency vector (no time</span>
+<span class="sd">          window averaging).</span>
+
+<span class="sd">    window_size : float, default=0.1</span>
+<span class="sd">        Window length (seconds) used when ``mode=&quot;windows&quot;``.</span>
+
+<span class="sd">    window_step : float, default=0.1</span>
+<span class="sd">        Step size (seconds) used when ``mode=&quot;windows&quot;``.</span>
 
 <span class="sd">    picks : str | array_like of int | array_like of str | None, optional</span>
-<span class="sd">        Channels to include. Passed to</span>
-<span class="sd">        :meth:`mne.time_frequency.EpochsTFR.pick`. If ``None``, all channels are used.</span>
+<span class="sd">        Channels to include. Passed to :meth:`mne.time_frequency.EpochsTFR.pick`.</span>
+<span class="sd">        If ``None``, all channels are used.</span>
+
+<span class="sd">    baseline : tuple of float | None, optional</span>
+<span class="sd">        Baseline interval in seconds (e.g., ``(None, 0.0)``). If provided, baseline</span>
+<span class="sd">        correction is applied on a copy of ``data`` before computing the metric.</span>
 
 <span class="sd">    average : bool, default=True</span>
-<span class="sd">        Controls the output format for each channel.</span>
+<span class="sd">        If ``True``, return a scalar averaged across epochs. If ``False``, return the</span>
+<span class="sd">        per-epoch dispersion values as an array of shape ``(n_epochs,)``.</span>
 
-<span class="sd">        - If ``True``, return a single scalar (mean dispersion across epochs).</span>
-<span class="sd">        - If ``False``, return a JSON-encoded list of per-epoch dispersion values</span>
-<span class="sd">          (epoch order matches ``data``).</span>
-
-<span class="sd">    additional_values : dict | None, optional</span>
-<span class="sd">        Extra columns to append to the returned dataframe (e.g., ``{&quot;subject&quot;: 1}``).</span>
+<span class="sd">    return_centroid : bool, default=False</span>
+<span class="sd">        If ``True``, also return the per-epoch centroid frequency vectors.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    df : pandas.DataFrame</span>
-<span class="sd">        Dataframe with one row per channel.</span>
+<span class="sd">    dispersion : float | ndarray of shape (n_epochs,)</span>
+<span class="sd">        Within-trial frequency dispersion. If ``average=True``, a scalar (mean across</span>
+<span class="sd">        epochs). Otherwise, an array with one value per epoch.</span>
 
-<span class="sd">        ``channel`` : str</span>
-<span class="sd">            Channel name.</span>
-
-<span class="sd">        ``within_trial_frequency`` : float | str</span>
-<span class="sd">            If ``average=True``, the mean dispersion across epochs.</span>
-<span class="sd">            If ``average=False``, a JSON-encoded list of dispersions with length</span>
-<span class="sd">            ``n_epochs``.</span>
+<span class="sd">    centroid : ndarray of shape (n_epochs, n_freqs), optional</span>
+<span class="sd">        Returned only when ``return_centroid=True``. The within-epoch centroid</span>
+<span class="sd">        frequency vectors.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">    - For each channel and epoch, frequency vectors are constructed either by</span>
-<span class="sd">      averaging over time windows (``mode=&quot;windows&quot;``) or by using individual</span>
-<span class="sd">      time samples (``mode=&quot;all_samples&quot;``).</span>
 <span class="sd">    - The function operates on a copy of the input object (``data.copy()``) and does</span>
 <span class="sd">      not modify ``data`` in place.</span>
-<span class="sd">    - This metric captures *within-trial frequency variability*, complementary to</span>
-<span class="sd">      spatial and temporal variability metrics.</span>
+<span class="sd">    - For ``mode=&quot;windows&quot;``, at least two windows must be generated; otherwise a</span>
+<span class="sd">      :class:`ValueError` is raised.</span>
+<span class="sd">    - The exact meaning of distance and centroid depends on</span>
+<span class="sd">      ``callback_distance`` / ``callback_centroid``.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">type_data</span> <span class="o">=</span> <span class="n">_get_data_type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">type_data</span> <span class="o">==</span> <span class="s2">&quot;EpochsTFR&quot;</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;data must be an instance of EpochsTFR objects.&quot;</span><span class="p">)</span>
 
-    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">callback_distance</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">callback_distance</span> <span class="o">=</span> <span class="n">distance_angle</span>
 
-    <span class="k">if</span> <span class="n">baseline</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="n">_apply_baseline</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">baseline</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">callback_centroid</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">callback_centroid</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">frechet_mean_angular</span><span class="p">,</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
     <span class="k">if</span> <span class="n">picks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">metric</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span> <span class="s2">&quot;cosine&quot;</span><span class="p">]:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;metrics must be &#39;angle&#39; or &#39;cosine&#39;&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">baseline</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">_apply_baseline</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">baseline</span><span class="p">)</span>
 
-    <span class="n">df_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;within_trial_frequency&quot;</span><span class="p">:</span> <span class="p">[]}</span>
-
-    <span class="n">X_dict</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;windows&quot;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">windows</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">windows</span> <span class="o">=</span> <span class="n">_auto_windows</span><span class="p">(</span>
-                <span class="n">size</span><span class="o">=</span><span class="n">auto_window_size</span><span class="p">,</span>
-                <span class="n">step</span><span class="o">=</span><span class="n">auto_window_step</span><span class="p">,</span>
-                <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
-                <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
-            <span class="p">)</span>
+        <span class="n">windows</span> <span class="o">=</span> <span class="n">_auto_windows</span><span class="p">(</span>
+            <span class="n">size</span><span class="o">=</span><span class="n">window_size</span><span class="p">,</span>
+            <span class="n">step</span><span class="o">=</span><span class="n">window_step</span><span class="p">,</span>
+            <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+            <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+        <span class="p">)</span>
 
-            <span class="k">if</span> <span class="p">(</span><span class="n">windows</span><span class="o">.</span><span class="n">ndim</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">windows</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Two or more windows must be specified. </span><span class="si">{</span><span class="n">windows</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">windows</span><span class="o">.</span><span class="n">ndim</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">windows</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Two or more windows must be specified. </span><span class="si">{</span><span class="n">windows</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-        <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
-            <span class="n">X_dict</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-            <span class="k">for</span> <span class="n">window</span> <span class="ow">in</span> <span class="n">windows</span><span class="p">:</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">_get_data</span><span class="p">(</span>
+            <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+            <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;frequency&quot;</span><span class="p">,</span>
+            <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">windows</span><span class="o">=</span><span class="n">windows</span><span class="p">,</span>
+            <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+            <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+            <span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">,</span>
+        <span class="p">)</span>
 
-                <span class="n">X</span> <span class="o">=</span> <span class="n">_get_data</span><span class="p">(</span>
-                    <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
-                    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;frequency&quot;</span><span class="p">,</span>
-                    <span class="n">tmin</span><span class="o">=</span><span class="n">window</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-                    <span class="n">tmax</span><span class="o">=</span><span class="n">window</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-                    <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
-                    <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
-                    <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span>
-                <span class="p">)</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="c1"># X.shape: n_windows, n_epochs, n_freqs</span>
 
-                <span class="n">X_dict</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-
-            <span class="n">X_dict</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">X_dict</span><span class="p">[</span><span class="n">ch</span><span class="p">])</span>
-            <span class="c1"># X.shape: n_windows, n_epochs, n_freqs</span>
-
-            <span class="n">X_dict</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_dict</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-            <span class="c1"># X.shape: n_epochs, n_windows, n_freqs</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="c1"># X.shape: n_epochs, n_windows, n_freqs</span>
 
     <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;all_samples&quot;</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
-            <span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">)</span>
-            <span class="c1"># data.shape: n_epochs, n_channels, n_freqs, n_times</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
+        <span class="c1"># data.shape: n_epochs, n_channels, n_freqs, n_times</span>
 
-            <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-            <span class="c1"># X.shape: n_epochs, n_freqs, n_times</span>
-            <span class="c1"># In all_samples mode, n_times is equal to the number of windows</span>
-            <span class="c1"># X.shape: n_epochs, n_freqs, n_windows</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="c1"># X.shape: n_epochs, n_freqs, n_times</span>
+        <span class="c1"># In all_samples mode, n_times is equal to the number of windows</span>
+        <span class="c1"># X.shape: n_epochs, n_freqs, n_windows</span>
 
-            <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-            <span class="c1"># X.shape: n_epochs, n_windows, n_freqs</span>
-
-            <span class="n">X_dict</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span>
-
+        <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="c1"># X.shape: n_epochs, n_windows, n_freqs</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;mode must be &#39;windows&#39; or &#39;all_samples&#39;&quot;</span><span class="p">)</span>
 
-    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
-        <span class="n">n_epochs</span><span class="p">,</span> <span class="n">n_windows</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">X_dict</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">n_epochs</span><span class="p">,</span> <span class="n">n_windows</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
 
-        <span class="n">dispersion</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">idx_trial</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_epochs</span><span class="p">):</span>
-            <span class="n">X_trial</span> <span class="o">=</span> <span class="n">X_dict</span><span class="p">[</span><span class="n">ch</span><span class="p">][</span><span class="n">idx_trial</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
-            <span class="c1"># X_trial.shape: n_windows, n_freqs</span>
+    <span class="n">dispersion</span><span class="p">,</span> <span class="n">centroid_list</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">idx_trial</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_epochs</span><span class="p">):</span>
+        <span class="n">X_trial</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">idx_trial</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+        <span class="c1"># X_trial.shape: n_windows, n_freqs</span>
 
-            <span class="k">if</span> <span class="n">metric</span> <span class="o">==</span> <span class="s2">&quot;angle&quot;</span><span class="p">:</span>
-                <span class="n">mean</span> <span class="o">=</span> <span class="n">frechet_mean_angular</span><span class="p">(</span><span class="n">X_trial</span><span class="p">,</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">centroid</span> <span class="o">=</span> <span class="n">callback_centroid</span><span class="p">(</span><span class="n">X_trial</span><span class="p">)</span>
+        <span class="n">centroid_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">centroid</span><span class="p">)</span>
 
-                <span class="n">distances_trial</span> <span class="o">=</span> <span class="p">[]</span>
-                <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_windows</span><span class="p">):</span>
-                    <span class="n">d</span> <span class="o">=</span> <span class="n">distance_angle</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">X_trial</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:])</span>
-                    <span class="n">distances_trial</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+        <span class="n">distances_trial</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_windows</span><span class="p">):</span>
+            <span class="n">d</span> <span class="o">=</span> <span class="n">callback_distance</span><span class="p">(</span><span class="n">X_trial</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:],</span> <span class="n">centroid</span><span class="p">)</span>
+            <span class="n">distances_trial</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 
-            <span class="k">elif</span> <span class="n">metric</span> <span class="o">==</span> <span class="s2">&quot;cosine&quot;</span><span class="p">:</span>
-                <span class="n">mean</span> <span class="o">=</span> <span class="n">extrinsic_mean</span><span class="p">(</span><span class="n">X_trial</span><span class="p">)</span>
+        <span class="n">dispersion_within_trial</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">distances_trial</span><span class="p">)</span>
 
-                <span class="n">distances_trial</span> <span class="o">=</span> <span class="p">[]</span>
-                <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_windows</span><span class="p">):</span>
-                    <span class="n">d</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">cosine</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">X_trial</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:])</span>
-                    <span class="n">distances_trial</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+        <span class="n">dispersion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dispersion_within_trial</span><span class="p">)</span>
 
-            <span class="n">dispersion_within_trial</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">distances_trial</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">average</span><span class="p">:</span>
+        <span class="n">dispersion</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dispersion</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dispersion</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">dispersion</span><span class="p">)</span>
 
-            <span class="n">dispersion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dispersion_within_trial</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">return_centroid</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">dispersion</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">centroid_list</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">average</span><span class="p">:</span>
-            <span class="n">dispersion</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dispersion</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">dispersion</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">dispersion</span><span class="p">)</span>
-
-        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
-        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;within_trial_frequency&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dispersion</span><span class="p">)</span>
-
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_dict</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">additional_values</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">df</span> <span class="o">=</span> <span class="n">_add_values_to_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">additional_values</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">df</span></div>
+    <span class="k">return</span> <span class="n">dispersion</span></div>
 
 
 
 <div class="viewcode-block" id="between_trial_frequency">
 <a class="viewcode-back" href="../../../nearby.metrics.between_trial_frequency.html#nearby.metrics.frequency.between_trial_frequency">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">between_trial_frequency</span><span class="p">(</span>
-    <span class="n">data</span><span class="p">,</span>
-    <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
-    <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">,</span>
+        <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">callback_distance</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">callback_centroid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">return_centroid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Compute between-trial frequency variability from epoch-wise spectra.</span>
+<span class="sd">    Compute between-trial frequency variability.</span>
 
-<span class="sd">    This metric quantifies how much the *spectral pattern across frequencies* varies</span>
-<span class="sd">    across epochs. For each channel, each epoch is reduced to a single frequency</span>
-<span class="sd">    vector by averaging the TFR over time within the selected window (``tmin``–``tmax``).</span>
-<span class="sd">    A reference spectrum is then estimated across epochs, and distances from this</span>
-<span class="sd">    mean to each epoch’s spectrum are computed. The final output is the mean distance</span>
-<span class="sd">    across epochs (or a per-epoch list) for each channel.</span>
+<span class="sd">    This metric quantifies how much the spectral pattern across frequencies varies</span>
+<span class="sd">    across epochs. Each epoch is reduced to a single frequency vector by averaging</span>
+<span class="sd">    the time–frequency representation over time within ``[tmin, tmax]`` (and optionally</span>
+<span class="sd">    restricting frequencies to ``[fmin, fmax]``). A centroid frequency pattern is then</span>
+<span class="sd">    estimated across epochs using ``callback_centroid``, and the dispersion is</span>
+<span class="sd">    computed as the mean distance (``callback_distance``) between each epoch spectrum</span>
+<span class="sd">    and the centroid. The final output aggregates distances across epochs.</span>
 
-<span class="sd">    Two distance/mean definitions are supported via ``metric``:</span>
-
-<span class="sd">    - ``&quot;angle&quot;``: angular distance to a Fréchet mean (p=2) on the unit sphere.</span>
-<span class="sd">    - ``&quot;cosine&quot;``: cosine distance to an extrinsic (Euclidean) mean.</span>
+<span class="sd">    Only time–frequency input (:class:`mne.time_frequency.tfr.EpochsTFR`) is supported.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    data : mne.time_frequency.tfr.EpochsTFR</span>
-<span class="sd">        Epoched time–frequency data. This function is implemented for TFR input only.</span>
-
-<span class="sd">    baseline : tuple of float | None, optional</span>
-<span class="sd">        Baseline interval in seconds (e.g., ``(None, 0)``). If provided, baseline</span>
-<span class="sd">        correction is applied on a copy of ``data`` using ``mode=&quot;percent&quot;``.</span>
+<span class="sd">        Epoched time–frequency data.</span>
 
 <span class="sd">    tmin, tmax : float | None, optional</span>
-<span class="sd">        Time window of interest in seconds. If provided, data are cropped to</span>
-<span class="sd">        ``[tmin, tmax]`` before averaging over time.</span>
+<span class="sd">        Time bounds (seconds) used to crop the data to ``[tmin, tmax]`` prior to</span>
+<span class="sd">        averaging over time.</span>
 
 <span class="sd">    fmin, fmax : float | None, optional</span>
-<span class="sd">        Frequency band of interest in Hz. If provided, spectra are restricted to</span>
-<span class="sd">        frequencies in ``[fmin, fmax]`` before computing variability. If ``None``,</span>
-<span class="sd">        all frequencies are used.</span>
+<span class="sd">        Lower and upper frequency bounds (Hz). If provided, spectra are restricted to</span>
+<span class="sd">        ``[fmin, fmax]`` prior to computing the metric.</span>
 
-<span class="sd">    metric : {&quot;angle&quot;, &quot;cosine&quot;}, default=&quot;angle&quot;</span>
-<span class="sd">        Distance/mean definition used to measure dispersion across epochs.</span>
+<span class="sd">    callback_distance : callable | None, optional</span>
+<span class="sd">        Distance function comparing two frequency vectors of shape ``(n_freqs,)``.</span>
+<span class="sd">        If ``None``, uses :func:`nearby.distances.distance_angle`.</span>
 
-<span class="sd">        - ``&quot;angle&quot;``: estimate the across-epoch mean spectrum using a Fréchet mean</span>
-<span class="sd">          (p=2), then compute angular distances to each epoch spectrum.</span>
-<span class="sd">        - ``&quot;cosine&quot;``: estimate the mean spectrum using an extrinsic mean, then compute</span>
-<span class="sd">          cosine distances to each epoch spectrum.</span>
+<span class="sd">    callback_centroid : callable | None, optional</span>
+<span class="sd">        Function computing a centroid frequency vector from the stacked epoch spectra</span>
+<span class="sd">        ``X`` of shape ``(n_epochs, n_freqs)``.</span>
+<span class="sd">        If ``None``, uses an angular Fréchet mean via</span>
+<span class="sd">        ``partial(frechet_mean_angular, verbosity=0)``.</span>
 
 <span class="sd">    picks : str | array_like of int | array_like of str | None, optional</span>
-<span class="sd">        Channels to include. Passed to</span>
-<span class="sd">        :meth:`mne.time_frequency.EpochsTFR.pick`. If ``None``, all channels are used.</span>
+<span class="sd">        Channels to include. Passed to :meth:`mne.time_frequency.EpochsTFR.pick`.</span>
+<span class="sd">        If ``None``, all channels are used.</span>
+
+<span class="sd">    baseline : tuple of float | None, optional</span>
+<span class="sd">        Baseline interval in seconds (e.g., ``(None, 0.0)``). If provided, baseline</span>
+<span class="sd">        correction is applied on a copy of ``data`` before computing the metric.</span>
 
 <span class="sd">    average : bool, default=True</span>
-<span class="sd">        Controls the output format for each channel.</span>
+<span class="sd">        If ``True``, return a scalar mean distance across epochs. If ``False``, return</span>
+<span class="sd">        per-epoch distances as an array of shape ``(n_epochs,)``.</span>
 
-<span class="sd">        - If ``True``, return a single scalar (mean distance across epochs).</span>
-<span class="sd">        - If ``False``, return a JSON-encoded list of per-epoch distances (epoch order</span>
-<span class="sd">          matches ``data``).</span>
-
-<span class="sd">    additional_values : dict | None, optional</span>
-<span class="sd">        Extra columns to append to the returned dataframe (e.g., ``{&quot;subject&quot;: 1}``).</span>
+<span class="sd">    return_centroid : bool, default=False</span>
+<span class="sd">        If ``True``, also return the centroid frequency vector.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    df : pandas.DataFrame</span>
-<span class="sd">        Dataframe with one row per channel.</span>
+<span class="sd">    dispersion : float | ndarray of shape (n_epochs,)</span>
+<span class="sd">        Between-trial frequency dispersion. If ``average=True``, a scalar (mean across</span>
+<span class="sd">        epochs). Otherwise, an array with one value per epoch.</span>
 
-<span class="sd">        ``channel`` : str</span>
-<span class="sd">            Channel name.</span>
-
-<span class="sd">        ``between_trial_frequency`` : float | str</span>
-<span class="sd">            If ``average=True``, the mean distance across epochs.</span>
-<span class="sd">            If ``average=False``, a JSON-encoded list of distances with length</span>
-<span class="sd">            ``n_epochs``.</span>
+<span class="sd">    centroid : ndarray of shape (n_freqs,), optional</span>
+<span class="sd">        Returned only when ``return_centroid=True``. The centroid frequency vector.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">    For each channel, the per-epoch spectrum is computed by averaging TFR values over</span>
-<span class="sd">    time within ``[tmin, tmax]`` (after optional frequency restriction). Variability is</span>
-<span class="sd">    measured as the dispersion of these spectra around a mean spectrum estimated across</span>
-<span class="sd">    epochs. The function operates on a copy of the input object (``data.copy()``) and</span>
-<span class="sd">    does not modify ``data`` in place.</span>
+<span class="sd">    - The function operates on a copy of the input object (``data.copy()``) and does</span>
+<span class="sd">      not modify ``data`` in place.</span>
+<span class="sd">    - The exact meaning of distance and centroid depends on</span>
+<span class="sd">      ``callback_distance`` / ``callback_centroid``.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">type_data</span> <span class="o">=</span> <span class="n">_get_data_type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">type_data</span> <span class="o">==</span> <span class="s2">&quot;EpochsTFR&quot;</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;data must be an instance of EpochsTFR objects.&quot;</span><span class="p">)</span>
 
-    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">callback_distance</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">callback_distance</span> <span class="o">=</span> <span class="n">distance_angle</span>
 
-    <span class="k">if</span> <span class="n">baseline</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="n">_apply_baseline</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">baseline</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">callback_centroid</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">callback_centroid</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">frechet_mean_angular</span><span class="p">,</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
     <span class="k">if</span> <span class="n">picks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">metric</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span> <span class="s2">&quot;cosine&quot;</span><span class="p">]:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;metrics must be &#39;angle&#39; or &#39;cosine&#39;&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">baseline</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">_apply_baseline</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">baseline</span><span class="p">)</span>
 
-    <span class="n">df_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;between_trial_frequency&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">_get_data</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+        <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;frequency&quot;</span><span class="p">,</span>
+        <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+        <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+        <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+        <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+        <span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">,</span>
+    <span class="p">)</span>
 
-    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
-        <span class="n">X</span> <span class="o">=</span> <span class="n">_get_data</span><span class="p">(</span>
-            <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
-            <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;frequency&quot;</span><span class="p">,</span>
-            <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
-            <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
-            <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
-            <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
-            <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span>
-        <span class="p">)</span>
+    <span class="n">n_epochs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
 
-        <span class="n">n_epochs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">distances</span> <span class="o">=</span> <span class="p">[]</span>
 
-        <span class="n">distances</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">centroid</span> <span class="o">=</span> <span class="n">callback_centroid</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">metric</span> <span class="o">==</span> <span class="s2">&quot;angle&quot;</span><span class="p">:</span>
-            <span class="n">mean</span> <span class="o">=</span> <span class="n">frechet_mean_angular</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_epochs</span><span class="p">):</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">callback_distance</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:],</span> <span class="n">centroid</span><span class="p">)</span>
+        <span class="n">distances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 
-            <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_epochs</span><span class="p">):</span>
-                <span class="n">d</span> <span class="o">=</span> <span class="n">distance_angle</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">X</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:])</span>
-                <span class="n">distances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">metric</span> <span class="o">==</span> <span class="s2">&quot;cosine&quot;</span><span class="p">:</span>
-            <span class="n">mean</span> <span class="o">=</span> <span class="n">extrinsic_mean</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">average</span><span class="p">:</span>
+        <span class="n">dispersion</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dispersion</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
 
-            <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_epochs</span><span class="p">):</span>
-                <span class="n">d</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">cosine</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">X</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:])</span>
-                <span class="n">distances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">return_centroid</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">dispersion</span><span class="p">,</span> <span class="n">centroid</span>
 
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;metrics must be &#39;angle&#39; or &#39;cosine&#39;&quot;</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="n">average</span><span class="p">:</span>
-            <span class="n">distances</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
-            <span class="n">distances</span> <span class="o">=</span> <span class="n">distances</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">distances</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
-
-        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
-        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;between_trial_frequency&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
-
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_dict</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">additional_values</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">df</span> <span class="o">=</span> <span class="n">_add_values_to_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">additional_values</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">df</span></div>
+    <span class="k">return</span> <span class="n">dispersion</span></div>
 
 
 
 <div class="viewcode-block" id="between_trial_group_frequency">
 <a class="viewcode-back" href="../../../nearby.metrics.between_trial_group_frequency.html#nearby.metrics.frequency.between_trial_group_frequency">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">between_trial_group_frequency</span><span class="p">(</span>
-    <span class="n">data</span><span class="p">,</span>
-    <span class="n">centroid</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span>
-    <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span>
-    <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">,</span>
+        <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">callback_distance</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">callback_centroid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">centroid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">return_centroid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Compute between-trial-group frequency variability from group-representative spectra.</span>
+<span class="sd">    Compute between-trial-group frequency variability.</span>
 
-<span class="sd">    This metric quantifies how much *group-level spectral patterns* differ from one</span>
-<span class="sd">    another. Each element of ``data`` is expected to be a group-representative TFR</span>
-<span class="sd">    (:class:`mne.time_frequency.tfr.AverageTFR`). For each channel, each group object</span>
-<span class="sd">    is reduced to a single frequency vector by averaging the TFR over time within</span>
-<span class="sd">    ``[tmin, tmax]`` (after optional frequency restriction to ``[fmin, fmax]``).</span>
-<span class="sd">    Distances between each group spectrum and a centroid spectrum are then computed.</span>
-<span class="sd">    The final output is the mean distance across groups (or a per-group list) for</span>
-<span class="sd">    each channel.</span>
-
-<span class="sd">    The centroid can be computed from the group spectra (``centroid=&quot;mean&quot;``) or</span>
-<span class="sd">    provided explicitly as an :class:`~mne.time_frequency.tfr.AverageTFR`. When</span>
-<span class="sd">    ``centroid=&quot;mean&quot;``, the centroid computation depends on ``metric``:</span>
-
-<span class="sd">    - ``metric=&quot;angle&quot;`` uses a Fréchet mean (p=2) on the unit sphere.</span>
-<span class="sd">    - ``metric=&quot;cosine&quot;`` uses an extrinsic (Euclidean) mean.</span>
+<span class="sd">    This metric quantifies how much group-representative spectral patterns differ</span>
+<span class="sd">    from one another. Each element of ``data`` is expected to be a group-level</span>
+<span class="sd">    representative time–frequency object (:class:`mne.time_frequency.tfr.AverageTFR`).</span>
+<span class="sd">    Each group object is reduced to a single frequency vector by averaging the TFR</span>
+<span class="sd">    over time within ``[tmin, tmax]`` (and optionally restricting frequencies to</span>
+<span class="sd">    ``[fmin, fmax]``). A centroid spectrum is then defined (either computed from the</span>
+<span class="sd">    group spectra or extracted from an explicit centroid object), and the dispersion</span>
+<span class="sd">    is computed as the mean distance (``callback_distance``) between each group</span>
+<span class="sd">    spectrum and the centroid.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    data : list of mne.time_frequency.tfr.AverageTFR</span>
-<span class="sd">        List of group-representative TFR objects. Only lists of</span>
-<span class="sd">        :class:`~mne.time_frequency.tfr.AverageTFR` are supported.</span>
-
-<span class="sd">    centroid : {&quot;mean&quot;} | mne.time_frequency.tfr.AverageTFR, default=&quot;mean&quot;</span>
-<span class="sd">        Definition of the centroid (reference) spectrum used for comparisons.</span>
-
-<span class="sd">        - ``&quot;mean&quot;``: compute the centroid spectrum from the group spectra. The mean</span>
-<span class="sd">          definition depends on ``metric`` (Fréchet mean for ``&quot;angle&quot;``, extrinsic</span>
-<span class="sd">          mean for ``&quot;cosine&quot;``).</span>
-<span class="sd">        - If an :class:`~mne.time_frequency.tfr.AverageTFR` is provided, it is reduced</span>
-<span class="sd">          to a centroid spectrum using the same averaging operations as for ``data``.</span>
+<span class="sd">        Group-representative time–frequency objects. All entries must be</span>
+<span class="sd">        :class:`~mne.time_frequency.tfr.AverageTFR`.</span>
 
 <span class="sd">    tmin, tmax : float | None, optional</span>
-<span class="sd">        Time window of interest in seconds. If provided, data are cropped to</span>
-<span class="sd">        ``[tmin, tmax]`` before averaging over time.</span>
+<span class="sd">        Time bounds (seconds) used to crop objects prior to averaging over time.</span>
 
 <span class="sd">    fmin, fmax : float | None, optional</span>
-<span class="sd">        Frequency band of interest in Hz. If provided, spectra are restricted to</span>
-<span class="sd">        frequencies in ``[fmin, fmax]`` before computing distances. If ``None``,</span>
-<span class="sd">        all frequencies are used.</span>
+<span class="sd">        Lower and upper frequency bounds (Hz). If provided, spectra are restricted to</span>
+<span class="sd">        ``[fmin, fmax]`` prior to computing the metric.</span>
 
-<span class="sd">    metric : {&quot;angle&quot;, &quot;cosine&quot;}, default=&quot;angle&quot;</span>
-<span class="sd">        Distance definition used to compare spectra across groups.</span>
+<span class="sd">    callback_distance : callable | None, optional</span>
+<span class="sd">        Distance function comparing two frequency vectors of shape ``(n_freqs,)``.</span>
+<span class="sd">        If ``None``, uses :func:`nearby.distances.distance_angle`.</span>
 
-<span class="sd">        - ``&quot;angle&quot;``: angular distance between spectra (via ``distance_angle``).</span>
-<span class="sd">        - ``&quot;cosine&quot;``: cosine distance between spectra.</span>
+<span class="sd">    callback_centroid : callable | None, optional</span>
+<span class="sd">        Function computing a centroid frequency vector from a stack of group spectra</span>
+<span class="sd">        with shape ``(n_groups, n_freqs)``.</span>
+<span class="sd">        If ``None``, uses an angular Fréchet mean via</span>
+<span class="sd">        ``partial(frechet_mean_angular, verbosity=0)``.</span>
+
+<span class="sd">    centroid : mne.time_frequency.tfr.AverageTFR | None, optional</span>
+<span class="sd">        Reference centroid object. If ``None``, the centroid spectrum is computed from</span>
+<span class="sd">        the group spectra via ``callback_centroid``. If provided, it must be an</span>
+<span class="sd">        :class:`~mne.time_frequency.tfr.AverageTFR` and will be reduced to a spectrum</span>
+<span class="sd">        using the same extraction procedure as for group objects.</span>
 
 <span class="sd">    picks : str | array_like of int | array_like of str | None, optional</span>
 <span class="sd">        Channels to include. Applied to each element in ``data`` and to the centroid</span>
 <span class="sd">        object (if provided). If ``None``, all channels are used.</span>
 
+<span class="sd">    baseline : tuple of float | None, optional</span>
+<span class="sd">        Baseline interval in seconds (e.g., ``(None, 0.0)``). If provided, baseline</span>
+<span class="sd">        correction is applied on a copy of ``data`` before computing the metric.</span>
+
 <span class="sd">    average : bool, default=True</span>
-<span class="sd">        Controls the output format for each channel.</span>
+<span class="sd">        If ``True``, return a scalar mean distance across groups. If ``False``, return</span>
+<span class="sd">        per-group distances as an array of shape ``(n_groups,)``.</span>
 
-<span class="sd">        - If ``True``, return a single scalar (mean distance across groups).</span>
-<span class="sd">        - If ``False``, return a JSON-encoded list of per-group distances (group order</span>
-<span class="sd">          matches ``data``).</span>
-
-<span class="sd">    additional_values : dict | None, optional</span>
-<span class="sd">        Extra columns to append to the returned dataframe (e.g., ``{&quot;subject&quot;: 1}``).</span>
+<span class="sd">    return_centroid : bool, default=False</span>
+<span class="sd">        If ``True``, also return the centroid frequency vector used as the reference.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    df : pandas.DataFrame</span>
-<span class="sd">        Dataframe with one row per channel.</span>
+<span class="sd">    dispersion : float | ndarray of shape (n_groups,)</span>
+<span class="sd">        Between-trial-group frequency dispersion. If ``average=True``, a scalar (mean</span>
+<span class="sd">        across groups). Otherwise, an array with one value per group.</span>
 
-<span class="sd">        ``channel`` : str</span>
-<span class="sd">            Channel name.</span>
-
-<span class="sd">        ``between_trial_group_frequency`` : float | str</span>
-<span class="sd">            If ``average=True``, the mean distance across groups.</span>
-<span class="sd">            If ``average=False``, a JSON-encoded list of distances with length</span>
-<span class="sd">            ``len(data)``.</span>
+<span class="sd">    centroid_vector : ndarray of shape (n_freqs,), optional</span>
+<span class="sd">        Returned only when ``return_centroid=True``. The centroid frequency vector</span>
+<span class="sd">        used as the reference.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">    - For each group :class:`~mne.time_frequency.tfr.AverageTFR`, the per-channel</span>
-<span class="sd">      spectrum is computed by averaging TFR values over time within ``[tmin, tmax]``</span>
-<span class="sd">      (after optional frequency restriction).</span>
-<span class="sd">    - This function measures variability between *group-level representatives*</span>
-<span class="sd">      rather than between single-trial epochs.</span>
-<span class="sd">    - The function operates on copies of the input objects (``copy()``) and does not</span>
-<span class="sd">      modify inputs in place.</span>
+<span class="sd">    - The function operates on copies of the input objects (``.copy()``) and does not</span>
+<span class="sd">      modify the originals in place.</span>
+<span class="sd">    - The exact meaning of distance and centroid depends on</span>
+<span class="sd">      ``callback_distance`` / ``callback_centroid``.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
     <span class="n">type_data</span> <span class="o">=</span> <span class="n">_get_data_type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
     <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">type_data</span> <span class="o">==</span> <span class="s2">&quot;list_AverageTFR&quot;</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;data must be an instance of list of AverageTFR objects.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">callback_distance</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">callback_distance</span> <span class="o">=</span> <span class="n">distance_angle</span>
+
+    <span class="k">if</span> <span class="n">callback_centroid</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">callback_centroid</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">frechet_mean_angular</span><span class="p">,</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
     <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))]</span>
 
@@ -884,87 +840,62 @@
         <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
             <span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">centroid</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">centroid</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;mean&quot;</span><span class="p">]:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                <span class="s2">&quot;centroid must be &#39;mean&#39; or instance of AverageTFR objects.&quot;</span>
-            <span class="p">)</span>
-        <span class="n">data_centroid</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="n">baseline</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">_apply_baseline</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">baseline</span><span class="p">)</span>
+
+    <span class="n">X_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">_get_data</span><span class="p">(</span>
+            <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="p">],</span>
+            <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;frequency&quot;</span><span class="p">,</span>
+            <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+            <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+            <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+            <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+            <span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">X_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">centroid</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">X_centroid</span> <span class="o">=</span> <span class="n">callback_centroid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">X_list</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">data_centroid</span> <span class="o">=</span> <span class="n">centroid</span>
-        <span class="n">type_data_centroid</span> <span class="o">=</span> <span class="n">_get_data_type</span><span class="p">(</span><span class="n">data_centroid</span><span class="p">)</span>
+        <span class="n">type_data_centroid</span> <span class="o">=</span> <span class="n">_get_data_type</span><span class="p">(</span><span class="n">centroid</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">type_data_centroid</span> <span class="o">!=</span> <span class="s2">&quot;AverageTFR&quot;</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;centroid must be an instance of AverageTFR objects.&quot;</span><span class="p">)</span>
 
-        <span class="n">data_centroid</span> <span class="o">=</span> <span class="n">data_centroid</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">centroid</span> <span class="o">=</span> <span class="n">centroid</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
         <span class="k">if</span> <span class="n">picks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">data_centroid</span> <span class="o">=</span> <span class="n">data_centroid</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
+            <span class="n">centroid</span> <span class="o">=</span> <span class="n">centroid</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">baseline</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">centroid</span> <span class="o">=</span> <span class="n">_apply_baseline</span><span class="p">(</span><span class="n">centroid</span><span class="p">,</span> <span class="n">baseline</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">metric</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;angle&quot;</span><span class="p">,</span> <span class="s2">&quot;cosine&quot;</span><span class="p">]:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;metric must be &#39;angle&#39; or &#39;cosine&#39;&quot;</span><span class="p">)</span>
+        <span class="n">X_centroid</span> <span class="o">=</span> <span class="n">_get_data</span><span class="p">(</span>
+            <span class="n">data</span><span class="o">=</span><span class="n">centroid</span><span class="p">,</span>
+            <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;frequency&quot;</span><span class="p">,</span>
+            <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+            <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+            <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+            <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+            <span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">,</span>
+        <span class="p">)</span>
 
-    <span class="n">df_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;between_trial_group_frequency&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+    <span class="n">distances</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">X</span> <span class="ow">in</span> <span class="n">X_list</span><span class="p">:</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">callback_distance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">X_centroid</span><span class="p">)</span>
+        <span class="n">distances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 
-    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">average</span><span class="p">:</span>
+        <span class="n">dispersion</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dispersion</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
 
-        <span class="n">X_list</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
-            <span class="n">x</span> <span class="o">=</span> <span class="n">_get_data</span><span class="p">(</span>
-                <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="p">],</span>
-                <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;frequency&quot;</span><span class="p">,</span>
-                <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
-                <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
-                <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
-                <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
-                <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span>
-            <span class="p">)</span>
-            <span class="n">X_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">return_centroid</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">dispersion</span><span class="p">,</span> <span class="n">X_centroid</span>
 
-        <span class="k">if</span> <span class="n">data_centroid</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">X_centroid</span> <span class="o">=</span> <span class="n">_get_data</span><span class="p">(</span>
-                <span class="n">data</span><span class="o">=</span><span class="n">data_centroid</span><span class="p">,</span>
-                <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;frequency&quot;</span><span class="p">,</span>
-                <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
-                <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
-                <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
-                <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
-                <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span>
-            <span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">metric</span> <span class="o">==</span> <span class="s2">&quot;angle&quot;</span><span class="p">:</span>
-                <span class="n">X_centroid</span> <span class="o">=</span> <span class="n">frechet_mean_angular</span><span class="p">(</span><span class="n">X_list</span><span class="p">,</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-            <span class="k">elif</span> <span class="n">metric</span> <span class="o">==</span> <span class="s2">&quot;cosine&quot;</span><span class="p">:</span>
-                <span class="n">X_centroid</span> <span class="o">=</span> <span class="n">extrinsic_mean</span><span class="p">(</span><span class="n">X_list</span><span class="p">)</span>
-
-        <span class="n">distances</span> <span class="o">=</span> <span class="p">[]</span>
-
-        <span class="k">if</span> <span class="n">metric</span> <span class="o">==</span> <span class="s2">&quot;angle&quot;</span><span class="p">:</span>
-            <span class="k">for</span> <span class="n">X</span> <span class="ow">in</span> <span class="n">X_list</span><span class="p">:</span>
-                <span class="n">d</span> <span class="o">=</span> <span class="n">distance_angle</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">X_centroid</span><span class="p">)</span>
-                <span class="n">distances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">metric</span> <span class="o">==</span> <span class="s2">&quot;cosine&quot;</span><span class="p">:</span>
-            <span class="k">for</span> <span class="n">X</span> <span class="ow">in</span> <span class="n">X_list</span><span class="p">:</span>
-                <span class="n">d</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">cosine</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">X_centroid</span><span class="p">)</span>
-                <span class="n">distances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;metric must be &#39;angle&#39; or &#39;cosine&#39;&quot;</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="n">average</span><span class="p">:</span>
-            <span class="n">distances</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
-            <span class="n">distances</span> <span class="o">=</span> <span class="n">distances</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">distances</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
-
-        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
-        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;between_trial_group_frequency&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
-
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_dict</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">additional_values</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">df</span> <span class="o">=</span> <span class="n">_add_values_to_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">additional_values</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">df</span></div>
+    <span class="k">return</span> <span class="n">dispersion</span></div>
 
 </pre></div>
 
@@ -995,8 +926,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1016,7 +947,7 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     <br/>
   </p>
 </div>
@@ -1030,7 +961,7 @@
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
 </p></div>
       
     </div>

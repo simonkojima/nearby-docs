@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nearby.metrics.rimbert &#8212; Nearby 0.0.6 documentation</title>
+    <title>nearby.metrics.rimbert &#8212; Nearby 0.1.0 documentation</title>
   
   
   
@@ -26,51 +26,59 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=fd6457a4" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
 
-    <script src="../../../_static/documentation_options.js?v=1fd71caa"></script>
-    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../_static/sg-tags.js?v=d80f6fa4"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/nearby/metrics/rimbert';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_version = '0.20.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.6';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1.0';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../../_static/searchtools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  
+  
+  
   
   <dialog id="pst-search-dialog">
     
@@ -96,7 +104,7 @@
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
   <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
@@ -122,8 +130,8 @@
       
     
     
-    <img src="../../../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.6 documentation - Home"/>
-    <img src="../../../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.6 documentation - Home"/>
+    <img src="../../../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.1.0 documentation - Home"/>
+    <img src="../../../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.1.0 documentation - Home"/>
   
   
 </a></div>
@@ -179,11 +187,18 @@
       
         <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
       
         <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -281,11 +296,18 @@
         
           <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
         
           <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -368,58 +390,57 @@
                   
   <h1>Source code for nearby.metrics.rimbert</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">..utils.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">_get_data_type</span><span class="p">,</span> <span class="n">_add_values_to_df</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">_get_data_type</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils.proc</span><span class="w"> </span><span class="kn">import</span> <span class="n">_get_data</span><span class="p">,</span> <span class="n">_apply_baseline</span>
 
 
 <div class="viewcode-block" id="mean_erds">
 <a class="viewcode-back" href="../../../nearby.metrics.mean_erds.html#nearby.metrics.rimbert.mean_erds">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">mean_erds</span><span class="p">(</span>
     <span class="n">data</span><span class="p">,</span>
-    <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Compute mean ERD/S values for each channel.</span>
+<span class="sd">    Compute mean ERD/S amplitude per channel.</span>
 
-<span class="sd">    For each channel, this function extracts an epoch-wise ERD/S time course,</span>
-<span class="sd">    summarizes each epoch by its mean over time within ``[tmin, tmax]``, and then</span>
-<span class="sd">    optionally averages these per-epoch values across epochs.</span>
+<span class="sd">    This function computes the channel-wise mean ERD/S amplitude as defined as</span>
+<span class="sd">    &quot;The means of the ERD&quot; in Rimbert et al. (MetroXRAINE 2022). It is **not** a</span>
+<span class="sd">    variability metric.</span>
 
-<span class="sd">    This metrics is **NOT a variability metric**, and it is called **The means of the ERD** in the original</span>
-<span class="sd">    paper by Rimbert et al. [1]_.</span>
+<span class="sd">    For each channel, an epoch-wise ERD/S time course is extracted, each epoch is</span>
+<span class="sd">    summarized by its mean over time within ``[tmin, tmax]``, and (optionally) these</span>
+<span class="sd">    per-epoch values are averaged across epochs.</span>
 
-<span class="sd">    - If ``data`` is an :class:`mne.time_frequency.tfr.EpochsTFR`, values are optionally</span>
-<span class="sd">      restricted to ``[fmin, fmax]`` and averaged over frequency, yielding one time</span>
-<span class="sd">      course per epoch.</span>
-<span class="sd">    - If ``data`` is an :class:`mne.epochs.Epochs`, the epoched signal is used directly</span>
-<span class="sd">      (in microvolts).</span>
+<span class="sd">    Supported inputs are time-domain epochs (:class:`mne.epochs.Epochs`) and</span>
+<span class="sd">    time–frequency epochs (:class:`mne.time_frequency.tfr.EpochsTFR`). For TFR input,</span>
+<span class="sd">    values can be restricted to ``[fmin, fmax]`` and reduced to a single time course</span>
+<span class="sd">    per epoch/channel by the internal data extraction routine.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    data : mne.epochs.Epochs | mne.time_frequency.tfr.EpochsTFR</span>
-<span class="sd">        Epoched MNE object. Only these two types are supported.</span>
+<span class="sd">        Epoched MNE object.</span>
 
 <span class="sd">    baseline : tuple of float | None, optional</span>
-<span class="sd">        Baseline interval in seconds (e.g., ``(None, 0)``). If provided, baseline</span>
-<span class="sd">        correction is applied on a copy of ``data`` before computing means.</span>
-<span class="sd">        For :class:`~mne.time_frequency.tfr.EpochsTFR`, baseline is applied with</span>
-<span class="sd">        ``mode=&quot;percent&quot;``.</span>
+<span class="sd">        Baseline interval in seconds (e.g., ``(None, 0.0)``). If provided, baseline</span>
+<span class="sd">        correction is applied on a copy of ``data`` before computing the mean.</span>
+<span class="sd">        For :class:`~mne.time_frequency.tfr.EpochsTFR`, baseline correction is applied</span>
+<span class="sd">        with ``mode=&quot;percent&quot;`` (via :meth:`mne.time_frequency.EpochsTFR.apply_baseline`).</span>
 
 <span class="sd">    fmin, fmax : float | None, optional</span>
-<span class="sd">        Frequency band of interest in Hz. Only used when ``data`` is an</span>
+<span class="sd">        Lower and upper frequency bounds (Hz). Only used when ``data`` is</span>
 <span class="sd">        :class:`~mne.time_frequency.tfr.EpochsTFR`. If provided, values are restricted</span>
-<span class="sd">        to frequencies in ``[fmin, fmax]`` before averaging over frequency.</span>
+<span class="sd">        to ``[fmin, fmax]`` before frequency reduction.</span>
 
 <span class="sd">    tmin, tmax : float | None, optional</span>
-<span class="sd">        Time window of interest in seconds. If provided, data are cropped to</span>
+<span class="sd">        Time bounds (seconds) used to crop the extracted time course(s) to</span>
 <span class="sd">        ``[tmin, tmax]`` before averaging over time.</span>
 
 <span class="sd">    picks : str | array_like of int | array_like of str | None, optional</span>
@@ -427,36 +448,21 @@
 <span class="sd">        :meth:`mne.time_frequency.EpochsTFR.pick`. If ``None``, all channels are used.</span>
 
 <span class="sd">    average : bool, default=True</span>
-<span class="sd">        Controls the output format for each channel.</span>
-
-<span class="sd">        - If ``True``, return a single scalar per channel (mean of per-epoch means).</span>
-<span class="sd">        - If ``False``, return a JSON-encoded list of per-epoch mean values (epoch order</span>
-<span class="sd">          matches ``data``).</span>
-
-<span class="sd">    additional_values : dict | None, optional</span>
-<span class="sd">        Extra columns to append to the returned dataframe (e.g., ``{&quot;subject&quot;: 1}``).</span>
+<span class="sd">        If ``True``, return a scalar mean across epochs (mean of per-epoch means).</span>
+<span class="sd">        If ``False``, return the per-epoch mean values as an array of shape</span>
+<span class="sd">        ``(n_epochs,)``.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    df : pandas.DataFrame</span>
-<span class="sd">        Dataframe with one row per channel.</span>
-
-<span class="sd">        ``channel`` : str</span>
-<span class="sd">            Channel name.</span>
-
-<span class="sd">        ``mean_erds`` : float | str</span>
-<span class="sd">            If ``average=True``, a scalar mean value.</span>
-<span class="sd">            If ``average=False``, a JSON-encoded list of per-epoch mean values with</span>
-<span class="sd">            length ``n_epochs``.</span>
+<span class="sd">    mean : float | ndarray of shape (n_epochs,)</span>
+<span class="sd">        Channel-wise mean ERD/S amplitude aggregated across epochs (scalar) or</span>
+<span class="sd">        per-epoch values (array), depending on ``average``.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
 <span class="sd">    The per-epoch value is computed by averaging the extracted time course over time</span>
-<span class="sd">    within ``[tmin, tmax]``. For TFR input, the time course is first obtained by</span>
-<span class="sd">    averaging over frequencies within ``[fmin, fmax]``.</span>
-<span class="sd">    The function operates on a copy of the input object (``data.copy()``) and does not</span>
-<span class="sd">    modify inputs in place.</span>
-
+<span class="sd">    within ``[tmin, tmax]``. The function operates on a copy of the input object</span>
+<span class="sd">    (``data.copy()``) and does not modify inputs in place.</span>
 
 <span class="sd">    References</span>
 <span class="sd">    ----------</span>
@@ -482,44 +488,26 @@
     <span class="k">if</span> <span class="n">picks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
 
-    <span class="n">df_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;mean_erds&quot;</span><span class="p">:</span> <span class="p">[]}</span>
-    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">_get_data</span><span class="p">(</span>
+        <span class="n">data</span><span class="p">,</span>
+        <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+        <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+        <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+        <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+        <span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">,</span>
+        <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="c1"># X.shape: n_epochs, n_times</span>
 
-        <span class="k">if</span> <span class="n">type_data</span> <span class="o">==</span> <span class="s2">&quot;EpochsTFR&quot;</span><span class="p">:</span>
-            <span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span> <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">)</span>
-            <span class="c1"># X.shape: n_epochs, n_channels, n_freqs, n_times</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># X.shape: n_epochs</span>
 
-            <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-            <span class="c1"># X.shape: n_epochs, n_freqs, n_times</span>
+    <span class="k">if</span> <span class="n">average</span><span class="p">:</span>
+        <span class="n">mean</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 
-            <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-            <span class="c1"># X.shape: n_epochs, n_times</span>
-
-        <span class="k">elif</span> <span class="n">type_data</span> <span class="o">==</span> <span class="s2">&quot;Epochs&quot;</span><span class="p">:</span>
-            <span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;uV&quot;</span><span class="p">)</span>
-            <span class="c1"># data.shape: n_epochs, n_channels, n_times</span>
-
-            <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-            <span class="c1"># X.shape: n_epochs, n_times</span>
-
-        <span class="n">mean</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-        <span class="c1"># X.shape: n_epochs</span>
-
-        <span class="k">if</span> <span class="n">average</span><span class="p">:</span>
-            <span class="n">mean</span> <span class="o">=</span> <span class="n">mean</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">mean</span> <span class="o">=</span> <span class="n">mean</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-            <span class="n">mean</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
-
-        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
-        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;mean_erds&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
-
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_dict</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">additional_values</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">df</span> <span class="o">=</span> <span class="n">_add_values_to_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">additional_values</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">df</span></div>
+    <span class="k">return</span> <span class="n">mean</span></div>
 
 
 
@@ -527,71 +515,70 @@
 <a class="viewcode-back" href="../../../nearby.metrics.standard_deviation_erds.html#nearby.metrics.rimbert.standard_deviation_erds">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">standard_deviation_erds</span><span class="p">(</span>
     <span class="n">data</span><span class="p">,</span>
-    <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">fmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">fmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-    <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Compute the standard deviation of mean ERD/S values across trials.</span>
 
-<span class="sd">    This metric quantifies *between-trial amplitude variability* of ERD/S.</span>
-<span class="sd">    For each channel, each epoch is first summarized by a single mean ERD/S</span>
-<span class="sd">    value (averaged over time, and over frequency for TFR input). The standard</span>
-<span class="sd">    deviation of these per-epoch mean values is then computed across epochs.</span>
+<span class="sd">    Compute the standard deviation of per-epoch mean ERD/S amplitudes.</span>
 
-<span class="sd">    - If ``data`` is an :class:`mne.time_frequency.tfr.EpochsTFR`, values are</span>
-<span class="sd">      optionally restricted to ``[fmin, fmax]``, averaged over frequency, and</span>
-<span class="sd">      then averaged over time.</span>
-<span class="sd">    - If ``data`` is an :class:`mne.epochs.Epochs`, the epoched signal is averaged</span>
-<span class="sd">      over time directly (in microvolts).</span>
+<span class="sd">    This metric quantifies *between-trial amplitude variability* of ERD/S by taking</span>
+<span class="sd">    the standard deviation across epochs of a per-epoch ERD/S amplitude summary.</span>
+
+<span class="sd">    For each channel:</span>
+<span class="sd">    1) extract an epoch-wise ERD/S time course,</span>
+<span class="sd">    2) summarize each epoch by its mean over time within ``[tmin, tmax]``,</span>
+<span class="sd">       (and over frequency for TFR input, as handled by the internal extraction),</span>
+<span class="sd">    3) compute the standard deviation of these per-epoch means across epochs.</span>
+
+<span class="sd">    Supported inputs are time-domain epochs (:class:`mne.epochs.Epochs`) and</span>
+<span class="sd">    time–frequency epochs (:class:`mne.time_frequency.tfr.EpochsTFR`). For TFR input,</span>
+<span class="sd">    values can be restricted to ``[fmin, fmax]`` and reduced to a single time course</span>
+<span class="sd">    per epoch/channel by the internal data extraction routine.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    data : mne.epochs.Epochs | mne.time_frequency.tfr.EpochsTFR</span>
-<span class="sd">        Epoched MNE object. Only these two types are supported.</span>
+<span class="sd">        Epoched MNE object.</span>
 
 <span class="sd">    baseline : tuple of float | None, optional</span>
-<span class="sd">        Baseline interval in seconds (e.g., ``(None, 0)``). If provided, baseline</span>
-<span class="sd">        correction is applied on a copy of ``data`` before computing values.</span>
-<span class="sd">        For :class:`~mne.time_frequency.tfr.EpochsTFR`, baseline is applied with</span>
-<span class="sd">        ``mode=&quot;percent&quot;``.</span>
+<span class="sd">        Baseline interval in seconds (e.g., ``(None, 0.0)``). If provided, baseline</span>
+<span class="sd">        correction is applied on a copy of ``data`` before computing the metric.</span>
+<span class="sd">        For :class:`~mne.time_frequency.tfr.EpochsTFR`, baseline correction is applied</span>
+<span class="sd">        with ``mode=&quot;percent&quot;``.</span>
 
 <span class="sd">    fmin, fmax : float | None, optional</span>
-<span class="sd">        Frequency band of interest in Hz. Only used when ``data`` is an</span>
+<span class="sd">        Lower and upper frequency bounds (Hz). Only used when ``data`` is</span>
 <span class="sd">        :class:`~mne.time_frequency.tfr.EpochsTFR`. If provided, values are restricted</span>
-<span class="sd">        to frequencies in ``[fmin, fmax]`` before averaging.</span>
+<span class="sd">        to ``[fmin, fmax]`` before frequency reduction.</span>
 
 <span class="sd">    tmin, tmax : float | None, optional</span>
-<span class="sd">        Time window of interest in seconds. If provided, data are cropped to</span>
-<span class="sd">        ``[tmin, tmax]`` before computing per-epoch means.</span>
+<span class="sd">        Time bounds (seconds) used to crop the extracted time course(s) to</span>
+<span class="sd">        ``[tmin, tmax]`` before averaging over time.</span>
 
 <span class="sd">    picks : str | array_like of int | array_like of str | None, optional</span>
 <span class="sd">        Channels to include. Passed to :meth:`mne.Epochs.pick` /</span>
 <span class="sd">        :meth:`mne.time_frequency.EpochsTFR.pick`. If ``None``, all channels are used.</span>
 
 <span class="sd">    ddof : int, default=1</span>
-<span class="sd">        Delta degrees of freedom passed to :func:`numpy.std`.</span>
-<span class="sd">        This parameter is forwarded directly to ``np.std(X, ddof=ddof)`` when</span>
-<span class="sd">        computing the standard deviation across epochs.</span>
-
-<span class="sd">    additional_values : dict | None, optional</span>
-<span class="sd">        Extra columns to append to the returned dataframe (e.g., ``{&quot;subject&quot;: 1}``).</span>
+<span class="sd">        Delta degrees of freedom passed to :func:`numpy.std`. The standard deviation</span>
+<span class="sd">        is computed as ``np.std(values, ddof=ddof)`` over epochs.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    df : pandas.DataFrame</span>
-<span class="sd">        Dataframe with one row per channel.</span>
+<span class="sd">    std : float</span>
+<span class="sd">        Standard deviation of the per-epoch mean ERD/S amplitudes across epochs.</span>
 
-<span class="sd">        ``channel`` : str</span>
-<span class="sd">            Channel name.</span>
-
-<span class="sd">        ``standard_deviation_erds`` : float</span>
-<span class="sd">            Standard deviation of per-epoch mean ERD/S values across epochs.</span>
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The per-epoch value is computed by averaging the extracted time course over time</span>
+<span class="sd">    within ``[tmin, tmax]``. The function operates on a copy of the input object</span>
+<span class="sd">    (``data.copy()``) and does not modify inputs in place.</span>
 
 <span class="sd">    References</span>
 <span class="sd">    ----------</span>
@@ -608,50 +595,28 @@
 
     <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
-    <span class="k">if</span> <span class="n">baseline</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">type_data</span> <span class="o">==</span> <span class="s2">&quot;EpochsTFR&quot;</span><span class="p">:</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">apply_baseline</span><span class="p">(</span><span class="n">baseline</span><span class="p">,</span> <span class="s2">&quot;percent&quot;</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">type_data</span> <span class="o">==</span> <span class="s2">&quot;Epochs&quot;</span><span class="p">:</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">apply_baseline</span><span class="p">(</span><span class="n">baseline</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">_apply_baseline</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">baseline</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">picks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pick</span><span class="p">(</span><span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
 
-    <span class="n">df_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;standard_deviation_erds&quot;</span><span class="p">:</span> <span class="p">[]}</span>
-    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">ch_names</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">type_data</span> <span class="o">==</span> <span class="s2">&quot;EpochsTFR&quot;</span><span class="p">:</span>
-            <span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span> <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">)</span>
-            <span class="c1"># X.shape: n_epochs, n_channels, n_freqs, n_times</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">_get_data</span><span class="p">(</span>
+        <span class="n">data</span><span class="p">,</span>
+        <span class="n">fmin</span><span class="o">=</span><span class="n">fmin</span><span class="p">,</span>
+        <span class="n">fmax</span><span class="o">=</span><span class="n">fmax</span><span class="p">,</span>
+        <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span>
+        <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span>
+        <span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">,</span>
+        <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="c1"># X.shape: n_epochs, n_times</span>
 
-            <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-            <span class="c1"># X.shape: n_epochs, n_freqs, n_times</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># X.shape: n_epochs</span>
 
-            <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-            <span class="c1"># X.shape: n_epochs, n_times</span>
+    <span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="n">ddof</span><span class="p">)</span>
 
-            <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-            <span class="c1"># X.shape: n_epochs</span>
-        <span class="k">elif</span> <span class="n">type_data</span> <span class="o">==</span> <span class="s2">&quot;Epochs&quot;</span><span class="p">:</span>
-            <span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="n">ch</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;uV&quot;</span><span class="p">)</span>
-            <span class="c1"># X.shape: n_epochs, n_channels, n_times</span>
-
-            <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-            <span class="c1"># X.shape: n_epochs, n_times</span>
-
-            <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-            <span class="c1"># X.shape: n_epochs</span>
-
-        <span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="n">ddof</span><span class="p">)</span>
-
-        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
-        <span class="n">df_dict</span><span class="p">[</span><span class="s2">&quot;standard_deviation_erds&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">std</span><span class="p">)</span>
-
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_dict</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">additional_values</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">df</span> <span class="o">=</span> <span class="n">_add_values_to_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">additional_values</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">df</span></div>
+    <span class="k">return</span> <span class="n">std</span></div>
 
 </pre></div>
 
@@ -682,8 +647,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -703,7 +668,7 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     <br/>
   </p>
 </div>
@@ -717,7 +682,7 @@
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
 </p></div>
       
     </div>

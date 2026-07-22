@@ -110,7 +110,7 @@ Extract Epochs
 
  .. code-block:: none
 
-      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 43464.29it/s]
+      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 37843.34it/s]
     Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-1_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424519  =      0.000 ...   424.519 secs...
@@ -218,7 +218,7 @@ Extract Epochs
     Applying baseline correction (mode: mean)
     [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
     [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.4s
-    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    1.8s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    1.7s remaining:    0.1s
     [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    1.8s finished
     Applying baseline correction (mode: percent)
 
@@ -251,7 +251,7 @@ Within-Trial Variability Metrics
 Within-Trial Temporal Variability (WiTrialTemp)
 -----------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 80-91
+.. GENERATED FROM PYTHON SOURCE LINES 80-92
 
 .. code-block:: Python
 
@@ -260,10 +260,11 @@ Within-Trial Temporal Variability (WiTrialTemp)
         epochs["Target"],
         tmin=tmin,
         tmax=tmax,
+        window_size=0.05,
+        window_step=0.05,
         picks=["Cz", "CPz", "Pz"],
     )
-
-    results["WiTrialTemp"] = wi_trial_temp["within_trial_temporal"].mean()
+    results["WiTrialTemp"] = wi_trial_temp
     print(f"WiTrialTemp: {results['WiTrialTemp']:.3f}")
 
 
@@ -274,17 +275,17 @@ Within-Trial Temporal Variability (WiTrialTemp)
 
  .. code-block:: none
 
-    WiTrialTemp: 6.794
+    WiTrialTemp: 12.552
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 92-94
+.. GENERATED FROM PYTHON SOURCE LINES 93-95
 
 Within-Trial Spatial Variability (WiTrialSpat)
 ----------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 94-107
+.. GENERATED FROM PYTHON SOURCE LINES 95-107
 
 .. code-block:: Python
 
@@ -293,12 +294,11 @@ Within-Trial Spatial Variability (WiTrialSpat)
         epochs["Target"],
         tmin=tmin,
         tmax=tmax,
-        auto_window_size=0.05,
-        auto_window_step=0.05,
-        metric="angle",
+        window_size=0.05,
+        window_step=0.05,
     )
 
-    results["WiTrialSpat"] = wi_trial_spat["within_trial_spatial"].mean()
+    results["WiTrialSpat"] = wi_trial_spat
     print(f"WiTrialSpat: {results['WiTrialSpat']:.3f}")
 
 
@@ -309,7 +309,7 @@ Within-Trial Spatial Variability (WiTrialSpat)
 
  .. code-block:: none
 
-    WiTrialSpat: 0.565
+    WiTrialSpat: 0.551
 
 
 
@@ -319,7 +319,7 @@ Within-Trial Spatial Variability (WiTrialSpat)
 Within-Trial Frequency Variability (WiTrialFreq)
 ------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 110-124
+.. GENERATED FROM PYTHON SOURCE LINES 110-123
 
 .. code-block:: Python
 
@@ -328,13 +328,12 @@ Within-Trial Frequency Variability (WiTrialFreq)
         tfrs["Target"],
         tmin=tmin,
         tmax=tmax,
-        auto_window_size=0.05,
-        auto_window_step=0.05,
-        metric="angle",
+        window_size=0.05,
+        window_step=0.05,
         picks=["Cz", "CPz", "Pz"],
     )
 
-    results["WiTrialFreq"] = wi_trial_freq["within_trial_frequency"].mean()
+    results["WiTrialFreq"] = wi_trial_freq
     print(f"WiTrialFreq: {results['WiTrialFreq']:.3f}")
 
 
@@ -345,22 +344,22 @@ Within-Trial Frequency Variability (WiTrialFreq)
 
  .. code-block:: none
 
-    WiTrialFreq: 0.180
+    WiTrialFreq: 0.163
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 125-127
+.. GENERATED FROM PYTHON SOURCE LINES 124-126
 
 Between-Trial Variability Metrics
 =================================
 
-.. GENERATED FROM PYTHON SOURCE LINES 129-131
+.. GENERATED FROM PYTHON SOURCE LINES 128-130
 
 Between-Trial Temporal Variability (BtwTrialTemp)
 -------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 131-142
+.. GENERATED FROM PYTHON SOURCE LINES 130-141
 
 .. code-block:: Python
 
@@ -372,7 +371,7 @@ Between-Trial Temporal Variability (BtwTrialTemp)
         picks=["Cz", "CPz", "Pz"],
     )
 
-    results["BtwTrialTemp"] = btw_trial_temp["between_trial_temporal"].mean()
+    results["BtwTrialTemp"] = btw_trial_temp
     print(f"BtwTrialTemp: {results['BtwTrialTemp']:.3f}")
 
 
@@ -383,17 +382,17 @@ Between-Trial Temporal Variability (BtwTrialTemp)
 
  .. code-block:: none
 
-    BtwTrialTemp: 23.808
+    BtwTrialTemp: 33.579
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 143-145
+.. GENERATED FROM PYTHON SOURCE LINES 142-144
 
 Between-Trial Spatial Variability (BtwTrialSpat)
 ------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 145-156
+.. GENERATED FROM PYTHON SOURCE LINES 144-154
 
 .. code-block:: Python
 
@@ -402,10 +401,9 @@ Between-Trial Spatial Variability (BtwTrialSpat)
         epochs["Target"],
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
     )
 
-    results["BtwTrialSpat"] = btw_trial_spat["between_trial_spatial"].mean()
+    results["BtwTrialSpat"] = btw_trial_spat
     print(f"BtwTrialSpat: {results['BtwTrialSpat']:.3f}")
 
 
@@ -421,12 +419,12 @@ Between-Trial Spatial Variability (BtwTrialSpat)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 157-159
+.. GENERATED FROM PYTHON SOURCE LINES 155-157
 
 Between-Trial Frequency Variability (BtwTrialFreq)
 --------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 159-171
+.. GENERATED FROM PYTHON SOURCE LINES 157-168
 
 .. code-block:: Python
 
@@ -435,11 +433,10 @@ Between-Trial Frequency Variability (BtwTrialFreq)
         tfrs["Target"],
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
         picks=["Cz", "CPz", "Pz"],
     )
 
-    results["BtwTrialFreq"] = btw_trial_freq["between_trial_frequency"].mean()
+    results["BtwTrialFreq"] = btw_trial_freq
     print(f"BtwTrialFreq: {results['BtwTrialFreq']:.3f}")
 
 
@@ -450,17 +447,17 @@ Between-Trial Frequency Variability (BtwTrialFreq)
 
  .. code-block:: none
 
-    BtwTrialFreq: 0.881
+    BtwTrialFreq: 0.850
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 172-174
+.. GENERATED FROM PYTHON SOURCE LINES 169-171
 
 Results
 =======
 
-.. GENERATED FROM PYTHON SOURCE LINES 174-176
+.. GENERATED FROM PYTHON SOURCE LINES 171-173
 
 .. code-block:: Python
 
@@ -475,7 +472,7 @@ Results
  .. code-block:: none
 
        WiTrialTemp  WiTrialSpat  WiTrialFreq  BtwTrialTemp  BtwTrialSpat  BtwTrialFreq
-    0     6.793757      0.56506     0.180005     23.807859      1.474609      0.881017
+    0    12.552497     0.551228     0.162898     33.579187      1.474609      0.850342
 
 
 
@@ -483,7 +480,7 @@ Results
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 25.717 seconds)
+   **Total running time of the script:** (0 minutes 16.968 seconds)
 
 
 .. _sphx_glr_download_auto_examples_02_ERP_01_example_variability_ERP_intra_subject.py:

@@ -121,7 +121,7 @@ Extract Epochs
 
  .. code-block:: none
 
-      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 134937.39it/s]
+      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 98048.66it/s]
     Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-1_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424519  =      0.000 ...   424.519 secs...
@@ -164,7 +164,7 @@ Extract Epochs
     Creating RawArray with float64 data, n_channels=1, n_times=424480
         Range : 0 ... 424479 =      0.000 ...   424.479 secs
     Ready.
-      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 2666.86it/s]
+      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 2519.69it/s]
     Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-B/eeg/sub-B_task-2stream_run-1_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424559  =      0.000 ...   424.559 secs...
@@ -207,7 +207,7 @@ Extract Epochs
     Creating RawArray with float64 data, n_channels=1, n_times=424560
         Range : 0 ... 424559 =      0.000 ...   424.559 secs
     Ready.
-      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 3038.92it/s]
+      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 3060.98it/s]
     Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-C/eeg/sub-C_task-2stream_run-1_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424519  =      0.000 ...   424.519 secs...
@@ -250,7 +250,7 @@ Extract Epochs
     Creating RawArray with float64 data, n_channels=1, n_times=424560
         Range : 0 ... 424559 =      0.000 ...   424.559 secs
     Ready.
-      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 3102.17it/s]
+      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 3062.53it/s]
     Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-D/eeg/sub-D_task-2stream_run-1_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424519  =      0.000 ...   424.519 secs...
@@ -357,144 +357,8 @@ Extract Epochs
     0 bad epochs dropped
     Applying baseline correction (mode: mean)
     [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.4s
-    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    1.8s remaining:    0.1s
-    [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    1.8s finished
-    Applying baseline correction (mode: percent)
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Used Annotations descriptions: [np.str_('NonTarget'), np.str_('Target')]
-    Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
-    Not setting metadata
-    1440 matching events found
-    No baseline correction applied
-    0 projection items activated
-    Using data from preloaded Raw for 1440 events and 1301 original time points ...
-    0 bad epochs dropped
-    Applying baseline correction (mode: mean)
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.4s
-    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    1.9s remaining:    0.1s
-    [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    1.9s finished
-    Applying baseline correction (mode: percent)
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Used Annotations descriptions: [np.str_('NonTarget'), np.str_('Target')]
-    Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
-    Not setting metadata
-    1440 matching events found
-    No baseline correction applied
-    0 projection items activated
-    Using data from preloaded Raw for 1440 events and 1301 original time points ...
-    0 bad epochs dropped
-    Applying baseline correction (mode: mean)
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
     [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.5s
-    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.7s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.6s remaining:    0.1s
     [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    2.7s finished
     Applying baseline correction (mode: percent)
     Filtering raw data in 1 contiguous segment
@@ -562,8 +426,144 @@ Extract Epochs
     Applying baseline correction (mode: mean)
     [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
     [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.5s
-    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.8s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.9s remaining:    0.1s
     [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    2.9s finished
+    Applying baseline correction (mode: percent)
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Used Annotations descriptions: [np.str_('NonTarget'), np.str_('Target')]
+    Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
+    Not setting metadata
+    1440 matching events found
+    No baseline correction applied
+    0 projection items activated
+    Using data from preloaded Raw for 1440 events and 1301 original time points ...
+    0 bad epochs dropped
+    Applying baseline correction (mode: mean)
+    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
+    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.4s
+    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.3s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    2.4s finished
+    Applying baseline correction (mode: percent)
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Used Annotations descriptions: [np.str_('NonTarget'), np.str_('Target')]
+    Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
+    Not setting metadata
+    1440 matching events found
+    No baseline correction applied
+    0 projection items activated
+    Using data from preloaded Raw for 1440 events and 1301 original time points ...
+    0 bad epochs dropped
+    Applying baseline correction (mode: mean)
+    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
+    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.5s
+    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.7s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    2.8s finished
     Applying baseline correction (mode: percent)
 
 
@@ -613,7 +613,7 @@ Between-Trial-Group Temporal Variability (BtwTrialGrpTemp)
         picks=["Cz", "CPz", "Pz"],
     )
 
-    results["BtwTrialGrpTemp"] = btw_trial_grp_temp["between_trial_group_temporal"].mean()
+    results["BtwTrialGrpTemp"] = btw_trial_grp_temp
     print(f"BtwTrialGrpTemp: {results['BtwTrialGrpTemp']:.3f}")
 
 
@@ -624,7 +624,7 @@ Between-Trial-Group Temporal Variability (BtwTrialGrpTemp)
 
  .. code-block:: none
 
-    BtwTrialGrpTemp: 2.091
+    BtwTrialGrpTemp: 2.656
 
 
 
@@ -634,7 +634,7 @@ Between-Trial-Group Temporal Variability (BtwTrialGrpTemp)
 Between-Trial-Group Spatial Variability (BtwTrialGrpSpat)
 ---------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 111-122
+.. GENERATED FROM PYTHON SOURCE LINES 111-121
 
 .. code-block:: Python
 
@@ -643,10 +643,9 @@ Between-Trial-Group Spatial Variability (BtwTrialGrpSpat)
         evoked_list,
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
     )
 
-    results["BtwTrialGrpSpat"] = btw_trial_grp_spat["between_trial_group_spatial"].mean()
+    results["BtwTrialGrpSpat"] = btw_trial_grp_spat
     print(f"BtwTrialGrpSpat: {results['BtwTrialGrpSpat']:.3f}")
 
 
@@ -662,12 +661,12 @@ Between-Trial-Group Spatial Variability (BtwTrialGrpSpat)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 123-125
+.. GENERATED FROM PYTHON SOURCE LINES 122-124
 
 Between-Trial-Group Frequency Variability (BtwTrialGrpFreq)
 -----------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 125-137
+.. GENERATED FROM PYTHON SOURCE LINES 124-135
 
 .. code-block:: Python
 
@@ -676,11 +675,10 @@ Between-Trial-Group Frequency Variability (BtwTrialGrpFreq)
         tfrs_list,
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
         picks=["Cz", "CPz", "Pz"],
     )
 
-    results["BtwTrialGrpFreq"] = btw_trial_grp_freq["between_trial_group_frequency"].mean()
+    results["BtwTrialGrpFreq"] = btw_trial_grp_freq
     print(f"BtwTrialGrpFreq: {results['BtwTrialGrpFreq']:.3f}")
 
 
@@ -691,17 +689,17 @@ Between-Trial-Group Frequency Variability (BtwTrialGrpFreq)
 
  .. code-block:: none
 
-    BtwTrialGrpFreq: 0.154
+    BtwTrialGrpFreq: 0.137
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 138-140
+.. GENERATED FROM PYTHON SOURCE LINES 136-138
 
 Between-Trial-Group Variability (Test-User Referenced)
 ======================================================
 
-.. GENERATED FROM PYTHON SOURCE LINES 140-144
+.. GENERATED FROM PYTHON SOURCE LINES 138-142
 
 .. code-block:: Python
 
@@ -716,12 +714,12 @@ Between-Trial-Group Variability (Test-User Referenced)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 145-147
+.. GENERATED FROM PYTHON SOURCE LINES 143-145
 
 Between-Trial-Group Temporal Variability - Test-User Referenced (BtwTrialGrpTemp-TR)
 ------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 147-161
+.. GENERATED FROM PYTHON SOURCE LINES 145-157
 
 .. code-block:: Python
 
@@ -734,9 +732,7 @@ Between-Trial-Group Temporal Variability - Test-User Referenced (BtwTrialGrpTemp
         picks=["Cz", "CPz", "Pz"],
     )
 
-    results["BtwTrialGrpTemp-TR"] = btw_trial_grp_temp_tr[
-        "between_trial_group_temporal"
-    ].mean()
+    results["BtwTrialGrpTemp-TR"] = btw_trial_grp_temp_tr
     print(f"BtwTrialGrpTemp-TR: {results['BtwTrialGrpTemp-TR']:.3f}")
 
 
@@ -747,17 +743,17 @@ Between-Trial-Group Temporal Variability - Test-User Referenced (BtwTrialGrpTemp
 
  .. code-block:: none
 
-    BtwTrialGrpTemp-TR: 3.614
+    BtwTrialGrpTemp-TR: 3.507
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 162-164
+.. GENERATED FROM PYTHON SOURCE LINES 158-160
 
 Between-Trial-Group Spatial Variability - Test-User Referenced (BtwTrialGrpSpat-TR)
 -----------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 164-178
+.. GENERATED FROM PYTHON SOURCE LINES 160-171
 
 .. code-block:: Python
 
@@ -767,12 +763,9 @@ Between-Trial-Group Spatial Variability - Test-User Referenced (BtwTrialGrpSpat-
         centroid=evoked_dict[test_subject],
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
     )
 
-    results["BtwTrialGrpSpat-TR"] = btw_trial_grp_spat_tr[
-        "between_trial_group_spatial"
-    ].mean()
+    results["BtwTrialGrpSpat-TR"] = btw_trial_grp_spat_tr
     print(f"BtwTrialGrpSpat-TR: {results['BtwTrialGrpSpat-TR']:.3f}")
 
 
@@ -788,12 +781,12 @@ Between-Trial-Group Spatial Variability - Test-User Referenced (BtwTrialGrpSpat-
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 179-181
+.. GENERATED FROM PYTHON SOURCE LINES 172-174
 
 Between-Trial-Group Frequency Variability - Test-User Referenced (BtwTrialGrpFreq-TR)
 -------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 181-196
+.. GENERATED FROM PYTHON SOURCE LINES 174-186
 
 .. code-block:: Python
 
@@ -803,13 +796,10 @@ Between-Trial-Group Frequency Variability - Test-User Referenced (BtwTrialGrpFre
         centroid=tfrs_dict[test_subject],
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
         picks=["Cz", "CPz", "Pz"],
     )
 
-    results["BtwTrialGrpFreq-TR"] = btw_trial_grp_freq_tr[
-        "between_trial_group_frequency"
-    ].mean()
+    results["BtwTrialGrpFreq-TR"] = btw_trial_grp_freq_tr
     print(f"BtwTrialGrpFreq-TR: {results['BtwTrialGrpFreq-TR']:.3f}")
 
 
@@ -820,17 +810,17 @@ Between-Trial-Group Frequency Variability - Test-User Referenced (BtwTrialGrpFre
 
  .. code-block:: none
 
-    BtwTrialGrpFreq-TR: 0.223
+    BtwTrialGrpFreq-TR: 0.206
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 197-199
+.. GENERATED FROM PYTHON SOURCE LINES 187-189
 
 Results
 =======
 
-.. GENERATED FROM PYTHON SOURCE LINES 199-201
+.. GENERATED FROM PYTHON SOURCE LINES 189-191
 
 .. code-block:: Python
 
@@ -845,7 +835,7 @@ Results
  .. code-block:: none
 
        BtwTrialGrpTemp  BtwTrialGrpSpat  BtwTrialGrpFreq  BtwTrialGrpTemp-TR  BtwTrialGrpSpat-TR  BtwTrialGrpFreq-TR
-    0         2.090647          1.09036         0.154033            3.614317            1.438046            0.223217
+    0         2.656304          1.09036         0.136924            3.507357            1.438046            0.205531
 
 
 
@@ -853,7 +843,7 @@ Results
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 58.528 seconds)
+   **Total running time of the script:** (1 minutes 15.082 seconds)
 
 
 .. _sphx_glr_download_auto_examples_02_ERP_02_example_variability_ERP_inter_subject.py:

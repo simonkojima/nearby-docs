@@ -21,7 +21,7 @@
 Example: Intra-Subject Variability of ERDS in a motor-imagery task
 ==================================================================
 
-.. GENERATED FROM PYTHON SOURCE LINES 5-15
+.. GENERATED FROM PYTHON SOURCE LINES 5-16
 
 .. code-block:: Python
 
@@ -30,6 +30,7 @@ Example: Intra-Subject Variability of ERDS in a motor-imagery task
     #
     # License: BSD (3-clause)
 
+    import numpy as np
     import mne
     import pandas as pd
     import nearby
@@ -42,12 +43,12 @@ Example: Intra-Subject Variability of ERDS in a motor-imagery task
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 16-18
+.. GENERATED FROM PYTHON SOURCE LINES 17-19
 
 Extract Epochs
 ==============
 
-.. GENERATED FROM PYTHON SOURCE LINES 18-54
+.. GENERATED FROM PYTHON SOURCE LINES 19-55
 
 .. code-block:: Python
 
@@ -95,13 +96,19 @@ Extract Epochs
 
  .. code-block:: none
 
-    0it [00:00, ?it/s]    9it [00:00, 24197.91it/s]
+    0it [00:00, ?it/s]    9it [00:00, 23592.96it/s]
     Reading 0 ... 230399  =      0.000 ...   449.998 secs...
     Reading 0 ... 230399  =      0.000 ...   449.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
+    No stim channel nor annotations found, skipping setting annotations.
+    No stim channel nor annotations found, skipping setting annotations.
+    No stim channel nor annotations found, skipping setting annotations.
+    No stim channel nor annotations found, skipping setting annotations.
+    No stim channel nor annotations found, skipping setting annotations.
+    No stim channel nor annotations found, skipping setting annotations.
     Filtering raw data in 1 contiguous segment
     Setting up band-pass filter from 7 - 13 Hz
 
@@ -156,10 +163,11 @@ Extract Epochs
     - Filter order 16 (effective, after forward-backward)
     - Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
-    Used Annotations descriptions: [np.str_('left_hand'), np.str_('right_hand')]
+    Used Annotations descriptions: [np.str_('1010'), np.str_('32769'), np.str_('32770'), np.str_('33281'), np.str_('33282'), np.str_('33284'), np.str_('768'), np.str_('781'), np.str_('786'), np.str_('800'), np.str_('left_hand'), np.str_('right_hand')]
     Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
+    Multiple event values for single event times found. Creating new event value to reflect simultaneous events.
     Not setting metadata
-    240 matching events found
+    1221 matching events found
     No baseline correction applied
     0 projection items activated
     Using data from preloaded Raw for 240 events and 4097 original time points ...
@@ -316,9 +324,9 @@ Extract Epochs
 
 
 
-    <tr class="mne-repr-section-header general-4713a6e4-1d1d-4f77-8cae-691ef9e0d06b"
+    <tr class="mne-repr-section-header general-65da2f92-47f8-40a7-a0de-1d9d64e1105a"
          title="Hide section" 
-        onclick="toggleVisibility('general-4713a6e4-1d1d-4f77-8cae-691ef9e0d06b')">
+        onclick="toggleVisibility('general-65da2f92-47f8-40a7-a0de-1d9d64e1105a')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -330,19 +338,19 @@ Extract Epochs
     </tr>
 
 
-    <tr class="repr-element general-4713a6e4-1d1d-4f77-8cae-691ef9e0d06b ">
+    <tr class="repr-element general-65da2f92-47f8-40a7-a0de-1d9d64e1105a ">
         <td class="mne-repr-section-toggle"></td>
         <td>MNE object type</td>
         <td>Epochs</td>
     </tr>
-    <tr class="repr-element general-4713a6e4-1d1d-4f77-8cae-691ef9e0d06b ">
+    <tr class="repr-element general-65da2f92-47f8-40a7-a0de-1d9d64e1105a ">
         <td class="mne-repr-section-toggle"></td>
         <td>Measurement date</td>
     
         <td>2024-09-20 at 17:57:40 UTC</td>
     
     </tr>
-    <tr class="repr-element general-4713a6e4-1d1d-4f77-8cae-691ef9e0d06b ">
+    <tr class="repr-element general-65da2f92-47f8-40a7-a0de-1d9d64e1105a ">
         <td class="mne-repr-section-toggle"></td>
         <td>Participant</td>
     
@@ -351,7 +359,7 @@ Extract Epochs
     
     
     </tr>
-    <tr class="repr-element general-4713a6e4-1d1d-4f77-8cae-691ef9e0d06b ">
+    <tr class="repr-element general-65da2f92-47f8-40a7-a0de-1d9d64e1105a ">
         <td class="mne-repr-section-toggle"></td>
         <td>Experimenter</td>
     
@@ -366,9 +374,9 @@ Extract Epochs
 
 
 
-    <tr class="mne-repr-section-header acquisition-32b4c519-2390-477a-8913-f1acdf566c9f"
+    <tr class="mne-repr-section-header acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f"
          title="Hide section" 
-        onclick="toggleVisibility('acquisition-32b4c519-2390-477a-8913-f1acdf566c9f')">
+        onclick="toggleVisibility('acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -383,14 +391,14 @@ Extract Epochs
 
 
 
-    <tr class="repr-element acquisition-32b4c519-2390-477a-8913-f1acdf566c9f ">
+    <tr class="repr-element acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f ">
         <td class="mne-repr-section-toggle"></td>
         <td>Total number of events</td>
         <td>240</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-32b4c519-2390-477a-8913-f1acdf566c9f ">
+    <tr class="repr-element acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f ">
         <td class="mne-repr-section-toggle"></td>
         <td>Events counts</td>
     
@@ -407,35 +415,35 @@ Extract Epochs
     </tr>
 
 
-    <tr class="repr-element acquisition-32b4c519-2390-477a-8913-f1acdf566c9f ">
+    <tr class="repr-element acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f ">
         <td class="mne-repr-section-toggle"></td>
         <td>Time range</td>
         <td>-2.500 – 5.492 s</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-32b4c519-2390-477a-8913-f1acdf566c9f ">
+    <tr class="repr-element acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f ">
         <td class="mne-repr-section-toggle"></td>
         <td>Baseline</td>
         <td>off</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-32b4c519-2390-477a-8913-f1acdf566c9f ">
+    <tr class="repr-element acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f ">
         <td class="mne-repr-section-toggle"></td>
         <td>Sampling frequency</td>
         <td>128.00 Hz</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-32b4c519-2390-477a-8913-f1acdf566c9f ">
+    <tr class="repr-element acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f ">
         <td class="mne-repr-section-toggle"></td>
         <td>Time points</td>
         <td>1,024</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-32b4c519-2390-477a-8913-f1acdf566c9f ">
+    <tr class="repr-element acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f ">
         <td class="mne-repr-section-toggle"></td>
         <td>Metadata</td>
         <td>No metadata set</td>
@@ -449,9 +457,9 @@ Extract Epochs
 
 
 
-    <tr class="mne-repr-section-header channels-510003a9-2604-4b17-92de-aae6dc948b14"
+    <tr class="mne-repr-section-header channels-eaf17072-6ac0-4cb9-873a-8d10c6b5dd41"
          title="Hide section" 
-        onclick="toggleVisibility('channels-510003a9-2604-4b17-92de-aae6dc948b14')">
+        onclick="toggleVisibility('channels-eaf17072-6ac0-4cb9-873a-8d10c6b5dd41')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -464,7 +472,7 @@ Extract Epochs
 
 
     
-    <tr class="repr-element channels-510003a9-2604-4b17-92de-aae6dc948b14 ">
+    <tr class="repr-element channels-eaf17072-6ac0-4cb9-873a-8d10c6b5dd41 ">
         <td class="mne-repr-section-toggle"></td>
         <td>EEG</td>
         <td>
@@ -477,7 +485,7 @@ Extract Epochs
     </tr>
 
 
-    <tr class="repr-element channels-510003a9-2604-4b17-92de-aae6dc948b14 ">
+    <tr class="repr-element channels-eaf17072-6ac0-4cb9-873a-8d10c6b5dd41 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Head & sensor digitization</td>
     
@@ -492,9 +500,9 @@ Extract Epochs
 
 
 
-    <tr class="mne-repr-section-header filters-ce1bcf67-c651-4f8a-86dd-f4aa7af62a9e"
+    <tr class="mne-repr-section-header filters-c0b3b72b-7993-44da-b503-b26892d02ff4"
          title="Hide section" 
-        onclick="toggleVisibility('filters-ce1bcf67-c651-4f8a-86dd-f4aa7af62a9e')">
+        onclick="toggleVisibility('filters-c0b3b72b-7993-44da-b503-b26892d02ff4')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -506,14 +514,14 @@ Extract Epochs
     </tr>
 
 
-    <tr class="repr-element filters-ce1bcf67-c651-4f8a-86dd-f4aa7af62a9e ">
+    <tr class="repr-element filters-c0b3b72b-7993-44da-b503-b26892d02ff4 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Highpass</td>
         <td>7.00 Hz</td>
     </tr>
 
 
-    <tr class="repr-element filters-ce1bcf67-c651-4f8a-86dd-f4aa7af62a9e ">
+    <tr class="repr-element filters-c0b3b72b-7993-44da-b503-b26892d02ff4 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Lowpass</td>
         <td>13.00 Hz</td>
@@ -525,12 +533,12 @@ Extract Epochs
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 55-57
+.. GENERATED FROM PYTHON SOURCE LINES 56-58
 
 Extract ERDS
 ============
 
-.. GENERATED FROM PYTHON SOURCE LINES 57-73
+.. GENERATED FROM PYTHON SOURCE LINES 58-74
 
 .. code-block:: Python
 
@@ -560,21 +568,21 @@ Extract ERDS
 
     [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
     [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    1.8s
-    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    2.1s remaining:    1.0s
-    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    2.2s remaining:    0.3s
-    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    2.2s finished
+    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    2.2s remaining:    1.1s
+    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    2.3s remaining:    0.3s
+    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    2.3s finished
     Applying baseline correction (mode: percent)
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 74-77
+.. GENERATED FROM PYTHON SOURCE LINES 75-78
 
 Within-Trial Variability Metrics
 ================================
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 77-83
+.. GENERATED FROM PYTHON SOURCE LINES 78-84
 
 .. code-block:: Python
 
@@ -591,12 +599,12 @@ Within-Trial Variability Metrics
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 84-86
+.. GENERATED FROM PYTHON SOURCE LINES 85-87
 
 Within-Trial Temporal Variability (WiTrialTemp)
 -----------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 86-111
+.. GENERATED FROM PYTHON SOURCE LINES 87-113
 
 .. code-block:: Python
 
@@ -607,8 +615,8 @@ Within-Trial Temporal Variability (WiTrialTemp)
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        auto_window_size=1,
-        auto_window_step=1,
+        window_size=1,
+        window_step=1,
         picks="C4",
     )
     wi_trial_temp_right = nearby.metrics.within_trial_temporal(
@@ -617,13 +625,14 @@ Within-Trial Temporal Variability (WiTrialTemp)
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        auto_window_size=1,
-        auto_window_step=1,
+        window_size=1,
+        window_step=1,
         picks="C3",
     )
-    wi_trial_temp = pd.concat([wi_trial_temp_left, wi_trial_temp_right])
-    results["WiTrialTemp"] = wi_trial_temp["within_trial_temporal"].mean()
-    print(f"WiTrialTemp: {results['WiTrialTemp']:.3f}")
+
+    wi_trial_temp = np.mean([wi_trial_temp_left, wi_trial_temp_right])
+    results["WiTrialTemp"] = wi_trial_temp
+    print(f"WiTrialTemp: {wi_trial_temp:.3f}")
 
 
 
@@ -633,17 +642,17 @@ Within-Trial Temporal Variability (WiTrialTemp)
 
  .. code-block:: none
 
-    WiTrialTemp: 0.126
+    WiTrialTemp: 0.127
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 112-114
+.. GENERATED FROM PYTHON SOURCE LINES 114-116
 
 Within-Trial Spatial Variability (WiTrialSpat)
 ----------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 114-139
+.. GENERATED FROM PYTHON SOURCE LINES 116-140
 
 .. code-block:: Python
 
@@ -654,9 +663,8 @@ Within-Trial Spatial Variability (WiTrialSpat)
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        auto_window_size=1,
-        auto_window_step=1,
-        metric="angle",
+        window_size=1,
+        window_step=1,
     )
     wi_trial_spat_right = nearby.metrics.within_trial_spatial(
         tfrs["right_hand"],
@@ -664,13 +672,13 @@ Within-Trial Spatial Variability (WiTrialSpat)
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        auto_window_size=1,
-        auto_window_step=1,
-        metric="angle",
+        window_size=1,
+        window_step=1,
     )
-    wi_trial_spat = pd.concat([wi_trial_spat_left, wi_trial_spat_right])
-    results["WiTrialSpat"] = wi_trial_spat["within_trial_spatial"].mean()
-    print(f"WiTrialSpat: {results['WiTrialSpat']:.3f}")
+
+    wi_trial_spat = np.mean([wi_trial_spat_left, wi_trial_spat_right])
+    results["WiTrialSpat"] = wi_trial_spat
+    print(f"WiTrialSpat: {wi_trial_spat:.3f}")
 
 
 
@@ -680,17 +688,17 @@ Within-Trial Spatial Variability (WiTrialSpat)
 
  .. code-block:: none
 
-    WiTrialSpat: 0.596
+    WiTrialSpat: 0.594
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 140-142
+.. GENERATED FROM PYTHON SOURCE LINES 141-143
 
 Within-Trial Frequency Variability (WiTrialFreq)
 ------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 142-170
+.. GENERATED FROM PYTHON SOURCE LINES 143-169
 
 .. code-block:: Python
 
@@ -700,9 +708,8 @@ Within-Trial Frequency Variability (WiTrialFreq)
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        auto_window_size=1,
-        auto_window_step=1,
-        metric="angle",
+        window_size=1,
+        window_step=1,
         picks="C4",
     )
 
@@ -712,15 +719,14 @@ Within-Trial Frequency Variability (WiTrialFreq)
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        auto_window_size=1,
-        auto_window_step=1,
-        metric="angle",
+        window_size=1,
+        window_step=1,
         picks="C3",
     )
 
-    wi_trial_freq = pd.concat([wi_trial_freq_left, wi_trial_freq_right])
-    results["WiTrialFreq"] = wi_trial_freq["within_trial_frequency"].mean()
-    print(f"WiTrialFreq: {results['WiTrialFreq']:.3f}")
+    wi_trial_freq = np.mean([wi_trial_freq_left, wi_trial_freq_right])
+    results["WiTrialFreq"] = wi_trial_freq
+    print(f"WiTrialFreq: {wi_trial_freq:.3f}")
 
 
 
@@ -730,22 +736,22 @@ Within-Trial Frequency Variability (WiTrialFreq)
 
  .. code-block:: none
 
-    WiTrialFreq: 0.534
+    WiTrialFreq: 0.532
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 171-173
+.. GENERATED FROM PYTHON SOURCE LINES 170-172
 
 Between-Trial Variability
 =========================
 
-.. GENERATED FROM PYTHON SOURCE LINES 176-178
+.. GENERATED FROM PYTHON SOURCE LINES 175-177
 
 Between-Trial Temporal Variability (BtwTrialTemp)
 -------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 178-200
+.. GENERATED FROM PYTHON SOURCE LINES 177-199
 
 .. code-block:: Python
 
@@ -767,9 +773,9 @@ Between-Trial Temporal Variability (BtwTrialTemp)
         picks="C3",
     )
 
-    btw_trial_temp = pd.concat([btw_trial_temp_left, btw_trial_temp_right])
-    results["BtwTrialTemp"] = btw_trial_temp["between_trial_temporal"].mean()
-    print(f"BtwTrialTemp: {results['BtwTrialTemp']:.3f}")
+    btw_trial_temp = np.mean([btw_trial_temp_left, btw_trial_temp_right])
+    results["BtwTrialTemp"] = btw_trial_temp
+    print(f"BtwTrialTemp: {btw_trial_temp:.3f}")
 
 
 
@@ -779,17 +785,17 @@ Between-Trial Temporal Variability (BtwTrialTemp)
 
  .. code-block:: none
 
-    BtwTrialTemp: 4.322
+    BtwTrialTemp: 8.684
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 201-203
+.. GENERATED FROM PYTHON SOURCE LINES 200-202
 
 Between-Trial Spatial Variability (BtwTrialSpat)
 ------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 203-225
+.. GENERATED FROM PYTHON SOURCE LINES 202-222
 
 .. code-block:: Python
 
@@ -800,7 +806,6 @@ Between-Trial Spatial Variability (BtwTrialSpat)
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
     )
     btw_trial_spat_right = nearby.metrics.between_trial_spatial(
         tfrs["right_hand"],
@@ -808,12 +813,11 @@ Between-Trial Spatial Variability (BtwTrialSpat)
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
     )
 
-    btw_trial_spat = pd.concat([btw_trial_spat_left, btw_trial_spat_right])
-    results["BtwTrialSpat"] = btw_trial_spat["between_trial_spatial"].mean()
-    print(f"BtwTrialSpat: {results['BtwTrialSpat']:.3f}")
+    btw_trial_spat = np.mean([btw_trial_spat_left, btw_trial_spat_right])
+    results["BtwTrialSpat"] = btw_trial_spat
+    print(f"BtwTrialSpat: {btw_trial_spat:.3f}")
 
 
 
@@ -828,12 +832,12 @@ Between-Trial Spatial Variability (BtwTrialSpat)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 226-228
+.. GENERATED FROM PYTHON SOURCE LINES 223-225
 
 Between-Trial Frequency Variability (BtwTrialFreq)
 --------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 228-252
+.. GENERATED FROM PYTHON SOURCE LINES 225-247
 
 .. code-block:: Python
 
@@ -844,7 +848,6 @@ Between-Trial Frequency Variability (BtwTrialFreq)
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
         picks="C4",
     )
     btw_trial_freq_right = nearby.metrics.between_trial_frequency(
@@ -853,13 +856,12 @@ Between-Trial Frequency Variability (BtwTrialFreq)
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
         picks="C3",
     )
 
-    btw_trial_freq = pd.concat([btw_trial_freq_left, btw_trial_freq_right])
-    results["BtwTrialFreq"] = btw_trial_freq["between_trial_frequency"].mean()
-    print(f"BtwTrialFreq: {results['BtwTrialFreq']:.3f}")
+    btw_trial_freq = np.mean([btw_trial_freq_left, btw_trial_freq_right])
+    results["BtwTrialFreq"] = btw_trial_freq
+    print(f"BtwTrialFreq: {btw_trial_freq:.3f}")
 
 
 
@@ -874,12 +876,12 @@ Between-Trial Frequency Variability (BtwTrialFreq)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 253-255
+.. GENERATED FROM PYTHON SOURCE LINES 248-250
 
 Class Stability
 ===============
 
-.. GENERATED FROM PYTHON SOURCE LINES 255-267
+.. GENERATED FROM PYTHON SOURCE LINES 250-262
 
 .. code-block:: Python
 
@@ -891,9 +893,9 @@ Class Stability
         epochs=epochs["right_hand"], tmin=tmin, tmax=tmax
     )
 
-    class_stability = pd.concat([class_stability_left, class_stability_right])
-    results["class_stability"] = class_stability["class_stability"].mean()
-    print(f"class_stability: {results['class_stability']:.3f}")
+    class_stability = np.mean([class_stability_left, class_stability_right])
+    results["class_stability"] = class_stability
+    print(f"class_stability: {class_stability:.3f}")
 
 
 
@@ -908,12 +910,12 @@ Class Stability
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 268-270
+.. GENERATED FROM PYTHON SOURCE LINES 263-265
 
 STDERD
 ------
 
-.. GENERATED FROM PYTHON SOURCE LINES 270-291
+.. GENERATED FROM PYTHON SOURCE LINES 265-286
 
 .. code-block:: Python
 
@@ -934,9 +936,9 @@ STDERD
         tmax=tmax,
         picks="C3",
     )
-    std_erd = pd.concat([std_erd_left, std_erd_right])
-    results["STDERD"] = std_erd["standard_deviation_erds"].mean()
-    print(f"STDERD: {results['STDERD']:.3f}")
+    std_erd = np.mean([std_erd_left, std_erd_right])
+    results["STDERD"] = std_erd
+    print(f"STDERD: {std_erd:.3f}")
 
 
 
@@ -951,12 +953,12 @@ STDERD
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 292-294
+.. GENERATED FROM PYTHON SOURCE LINES 287-289
 
 Results
 =======
 
-.. GENERATED FROM PYTHON SOURCE LINES 294-296
+.. GENERATED FROM PYTHON SOURCE LINES 289-291
 
 .. code-block:: Python
 
@@ -971,7 +973,7 @@ Results
  .. code-block:: none
 
        WiTrialTemp  WiTrialSpat  WiTrialFreq  BtwTrialTemp  BtwTrialSpat  BtwTrialFreq  class_stability    STDERD
-    0     0.125983     0.595941     0.534277      4.321758      1.182418      0.999372          0.16404  0.023164
+    0     0.127228     0.593851     0.532088      8.683985      1.182418      0.999372          0.16404  0.023164
 
 
 
@@ -979,7 +981,7 @@ Results
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 27.623 seconds)
+   **Total running time of the script:** (0 minutes 9.078 seconds)
 
 
 .. _sphx_glr_download_auto_examples_01_MI-BCI_01_example_variability_MI_intra_subject.py:

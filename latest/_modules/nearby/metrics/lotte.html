@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nearby.metrics.lotte &#8212; Nearby 0.0.6 documentation</title>
+    <title>nearby.metrics.lotte &#8212; Nearby 0.1.0 documentation</title>
   
   
   
@@ -26,51 +26,59 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=fd6457a4" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
 
-    <script src="../../../_static/documentation_options.js?v=1fd71caa"></script>
-    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../_static/sg-tags.js?v=d80f6fa4"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/nearby/metrics/lotte';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_version = '0.20.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.6';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1.0';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../../_static/searchtools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  
+  
+  
   
   <dialog id="pst-search-dialog">
     
@@ -96,7 +104,7 @@
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
   <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
@@ -122,8 +130,8 @@
       
     
     
-    <img src="../../../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.6 documentation - Home"/>
-    <img src="../../../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.6 documentation - Home"/>
+    <img src="../../../_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.1.0 documentation - Home"/>
+    <img src="../../../_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.1.0 documentation - Home"/>
   
   
 </a></div>
@@ -179,11 +187,18 @@
       
         <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
       
         <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -281,11 +296,18 @@
         
           <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
         
           <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -369,81 +391,80 @@
   <h1>Source code for nearby.metrics.lotte</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pyriemann</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-
-<span class="kn">from</span><span class="w"> </span><span class="nn">..utils.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">_add_values_to_df</span>
 
 
 <div class="viewcode-block" id="class_stability">
 <a class="viewcode-back" href="../../../nearby.metrics.class_stability.html#nearby.metrics.lotte.class_stability">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">class_stability</span><span class="p">(</span>
-    <span class="n">epochs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">covs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">centroid</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span>
-    <span class="n">estimator</span><span class="o">=</span><span class="s2">&quot;scm&quot;</span><span class="p">,</span>
-    <span class="n">additional_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">epochs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">tmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">covs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">picks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">centroid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">estimator</span><span class="o">=</span><span class="s2">&quot;scm&quot;</span><span class="p">,</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Compute a Riemannian geometry-based class stability score.</span>
 
-<span class="sd">    This function quantifies how tightly a set of symmetric positive definite (SPD)</span>
-<span class="sd">    covariance matrices cluster on the Riemannian manifold. It first computes a</span>
-<span class="sd">    centroid covariance matrix (by default, the Riemannian mean) and then computes</span>
-<span class="sd">    the average Riemannian distance from each covariance matrix to the centroid. This</span>
-<span class="sd">    average distance defines a dispersion value that is mapped to a stability score</span>
-<span class="sd">    in ``(0, 1]`` via ``1 / (1 + dispersion)`` (higher means more stable / less dispersed).</span>
+<span class="sd">    This function measures how tightly a set of symmetric positive definite (SPD)</span>
+<span class="sd">    covariance matrices cluster on the Riemannian manifold. It computes a centroid</span>
+<span class="sd">    covariance matrix (by default, the Riemannian mean) and then measures the</span>
+<span class="sd">    dispersion as the average Riemannian distance from each covariance matrix to the</span>
+<span class="sd">    centroid. The dispersion is mapped to a stability score in ``(0, 1]`` via::</span>
+
+<span class="sd">        stability = 1 / (1 + dispersion)</span>
+
+<span class="sd">    where higher values indicate higher stability (i.e., less dispersion).</span>
 
 <span class="sd">    Input can be provided either as:</span>
-
-<span class="sd">    - ``covs``: a precomputed set of covariance matrices, or</span>
+<span class="sd">    - ``covs``: precomputed covariance matrices, or</span>
 <span class="sd">    - ``epochs``: an :class:`mne.epochs.Epochs` object from which covariance matrices</span>
 <span class="sd">      are estimated using PyRiemann.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    epochs : mne.epochs.Epochs | None, optional</span>
-<span class="sd">        Epoched EEG data used to estimate covariance matrices when ``covs`` is ``None``.</span>
-<span class="sd">        If provided, covariance matrices are computed from::</span>
+<span class="sd">        Epoched EEG data used to estimate covariance matrices when ``covs`` is</span>
+<span class="sd">        ``None``. Covariances are computed from::</span>
 
-<span class="sd">            epochs.get_data(units=&quot;uV&quot;, tmin=tmin, tmax=tmax)</span>
+<span class="sd">            epochs.get_data(units=&quot;uV&quot;, tmin=tmin, tmax=tmax, picks=picks)</span>
 
 <span class="sd">        using :class:`pyriemann.estimation.Covariances` with ``estimator=estimator``.</span>
 
-<span class="sd">    covs : array_like, shape (n_matrices, n_channels, n_channels) | None, optional</span>
-<span class="sd">        A collection of covariance matrices. The array must be 3D and square in the</span>
-<span class="sd">        last two dimensions. Matrices are assumed to be SPD.</span>
+<span class="sd">    covs : array_like of shape (n_matrices, n_channels, n_channels) | None, optional</span>
+<span class="sd">        Collection of covariance matrices. Must be 3D and square in the last two</span>
+<span class="sd">        dimensions. Matrices are assumed to be SPD.</span>
 
 <span class="sd">    tmin, tmax : float | None, optional</span>
-<span class="sd">        Time range of interest (in seconds) used when extracting epoch data from</span>
-<span class="sd">        ``epochs`` (passed to :meth:`mne.Epochs.get_data`).</span>
+<span class="sd">        Time bounds (seconds) used when extracting epoch data from ``epochs`` (passed</span>
+<span class="sd">        to :meth:`mne.Epochs.get_data`). Ignored when ``covs`` is provided.</span>
 
-<span class="sd">    centroid : {&quot;mean&quot;} | array_like, shape (n_channels, n_channels), default=&quot;mean&quot;</span>
-<span class="sd">        Definition of the centroid covariance matrix.</span>
+<span class="sd">    picks : str | array_like of int | array_like of str | None, optional</span>
+<span class="sd">        Channels to include when extracting data from ``epochs``. Passed to</span>
+<span class="sd">        :meth:`mne.Epochs.get_data`. Ignored when ``covs`` is provided.</span>
 
-<span class="sd">        - ``&quot;mean&quot;``: compute the Riemannian mean using</span>
-<span class="sd">          :func:`pyriemann.utils.mean.mean_covariance` with ``metric=&quot;riemann&quot;``.</span>
-<span class="sd">        - If an array is provided, it is used directly as the centroid.</span>
+<span class="sd">    centroid : ndarray of shape (n_channels, n_channels) | None, optional</span>
+<span class="sd">        Centroid covariance matrix. If ``None``, the centroid is computed as the</span>
+<span class="sd">        Riemannian mean using :func:`pyriemann.utils.mean.mean_covariance` with</span>
+<span class="sd">        ``metric=&quot;riemann&quot;``. If an array is provided, it is used directly.</span>
 
 <span class="sd">    estimator : str, default=&quot;scm&quot;</span>
-<span class="sd">        Covariance estimator passed to :class:`pyriemann.estimation.Covariances`</span>
-<span class="sd">        when computing covariances from ``epochs`` (e.g., ``&quot;scm&quot;``, ``&quot;oas&quot;``,</span>
-<span class="sd">        ``&quot;lwf&quot;``).</span>
-
-<span class="sd">    additional_values : dict | pandas.Series | None, optional</span>
-<span class="sd">        Additional columns to append to the returned dataframe (e.g., ``subject``,</span>
-<span class="sd">        ``session``, ``condition``, ``class``). Added via ``add_values_to_df``.</span>
+<span class="sd">        Covariance estimator passed to :class:`pyriemann.estimation.Covariances` when</span>
+<span class="sd">        computing covariances from ``epochs`` (e.g., ``&quot;scm&quot;``, ``&quot;oas&quot;``, ``&quot;lwf&quot;``).</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    df : pandas.DataFrame</span>
-<span class="sd">        Single-row dataframe containing at least:</span>
+<span class="sd">    stability : float</span>
+<span class="sd">        Class stability score in ``(0, 1]`` (higher means more stable / less</span>
+<span class="sd">        dispersed).</span>
 
-<span class="sd">        - ``class_stability`` : float</span>
-<span class="sd">            Stability score in ``(0, 1]`` (higher means more stable / less dispersed).</span>
-
-<span class="sd">        If ``additional_values`` is provided, additional columns are added.</span>
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    - The dispersion is computed as the mean of Riemannian distances obtained via</span>
+<span class="sd">      :func:`pyriemann.utils.distance.distance` with ``metric=&quot;riemann&quot;``.</span>
+<span class="sd">    - If both ``epochs`` and ``covs`` are provided, ``covs`` is used and ``epochs`` is</span>
+<span class="sd">      ignored (current behavior follows the implementation logic).</span>
 
 <span class="sd">    References</span>
 <span class="sd">    ----------</span>
@@ -456,7 +477,7 @@
 
     <span class="k">if</span> <span class="p">(</span><span class="n">epochs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">covs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
         <span class="n">covs</span> <span class="o">=</span> <span class="n">pyriemann</span><span class="o">.</span><span class="n">estimation</span><span class="o">.</span><span class="n">Covariances</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">estimator</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span>
-            <span class="n">epochs</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="s2">&quot;uV&quot;</span><span class="p">,</span> <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">)</span>
+            <span class="n">epochs</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="s2">&quot;uV&quot;</span><span class="p">,</span> <span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
         <span class="p">)</span>
 
     <span class="n">covs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">covs</span><span class="p">)</span>
@@ -467,12 +488,8 @@
     <span class="k">if</span> <span class="n">covs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">covs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;covs must be a square matrix&quot;</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">centroid</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="k">match</span> <span class="n">centroid</span><span class="p">:</span>
-            <span class="k">case</span> <span class="s2">&quot;mean&quot;</span><span class="p">:</span>
-                <span class="n">M</span> <span class="o">=</span> <span class="n">pyriemann</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">mean</span><span class="o">.</span><span class="n">mean_covariance</span><span class="p">(</span><span class="n">covs</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;riemann&quot;</span><span class="p">)</span>
-            <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;centroid=</span><span class="si">{</span><span class="n">centroid</span><span class="si">}</span><span class="s2"> is not implemented.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">centroid</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">M</span> <span class="o">=</span> <span class="n">pyriemann</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">mean</span><span class="o">.</span><span class="n">mean_covariance</span><span class="p">(</span><span class="n">covs</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;riemann&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">M</span> <span class="o">=</span> <span class="n">centroid</span>
 
@@ -487,13 +504,7 @@
 
     <span class="n">stability</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">dispersion</span><span class="p">)</span>
 
-    <span class="n">results</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;class_stability&quot;</span><span class="p">:</span> <span class="n">stability</span><span class="p">}</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-    <span class="k">if</span> <span class="n">additional_values</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">df</span> <span class="o">=</span> <span class="n">add_values_to_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">additional_values</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">df</span></div>
+    <span class="k">return</span> <span class="n">stability</span></div>
 
 </pre></div>
 
@@ -524,8 +535,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -545,7 +556,7 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     <br/>
   </p>
 </div>
@@ -559,7 +570,7 @@
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
 </p></div>
       
     </div>

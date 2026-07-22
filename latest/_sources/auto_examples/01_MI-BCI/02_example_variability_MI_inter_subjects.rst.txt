@@ -21,7 +21,7 @@
 Example: Inter-Subjects Variability of ERDS in a motor-imagery task
 ===================================================================
 
-.. GENERATED FROM PYTHON SOURCE LINES 5-15
+.. GENERATED FROM PYTHON SOURCE LINES 5-16
 
 .. code-block:: Python
 
@@ -31,6 +31,7 @@ Example: Inter-Subjects Variability of ERDS in a motor-imagery task
     # License: BSD (3-clause)
 
     import mne
+    import numpy as np
     import pandas as pd
     import nearby
     from moabb.datasets import Dreyer2023
@@ -42,12 +43,12 @@ Example: Inter-Subjects Variability of ERDS in a motor-imagery task
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 16-18
+.. GENERATED FROM PYTHON SOURCE LINES 17-19
 
 Extract Epochs
 ==============
 
-.. GENERATED FROM PYTHON SOURCE LINES 18-62
+.. GENERATED FROM PYTHON SOURCE LINES 19-63
 
 .. code-block:: Python
 
@@ -103,28 +104,28 @@ Extract Epochs
 
  .. code-block:: none
 
-    0it [00:00, ?it/s]    9it [00:00, 20360.70it/s]
+    0it [00:00, ?it/s]    9it [00:00, 20305.94it/s]
     Reading 0 ... 230399  =      0.000 ...   449.998 secs...
     Reading 0 ... 230399  =      0.000 ...   449.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
-    0it [00:00, ?it/s]    9it [00:00, 22166.02it/s]
+    0it [00:00, ?it/s]    9it [00:00, 21484.77it/s]
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
-    0it [00:00, ?it/s]    9it [00:00, 23373.83it/s]
+    0it [00:00, ?it/s]    9it [00:00, 22891.90it/s]
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
-    0it [00:00, ?it/s]    9it [00:00, 23831.27it/s]
+    0it [00:00, ?it/s]    9it [00:00, 24720.85it/s]
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
@@ -383,12 +384,12 @@ Extract Epochs
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-65
+.. GENERATED FROM PYTHON SOURCE LINES 64-66
 
 Extract ERDS
 ============
 
-.. GENERATED FROM PYTHON SOURCE LINES 65-87
+.. GENERATED FROM PYTHON SOURCE LINES 66-88
 
 .. code-block:: Python
 
@@ -423,39 +424,39 @@ Extract ERDS
  .. code-block:: none
 
     [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.2s
-    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.4s remaining:    0.2s
-    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.5s remaining:    0.1s
-    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.5s finished
+    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.3s
+    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.5s remaining:    0.3s
+    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.6s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.6s finished
+    Applying baseline correction (mode: percent)
+    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
+    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.3s
+    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.5s remaining:    0.3s
+    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.6s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.6s finished
     Applying baseline correction (mode: percent)
     [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
     [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.2s
-    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.5s remaining:    0.2s
-    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.5s remaining:    0.1s
-    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.5s finished
+    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.5s remaining:    0.3s
+    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.6s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.6s finished
     Applying baseline correction (mode: percent)
     [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.2s
-    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.4s remaining:    0.2s
-    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.5s remaining:    0.1s
-    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.5s finished
-    Applying baseline correction (mode: percent)
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.2s
-    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.4s remaining:    0.2s
-    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.5s remaining:    0.1s
-    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.5s finished
+    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.3s
+    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.5s remaining:    0.3s
+    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.6s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.6s finished
     Applying baseline correction (mode: percent)
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 88-90
+.. GENERATED FROM PYTHON SOURCE LINES 89-91
 
 Between-Group-Trial Variability
 ===============================
 
-.. GENERATED FROM PYTHON SOURCE LINES 90-108
+.. GENERATED FROM PYTHON SOURCE LINES 91-109
 
 .. code-block:: Python
 
@@ -484,20 +485,15 @@ Between-Group-Trial Variability
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 109-111
+.. GENERATED FROM PYTHON SOURCE LINES 110-112
 
 Between-Trial-Group Temporal Variability (BtwTrialGrpTemp)
 ----------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 111-139
+.. GENERATED FROM PYTHON SOURCE LINES 112-135
 
 .. code-block:: Python
 
-
-    import importlib
-
-    importlib.reload(nearby)
-    importlib.reload(nearby.metrics)
 
     btw_trial_grp_temp_left = nearby.metrics.between_trial_group_temporal(
         tfrs_left,
@@ -517,8 +513,8 @@ Between-Trial-Group Temporal Variability (BtwTrialGrpTemp)
         picks="C3",
     )
 
-    btw_trial_grp_temp = pd.concat([btw_trial_grp_temp_left, btw_trial_grp_temp_right])
-    results["BtwTrialGrpTemp"] = btw_trial_grp_temp["between_trial_group_temporal"].mean()
+    btw_trial_grp_temp = np.mean([btw_trial_grp_temp_left, btw_trial_grp_temp_right])
+    results["BtwTrialGrpTemp"] = btw_trial_grp_temp
     print(f"BtwTrialGrpTemp: {results['BtwTrialGrpTemp']:.3f}")
 
 
@@ -529,31 +525,39 @@ Between-Trial-Group Temporal Variability (BtwTrialGrpTemp)
 
  .. code-block:: none
 
-    BtwTrialGrpTemp: 52.502
+    BtwTrialGrpTemp: 132.093
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 140-142
+.. GENERATED FROM PYTHON SOURCE LINES 136-138
 
 Between-Trial-Group Spatial Variability (BtwTrialGrpSpat)
 ---------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 142-155
+.. GENERATED FROM PYTHON SOURCE LINES 138-159
 
 .. code-block:: Python
 
 
     btw_trial_grp_spat_left = nearby.metrics.between_trial_group_spatial(
-        tfrs_left, fmin=fmin, fmax=fmax, tmin=tmin, tmax=tmax, metric="angle"
+        tfrs_left,
+        fmin=fmin,
+        fmax=fmax,
+        tmin=tmin,
+        tmax=tmax,
     )
 
     btw_trial_grp_spat_right = nearby.metrics.between_trial_group_spatial(
-        tfrs_right, fmin=fmin, fmax=fmax, tmin=tmin, tmax=tmax, metric="angle"
+        tfrs_right,
+        fmin=fmin,
+        fmax=fmax,
+        tmin=tmin,
+        tmax=tmax,
     )
 
-    btw_trial_grp_spat = pd.concat([btw_trial_grp_spat_left, btw_trial_grp_spat_right])
-    results["BtwTrialGrpSpat"] = btw_trial_grp_spat["between_trial_group_spatial"].mean()
+    btw_trial_grp_spat = np.mean([btw_trial_grp_spat_left, btw_trial_grp_spat_right])
+    results["BtwTrialGrpSpat"] = btw_trial_grp_spat
     print(f"BtwTrialGrpSpat: {results['BtwTrialGrpSpat']:.3f}")
 
 
@@ -569,12 +573,12 @@ Between-Trial-Group Spatial Variability (BtwTrialGrpSpat)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 156-158
+.. GENERATED FROM PYTHON SOURCE LINES 160-162
 
 Between-Trial-Group Frequency Variability (BtwTrialGrpFreq)
 -----------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 158-183
+.. GENERATED FROM PYTHON SOURCE LINES 162-185
 
 .. code-block:: Python
 
@@ -585,7 +589,6 @@ Between-Trial-Group Frequency Variability (BtwTrialGrpFreq)
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
         picks="C4",
     )
 
@@ -595,12 +598,11 @@ Between-Trial-Group Frequency Variability (BtwTrialGrpFreq)
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
         picks="C3",
     )
 
-    btw_trial_grp_freq = pd.concat([btw_trial_grp_freq_left, btw_trial_grp_freq_right])
-    results["BtwTrialGrpFreq"] = btw_trial_grp_freq["between_trial_group_frequency"].mean()
+    btw_trial_grp_freq = np.mean([btw_trial_grp_freq_left, btw_trial_grp_freq_right])
+    results["BtwTrialGrpFreq"] = btw_trial_grp_freq
     print(f"BtwTrialGrpFreq: {results['BtwTrialGrpFreq']:.3f}")
 
 
@@ -616,12 +618,12 @@ Between-Trial-Group Frequency Variability (BtwTrialGrpFreq)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 184-186
+.. GENERATED FROM PYTHON SOURCE LINES 186-188
 
 Between-Trial-Group Variability (Test-User Referenced)
 ======================================================
 
-.. GENERATED FROM PYTHON SOURCE LINES 186-190
+.. GENERATED FROM PYTHON SOURCE LINES 188-192
 
 .. code-block:: Python
 
@@ -636,12 +638,12 @@ Between-Trial-Group Variability (Test-User Referenced)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 191-193
+.. GENERATED FROM PYTHON SOURCE LINES 193-195
 
 Between-Trial-Group Temporal Variability - Test-User Referenced (BtwTrialGrpTemp-TR)
 ------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 193-222
+.. GENERATED FROM PYTHON SOURCE LINES 195-222
 
 .. code-block:: Python
 
@@ -666,12 +668,10 @@ Between-Trial-Group Temporal Variability - Test-User Referenced (BtwTrialGrpTemp
         picks="C3",
     )
 
-    btw_trial_grp_temp_tr = pd.concat(
+    btw_trial_grp_temp_tr = np.mean(
         [btw_trial_grp_temp_tr_left, btw_trial_grp_temp_tr_right]
     )
-    results["BtwTrialGrpTemp-TR"] = btw_trial_grp_temp_tr[
-        "between_trial_group_temporal"
-    ].mean()
+    results["BtwTrialGrpTemp-TR"] = btw_trial_grp_temp_tr
     print(f"BtwTrialGrpTemp-TR: {results['BtwTrialGrpTemp-TR']:.3f}")
 
 
@@ -692,7 +692,7 @@ Between-Trial-Group Temporal Variability - Test-User Referenced (BtwTrialGrpTemp
 Between-Trial-Group Spatial Variability - Test-User Referenced (BtwTrialGrpSpat-TR)
 -----------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 225-254
+.. GENERATED FROM PYTHON SOURCE LINES 225-250
 
 .. code-block:: Python
 
@@ -704,7 +704,6 @@ Between-Trial-Group Spatial Variability - Test-User Referenced (BtwTrialGrpSpat-
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
     )
 
     btw_trial_grp_spat_tr_right = nearby.metrics.between_trial_group_spatial(
@@ -714,15 +713,12 @@ Between-Trial-Group Spatial Variability - Test-User Referenced (BtwTrialGrpSpat-
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
     )
 
-    btw_trial_grp_spat_tr = pd.concat(
+    btw_trial_grp_spat_tr = np.mean(
         [btw_trial_grp_spat_tr_left, btw_trial_grp_spat_tr_right]
     )
-    results["BtwTrialGrpSpat-TR"] = btw_trial_grp_spat_tr[
-        "between_trial_group_spatial"
-    ].mean()
+    results["BtwTrialGrpSpat-TR"] = btw_trial_grp_spat_tr
     print(f"BtwTrialGrpSpat-TR: {results['BtwTrialGrpSpat-TR']:.3f}")
 
 
@@ -738,42 +734,65 @@ Between-Trial-Group Spatial Variability - Test-User Referenced (BtwTrialGrpSpat-
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 255-257
+.. GENERATED FROM PYTHON SOURCE LINES 251-253
 
 Between-Trial-Group Frequency Variability - Test-User Referenced (BtwTrialGrpFreq-TR)
 -------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 257-286
+.. GENERATED FROM PYTHON SOURCE LINES 253-305
 
 .. code-block:: Python
 
 
-    btw_trial_grp_freq_tr_left = nearby.metrics.between_trial_group_frequency(
+    btw_trial_grp_freq_tr_left_C3 = nearby.metrics.between_trial_group_frequency(
         tfrs_train_left,
         centroid=tfrs_dict["left_hand"][test_subject],
         fmin=fmin,
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
+        picks=["C3"],
     )
 
-    btw_trial_grp_freq_tr_right = nearby.metrics.between_trial_group_frequency(
+    btw_trial_grp_freq_tr_left_C4 = nearby.metrics.between_trial_group_frequency(
+        tfrs_train_left,
+        centroid=tfrs_dict["left_hand"][test_subject],
+        fmin=fmin,
+        fmax=fmax,
+        tmin=tmin,
+        tmax=tmax,
+        picks=["C4"],
+    )
+
+    btw_trial_grp_freq_tr_right_C3 = nearby.metrics.between_trial_group_frequency(
         tfrs_train_right,
         centroid=tfrs_dict["right_hand"][test_subject],
         fmin=fmin,
         fmax=fmax,
         tmin=tmin,
         tmax=tmax,
-        metric="angle",
+        picks=["C3"],
     )
 
-    btw_trial_grp_freq_tr = pd.concat(
-        [btw_trial_grp_freq_tr_left, btw_trial_grp_freq_tr_right]
+    btw_trial_grp_freq_tr_right_C4 = nearby.metrics.between_trial_group_frequency(
+        tfrs_train_right,
+        centroid=tfrs_dict["right_hand"][test_subject],
+        fmin=fmin,
+        fmax=fmax,
+        tmin=tmin,
+        tmax=tmax,
+        picks=["C4"],
     )
-    results["BtwTrialGrpFreq-TR"] = btw_trial_grp_freq_tr[
-        "between_trial_group_frequency"
-    ].mean()
+
+    btw_trial_grp_freq_tr = np.mean(
+        [
+            btw_trial_grp_freq_tr_left_C3,
+            btw_trial_grp_freq_tr_left_C4,
+            btw_trial_grp_freq_tr_right_C3,
+            btw_trial_grp_freq_tr_right_C4,
+        ]
+    )
+    results["BtwTrialGrpFreq-TR"] = btw_trial_grp_freq_tr
     print(f"BtwTrialGrpFreq-TR: {results['BtwTrialGrpFreq-TR']:.3f}")
 
 
@@ -784,17 +803,17 @@ Between-Trial-Group Frequency Variability - Test-User Referenced (BtwTrialGrpFre
 
  .. code-block:: none
 
-    BtwTrialGrpFreq-TR: 1.853
+    BtwTrialGrpFreq-TR: 2.427
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 287-289
+.. GENERATED FROM PYTHON SOURCE LINES 306-308
 
 Results
 =======
 
-.. GENERATED FROM PYTHON SOURCE LINES 289-291
+.. GENERATED FROM PYTHON SOURCE LINES 308-310
 
 .. code-block:: Python
 
@@ -809,7 +828,7 @@ Results
  .. code-block:: none
 
        BtwTrialGrpTemp  BtwTrialGrpSpat  BtwTrialGrpFreq  BtwTrialGrpTemp-TR  BtwTrialGrpSpat-TR  BtwTrialGrpFreq-TR
-    0        52.502186         0.946375         1.026725            127.8634            1.961261            1.853452
+    0       132.092692         0.946375         1.026725            127.8634            1.961261            2.427303
 
 
 
@@ -817,7 +836,7 @@ Results
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 10.811 seconds)
+   **Total running time of the script:** (0 minutes 11.375 seconds)
 
 
 .. _sphx_glr_download_auto_examples_01_MI-BCI_02_example_variability_MI_inter_subjects.py:

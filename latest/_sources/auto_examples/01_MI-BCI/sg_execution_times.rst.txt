@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:27.623** total execution time for 2 files **from auto_examples/01_MI-BCI**:
+**00:09.078** total execution time for 2 files **from auto_examples/01_MI-BCI**:
 
 .. container::
 
@@ -33,7 +33,7 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_01_MI-BCI_01_example_variability_MI_intra_subject.py` (``01_example_variability_MI_intra_subject.py``)
-     - 00:27.623
+     - 00:09.078
      - 0.0
    * - :ref:`sphx_glr_auto_examples_01_MI-BCI_02_example_variability_MI_inter_subjects.py` (``02_example_variability_MI_inter_subjects.py``)
      - 00:00.000

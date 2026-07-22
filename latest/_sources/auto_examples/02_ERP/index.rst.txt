@@ -8,6 +8,10 @@ Using Nearby on ERP Data
 .. toctree::
    :hidden:
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -24,7 +28,7 @@ Using Nearby on ERP Data
   .. image:: /auto_examples/02_ERP/images/thumb/sphx_glr_01_example_variability_ERP_intra_subject_thumb.png
     :alt:
 
-  :ref:`sphx_glr_auto_examples_02_ERP_01_example_variability_ERP_intra_subject.py`
+  :doc:`/auto_examples/02_ERP/01_example_variability_ERP_intra_subject`
 
 .. raw:: html
 
@@ -41,7 +45,7 @@ Using Nearby on ERP Data
   .. image:: /auto_examples/02_ERP/images/thumb/sphx_glr_02_example_variability_ERP_inter_subject_thumb.png
     :alt:
 
-  :ref:`sphx_glr_auto_examples_02_ERP_02_example_variability_ERP_inter_subject.py`
+  :doc:`/auto_examples/02_ERP/02_example_variability_ERP_inter_subject`
 
 .. raw:: html
 

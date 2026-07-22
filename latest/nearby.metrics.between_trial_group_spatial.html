@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>nearby.metrics.between_trial_group_spatial &#8212; Nearby 0.0.6 documentation</title>
+    <title>nearby.metrics.between_trial_group_spatial &#8212; Nearby 0.1.0 documentation</title>
   
   
   
@@ -27,32 +27,34 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=fd6457a4" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css?v=1277b6f3" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
 
-    <script src="_static/documentation_options.js?v=1fd71caa"></script>
-    <script src="_static/doctools.js?v=9bcbadda"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/documentation_options.js?v=01f34227"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/sg-tags.js?v=d80f6fa4"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'nearby.metrics.between_trial_group_spatial';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_version = '0.20.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://simonkojima.github.io/nearby-docs/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.0.6';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1.0';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="nearby.metrics.between_trial_group_frequency" href="nearby.metrics.between_trial_group_frequency.html" />
@@ -60,20 +62,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  
+  
+  
   
   <dialog id="pst-search-dialog">
     
@@ -99,7 +107,7 @@
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
   <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
@@ -125,8 +133,8 @@
       
     
     
-    <img src="_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.0.6 documentation - Home"/>
-    <img src="_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.0.6 documentation - Home"/>
+    <img src="_static/logo-light.png" class="logo__image only-light" alt="Nearby 0.1.0 documentation - Home"/>
+    <img src="_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="Nearby 0.1.0 documentation - Home"/>
   
   
 </a></div>
@@ -182,11 +190,18 @@
       
         <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
       
         <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -286,11 +301,18 @@
         
           <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
         
           <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -317,7 +339,15 @@
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
         <div class="sidebar-primary-item">
+
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
@@ -417,88 +447,62 @@
 <h1>nearby.metrics.between_trial_group_spatial<a class="headerlink" href="#nearby-metrics-between-trial-group-spatial" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="nearby.metrics.between_trial_group_spatial">
-<span class="sig-prename descclassname"><span class="pre">nearby.metrics.</span></span><span class="sig-name descname"><span class="pre">between_trial_group_spatial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">centroid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mean'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/spatial.html#between_trial_group_spatial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.between_trial_group_spatial" title="Link to this definition">#</a></dt>
-<dd><p>Compute between-trial-group spatial variability from group-representative patterns.</p>
-<p>This metric quantifies how much group-level spatial patterns differ from one
-another. Each element of <code class="docutils literal notranslate"><span class="pre">data</span></code> is expected to be a trial-group representative
-object (e.g., an averaged response), and each group object is reduced to a single
-spatial vector (one value per channel) by averaging over time (and over frequency
-for TFR input). Distances between each group spatial vector and a centroid spatial
-vector are then computed. The final output is the mean distance across groups, or
-a per-group list.</p>
-<p>The centroid can be computed from the group vectors (<code class="docutils literal notranslate"><span class="pre">centroid=&quot;mean&quot;</span></code>) or
-provided explicitly as an MNE object. The centroid computation depends on
-<code class="docutils literal notranslate"><span class="pre">metric</span></code>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">metric=&quot;angle&quot;</span></code> uses a Fréchet mean (p=2) on the unit sphere.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metric=&quot;cosine&quot;</span></code> uses an extrinsic (Euclidean) mean.</p></li>
-</ul>
+<span class="sig-prename descclassname"><span class="pre">nearby.metrics.</span></span><span class="sig-name descname"><span class="pre">between_trial_group_spatial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback_centroid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">centroid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_centroid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nearby/metrics/spatial.html#between_trial_group_spatial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nearby.metrics.between_trial_group_spatial" title="Link to this definition">#</a></dt>
+<dd><p>Compute between-trial-group spatial variability.</p>
+<p>This metric quantifies how much group-representative spatial patterns differ from
+one another. Each element of <code class="docutils literal notranslate"><span class="pre">data</span></code> is expected to be a group-level
+representative MNE object (either <code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Evoked</span></code> or
+<code class="xref py py-class docutils literal notranslate"><span class="pre">mne.time_frequency.tfr.AverageTFR</span></code>). Each object is reduced to a single
+spatial vector by averaging over time (and additionally over frequency for TFR
+input). A centroid spatial vector is then defined (either computed from the group
+vectors or extracted from an explicit centroid object), and the dispersion is the
+mean distance (<code class="docutils literal notranslate"><span class="pre">callback_distance</span></code>) between each group vector and the centroid.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<em>list</em><em> of </em><em>mne.Evoked</em><em> | </em><em>list</em><em> of </em><em>mne.time_frequency.tfr.AverageTFR</em>) – List of group-representative objects. All entries must have the same type:
-either <code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Evoked</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">mne.time_frequency.tfr.AverageTFR</span></code>.</p></li>
-<li><p><strong>centroid</strong> (<em>{&quot;mean&quot;}</em><em> | </em><em>mne.Evoked</em><em> | </em><em>mne.time_frequency.tfr.AverageTFR</em><em>, </em><em>default=&quot;mean&quot;</em>) – <p>Definition of the centroid (reference) pattern used for comparisons.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;mean&quot;</span></code>: compute the centroid spatial vector from the group spatial
-vectors. The mean definition depends on <code class="docutils literal notranslate"><span class="pre">metric</span></code> (Fréchet mean for
-<code class="docutils literal notranslate"><span class="pre">&quot;angle&quot;</span></code>, extrinsic mean for <code class="docutils literal notranslate"><span class="pre">&quot;cosine&quot;</span></code>).</p></li>
-<li><p>If an MNE object is provided, it is reduced to a centroid spatial vector
-using the same averaging operations as for <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p></li>
-</ul>
-<p>The centroid object must be of the same type as the elements of <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
-</p></li>
-<li><p><strong>fmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency band of interest in Hz. Only used when <code class="docutils literal notranslate"><span class="pre">data</span></code> contains
-<code class="xref py py-class docutils literal notranslate"><span class="pre">AverageTFR</span></code>. If provided, TFR values are cropped
-in frequency to <code class="docutils literal notranslate"><span class="pre">[fmin,</span> <span class="pre">fmax]</span></code> prior to averaging.</p></li>
-<li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Frequency band of interest in Hz. Only used when <code class="docutils literal notranslate"><span class="pre">data</span></code> contains
-<code class="xref py py-class docutils literal notranslate"><span class="pre">AverageTFR</span></code>. If provided, TFR values are cropped
-in frequency to <code class="docutils literal notranslate"><span class="pre">[fmin,</span> <span class="pre">fmax]</span></code> prior to averaging.</p></li>
-<li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time window of interest in seconds. If provided, objects are cropped to
-<code class="docutils literal notranslate"><span class="pre">[tmin,</span> <span class="pre">tmax]</span></code> prior to averaging over time.</p></li>
-<li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time window of interest in seconds. If provided, objects are cropped to
-<code class="docutils literal notranslate"><span class="pre">[tmin,</span> <span class="pre">tmax]</span></code> prior to averaging over time.</p></li>
-<li><p><strong>metric</strong> (<em>{&quot;angle&quot;</em><em>, </em><em>&quot;cosine&quot;}</em><em>, </em><em>default=&quot;angle&quot;</em>) – <p>Distance definition used to measure dispersion across groups.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;angle&quot;</span></code>: angular distance between spatial patterns.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;cosine&quot;</span></code>: cosine distance between spatial patterns.</p></li>
-</ul>
-</p></li>
+<li><p><strong>data</strong> (<em>list</em><em> of </em><em>mne.Evoked</em><em> | </em><em>list</em><em> of </em><em>mne.time_frequency.tfr.AverageTFR</em>) – Group-representative MNE objects. All entries must have the same type.</p></li>
+<li><p><strong>tmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time bounds (seconds) used to crop objects prior to averaging over time.</p></li>
+<li><p><strong>tmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Time bounds (seconds) used to crop objects prior to averaging over time.</p></li>
+<li><p><strong>fmin</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Lower and upper frequency bounds (Hz). Only used when objects are
+<code class="xref py py-class docutils literal notranslate"><span class="pre">AverageTFR</span></code>.</p></li>
+<li><p><strong>fmax</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Lower and upper frequency bounds (Hz). Only used when objects are
+<code class="xref py py-class docutils literal notranslate"><span class="pre">AverageTFR</span></code>.</p></li>
+<li><p><strong>callback_distance</strong> (<em>callable</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Distance function comparing two spatial vectors of shape <code class="docutils literal notranslate"><span class="pre">(n_channels,)</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, uses <a class="reference internal" href="nearby.distances.html#nearby.distances.distances.distance_angle" title="nearby.distances.distances.distance_angle"><code class="xref py py-func docutils literal notranslate"><span class="pre">nearby.distances.distances.distance_angle()</span></code></a>.</p></li>
+<li><p><strong>callback_centroid</strong> (<em>callable</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Function computing a centroid spatial vector from a stack of group spatial
+vectors with shape <code class="docutils literal notranslate"><span class="pre">(n_groups,</span> <span class="pre">n_channels)</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, uses an angular Fréchet mean via
+<code class="docutils literal notranslate"><span class="pre">partial(frechet_mean_angular,</span> <span class="pre">verbosity=0)</span></code>.</p></li>
+<li><p><strong>centroid</strong> (<em>mne.Evoked</em><em> | </em><em>mne.time_frequency.tfr.AverageTFR</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Reference centroid object. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the centroid spatial vector is
+computed from the group spatial vectors via <code class="docutils literal notranslate"><span class="pre">callback_centroid</span></code>.
+If provided, it must be of the same type as the entries in <code class="docutils literal notranslate"><span class="pre">data</span></code> and will
+be reduced to a spatial vector using the same extraction procedure as for
+group objects.</p></li>
 <li><p><strong>picks</strong> (<em>str</em><em> | </em><em>array_like</em><em> of </em><em>int</em><em> | </em><em>array_like</em><em> of </em><em>str</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Channels to include. Applied to each element in <code class="docutils literal notranslate"><span class="pre">data</span></code> and to the centroid
 object (if provided). If <code class="docutils literal notranslate"><span class="pre">None</span></code>, all channels are used.</p></li>
-<li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – <p>Controls the output format.</p>
-<ul>
-<li><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, return a single scalar (mean distance across groups).</p></li>
-<li><p>If <code class="docutils literal notranslate"><span class="pre">False</span></code>, return a JSON-encoded list of per-group distances (group order
-matches <code class="docutils literal notranslate"><span class="pre">data</span></code>).</p></li>
-</ul>
-</p></li>
-<li><p><strong>additional_values</strong> (<em>dict</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Extra columns to append to the returned dataframe (e.g., <code class="docutils literal notranslate"><span class="pre">{&quot;subject&quot;:</span> <span class="pre">1}</span></code>).</p></li>
+<li><p><strong>baseline</strong> (<em>tuple</em><em> of </em><em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Baseline interval in seconds (e.g., <code class="docutils literal notranslate"><span class="pre">(-1.0,</span> <span class="pre">0.0)</span></code>). If provided, baseline
+correction is applied on a copy of <code class="docutils literal notranslate"><span class="pre">data</span></code> before computing the metric.</p></li>
+<li><p><strong>average</strong> (<em>bool</em><em>, </em><em>default=True</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, return a scalar mean distance across groups. If <code class="docutils literal notranslate"><span class="pre">False</span></code>, return
+per-group distances as an array of shape <code class="docutils literal notranslate"><span class="pre">(n_groups,)</span></code>.</p></li>
+<li><p><strong>return_centroid</strong> (<em>bool</em><em>, </em><em>default=False</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also return the centroid spatial vector.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><p><strong>df</strong> – Dataframe with a single row.</p>
-<dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">between_trial_group_spatial</span></code><span class="classifier">float | str</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">average=True</span></code>, the mean distance across groups.
-If <code class="docutils literal notranslate"><span class="pre">average=False</span></code>, a JSON-encoded list of distances with length
-<code class="docutils literal notranslate"><span class="pre">len(data)</span></code>.</p>
-</dd>
-</dl>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>dispersion</strong> (<em>float | ndarray of shape (n_groups,)</em>) – Between-trial-group spatial dispersion. If <code class="docutils literal notranslate"><span class="pre">average=True</span></code>, a scalar (mean
+across groups). Otherwise, an array with one value per group.</p></li>
+<li><p><strong>centroid_vector</strong> (<em>ndarray of shape (n_channels,), optional</em>) – Returned only when <code class="docutils literal notranslate"><span class="pre">return_centroid=True</span></code>. The centroid spatial vector used
+as the reference.</p></li>
+</ul>
 </p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>pandas.DataFrame</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
 <ul class="simple">
-<li><p>For <code class="xref py py-class docutils literal notranslate"><span class="pre">AverageTFR</span></code>, each group spatial vector is
-computed by averaging over frequency and then over time within the selected
-window.</p></li>
-<li><p>For <code class="xref py py-class docutils literal notranslate"><span class="pre">Evoked</span></code>, each group spatial vector is computed by averaging
-over time within the selected window (returned in microvolts).</p></li>
-<li><p>This function measures variability between <em>group-level representatives</em>
-rather than between single-trial epochs.</p></li>
+<li><p>The function operates on copies of the input objects (<code class="docutils literal notranslate"><span class="pre">.copy()</span></code>) and does not
+modify the originals in place.</p></li>
+<li><p>The exact meaning of distance and centroid depends on
+<code class="docutils literal notranslate"><span class="pre">callback_distance</span></code> / <code class="docutils literal notranslate"><span class="pre">callback_centroid</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -549,20 +553,20 @@ rather than between single-trial epochs.</p></li>
     class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nearby.metrics.between_trial_group_spatial"><code class="docutils literal notranslate"><span class="pre">between_trial_group_spatial()</span></code></a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/nearby.metrics.between_trial_group_spatial.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div></div>
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/nearby.metrics.between_trial_group_spatial.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
 
 </div></div>
               
@@ -577,8 +581,8 @@ rather than between single-trial epochs.</p></li>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -598,7 +602,7 @@ rather than between single-trial epochs.</p></li>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     <br/>
   </p>
 </div>
@@ -612,7 +616,7 @@ rather than between single-trial epochs.</p></li>
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
 </p></div>
       
     </div>
