@@ -1,0 +1,6 @@
+﻿nearby.metrics.standard\_deviation\_erds
+========================================
+
+.. currentmodule:: nearby.metrics
+
+.. autofunction:: standard_deviation_erds

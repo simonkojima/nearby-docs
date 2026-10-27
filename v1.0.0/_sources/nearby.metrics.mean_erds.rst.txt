@@ -1,0 +1,6 @@
+﻿nearby.metrics.mean\_erds
+=========================
+
+.. currentmodule:: nearby.metrics
+
+.. autofunction:: mean_erds

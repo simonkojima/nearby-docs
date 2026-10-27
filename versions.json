@@ -4,6 +4,10 @@
     "url": "/nearby-docs/latest/"
   },
   {
+    "version": "v1.0.0",
+    "url": "/nearby-docs/v1.0.0/"
+  },
+  {
     "version": "v0.1.0",
     "url": "/nearby-docs/v0.1.0/"
   },

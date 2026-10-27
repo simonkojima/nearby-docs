@@ -121,175 +121,223 @@ Extract Epochs
 
  .. code-block:: none
 
-      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 98048.66it/s]
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-1_eeg.vhdr...
+      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 106936.93it/s]
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-1_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424519  =      0.000 ...   424.519 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424520
         Range : 0 ... 424519 =      0.000 ...   424.519 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-3_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-3_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424519  =      0.000 ...   424.519 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204'), np.str_('Stimulus/S238')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204', 'Stimulus/S238']
     Creating RawArray with float64 data, n_channels=1, n_times=424520
         Range : 0 ... 424519 =      0.000 ...   424.519 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-5_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-5_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424639  =      0.000 ...   424.639 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424640
         Range : 0 ... 424639 =      0.000 ...   424.639 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-8_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-8_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424599  =      0.000 ...   424.599 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424600
         Range : 0 ... 424599 =      0.000 ...   424.599 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-10_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-10_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424559  =      0.000 ...   424.559 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424560
         Range : 0 ... 424559 =      0.000 ...   424.559 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-12_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-A/eeg/sub-A_task-2stream_run-12_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424479  =      0.000 ...   424.479 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424480
         Range : 0 ... 424479 =      0.000 ...   424.479 secs
     Ready.
-      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 2519.69it/s]
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-B/eeg/sub-B_task-2stream_run-1_eeg.vhdr...
+      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 106334.47it/s]
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-B/eeg/sub-B_task-2stream_run-1_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424559  =      0.000 ...   424.559 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424560
         Range : 0 ... 424559 =      0.000 ...   424.559 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-B/eeg/sub-B_task-2stream_run-3_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-B/eeg/sub-B_task-2stream_run-3_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424559  =      0.000 ...   424.559 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424560
         Range : 0 ... 424559 =      0.000 ...   424.559 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-B/eeg/sub-B_task-2stream_run-5_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-B/eeg/sub-B_task-2stream_run-5_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424519  =      0.000 ...   424.519 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424520
         Range : 0 ... 424519 =      0.000 ...   424.519 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-B/eeg/sub-B_task-2stream_run-8_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-B/eeg/sub-B_task-2stream_run-8_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424679  =      0.000 ...   424.679 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424680
         Range : 0 ... 424679 =      0.000 ...   424.679 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-B/eeg/sub-B_task-2stream_run-10_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-B/eeg/sub-B_task-2stream_run-10_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424479  =      0.000 ...   424.479 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424480
         Range : 0 ... 424479 =      0.000 ...   424.479 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-B/eeg/sub-B_task-2stream_run-12_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-B/eeg/sub-B_task-2stream_run-12_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424559  =      0.000 ...   424.559 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424560
         Range : 0 ... 424559 =      0.000 ...   424.559 secs
     Ready.
-      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 3060.98it/s]
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-C/eeg/sub-C_task-2stream_run-1_eeg.vhdr...
+      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 49136.01it/s]
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-C/eeg/sub-C_task-2stream_run-1_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424519  =      0.000 ...   424.519 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424520
         Range : 0 ... 424519 =      0.000 ...   424.519 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-C/eeg/sub-C_task-2stream_run-3_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-C/eeg/sub-C_task-2stream_run-3_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424479  =      0.000 ...   424.479 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424480
         Range : 0 ... 424479 =      0.000 ...   424.479 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-C/eeg/sub-C_task-2stream_run-5_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-C/eeg/sub-C_task-2stream_run-5_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424559  =      0.000 ...   424.559 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424560
         Range : 0 ... 424559 =      0.000 ...   424.559 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-C/eeg/sub-C_task-2stream_run-8_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-C/eeg/sub-C_task-2stream_run-8_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424559  =      0.000 ...   424.559 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424560
         Range : 0 ... 424559 =      0.000 ...   424.559 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-C/eeg/sub-C_task-2stream_run-10_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-C/eeg/sub-C_task-2stream_run-10_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424519  =      0.000 ...   424.519 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424520
         Range : 0 ... 424519 =      0.000 ...   424.519 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-C/eeg/sub-C_task-2stream_run-12_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-C/eeg/sub-C_task-2stream_run-12_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424559  =      0.000 ...   424.559 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424560
         Range : 0 ... 424559 =      0.000 ...   424.559 secs
     Ready.
-      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 3062.53it/s]
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-D/eeg/sub-D_task-2stream_run-1_eeg.vhdr...
+      0%|          | 0/36 [00:00<?, ?it/s]    100%|██████████| 36/36 [00:00<00:00, 108240.10it/s]
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-D/eeg/sub-D_task-2stream_run-1_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424519  =      0.000 ...   424.519 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424520
         Range : 0 ... 424519 =      0.000 ...   424.519 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-D/eeg/sub-D_task-2stream_run-3_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-D/eeg/sub-D_task-2stream_run-3_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424559  =      0.000 ...   424.559 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424560
         Range : 0 ... 424559 =      0.000 ...   424.559 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-D/eeg/sub-D_task-2stream_run-5_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-D/eeg/sub-D_task-2stream_run-5_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424559  =      0.000 ...   424.559 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424560
         Range : 0 ... 424559 =      0.000 ...   424.559 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-D/eeg/sub-D_task-2stream_run-8_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-D/eeg/sub-D_task-2stream_run-8_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424519  =      0.000 ...   424.519 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424520
         Range : 0 ... 424519 =      0.000 ...   424.519 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-D/eeg/sub-D_task-2stream_run-10_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-D/eeg/sub-D_task-2stream_run-10_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424559  =      0.000 ...   424.559 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424560
         Range : 0 ... 424559 =      0.000 ...   424.559 secs
     Ready.
-    Extracting parameters from /home/skojima/mne_data/MNE-Kojima2024B-data/sub-D/eeg/sub-D_task-2stream_run-12_eeg.vhdr...
+    Extracting parameters from /media/skojima/41e27c66-4999-42a0-b36f-cc19d7881326/mne_data/MNE-Kojima2024B-data/sub-D/eeg/sub-D_task-2stream_run-12_eeg.vhdr...
     Setting channel info structure...
     Reading 0 ... 424519  =      0.000 ...   424.519 secs...
-    Used Annotations descriptions: [np.str_('Stimulus/S  1'), np.str_('Stimulus/S  2'), np.str_('Stimulus/S101'), np.str_('Stimulus/S102'), np.str_('Stimulus/S103'), np.str_('Stimulus/S104'), np.str_('Stimulus/S111'), np.str_('Stimulus/S112'), np.str_('Stimulus/S113'), np.str_('Stimulus/S114'), np.str_('Stimulus/S201'), np.str_('Stimulus/S202'), np.str_('Stimulus/S203'), np.str_('Stimulus/S204')]
+    /home/skojima/git/nearby/.venv/lib/python3.14/site-packages/moabb/datasets/kojima2024b.py:656: FutureWarning: Montage name 'standard_1020' is deprecated and will be removed in MNE 1.14. Use 'colin27_1020' instead.
+      raw = raw.set_montage("standard_1020")
+    Used Annotations descriptions: ['Stimulus/S  1', 'Stimulus/S  2', 'Stimulus/S101', 'Stimulus/S102', 'Stimulus/S103', 'Stimulus/S104', 'Stimulus/S111', 'Stimulus/S112', 'Stimulus/S113', 'Stimulus/S114', 'Stimulus/S201', 'Stimulus/S202', 'Stimulus/S203', 'Stimulus/S204']
     Creating RawArray with float64 data, n_channels=1, n_times=424520
         Range : 0 ... 424519 =      0.000 ...   424.519 secs
     Ready.
@@ -347,143 +395,7 @@ Extract Epochs
     - Filter order 16 (effective, after forward-backward)
     - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
 
-    Used Annotations descriptions: [np.str_('NonTarget'), np.str_('Target')]
-    Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
-    Not setting metadata
-    1440 matching events found
-    No baseline correction applied
-    0 projection items activated
-    Using data from preloaded Raw for 1440 events and 1301 original time points ...
-    0 bad epochs dropped
-    Applying baseline correction (mode: mean)
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.5s
-    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.6s remaining:    0.1s
-    [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    2.7s finished
-    Applying baseline correction (mode: percent)
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Used Annotations descriptions: [np.str_('NonTarget'), np.str_('Target')]
-    Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
-    Not setting metadata
-    1440 matching events found
-    No baseline correction applied
-    0 projection items activated
-    Using data from preloaded Raw for 1440 events and 1301 original time points ...
-    0 bad epochs dropped
-    Applying baseline correction (mode: mean)
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.5s
-    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.9s remaining:    0.1s
-    [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    2.9s finished
-    Applying baseline correction (mode: percent)
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Filtering raw data in 1 contiguous segment
-    Setting up band-pass filter from 1 - 40 Hz
-
-    IIR filter parameters
-    ---------------------
-    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
-    - Filter order 16 (effective, after forward-backward)
-    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
-
-    Used Annotations descriptions: [np.str_('NonTarget'), np.str_('Target')]
+    Used Annotations descriptions: ['NonTarget', 'Target']
     Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
     Not setting metadata
     1440 matching events found
@@ -494,8 +406,8 @@ Extract Epochs
     Applying baseline correction (mode: mean)
     [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
     [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.4s
-    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.3s remaining:    0.1s
-    [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    2.4s finished
+    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    1.7s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    1.7s finished
     Applying baseline correction (mode: percent)
     Filtering raw data in 1 contiguous segment
     Setting up band-pass filter from 1 - 40 Hz
@@ -551,7 +463,7 @@ Extract Epochs
     - Filter order 16 (effective, after forward-backward)
     - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
 
-    Used Annotations descriptions: [np.str_('NonTarget'), np.str_('Target')]
+    Used Annotations descriptions: ['NonTarget', 'Target']
     Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
     Not setting metadata
     1440 matching events found
@@ -561,9 +473,145 @@ Extract Epochs
     0 bad epochs dropped
     Applying baseline correction (mode: mean)
     [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.5s
-    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    2.7s remaining:    0.1s
-    [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    2.8s finished
+    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.4s
+    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    1.8s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    1.8s finished
+    Applying baseline correction (mode: percent)
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Used Annotations descriptions: ['NonTarget', 'Target']
+    Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
+    Not setting metadata
+    1440 matching events found
+    No baseline correction applied
+    0 projection items activated
+    Using data from preloaded Raw for 1440 events and 1301 original time points ...
+    0 bad epochs dropped
+    Applying baseline correction (mode: mean)
+    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
+    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.4s
+    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    1.7s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    1.7s finished
+    Applying baseline correction (mode: percent)
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Filtering raw data in 1 contiguous segment
+    Setting up band-pass filter from 1 - 40 Hz
+
+    IIR filter parameters
+    ---------------------
+    Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+    - Filter order 16 (effective, after forward-backward)
+    - Cutoffs at 1.00, 40.00 Hz: -6.02, -6.02 dB
+
+    Used Annotations descriptions: ['NonTarget', 'Target']
+    Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
+    Not setting metadata
+    1440 matching events found
+    No baseline correction applied
+    0 projection items activated
+    Using data from preloaded Raw for 1440 events and 1301 original time points ...
+    0 bad epochs dropped
+    Applying baseline correction (mode: mean)
+    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
+    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.4s
+    [Parallel(n_jobs=-1)]: Done  62 out of  64 | elapsed:    1.7s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  64 out of  64 | elapsed:    1.8s finished
     Applying baseline correction (mode: percent)
 
 
@@ -843,7 +891,7 @@ Results
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (1 minutes 15.082 seconds)
+   **Total running time of the script:** (0 minutes 56.034 seconds)
 
 
 .. _sphx_glr_download_auto_examples_02_ERP_02_example_variability_ERP_inter_subject.py:

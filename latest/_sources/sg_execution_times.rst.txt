@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:26.047** total execution time for 4 files **from all galleries**:
+**01:44.175** total execution time for 4 files **from all galleries**:
 
 .. container::
 
@@ -32,15 +32,15 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
+   * - :ref:`sphx_glr_auto_examples_02_ERP_02_example_variability_ERP_inter_subject.py` (``../../examples/02_ERP/02_example_variability_ERP_inter_subject.py``)
+     - 00:56.034
+     - 0.0
    * - :ref:`sphx_glr_auto_examples_02_ERP_01_example_variability_ERP_intra_subject.py` (``../../examples/02_ERP/01_example_variability_ERP_intra_subject.py``)
-     - 00:16.968
+     - 00:27.848
      - 0.0
    * - :ref:`sphx_glr_auto_examples_01_MI-BCI_01_example_variability_MI_intra_subject.py` (``../../examples/01_MI-BCI/01_example_variability_MI_intra_subject.py``)
-     - 00:09.078
+     - 00:10.180
      - 0.0
    * - :ref:`sphx_glr_auto_examples_01_MI-BCI_02_example_variability_MI_inter_subjects.py` (``../../examples/01_MI-BCI/02_example_variability_MI_inter_subjects.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr_auto_examples_02_ERP_02_example_variability_ERP_inter_subject.py` (``../../examples/02_ERP/02_example_variability_ERP_inter_subject.py``)
-     - 00:00.000
+     - 00:10.114
      - 0.0

@@ -104,28 +104,24 @@ Extract Epochs
 
  .. code-block:: none
 
-    0it [00:00, ?it/s]    9it [00:00, 20305.94it/s]
     Reading 0 ... 230399  =      0.000 ...   449.998 secs...
     Reading 0 ... 230399  =      0.000 ...   449.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
-    0it [00:00, ?it/s]    9it [00:00, 21484.77it/s]
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
-    0it [00:00, ?it/s]    9it [00:00, 22891.90it/s]
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
-    0it [00:00, ?it/s]    9it [00:00, 24720.85it/s]
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
@@ -186,7 +182,7 @@ Extract Epochs
     - Filter order 16 (effective, after forward-backward)
     - Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
-    Used Annotations descriptions: [np.str_('left_hand'), np.str_('right_hand')]
+    Used Annotations descriptions: ['left_hand', 'right_hand']
     Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
     Not setting metadata
     240 matching events found
@@ -248,7 +244,7 @@ Extract Epochs
     - Filter order 16 (effective, after forward-backward)
     - Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
-    Used Annotations descriptions: [np.str_('left_hand'), np.str_('right_hand')]
+    Used Annotations descriptions: ['left_hand', 'right_hand']
     Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
     Not setting metadata
     240 matching events found
@@ -310,7 +306,7 @@ Extract Epochs
     - Filter order 16 (effective, after forward-backward)
     - Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
-    Used Annotations descriptions: [np.str_('left_hand'), np.str_('right_hand')]
+    Used Annotations descriptions: ['left_hand', 'right_hand']
     Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
     Not setting metadata
     240 matching events found
@@ -372,7 +368,7 @@ Extract Epochs
     - Filter order 16 (effective, after forward-backward)
     - Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
-    Used Annotations descriptions: [np.str_('left_hand'), np.str_('right_hand')]
+    Used Annotations descriptions: ['left_hand', 'right_hand']
     Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
     Not setting metadata
     240 matching events found
@@ -424,28 +420,28 @@ Extract ERDS
  .. code-block:: none
 
     [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.3s
-    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.5s remaining:    0.3s
-    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.6s remaining:    0.1s
-    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.6s finished
-    Applying baseline correction (mode: percent)
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.3s
-    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.5s remaining:    0.3s
-    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.6s remaining:    0.1s
-    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.6s finished
+    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.2s
+    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.4s remaining:    0.2s
+    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.5s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.5s finished
     Applying baseline correction (mode: percent)
     [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
     [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.2s
-    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.5s remaining:    0.3s
-    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.6s remaining:    0.1s
-    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.6s finished
+    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.4s remaining:    0.2s
+    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.5s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.5s finished
     Applying baseline correction (mode: percent)
     [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.3s
-    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.5s remaining:    0.3s
-    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.6s remaining:    0.1s
-    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.6s finished
+    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.2s
+    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.4s remaining:    0.2s
+    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.5s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.5s finished
+    Applying baseline correction (mode: percent)
+    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
+    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.2s
+    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    0.4s remaining:    0.2s
+    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    0.5s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    0.5s finished
     Applying baseline correction (mode: percent)
 
 
@@ -836,7 +832,7 @@ Results
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 11.375 seconds)
+   **Total running time of the script:** (0 minutes 10.114 seconds)
 
 
 .. _sphx_glr_download_auto_examples_01_MI-BCI_02_example_variability_MI_inter_subjects.py:

@@ -96,19 +96,12 @@ Extract Epochs
 
  .. code-block:: none
 
-    0it [00:00, ?it/s]    9it [00:00, 23592.96it/s]
     Reading 0 ... 230399  =      0.000 ...   449.998 secs...
     Reading 0 ... 230399  =      0.000 ...   449.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
     Reading 0 ... 230911  =      0.000 ...   450.998 secs...
-    No stim channel nor annotations found, skipping setting annotations.
-    No stim channel nor annotations found, skipping setting annotations.
-    No stim channel nor annotations found, skipping setting annotations.
-    No stim channel nor annotations found, skipping setting annotations.
-    No stim channel nor annotations found, skipping setting annotations.
-    No stim channel nor annotations found, skipping setting annotations.
     Filtering raw data in 1 contiguous segment
     Setting up band-pass filter from 7 - 13 Hz
 
@@ -163,11 +156,10 @@ Extract Epochs
     - Filter order 16 (effective, after forward-backward)
     - Cutoffs at 7.00, 13.00 Hz: -6.02, -6.02 dB
 
-    Used Annotations descriptions: [np.str_('1010'), np.str_('32769'), np.str_('32770'), np.str_('33281'), np.str_('33282'), np.str_('33284'), np.str_('768'), np.str_('781'), np.str_('786'), np.str_('800'), np.str_('left_hand'), np.str_('right_hand')]
+    Used Annotations descriptions: ['left_hand', 'right_hand']
     Ignoring annotation durations and creating fixed-duration epochs around annotation onsets.
-    Multiple event values for single event times found. Creating new event value to reflect simultaneous events.
     Not setting metadata
-    1221 matching events found
+    240 matching events found
     No baseline correction applied
     0 projection items activated
     Using data from preloaded Raw for 240 events and 4097 original time points ...
@@ -324,9 +316,9 @@ Extract Epochs
 
 
 
-    <tr class="mne-repr-section-header general-65da2f92-47f8-40a7-a0de-1d9d64e1105a"
+    <tr class="mne-repr-section-header general-339c3432-2495-43ae-a4d1-de49075f6794"
          title="Hide section" 
-        onclick="toggleVisibility('general-65da2f92-47f8-40a7-a0de-1d9d64e1105a')">
+        onclick="toggleVisibility('general-339c3432-2495-43ae-a4d1-de49075f6794')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -338,19 +330,19 @@ Extract Epochs
     </tr>
 
 
-    <tr class="repr-element general-65da2f92-47f8-40a7-a0de-1d9d64e1105a ">
+    <tr class="repr-element general-339c3432-2495-43ae-a4d1-de49075f6794 ">
         <td class="mne-repr-section-toggle"></td>
         <td>MNE object type</td>
         <td>Epochs</td>
     </tr>
-    <tr class="repr-element general-65da2f92-47f8-40a7-a0de-1d9d64e1105a ">
+    <tr class="repr-element general-339c3432-2495-43ae-a4d1-de49075f6794 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Measurement date</td>
     
         <td>2024-09-20 at 17:57:40 UTC</td>
     
     </tr>
-    <tr class="repr-element general-65da2f92-47f8-40a7-a0de-1d9d64e1105a ">
+    <tr class="repr-element general-339c3432-2495-43ae-a4d1-de49075f6794 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Participant</td>
     
@@ -359,7 +351,7 @@ Extract Epochs
     
     
     </tr>
-    <tr class="repr-element general-65da2f92-47f8-40a7-a0de-1d9d64e1105a ">
+    <tr class="repr-element general-339c3432-2495-43ae-a4d1-de49075f6794 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Experimenter</td>
     
@@ -374,9 +366,9 @@ Extract Epochs
 
 
 
-    <tr class="mne-repr-section-header acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f"
+    <tr class="mne-repr-section-header acquisition-706cbf0b-eb3e-4770-ad57-32576815a9b3"
          title="Hide section" 
-        onclick="toggleVisibility('acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f')">
+        onclick="toggleVisibility('acquisition-706cbf0b-eb3e-4770-ad57-32576815a9b3')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -391,14 +383,14 @@ Extract Epochs
 
 
 
-    <tr class="repr-element acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f ">
+    <tr class="repr-element acquisition-706cbf0b-eb3e-4770-ad57-32576815a9b3 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Total number of events</td>
         <td>240</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f ">
+    <tr class="repr-element acquisition-706cbf0b-eb3e-4770-ad57-32576815a9b3 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Events counts</td>
     
@@ -415,35 +407,35 @@ Extract Epochs
     </tr>
 
 
-    <tr class="repr-element acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f ">
+    <tr class="repr-element acquisition-706cbf0b-eb3e-4770-ad57-32576815a9b3 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Time range</td>
         <td>-2.500 – 5.492 s</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f ">
+    <tr class="repr-element acquisition-706cbf0b-eb3e-4770-ad57-32576815a9b3 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Baseline</td>
         <td>off</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f ">
+    <tr class="repr-element acquisition-706cbf0b-eb3e-4770-ad57-32576815a9b3 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Sampling frequency</td>
         <td>128.00 Hz</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f ">
+    <tr class="repr-element acquisition-706cbf0b-eb3e-4770-ad57-32576815a9b3 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Time points</td>
         <td>1,024</td>
     </tr>
 
 
-    <tr class="repr-element acquisition-73eced3c-3577-4423-82f6-7416e1d4b64f ">
+    <tr class="repr-element acquisition-706cbf0b-eb3e-4770-ad57-32576815a9b3 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Metadata</td>
         <td>No metadata set</td>
@@ -457,9 +449,9 @@ Extract Epochs
 
 
 
-    <tr class="mne-repr-section-header channels-eaf17072-6ac0-4cb9-873a-8d10c6b5dd41"
+    <tr class="mne-repr-section-header channels-524a977c-17e5-4e41-95d9-825350b92ede"
          title="Hide section" 
-        onclick="toggleVisibility('channels-eaf17072-6ac0-4cb9-873a-8d10c6b5dd41')">
+        onclick="toggleVisibility('channels-524a977c-17e5-4e41-95d9-825350b92ede')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -472,7 +464,7 @@ Extract Epochs
 
 
     
-    <tr class="repr-element channels-eaf17072-6ac0-4cb9-873a-8d10c6b5dd41 ">
+    <tr class="repr-element channels-524a977c-17e5-4e41-95d9-825350b92ede ">
         <td class="mne-repr-section-toggle"></td>
         <td>EEG</td>
         <td>
@@ -485,11 +477,11 @@ Extract Epochs
     </tr>
 
 
-    <tr class="repr-element channels-eaf17072-6ac0-4cb9-873a-8d10c6b5dd41 ">
+    <tr class="repr-element channels-524a977c-17e5-4e41-95d9-825350b92ede ">
         <td class="mne-repr-section-toggle"></td>
         <td>Head & sensor digitization</td>
     
-        <td>Not available</td>
+        <td>30 points</td>
     
     </tr>
     
@@ -500,9 +492,9 @@ Extract Epochs
 
 
 
-    <tr class="mne-repr-section-header filters-c0b3b72b-7993-44da-b503-b26892d02ff4"
+    <tr class="mne-repr-section-header filters-722037df-44d2-4294-ad75-c8ef9b466ff7"
          title="Hide section" 
-        onclick="toggleVisibility('filters-c0b3b72b-7993-44da-b503-b26892d02ff4')">
+        onclick="toggleVisibility('filters-722037df-44d2-4294-ad75-c8ef9b466ff7')">
         <th class="mne-repr-section-toggle">
             <button >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
@@ -514,14 +506,14 @@ Extract Epochs
     </tr>
 
 
-    <tr class="repr-element filters-c0b3b72b-7993-44da-b503-b26892d02ff4 ">
+    <tr class="repr-element filters-722037df-44d2-4294-ad75-c8ef9b466ff7 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Highpass</td>
         <td>7.00 Hz</td>
     </tr>
 
 
-    <tr class="repr-element filters-c0b3b72b-7993-44da-b503-b26892d02ff4 ">
+    <tr class="repr-element filters-722037df-44d2-4294-ad75-c8ef9b466ff7 ">
         <td class="mne-repr-section-toggle"></td>
         <td>Lowpass</td>
         <td>13.00 Hz</td>
@@ -567,10 +559,10 @@ Extract ERDS
  .. code-block:: none
 
     [Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    1.8s
-    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    2.2s remaining:    1.1s
-    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    2.3s remaining:    0.3s
-    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    2.3s finished
+    [Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    0.7s
+    [Parallel(n_jobs=-1)]: Done  18 out of  27 | elapsed:    1.0s remaining:    0.5s
+    [Parallel(n_jobs=-1)]: Done  24 out of  27 | elapsed:    1.0s remaining:    0.1s
+    [Parallel(n_jobs=-1)]: Done  27 out of  27 | elapsed:    1.0s finished
     Applying baseline correction (mode: percent)
 
 
@@ -981,7 +973,7 @@ Results
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 9.078 seconds)
+   **Total running time of the script:** (0 minutes 10.180 seconds)
 
 
 .. _sphx_glr_download_auto_examples_01_MI-BCI_01_example_variability_MI_intra_subject.py:
